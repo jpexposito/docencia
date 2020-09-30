@@ -1,8 +1,7 @@
 package es.iespuertodelacruz.profesor.controlador;
 
-import es.iespuertodelacruz.profesor.model.ConecionInicioBBDD;
-import es.iespuertodelacruz.profesor.model.OperacionBBDD;
 
+import es.iespuertodelacruz.profesor.model.*;
 public class Operacion {
 
     double n1;
