@@ -16,7 +16,20 @@ public class Operacion {
         this.n1 = n1;
         this.n2 = n2;
         this.operacion = operacion;
+
     }
+
+    public Operacion(double n1, double n2, double res,  char operacion) {
+
+        this.n1 = n1;
+        this.n2 = n2;
+        this.resultado = res;
+        this.operacion = operacion;
+        this.mostrarResultado();
+        this.almacenarBDD();
+
+    }
+
 
     /**
      * Metodo que muestra el resultado de la operacion

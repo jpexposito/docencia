@@ -26,39 +26,27 @@ public class Calculadora {
 
             System.out.println("Escribe una de las opciones\n");
             opcion = sn.nextInt();
-
+            n1 = obtenerValor();
+            n2 = obtenerValor();
             switch(opcion){
                 case 1:
                     System.out.println("Has seleccionado la opcion Sumar");
-                    n1 = obtenerValor();
-                    n2 = obtenerValor();
+
                     Suma suma = new Suma(n1,n2);
-                    suma.mostrarResultado();
-                    suma.almacenarBDD();
                     break;
                 case 2:
                     System.out.println("Has seleccionado la opcion Restar");
-                    n1 = obtenerValor();
-                    n2 = obtenerValor();
                     Resta resta = new Resta(n1,n2);
-                    resta.mostrarResultado();
-                    resta.almacenarBDD();
+
                     break;
                 case 3:
                     System.out.println("Has seleccionado la opcion Multiplicar");
-                    n1 = obtenerValor();
-                    n2 = obtenerValor();
                     Multilplicacion multilplicacion = new Multilplicacion(n1,n2);
-                    multilplicacion.mostrarResultado();
-                    multilplicacion.almacenarBDD();
                     break;
                 case 4:
                     System.out.println("Has seleccionado la opcion Dividir");
-                    n1 = obtenerValor();
-                    n2 = obtenerValor();
                     Division division = new Division(n1,n2);
-                    division.mostrarResultado();
-                    division.almacenarBDD();
+
                     break;
                 case 5:
                     salir=true;
