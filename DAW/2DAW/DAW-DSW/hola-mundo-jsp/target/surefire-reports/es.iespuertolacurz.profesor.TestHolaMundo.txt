@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: es.iespuertolacurz.profesor.TestHolaMundo
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.378 s - in es.iespuertolacurz.profesor.TestHolaMundo

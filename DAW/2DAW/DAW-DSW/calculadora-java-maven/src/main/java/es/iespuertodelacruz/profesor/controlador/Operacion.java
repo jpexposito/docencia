@@ -28,6 +28,8 @@ public class Operacion {
     public void almacenarBDD() {
         ConecionInicioBBDD.crearTabla();
         OperacionBBDD.insert(n1,n2,operacion,resultado);
+        String palabra = "textp";
+        palabra.contains("s");
     }
 
     /*
