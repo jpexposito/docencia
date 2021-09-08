@@ -1,7 +1,5 @@
 # ELEMENTOS DEL DESARROLLO DE SOFTWARE
 
-- [Diapositivas](http://jamj2000.github.io/entornosdesarrollo/1/diapositivas)
-- [Actividades](http://jamj2000.github.io/entornosdesarrollo/1/actividades)
 
 ## Introducción
 
@@ -52,7 +50,7 @@ La CPU se llama también UCP (en inglés), procesador o microprocesador.
 
 Sólo válido para **lenguajes compilados: C, C++, Java**.
 
-En lenguajes interpretados no exite código objeto, ni binario. Solo código fuente. Por ejemplo: PHP, Javascript, ...
+En **lenguajes interpretados** no exite código objeto, ni binario. Solo código fuente. Por ejemplo: PHP, Javascript, ...
 
 **El código objeto en Java se denomina ByteCode**.
 

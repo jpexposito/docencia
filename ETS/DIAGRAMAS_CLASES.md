@@ -1,7 +1,5 @@
 # Elaboración de diagramas de clases
 
-- [Diapositivas](http://jamj2000.github.io/entornosdesarrollo/5/diapositivas)
-- [Actividades](http://jamj2000.github.io/entornosdesarrollo/5/actividades)
 
 ## Introducción
 

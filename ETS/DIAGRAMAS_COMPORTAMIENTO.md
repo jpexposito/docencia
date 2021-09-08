@@ -1,7 +1,5 @@
 # Elaboración de diagramas de comportamiento
 
-- [Diapositivas](http://jamj2000.github.io/entornosdesarrollo/6/diapositivas)
-- [Actividades](http://jamj2000.github.io/entornosdesarrollo/6/actividades)
 
 ## Introducción
 

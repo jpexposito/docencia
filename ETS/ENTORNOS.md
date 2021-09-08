@@ -1,11 +1,6 @@
 
 # Entornos integrados de desarrollo
 
-- [Diapositivas](http://jamj2000.github.io/entornosdesarrollo/2/diapositivas)
-- [Actividades](http://jamj2000.github.io/entornosdesarrollo/2/actividades)
-
-
-
 
 ## Introducción
 

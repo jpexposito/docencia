@@ -1,7 +1,5 @@
 # Diseño y realización de pruebas
 
-- [Diapositivas](http://jamj2000.github.io/entornosdesarrollo/3/diapositivas)
-- [Actividades](http://jamj2000.github.io/entornosdesarrollo/3/actividades)
 
 <!---
 Ejemplos

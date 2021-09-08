@@ -1,8 +1,5 @@
 # Documentación y optimización
 
-- [Diapositivas](http://jamj2000.github.io/entornosdesarrollo/4/diapositivas)
-- [Actividades](http://jamj2000.github.io/entornosdesarrollo/4/actividades)
-
 ## Introducción
 
 
