@@ -163,7 +163,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 ### Modelo en cascada (I)
 
-![Modelo en cascada](http://jamj2000.github.io/entornosdesarrollo/1/assets/cascada.png)
+<img align="center" width="300" height="300" src="../img/metodologia-cascada.png" alt="Metodologia cascada">
 
 
 ### Modelo en cascada (II)
@@ -178,8 +178,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 ### Modelo en V (I)
 
-![Modelo en V](http://jamj2000.github.io/entornosdesarrollo/1/assets/v.png)
-
+<img align="center" src="../img/metodologia-v.png" alt="Metodologia en v">
 
 ### Modelo en V (II)
 
@@ -197,7 +196,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
   - por no existir experiencia previa.
   - por omisión o falta de concreción del usuario/cliente.
 
-![Modelo de construcción de prototipos](http://jamj2000.github.io/entornosdesarrollo/1/assets/prototipos.png)
+<img align="center" src="../img/metodologia-v.png" alt="Modelo de construcción de prototipos">
 
 
 ### Prototipos (II)
@@ -223,15 +222,13 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 - Desarrollado por Boehm en 1988.
 - La actividad de ___ingeniería___ corresponde a las fases de los modelos clásicos: análisis, diseño, codificación, ...
 
-![Modelo en espiral](http://jamj2000.github.io/entornosdesarrollo/1/assets/espiral.png)
+<img align="center" src="../img/metodologia-espiral.png" alt="Modelo en espiral">
 
 
 ### Modelo en espiral (II)
 #### ___Aplicado a la programación orientada a objetos___
 
 - En la actividad de ___ingeniería___ se da gran importancia a la reutilización de código.
-
-![Modelo en espiral](http://jamj2000.github.io/entornosdesarrollo/1/assets/espiral-poo.png)
 
 
 ### Metodologías ágiles (I)
@@ -269,7 +266,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 Pizarra kanban
 
-![Pizarra kanban](http://jamj2000.github.io/entornosdesarrollo/1/assets/kanban-board.png)
+<img align="center" src="../img/kanban-board.png" alt="Pizarra kanban">
 
 
 #### __Scrum (I)__
@@ -283,7 +280,7 @@ Pizarra kanban
 
 #### __Scrum (II)__
 
-![Proceso SCRUM](http://jamj2000.github.io/entornosdesarrollo/1/assets/scrum.png)
+<img align="center" src="../img/metodologia-scrum.png" alt="Proceso SCRUM">
 
 
 #### __XP (Programación extrema) (I)__
@@ -310,6 +307,8 @@ __Características__
 - Propiedad del código compartida
 - Estándares de codificación
 - 40 horas semanales
+
+<img align="center" src="../img/metodologia-xp.jpeg" alt="Proceso SCRUM">
 
 
 
