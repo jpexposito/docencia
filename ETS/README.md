@@ -1,6 +1,6 @@
 # Apuntes del módulo Entornos de Desarrollo
 
-<img align="center" width="300" height="300" src="img/codigo.png" alt="Entornos de desarrollo">
+<img align="center" width="300" height="300" src="../img/codigo.png" alt="Entornos de desarrollo">
 
 
 ## Contenidos del módulo
