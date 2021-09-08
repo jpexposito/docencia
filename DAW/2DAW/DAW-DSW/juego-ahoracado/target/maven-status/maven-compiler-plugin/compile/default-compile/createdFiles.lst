@@ -1,8 +1,0 @@
-es/iespuertolacruz/rest/jpexposito/dao/OperacionesBB.class
-es/iespuertolacruz/rest/jpexposito/servicios/Usuarios.class
-es/iespuertolacruz/rest/jpexposito/servicios/Resultados.class
-es/iespuertolacruz/rest/jpexposito/dao/InitBBDDServletContextListener.class
-es/iespuertolacruz/rest/jpexposito/utils/RestServiceUtils.class
-es/iespuertolacruz/rest/jpexposito/dao/entity/Pelicula.class
-es/iespuertolacruz/rest/jpexposito/dao/PeliculasDao.class
-es/iespuertolacruz/rest/jpexposito/servicios/Peliculas.class
