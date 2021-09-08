@@ -1,4 +1,4 @@
-# Instalación de Maven en el SO
+# Instalación de los IDE´s especificados en el SO
 
 
 ## Introducción
