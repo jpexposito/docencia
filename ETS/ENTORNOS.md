@@ -235,7 +235,7 @@ Otras funciones importantes son:
 
 ### Tareas asociadas
 
- - [Tarea 1: Entornos integrados de desarrollo](tareas/tarea-jdk.md)    
- - [Tarea 2: Elementos de desarrollo del software](tareas/tarea-maven.md)  
+ - [Tarea 1: Instalación de OpenJDK 8](tareas/tarea-jdk.md)    
+ - [Tarea 2: Instalación de Maven](tareas/tarea-maven.md)  
 
 
