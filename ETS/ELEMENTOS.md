@@ -168,6 +168,7 @@ El trabajo con una metodología de desarrollo de software permite reducir el niv
   - Modelo en espiral (iterativos)
   - Metodologías ágiles (adaptativos)
 
+<img align="center" src="../img/metodologias-desarrollo-software.jpeg" alt="Metodologías de desarrollo">
 
 ### Modelo en cascada (I)
 
