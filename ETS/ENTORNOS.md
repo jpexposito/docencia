@@ -233,4 +233,9 @@ Otras funciones importantes son:
 
   Herramienta adoptada por Java para la gestión de librerías.
 
+### Tareas asociadas
+
+ - [Tarea 1: Entornos integrados de desarrollo](tareas/tarea-jdk.md)    
+ - [Tarea 2: Elementos de desarrollo del software](tareas/tarea-maven.md)  
+
 
