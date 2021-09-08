@@ -1,11 +1,7 @@
 
 # Entornos integrados de desarrollo
 
-<img align="center" width="300" height="300" src="../img/ide.png" alt="Entornos de desarrollo integrado">
-
-
 ## Introducción
-
 
 En esta Unidad aprenderemos a:
 
@@ -13,7 +9,6 @@ En esta Unidad aprenderemos a:
 - Personalizar y automatizar el entorno de desarrollo.
 - Generar ejecutables a partir de código fuente.
 - Identificar las características comunes y específicas de diversos entornos de desarrollo.
-
 
 ### Conceptos
 
@@ -214,6 +209,8 @@ Otras funciones importantes son:
  - Administrar configuraciones del usuario. 
 
 ### Ejemplos
+
+<img align="center" width="300" height="300" src="../img/ide.png" alt="Entornos de desarrollo integrado">
 
 - Destinados principalmente a C++:
   - DevC++
