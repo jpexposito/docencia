@@ -163,7 +163,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 ### Modelo en cascada (I)
 
-<img align="center" width="300" height="300" src="../img/metodologia-cascada.png" alt="Metodologia cascada">
+<img align="center" src="../img/metodologia-cascada.png" alt="Metodologia cascada">
 
 
 ### Modelo en cascada (II)
@@ -196,7 +196,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
   - por no existir experiencia previa.
   - por omisión o falta de concreción del usuario/cliente.
 
-<img align="center" src="../img/metodologia-v.png" alt="Modelo de construcción de prototipos">
+<img align="center" src="../img/metodologia-prototipo.jpeg" alt="Modelo de construcción de prototipos">
 
 
 ### Prototipos (II)
@@ -266,7 +266,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 Pizarra kanban
 
-<img align="center" src="../img/kanban-board.png" alt="Pizarra kanban">
+<img align="center" src="../img/metodologia-kanban.png" alt="Pizarra kanban">
 
 
 #### __Scrum (I)__
