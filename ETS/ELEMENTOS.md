@@ -410,10 +410,13 @@ __Características__
 
 [Historia simplificada](http://rigaux.org/language-study/diagram-light.png)
 
+<img align="center" src="http://rigaux.org/language-study/diagram-light.png" alt="Historia simplificada">
+
 
 ### Historia detallada
 
 [Historia detallada](http://rigaux.org/language-study/diagram.png)
+<img align="center" src="http://rigaux.org/language-study/diagram.png" alt="Historia detallada">
 
 
 ### Criterios para la selección de un lenguaje
