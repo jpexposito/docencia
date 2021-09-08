@@ -68,7 +68,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 ### Desarrollo de software 
 
-<img align="center" width="300" height="300" src="../img/pasos-desarrollo-software.png" alt="Fases principales del desarrollo de software">
+<img align="center" src="../img/pasos-desarrollo-software.png" alt="Fases principales del desarrollo de software">
 
 
 #### ___Fases principales___
