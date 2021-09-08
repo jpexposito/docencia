@@ -221,3 +221,16 @@ Otras funciones importantes son:
   - Eclipse
   - IntelJ IDEA
   - Oracle JDeveloper
+
+
+### Herramientas en las que se apoya un IDE Java
+
+#### JDK
+
+  Necesario para desarrollar programas, ejecutarlos o generar su documentación interna.
+
+#### Maven
+
+  Herramienta adoptada por Java para la gestión de librerías.
+
+
