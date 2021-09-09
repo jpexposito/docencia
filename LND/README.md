@@ -1,6 +1,6 @@
 # Apuntes del módulo Lenguajes de marcas y sistemas de gestión de información
 
-<img align="center" width="300" height="300" src="../img/develop-web.png" alt="Lenguajes de marcas">
+<img align="center" src="../img/develop-web.png" alt="Lenguajes de marcas">
 
 ## Introducción
 
