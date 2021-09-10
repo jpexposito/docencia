@@ -24,11 +24,11 @@ Estos aparatos a día de hoy son indispensables en el día a día de mucha gente
 
 ### Configuraciones. Tipos y características. Dispositivos soportados.
 
-### Perfiles. Características. Arquitectura y requerimientos. Dispositivos
-soportados.
 
-### Ciclo de vida de una aplicación: descubrimiento, instalación, ejecución, actualización
-y borrado.
+### Perfiles. Características. Arquitectura y requerimientos. Dispositivos soportados.
+
+
+### Ciclo de vida de una aplicación: descubrimiento, instalación, ejecución, actualización y borrado.
 
 ### Modificación de aplicaciones existentes.
 
