@@ -115,12 +115,136 @@ A pesar de todas estas ventajas HTML no es un lenguaje perfecto, sus principales
 	</html> 
 ``` 
 
+Para resolver estos problemas de HTML el W3C establece, en 1998, el estándar internacional XML, un lenguaje de marcas puramente estructural que no incluye ninguna información relativa al diseño. Está convirtiéndose con rapidez en estándar para el intercambio de datos en la Web. A diferencia de HTML las etiquetas indican el significado de los datos en lugar del formato con el que se van a visualizar los datos.  
+XML es un metalenguaje caracterizado por:  
+ - Permitir definir etiquetas propias. 
+ - Permitir asignar atributos a las etiquetas. 
+ - Utilizar un esquema para definir de forma exacta las etiquetas y los atributos. 
+ - La estructura y el diseño son independientes. 
+ 
+En realidad XML es un conjunto de estándares relacionados entre sí y que son:  
+ - XSL, eXtensible Style Language. Permite definir hojas de estilo para los documentos XML e incluye capacidad para la transformación de documentos. 
+ - XML Linking Language, incluye Xpath, Xlink y Xpointer. Determinan aspectos sobre los enlaces entre documentos XML. 
+ - XML Namespaces. Proveen un contexto al que se aplican las marcas de un documento de XML y que sirve para diferenciarlas de otras con idéntico nombre válidas en otros contextos. 
+ - XML Schemas. Permiten definir restricciones que se aplicarán a un documento XML. Actualmente los más usados son las DTD. 
+En realidad XML es un conjunto de estándares relacionados entre sí y que son:  
+**Ejercicio resuelto** 
+```xml
+<?xml version="1.0" encoding="iso‐8859‐1"?>  
+<!DOCTYPE biblioteca">  
+<biblioteca>  
+ 	<ejemplar tipo_ejem="libro" titulo="XML practico" editorial="Ediciones Eni">  
+ 	 	<tipo> <libro isbn="978‐2‐7460‐4958‐1" edicion="1" paginas="347"></libro> </tipo>  
+ 	 	<autor nombre="Sebastien Lecomte"></autor>  
+ 	 	<autor nombre="Thierry Boulanger"></autor>  
+ 	 	<autor nombre="Ángel Belinchon Calleja" funcion="traductor"></autor>  
+ 	 	<prestado lector="Pepito Grillo">  
+ 	 	 	<fecha_pres dia="13" mes="mar" año="2009"></fecha_pres>  
+ 	 	 	<fecha_devol dia="21" mes="jun" año="2009"></fecha_devol>  
+ 	 	</prestado>  
+ 	</ jee	mplar>  
+ <ejemplar tipo_ejem="revista" titulo="Todo Linux 101. Virtualización en GNU/Linux" editorial="Studio Press">  
+ 	 	<tipo>  
+ 	 	 	<revista>  
+ 	 	 	 	<fecha_publicacion mes="abr" año="2009"></fecha_publicacion>  
+ 	 	 	</revista>  
+ 	 	</tipo>  
+ 	 	<autor nombre="Varios"></autor>  
+ 	 	<prestado lector="Pedro Picapiedra">  
+ 	 	 	<fecha_pres dia="12" mes="ene" año="2010"></fecha_pres>   	 	</prestado>  
+ 	</ jee	mplar>  
+</biblioteca>
+```  
+*** Comparación de XML con HTML. 
+
+ - XML 	
+  - Es un perfil de SGML. 
+  - Especifica cómo deben definirse conjuntos de etiquetas aplicables a un tipo de documento.  
+  - Modelo de hiperenlaces complejo.  
+  - El navegador es una plataforma para el desarrollo de aplicaciones.  
+  - Fin de la guerra de los navegadores y etiquetas propietarias.  
+
+ - HTML 
+  - Es una aplicación de SGML. 
+  - Aplica un conjunto limitado de etiquetas sobre un único tipo de documento. 
+  - Modelo de hiperenlaces simple. 
+  - El navegador es un visor de páginas. 
+
+El problema de la "no compatibilidad" y las diferencias entre navegadores ha alcanzado un punto en el que la solución es difícil
+
+ 	 
+**Ejemplo**  
+```xml 
+<?xml version="1.0" encoding="iso‐8859‐1"?>  
+<!DOCTYPE libro>  
+<libro>  
+ 	<titulo>XML practico </titulo>  
+ 	<autor>SebastienLecomte</autor>  
+ 	<autor>Thierry Boulanger</autor>  
+ 	<editorial>Ediciones Eni</editorial>  
+ 	<isbn>978‐2‐7460‐4958‐1</isbn>  
+ 	<edicion>1</edicion>  
+ 	<paginas>347</paginas>  
+<libro>  
+```  
+```html 
+<html>  
+ 	<head>  
+ 	 	<title>Libro</title>  
+ 	</head>  
+ 	<body>  
+ 	 	<h3>XML practico</h3><br>  
+ 	 	<p>autores: Sebastien Lecomte,  
+Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:  
+ 	 	Thierry Boulanger</p>  
+ 	 	<ul>  
+ 	 	 	<li>editorial: Ediciones Eni</li>  
+ 	 	 	<li>isbn:978‐2‐7460‐4958‐1</li>  
+ 	 	 	<li>edicion: 1 </li>  
+ 	 	 	<li>paginas: 347</li>  
+ 	 	</ul>  
+ 	</ odb	y>  
+</html>	  
+```  
+***Ejecuta el código en con un navegador para ver el resultado***  
+ 
+### Comparación de XML con SGML. 
+
+
+
+### XML (eXtensible Markup Language). 
+
 
 ## XML: estructura y sintaxis.
 
 ## Etiquetas.
 
+Los lenguajes de marcas utilizan una serie de etiquetas especiales intercaladas en un documento de texto sin formato. Dichas etiquetas serán posteriormente interpretadas por los intérpretes del lenguaje y ayudan al procesado del documento.  
+Las etiquetas se escriben encerradas entre ángulos, es decir < y >. Normalmente, se utilizan dos etiquetas: una de inicio y otra de fin para indicar que ha terminado el efecto que queríamos presentar. La única diferencia entre ambas es que la de cierre lleva una barra inclinada "/" antes del código. 
+``` xml 
+<etiqueta>texto que sufrirá las consecuencias de la etiqueta</etiqueta>  
+``` 
+Por ejemplo, en HTML  
+```html 
+<u>Esto está subrayado</u> 
+``` 
+Al interpretarlo en un navegador se verá así:  
+***Esto está subrayado***  
+ 
+Las últimas especificaciones emitidas por el W3C indican la necesidad de que vayan escritas siempre en minúsculas para considerar que el documento está correctamente creado.  
+
 ## Herramientas de edición.
+
+Para trabajar en XML es necesario editar los documentos y luego procesarlos, por tanto tenemos dos tipos de herramientas:  
+ - Editores XML 
+Una característica de los lenguajes de marcas es que se basan en la utilización de ficheros de texto plano por lo que basta utilizar un procesador de texto normal y corriente para construir un documento XML. 
+
+Para crear documentos XML complejos e ir añadiendo datos es conveniente usar algún editor XML. Estos nos ayudan a crear estructuras y etiquetas de los elementos usados en los documentos, además algunos incluyen ayuda para la creación de otros elementos como DTD, hojas de estilo CSS o XSL, ... El W3C ha desarrollado un editor de HTML, XHTML, CSS y XML gratuito cuyo nombre es Amaya.  
+ - Procesadores XML 
+
+Para interpretar el código XML se puede utilizar cualquier navegador. Los procesadores de XML permiten leer los documentos XML y acceder a su contenido y estructura. Un procesador es un conjunto de módulos de software entre los que se encuentra un parser o analizador de XML que comprueba que el documento cumple las normas establecidas para que pueda abrirse. Estas normas pueden corresponderse con las necesarias para trabajar sólo con documentos de tipo válido o sólo exigir que el documento esté bien formado, primeros se conocen como validadores y los segundos como no validadores. El modo en que los procesadores deben leer los datos XML está descrito en la recomendación de XML establecida por W3C.  
+Para publicar un documento XML en Internet se utilizan los procesadores XSLT, que permiten generar archivos HTML a partir de documentos XML.  
+Puesto que XML se puede utilizar para el intercambio de datos entre aplicaciones, hay que recurrir a motores independientes que se ejecutan sin que nos demos cuenta. Entre estos destacan "XML para Java" de IBM, JAXP de Sun, etc
 
 ## Elaboración de documentos XML bien formados.
 
