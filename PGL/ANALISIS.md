@@ -103,11 +103,49 @@ Palm OS. Desarrollado por PalmSource para PDA, aunque las últimas versiones tam
 - Maemo OS. Desarrollado por Nokia para smartPhones, PDA e Internet tables.
 - Bada. Desarrollado por Samsung.
 
+Hay que tener en cuenta que a medida que los teléfonos móviles crecen en popularidad, los sistemas operativos con los que trabajan también adquieren mayor importancia. Según un artículo en la publicación española "Cinco días", la cuota de mercado de sistemas operativos móviles en noviembre de 2010 era la siguiente:
+
+ - Symbian OS 36,6% (51% en 2010).
+ - Android 25% (1,8% en 2010).
+ - iOS 16,7% (13% en 2010).
+ - BlackBerry OS 14,8% (19% en 2010).
+ - Windows Phone 2,8% (9,3% en 2010).
+
 En la actualidad han desaparecido multitud de lenguajes y sistemas operativos. Veamos como se encuentra el mercado a 31 de diciembre de 2020.
 
 <img align="center" src="../img/so-smarthones2020.png" alt="Entornos de desarrollo integrado">
 
+Es sumamente probable que quienes adquieran en la actualidad un nuevo teléfono móvil, basen su elección entre sólo dos sistemas operativos: Android y iOS, pero esto no siempre fue así.
 
+Habiendo comenzado como un mercado multi-plataforma, el panorama de los smartphones se ha convertido en un duopolio en los últimos años, después de que el iOS de Apple y el Android de Google desplazaran al resto de plataformas, incluyendo el Windows Phone de Microsoft y el sistema operativo BlackBerry.
+
+Según datos de la consultora de tecnología IDC, los dispositivos Android representaron algo más del 84% de las unidades enviadas en 2020, y los iOS de Apple casi el 16% restante. En cambio, en 2010, hace poco más de una década, la cuota de mercado combinada de Android e iOS era inferior al 40%, con BlackBerry, Windows Phone y otros sistemas operativos compartiendo el resto del mercado.
+
+##### Android.
+
+Android fue inicialmente desarrollado por Android Inc., hoy día parte de la compañía Google. Está basado en una versión modificada del kernel de Linux.
+
+El primer fabricante que incorporó Android en sus dispositivos fue HTC con su terminal HTC Dream (comercializado también como T-Mobile G1 y popularmente conocido con los nombres de Google Phone o GPhone) en 2008.
+
+Es uno de los más "jóvenes" dentro del grupo de sistemas operativos para dispositivos móviles y se ha hecho un notable hueco alcanzando un tercio de la cuota de mercado a comienzos de 2011. Existen miles de aplicaciones que funcionan sobre Android, con un crecimiento cada vez mayor.
+
+Hoy día podemos encontrar multitud de fabricantes que incorporan Android en sus terminales: Sony Ericsson (Xperia X10 y X8), HTC (Serie A), Acer (beTouch E110), Motorola (Droid X), Samsung (series Galaxy y Nexus), Garmin (GarminPhone), Dell, Alcatel, LG, etc.
+
+A mediados de 2011, la última de versión de Android era la 2.3 (GingerBread, o "pan de jengibre"). Algunas versiones anteriores han sido: 2.2 (FroYo), 2.1 (Éclair), 1.6 (Donut) o 1.5 (Cupcake). Podemos observar que los nombres de las versiones corresponden con postres y que además según avanzan la versión avanza alfabéticamente la letra del postre.
+
+##### iOS.
+
+Se trata del sistema operativo desarrollado por Apple originalmente para su iPhone, aunque hoy día también es utilizado por otros dispositivos de la empresa.
+
+Apple sólo permite que este sistema operativo funcione sobre hardware Apple. Es un sistema operativo derivado del Mac OS X, también de Apple.
+
+En octubre de 2010 la tienda de aplicaciones de Apple (servicio de descarga de aplicaciones), llamada Apple Store, disponía ya de más de 300000 productos. A finales de 2010 la cuota de mercado de iOS en los dispositivos móviles que se vendían era de aproximadamente un 17%.
+
+Como se ha comentado antes, los únicos dispositivos que incorporan este sistema operativo son los distintos modelos de dispositivos fabricados por la propia compañía Apple. Es decir, los iPhones (iPhone, iPhone 3G, iPhone 3GS, iPhone 4, etc.), el iPod Touch, el iPad, y la Apple TV.
+
+Para desarrollar aplicaciones sobre iOS, las aplicaciones deben ser compiladas específicamente para este sistema operativo basado en la arquitectura ARM. Para ello puede utilizarse el kit de desarrollo iPhone SDK. El lenguaje de programación principal para este conjunto de herramientas es el Objective-C. Para poder utilizar este kit de desarrollo es necesario un ordenador MAC con un sistema operativo MAC OS X Leopard o superior. A mediados de 2011 ni el entorno .NET y ni Adobe Flash son soportados por iOS. Lo mismo sucede con Java, aunque se han producido algunos intentos de máquinas virtuales de Java (basadas en JAVA ME) para iOS, que rozan la legalidad a la que están sometidas las restrictivas licencias de Apple. Por supuesto, siempre habrá comunidades de usuarios y desarrolladores que intentarán saltarse estas restricciones (para más información al respecto puedes consultar el término iOS Jailbreaking en la web).
+
+El iOS SDK se puede descargar gratuitamente, aunque es necesario registrarse en el Programa de Desarrollo del iPhone para poder publicar el software creado, lo cual requiere la aprobación de la compañía Apple y un pago por ese servicio, que proporcionará al programador las claves firmadas que le permitirán publicar en la Apple Store.
 
 ### Entornos integrados de trabajo.
 
