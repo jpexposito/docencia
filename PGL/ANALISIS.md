@@ -115,7 +115,7 @@ Hay que tener en cuenta que a medida que los teléfonos móviles crecen en popul
 
 En la actualidad han desaparecido multitud de lenguajes y sistemas operativos. Veamos como se encuentra el mercado a 31 de diciembre de 2020.
 
-<img align="center" src="../img/so-smarthones2020.png" alt="Entornos de desarrollo integrado">
+<img src="../img/so-smarthones2020.png" alt="Entornos de desarrollo integrado">
 
 Es sumamente probable que quienes adquieran en la actualidad un nuevo teléfono móvil, basen su elección entre sólo dos sistemas operativos: Android y iOS, pero esto no siempre fue así.
 
@@ -151,7 +151,83 @@ El iOS SDK se puede descargar gratuitamente, aunque es necesario registrarse en 
 
 ### Entornos integrados de trabajo.
 
+#### IDE para desarrollo en nativo.
+
+#### Frameworks para desarrollo multiplataforma.
+
+¿Cuánto me costaría desarrollar una aplicación para Android? ¿Y si la quiero adaptar para iOS o navegadores? Estas son preguntas que muchas empresas se hacían hace tiempo a la hora de comenzar el desarrollo de una aplicación hasta la aparición de los distintos frameworks multiplataforma.
+
+Hoy en día muchas empresas necesitan soluciones para distintas plataformas móviles. El desarrollo nativo puede resultar complicado, ya que cada plataforma requiere de un lenguaje, entorno y herramientas distintas. Lo que puede suponer un problema ante presupuestos ajustados o equipos pequeños, en los cuales los conocimientos pueden ser más limitados.
+
+Para estos casos es aconsejable valorar diferentes frameworks ya que reducirían considerablemente los costes de tiempo y dinero para el cliente o el proveedor.
+A continuación, os explicamos cuáles son los mejores frameworks para el desarrollo de aplicaciones multiplatofrma.
+
+##### Flutter
+Este framework ha sido desarrollado por Google y utiliza el lenguaje de programación Dart. Flutter permite reutilizar casi todo el código haciendo que todo el proceso de desarrollo de aplicaciones móviles sea ágil y rentable, facilitando el desarrollo de aplicaciones móviles compilas de forma nativa para todo tipo de plataformas móviles, escritorio y web.
+
+Hoy en días es el Sistema Operativo más utilizado en los smartphones ya que es una herramienta gratuita y fácil de usar.
+
+Sus características son:
+
+ - Experiencia nativa: ayuda a los desarrolladores en problemas críticos de la plataforma que pueden surgir como la navegación, el desplazamiento, las fuentes, los iconos…
+ - Proceso de desarrollo ágil: permite a los desarrolladores desarrollar y diseñar aplicaciones con facilidad ya que cuenta con múltiples elementos incorporados que reducen el tiempo total de desarrollo de la aplicación.
+ - Interfaz de usuario intuitiva: permite a los desarrolladores diseñar y desarrollar una interfaz de usuario interactiva e intuitiva. Crear una aplicación atractiva es muy importante, ya que permite a las marcas conectar con sus usuarios y proporcionar una experiencia de usuario impecable.
+
+<img src="https://www.hiberus.com/crecemos-contigo/wp-content/uploads/2021/05/Flutter.png" alt="Flutter">
+
+
+##### Ionic
+
+Fue creado en 2013 por Drifty Co. Permite crear aplicaciones híbridas, las cuales son apps nativas, que esconden en su código, una página web. Se programa en HTML, CSS y JavaScript.
+
+La principal ventaja de Ionic es que se pueden utilizar cientos de elementos de interfaz de usuario predeterminados como formularios, filtros, hojas de acción, vistas de lista, barras de pestañas y menú de navegación en su diseño.
+
+ - Independiente de la plataforma: para ofrecer el aspecto de una aplicación nativa, puede determinar la plataforma en la que la aplicación está trabajando basada en el estilo CSS. Además, se une a AngularJS y proporciona una potente construcción con un código más sensible.
+ - Compatibilidad entre plataformas: frece un proceso de desarrollo de aplicaciones rápido y ágil reduciendo el tiempo y esfuerzo para diseñar y desarrollar aplicaciones.
+ - Cualidades de AngularJS: Dado que este framework se basa libremente en AngularJS, utiliza la mayor parte de sus funcionalidades y ayuda a los desarrolladores a crear aplicaciones móviles y web atractivas y ricas en características.
+Debido a su capacidad para construir aplicaciones tanto nativas como multiplataforma, Ionic es un gran marco para el desarrollo de las Progressive Web Apps (PWA).
+
+<img src="https://www.hiberus.com/crecemos-contigo/wp-content/uploads/2021/05/Ionic.png" alt="Ionic">
+
+
+###### React Native
+Fue creado por Facebok en 2015 y sirve para crear aplicaciones híbridas. Es una de las plataformas más populares entre las empresas para construir aplicaciones Android e iOS. Está basado en JavaScript y en un conjunto de componentes de ReactJS. Proporciona a los desarrolladores la posibilidad de escribir módulos en lenguajes Objective-C, Swift o Java.
+
+ - Fácil de mantener: los desarrolladores y empresarios no necesitan mantener dos códigos separados haciendo el proceso mucho más sencillo.
+ - Reutilización del código: los desarrolladores pueden reutilizar el código escrito para una plataforma mientras crean la aplicación para otra.
+ - Alto rendimiento: ya sea una aplicación para una pequeña empresa o una empresa a gran escala.
+Muchas aplicaciones populares como Instagram, Facebook Ads Manager, Airbnb, han sido desarrolladas utilizando React Native.
+
+<img src="https://www.hiberus.com/crecemos-contigo/wp-content/uploads/2021/05/React-Native.png" alt="React-Native">
+
+
+##### Xamarin
+
+Xamarin es el framework desarrollado por Microsoft, y se caracteriza por ser de código abierto y gratuito.
+
+Entre sus características se encuentran:
+
+ - Enlaces completos para los SDK subyacentes: proporcionan una sólida comprobación de tipos en tiempo de compilación y durante el desarrollo. Producen menos errores en tiempo de ejecución y aplicaciones de mayor calidad.
+ - Interoperabilidad con Objective-C, Java, C y C++ : permite usar una amplia variedad de código de terceros y enlazar bibliotecas nativas de Objective-C y Java mediante una sintaxis declarativa.
+ - Construcciones de lenguaje moderno: se escriben en C#, características de lenguaje dinámico, construcciones funcionales como lambdas, LINQ, características de programación en paralelo, genéricos y mucho más.
+ - Biblioteca de clases base (BCL) sólida: el código de C# existente se puede compilar para usarlo en una aplicación, lo que proporciona acceso a miles de bibliotecas que agregan funcionalidad más allá de la BCL.
+ - Entorno de desarrollo integrado (IDE) moderno: incluye finalización automática de código, sistema de administración de proyectos y soluciones, biblioteca de plantillas de proyecto, control de código fuente integrado, etc.
+ - Compatibilidad multiplataforma móvil iOS, Android y Windows: se pueden escribir aplicaciones de modo que compartan hasta el 90 % del código reduciendo considerablemente los costos de desarrollo y el tiempo de salida al mercado para los desarrolladores para dispositivos móviles.
+
+<img src="https://www.hiberus.com/crecemos-contigo/wp-content/uploads/2021/05/Xamarin.png" alt="Xamarin">
+
+Como podemos observar, el desarrollo de aplicaciones móviles multiplataforma tiene múltiples posibilidades siendo una buena opción para equipos pequeños o presupuestos ajustados. Dependiendo de las necesidades que tengamos, y los costes que podamos asumir, estos frameworks serian la utilidad perfecta para construir aplicaciones con un tiempo y unos costes más reducidos, aunque según el framework que se utilice quizás no se pueda acceder a ciertas funcionalidades nativas del dispositivo.
+
+En Hiberus Tecnología, nuestros expertos del área Hiberus Mobile cuentan con experiencia en el desarrollo de soluciones adaptadas a dispositivos móviles, que favorecen la accesibilidad y posibilitan la creación de nuevos modelos de negocio. Contacta con nosotros y descubre los todos los beneficios que Hiberus Mobile puede aportar a tu negocio.
+
+
+
+Como podemos observar, el desarrollo de aplicaciones móviles multiplataforma tiene múltiples posibilidades siendo una buena opción para equipos pequeños o presupuestos ajustados. Dependiendo de las necesidades que tengamos, y los costes que podamos asumir, estos frameworks serian la utilidad perfecta para construir aplicaciones con un tiempo y unos costes más reducidos, aunque según el framework que se utilice quizás no se pueda acceder a ciertas funcionalidades nativas del dispositivo.
+
+En Hiberus Tecnología, nuestros expertos del área Hiberus Mobile cuentan con experiencia en el desarrollo de soluciones adaptadas a dispositivos móviles, que favorecen la accesibilidad y posibilitan la creación de nuevos modelos de negocio. Contacta con nosotros y descubre los todos los beneficios que Hiberus Mobile puede aportar a tu negocio.
+
 ### Módulos para el desarrollo de aplicaciones móviles.
+
 
 ### Emuladores.
 
