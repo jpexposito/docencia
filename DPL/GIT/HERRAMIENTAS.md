@@ -79,14 +79,18 @@ Generalmente, los sistemas de control de versiones se utilizan para el desarroll
 
 Aunque muchos usuarios se preguntan cuál de los dos programas de control de versiones es mejor, no existe una respuesta general. La elección del sistema de control de versiones más adecuado para uno u otro proyecto dependerá de tus objetivos específicos. Ambos sistemas difieren en su estructura y en el proceso de trabajo resultante. La siguiente tabla resume sus principales diferencias:
 
-SVN	Git
-Control de versiones	Centralizada	Distribuida
-Repositorio	Un repositorio central donde se generan copias de trabajo	Copias locales del repositorio en las que se trabaja directamente
-Autorización de acceso	Dependiendo de la ruta de acceso	Para la totalidad del directorio
-Seguimiento de cambios	Basado en archivos	Basado en contenido
-Historial de cambios	Solo en el repositorio completo, las copias de trabajo incluyen únicamente la versión más reciente	Tanto el repositorio como las copias de trabajo individuales incluyen el historial completo
-Conectividad de red	Con cada acceso	Solo necesario para la sincronización
-Estas son las principales ventajas de ambos sistemas:
+| | SVN | Git |
+| -------------| ------------- | ------------- |	
+| Control de versiones | Centralizada | Distribuida |
+| Repositorio | Un repositorio central donde se generan copias de trabajo | Copias locales del repositorio en las que se trabaja directamente | 
+| Autorización de acceso | Dependiendo de la ruta de acceso	Para la totalidad del directorio | 
+| Seguimiento de cambios | Basado en archivos | Basado en contenido | 
+| Historial de cambios | Solo en el repositorio completo, las copias de trabajo incluyen únicamente la versión más reciente | Tanto el repositorio como las copias de trabajo individuales incluyen el historial completo | 
+| Conectividad de red | Con cada acceso | Solo necesario para la sincronización | 
+
+<img align="center" src="https://scriptcrunch.com/wp-content/uploads/2016/03/centralized-vs-distributed-advantages.png" alt="Comparativa svn git">
+
+_Estas son las principales ventajas de ambos sistemas:_
 
 #### Debes decantarte por Git cuando…
 
