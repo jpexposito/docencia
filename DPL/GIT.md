@@ -168,8 +168,8 @@ Un tipo de ramas de este tipo que tienen un funcionamiento especial son las llam
 
 Es frecuente y una buena práctica utilizar en el nombre de la rama un prefijo que indique el tipo de rama de la que se trata. Por ejemplo podría usar ‘feature-’ para ramas de nueva funcionalidad, ‘hotfix-’ para ramas que arreglan errores, y ‘release-’ para ramas de versión.
 
-[Herramientas externas para la generación de documentación. Instalación, configuración y uso](GIT/HERRAMIENTAS.md)  
-[Instalación, configuración y uso de sistemas de control de versiones](GIT/INSTALACION.md)    
-[Operaciones avanzadas](GIT/OPERACIONES.md)  
-[Seguridad de los sistemas de control de versiones](GIT/SEGURIDAD.md)  
-[Historia de un repositori](GIT/HISTORIA.md)  
+- [Herramientas externas para la generación de documentación. Instalación, configuración y uso](GIT/HERRAMIENTAS.md)  
+- [Instalación, configuración y uso de sistemas de control de versiones](GIT/INSTALACION.md)    
+- [Operaciones avanzadas](GIT/OPERACIONES.md)  
+- [Seguridad de los sistemas de control de versiones](GIT/SEGURIDAD.md)  
+- [Historia de un repositorio](GIT/HISTORIA.md)  
