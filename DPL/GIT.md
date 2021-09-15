@@ -98,6 +98,7 @@ Para colaborar en un proyecto usando un sistema de control de versiones lo prime
 El control de versiones Team Foundation Server permite escoger cualquiera de las dos formas de colaboración.
 
 **Arquitecturas de almacenamiento**
+
 Podemos clasificar los sistemas de control de versiones atendiendo a la arquitectura utilizada para el almacenamiento del código:
 
 - Distribuidos: cada usuario tiene su propio repositorio. Los distintos repositorios pueden intercambiar y mezclar revisiones entre ellos. Es frecuente el uso de un repositorio, que está normalmente disponible, que sirve de punto de sincronización de los distintos repositorios locales. Ejemplos: Git y Mercurial.
@@ -124,6 +125,7 @@ El flujo de trabajo de un sistema de control de versiones indica cómo se relaci
 En los sistemas de control de versiones centralizados el diseño del sistema restringe la forma en que los distintos usuarios colaboran entre sí. Sin embargo en los sistemas de control de versiones distribuidos hay mucha más flexibilidad en la forma de colaborar ya que cada desarrollador puede tanto contribuir como recibir contribuciones. Hay distintos flujos de trabajo, donde cada uno se adapta mejor a cierto tipo de proyectos. Veamos algunos ejemplo habituales que también se pueden combinar para así adaptarse mejor al proyecto concreto (por ejemplo podría usarse en general un flujo centralizado, y usar un gestor de integraciones para ciertas partes críticas y de especial importancia).
 
 *Flujo de trabajo centralizado*
+
 En el flujo de trabajo centralizado (en inglés Centralized Workflow) cada desarrollador es un nodo de trabajo. Por otro lado hay un repositorio remoto central que funciona a modo de punto de sincronización. Todos los nodos de trabajo operan en pie de igualdad sobre el repositorio remoto central.
 
 Si se trata de un sistema de control de versiones distribuido cada nodo de trabajo consiste en un repositorio local privado.
@@ -131,6 +133,7 @@ Si se trata de un sistema de control de versiones distribuido cada nodo de traba
 Una desventaja de este modo de trabajo es que si dos usuarios clonan desde un punto central, y ambos hacen cambios; tan solo el primero que envíe sus cambios lo podrá hacer limpiamente. El segundo desarrollador deberá fusionar previamente su trabajo con el del primero, antes de enviarlo, para evitar sobreescribir los cambios del primero. Es decir, es necesario hacer un paso previo ya que no se pueden subir cambios no directos (non-fast-forward changes).
 
 *Flujo de trabajo con un Gestor de Integraciones*
+
 En el flujo de trabajo con un Gestor de Integraciones (en inglés Integration-Manager Workflow) en el que cada desarrollador tiene acceso de escritura a un repositorio propio público y acceso de lectura a los repositorios públicos de todos los demás usuarios. Por otro lado hay un repositorio canónico, representante 'oficial' del proyecto.
 
 Para contribuir en estos proyectos cada desarrollador crea su propio clon público del repositorio canónico y envía sus cambios (realizados en un repositorio privado) a él. Para 'subir' sus cambios al repositorio canónico cada desarrollador tiene que realizar una petición a la persona gestora del mismo.
@@ -138,6 +141,7 @@ Para contribuir en estos proyectos cada desarrollador crea su propio clon públi
 La principal ventaja de esta forma de trabajar es que puedes continuar trabajando, y la persona gestora del repositorio canónico podrá recuperar tus cambios en cualquier momento. Las personas colaboradoras no tienen por qué esperar a que sus cambio sean incorporados al proyecto, cada cual puede trabajar a su propio ritmo.
 
 *Flujo de trabajo con Dictador y Tenientes*
+
 El flujo de trabajo con Dictador y Tenientes (en inglés Dictator and Lieutenants Workflow) es una ampliación del flujo de trabajo con gestor de integraciones. Es utilizado en proyectos muy grandes, con cientos de colaboradores, como el núcleo Linux.
 
 Hay una serie de gestores de integración que se encargan de partes concretas del repositorio, a los que se denominan tenientes. Todos los tenientes rinden cuentas a un gestor de integración; conocido como el dictador. El dictador integra todos los aportes de los tenientes publicando el trabajo en un repositorio de referencia del que recuperan todos los colaboradores.
@@ -145,12 +149,15 @@ Hay una serie de gestores de integración que se encargan de partes concretas de
 Este sistema de trabajo permite al líder del grupo (el dictador) delegar gran parte del trabajo en los tenientes, relegando su trabajo en recolectar el fruto de múltiples puntos de trabajo.
 
 *Uso de ramas*
+
 Las ramas, en un sistema de control de versiones, constituyen una potente herramienta que flexibiliza la forma en la que los colaboradores cooperan en el proyecto (en inglés Branching Workflows). Las ramas son solo una herramienta que es posible utilizar de distintas formas para conseguir distintos objetivos. Veamos algunas posibilidades.
 
 *Ramas de largo recorrido*
+
 En algunos proyectos se tienen varias ramas siempre abiertas, que indican diversos grados de estabilidad del contenido. Por ejemplo, en la rama ‘master’ es frecuente mantener únicamente lo que es totalmente estable. Luego se tienen otras ramas que revelan distintos grados de estabilidad. Por ejemplo podríamos tener una rama 'beta' (versión beta) y otra 'alfa' (versión alfa), en las que se va trabajando. Cuando se alcanza cierto grado de estabilidad superior a la rama en la que se está entonces se realiza una fusión con rama de estabilidad superior.
 
 *Ramas puntuales*
+
 Las ramas puntuales, también llamadas ramas de soporte, son ramas que se crean de forma puntual para realizar una funcionalidad muy concreta. Por ejemplo añadir una nueva característica (se les llama ramas de nueva funcionalidad o directamente por su nombre en inglés topic branch o feature branch) o corregir un fallo concreto (se les llama ramas para corregir error o directamente por su nombre en inglés hotfix branch).
 
 Este tipo de ramas permiten trabajar centrándonos exclusivamente en el desarrollo de una característica concreta y cuando esta esté concluida se fusiona con una de las ramas de largo recorrido (normalmente con la de más bajo nivel de estabilidad, para que sea probada en ese entorno). La fusión solo se realiza cuando se está 'seguro' de que esa característica está correctamente implementada, en lugar de fusionar en el orden que se van desarrollando las cosas. Esto permite por un lado tener un historial de las distintas versiones que se han tenido hasta conseguir la funcionalidad. Por otro lado permiten que el historial de las ramas de largo recorrido no sea 'ensuciados' con distintas modificaciones relativas a una funcionalidad concreta.
@@ -161,15 +168,12 @@ Un tipo de ramas de este tipo que tienen un funcionamiento especial son las llam
 
 Es frecuente y una buena práctica utilizar en el nombre de la rama un prefijo que indique el tipo de rama de la que se trata. Por ejemplo podría usar ‘feature-’ para ramas de nueva funcionalidad, ‘hotfix-’ para ramas que arreglan errores, y ‘release-’ para ramas de versión.
 
-
 ## Herramientas externas para la generación de documentación. Instalación, configuración y uso
-
-## Creación y utilización de plantillas.
 
 ## Instalación, configuración y uso de sistemas de control de versiones.
 
 ## Operaciones avanzadas.
 
-## eguridad de los sistemas de control de versiones.
+## Seguridad de los sistemas de control de versiones.
 
-##  Historia de un repositorio.
+## Historia de un repositorio.
