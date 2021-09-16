@@ -120,5 +120,6 @@ En caso de que las características enumeradas anteriormente no hayan sido decis
  - https://es.wikipedia.org/wiki/Git
  - https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/git-vs-svn-una-comparativa-del-control-de-versiones/
 
+## Tareas a realizar
 
  - [Tarea 1: Instalacíon de Git en local](../tareas/tarea-git.md)  
