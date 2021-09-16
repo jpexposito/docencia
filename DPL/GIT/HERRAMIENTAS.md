@@ -4,6 +4,17 @@
 
 En este punto hablaremos de dos herramientas para el control de versiones, para conocer sus diferencias y centrarnos en una de ellas.
 
+## CVS
+
+Es otro sistema de control de versiones muy popular. Es un modelo de repositorio cliente-servidor donde varios desarrolladores pueden trabajar en el mismo proyecto en paralelo. El cliente CVS mantendrá actualizada la copia de trabajo del archivo y requiere intervención manual sólo cuando ocurre un conflicto de edición.
+
+## Mercurial
+
+Es una herramienta distribuida de control de versiones que está escrita en Python y destinada a desarrolladores de software. Los sistemas operativos que admite son similares a Unix, Windows y macOS. Tiene un alto rendimiento y escalabilidad con capacidades avanzadas de ramificación y fusión y un desarrollo colaborativo totalmente distribuido. Además, posee una interfaz web integrada.
+
+## Monotone
+Está escrito en C ++ y es una herramienta para el control de versiones distribuido. El sistema operativo que admite incluye Unix, Linux, BSD, Mac OS X y Windows. Brinda un buen apoyo para la internacionalización y localización. Además, utiliza un protocolo personalizado muy eficiente y robusto llamado Netsync.
+
 ## SVN
 
 __Apache Subversion__ (abreviado frecuentemente como SVN, por el comando svn) es una herramienta de control de versiones open source basada en un repositorio cuyo funcionamiento se asemeja enormemente al de un sistema de ficheros. Es software libre bajo una licencia de tipo Apache/BSD.
@@ -29,6 +40,9 @@ Subversion puede acceder al repositorio a través de redes, lo que le permite se
 - El manejo de cambio de nombres de archivos no es completo. Lo maneja como la suma de una operación de copia y una de borrado.
 - No resuelve el problema de aplicar repetidamente parches entre ramas, no facilita llevar la cuenta de qué cambios se han realizado. Esto se resuelve siendo cuidadoso con los mensajes de commit.
 
+<img width="50%" align="center" src="https://codentrick.com/content/images/size/w2000/2015/07/SVN_Server_Client_Structure.png" alt="svn" >
+
+
 ## GIT
 
 Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. Su propósito es llevar registro de los cambios en archivos de computadora incluyendo coordinar el trabajo que varias personas realizan sobre archivos compartidos en un repositorio de código.
@@ -36,6 +50,8 @@ Git es un software de control de versiones diseñado por Linus Torvalds, pensand
 Al principio, Git se pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena. Hay algunos proyectos de mucha relevancia que ya usan Git, en particular, el grupo de programación del núcleo Linux.
 
 El mantenimiento del software Git está actualmente (2009) supervisado por Junio Hamano, quien recibe contribuciones al código de alrededor de 280 programadores. En cuanto a derechos de autor Git es un software libre distribuible bajo los términos de la versión 2 de la Licencia Pública General de GNU.
+
+<img width="50%" src="https://diegobersano.files.wordpress.com/2017/06/introgit-distribuido1.png" alt="git"/>
 
 ### Características
 
@@ -56,24 +72,11 @@ Linus Torvalds buscaba un sistema distribuido que pudiera usar en forma semejant
  - Realmacenamiento periódico en paquetes (ficheros). Esto es relativamente eficiente para escritura de cambios y relativamente ineficiente para lectura si el reempaquetado (con base en diferencias) no ocurre cada cierto tiempo.
  - Compatibilidad con Github y Microsoft Visual Studio Code
 
-
-## CVS
-
-Es otro sistema de control de versiones muy popular. Es un modelo de repositorio cliente-servidor donde varios desarrolladores pueden trabajar en el mismo proyecto en paralelo. El cliente CVS mantendrá actualizada la copia de trabajo del archivo y requiere intervención manual sólo cuando ocurre un conflicto de edición.
-
-## Mercurial
-
-Es una herramienta distribuida de control de versiones que está escrita en Python y destinada a desarrolladores de software. Los sistemas operativos que admite son similares a Unix, Windows y macOS. Tiene un alto rendimiento y escalabilidad con capacidades avanzadas de ramificación y fusión y un desarrollo colaborativo totalmente distribuido. Además, posee una interfaz web integrada.
-
-## Monotone
-Está escrito en C ++ y es una herramienta para el control de versiones distribuido. El sistema operativo que admite incluye Unix, Linux, BSD, Mac OS X y Windows. Brinda un buen apoyo para la internacionalización y localización. Además, utiliza un protocolo personalizado muy eficiente y robusto llamado Netsync.
-
 ## Git vs. SVN: ¿cuál es el mejor sistema de control de versiones?
 
 Los llamados sistemas de control de versiones fueron creados con el fin de detectar cambios en los documentos o archivos y se encargan de guardar todas las versiones anteriores, incluyendo el registro de fecha y hora, así como el identificador del usuario de un archivo para que los datos puedan ser recuperados y restaurados en cualquier momento. De esta forma, es posible determinar qué usuario ha realizado cambios en un punto determinado. Los objetivos generales de este tipo de sistemas consisten en coordinar el acceso compartido de varios usuarios a los archivos y permitir el desarrollo simultáneo de varias bifurcaciones o branches.  
 
 Generalmente, los sistemas de control de versiones se utilizan para el desarrollo de software, para aplicaciones de oficina y para gestores de contenido. Dos de los más conocidos son Apache Subversion (SVN) y Git, los cuales pueden ser instalados internamente en el servidor propio o externamente en el servidor de algún proveedor de alojamiento web. El servicio de alojamiento basado en la web para proyectos Git es GitHub, mientras que en  RiouxSVN aloja a Subversion. Proveedores como SourceForge ofrecen alojamiento para ambos sistemas.
-  
 
 ### SVN vs. Git: una comparación directa
 
