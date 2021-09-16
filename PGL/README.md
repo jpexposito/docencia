@@ -4,6 +4,10 @@
 
 ## Introducción
 
+ Para comenzar vamos a realizar un pequeño ejercicio basado en Java para conocer vuestro conocimiento y capacidades.
+ Para ello vamos a desarrollar el siguiente ejercicio:
+  - [Tarea 1: Gestión Bando](tareas/tarea-intellij-java-banco.md)    
+
 ## Contenidos del módulo
 
 [Unidad 1: Análisis de tecnologías para aplicaciones en dispositivos móviles ](ANALISIS.md)    
