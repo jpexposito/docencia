@@ -4,6 +4,8 @@
 
 En este punto hablaremos de dos herramientas para el control de versiones, para conocer sus diferencias y centrarnos en una de ellas.
 
+<img width="50%" src="https://miro.medium.com/max/1400/1*YCRvmmb9wbGAqKYVfJNyLw.png" alt="Top respositorio de codigo">
+
 ## CVS
 
 Es otro sistema de control de versiones muy popular. Es un modelo de repositorio cliente-servidor donde varios desarrolladores pueden trabajar en el mismo proyecto en paralelo. El cliente CVS mantendrá actualizada la copia de trabajo del archivo y requiere intervención manual sólo cuando ocurre un conflicto de edición.
@@ -91,18 +93,18 @@ Aunque muchos usuarios se preguntan cuál de los dos programas de control de ver
 | Historial de cambios | Solo en el repositorio completo, las copias de trabajo incluyen únicamente la versión más reciente | Tanto el repositorio como las copias de trabajo individuales incluyen el historial completo | 
 | Conectividad de red | Con cada acceso | Solo necesario para la sincronización | 
 
-<img align="center" src="https://scriptcrunch.com/wp-content/uploads/2016/03/centralized-vs-distributed-advantages.png" alt="Comparativa svn git">
+<img width="50%" src="https://scriptcrunch.com/wp-content/uploads/2016/03/centralized-vs-distributed-advantages.png" alt="Comparativa svn git">
 
-_Estas son las principales ventajas de ambos sistemas:_
+#### Estas son las principales ventajas de ambos sistemas:
 
-#### Debes decantarte por Git cuando…
+- __Debes decantarte por Git cuando…__ 
 
  - no quieres depender de una conexión de red permanente, pues quieres trabajar en tu proyecto desde cualquier lugar.
  - quieres seguridad en caso de fallo o pérdida de los repositorios principales.
  - no necesitas contar con permisos especiales de lectura y escritura para los diferentes directorios (aunque, de ser así, será posible y complejo implementarlo).
  - la transmisión rápida de los cambios es una de tus prioridades.
  
- #### Subversion será la opción indicada, si…
+- __Subversion será la opción indicada, si…__
 
  - necesitas permisos de acceso basados en rutas de acceso para las diferentes áreas de tu proyecto.
  - deseas agrupar todo tu trabajo en un solo lugar.
@@ -117,3 +119,6 @@ En caso de que las características enumeradas anteriormente no hayan sido decis
  - https://es.wikipedia.org/wiki/Subversion_(software)
  - https://es.wikipedia.org/wiki/Git
  - https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/git-vs-svn-una-comparativa-del-control-de-versiones/
+
+
+ - [Tarea 1: Instalacíon de Git en local](../tareas/tarea-git.md)  
