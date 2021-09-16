@@ -77,12 +77,12 @@ export PATH
 
 ## IDE (Intellij Idea)
 
- Descargar el Ide con el que comenzaremos a trabajar: Intellij Idea, versión comunity
-   
-<img src=" https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png" alt="Intellij">
-
+ Descargar el Ide con el que comenzaremos a trabajar: Intellij Idea, versión comunity.
  
 - [Descarga](https://www.jetbrains.com/es-es/idea/)  
+
+
+<img src=" https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png" alt="Intellij">
 
 
 ## Planteamento del Ejercicio (Gestión de Bancos)
