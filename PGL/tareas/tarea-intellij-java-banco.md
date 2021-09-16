@@ -82,8 +82,7 @@ export PATH
 - [Descarga](https://www.jetbrains.com/es-es/idea/)  
 
 
-<img src=" https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png" alt="Intellij">
-
+<a href="https://www.jetbrains.com/es-es/idea/"><img src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png?raw=true" title="Intellij" alt="Intellij"></a>
 
 ## Planteamento del Ejercicio (Gestión de Bancos)
 

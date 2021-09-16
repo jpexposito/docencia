@@ -1,4 +1,4 @@
-<a href="http://jpexposito.com"><img src="https://github.com/jpexposito/docencia/blob/master/img/docencia.png?raw=true" title="Docencia @jpexposito" alt="DAM @jpexposito"></a>
+<a href="http://jpexposito.com"><img src="https://github.com/jpexposito/docencia/blob/master/img/docencia.png?raw=true" title="Docencia @jpexposito" alt="Docencia @jpexposito"></a>
 
 # Repositorio dedicado a la docencia 
  
