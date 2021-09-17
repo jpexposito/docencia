@@ -1,5 +1,8 @@
 # Instalación de SublimeText 3
 
+<img src="https://www.easyappcode.com/upload/post-716768416.jpg" alt="Instalacion SublimeText">
+
+
 ## Introducción
 
  Esta tarea explica cómo instalar Sublime Text Linux Ubuntu y también cómo usar Sublime Text.

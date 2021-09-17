@@ -213,7 +213,6 @@ Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:
 ### Comparación de XML con SGML. 
 
 
-
 ### XML (eXtensible Markup Language). 
 
 
