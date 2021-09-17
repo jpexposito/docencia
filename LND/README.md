@@ -125,9 +125,9 @@
 
     - Se han instalado y analizado sistemas gestores de bases de datos nativas XML.
 
-h) Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.
+    - Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.
 
-i) Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML.
+    - Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML.
 
 #### Trabaja con sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.
 
