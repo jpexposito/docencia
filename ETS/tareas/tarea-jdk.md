@@ -2,7 +2,7 @@
 
 ## Título de la tarea
 
- - ** Instalación de JDK en el Ubuntu ** 
+ - __Instalación de JDK en el Ubuntu__
 
 ## Introducción
 
@@ -16,9 +16,6 @@ Lo primero debemos de actualizar el sistema con:
 
 ```
   sudo apt-get update
-   
-  sudo apt-get upgrade
-  
 ```
 
 e instalamos Java con este comando:

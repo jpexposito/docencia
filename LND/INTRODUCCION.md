@@ -154,8 +154,9 @@ En realidad XML es un conjunto de estándares relacionados entre sí y que son:
  	 	 	<fecha_pres dia="12" mes="ene" año="2010"></fecha_pres>   	 	</prestado>  
  	</ jee	mplar>  
 </biblioteca>
-```  
-*** Comparación de XML con HTML. 
+```
+
+### Comparación de XML con HTML. 
 
  - XML 	
   - Es un perfil de SGML. 
@@ -170,10 +171,11 @@ En realidad XML es un conjunto de estándares relacionados entre sí y que son:
   - Modelo de hiperenlaces simple. 
   - El navegador es un visor de páginas. 
 
-El problema de la "no compatibilidad" y las diferencias entre navegadores ha alcanzado un punto en el que la solución es difícil
+El problema de la "no compatibilidad" y las diferencias entre navegadores ha alcanzado un punto en el que la solución es difícil.
 
  	 
-**Ejemplo**  
+**Ejemplo**
+
 ```xml 
 <?xml version="1.0" encoding="iso‐8859‐1"?>  
 <!DOCTYPE libro>  
@@ -203,7 +205,7 @@ Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:
  	 	 	<li>edicion: 1 </li>  
  	 	 	<li>paginas: 347</li>  
  	 	</ul>  
- 	</ odb	y>  
+ 	</body>  
 </html>	  
 ```  
 ***Ejecuta el código en con un navegador para ver el resultado***  
