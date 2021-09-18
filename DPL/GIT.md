@@ -191,7 +191,7 @@
 
   Las ramas, en un sistema de control de versiones, constituyen una potente herramienta que flexibiliza la forma en la que los colaboradores cooperan en el proyecto (en inglés Branching Workflows). Las ramas son solo una herramienta que es posible utilizar de distintas formas para conseguir distintos objetivos. Veamos algunas posibilidades.
 
-   <img src=" https://i.stack.imgur.com/mvLUy.png" alt="Operaciones sobre un respositorio">
+   <img src="https://i.stack.imgur.com/mvLUy.png" alt="Operaciones sobre un respositorio">
 
 ### Ramas de largo recorrido
 
