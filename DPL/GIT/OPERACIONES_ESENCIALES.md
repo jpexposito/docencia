@@ -164,7 +164,3 @@ __Ejemplo de uso__:
 <img width="50%" src="https://gitbookdown.dallasdatascience.com/img/git_branch_merge.png" alt="fork">
 
  En git se trabaja con branches (ramas en español), originalmente se crea la rama master por defecto, a raíz de esto nosotros podemos crear nuestras propias ramas branch, siendo claro una copia de la rama master en primera instancia, dicho esto con el comando git branch –all podemos ver todas las ramas que tenga el proyecto.
-
-```
- Ejemplo de uso
-```
