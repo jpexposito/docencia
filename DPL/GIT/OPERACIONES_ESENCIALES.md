@@ -20,7 +20,22 @@
 __Ejemplo de uso__:
 
 ```
- Ejemplo de uso
+jpexposito@MacBook-Pro-de-Joatham Downloads % mkdir git_ejemplo
+jpexposito@MacBook-Pro-de-Joatham Downloads % cd git_ejemplo 
+jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git init
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llame a:
+ayuda: 
+ayuda: 	git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres comúnmente elegidos en lugar de 'master' son 'main', 'trunk' y
+ayuda: 'development'. Se puede cambiar el nombre de la rama recién creada mediante este comando:
+ayuda: 
+ayuda: 	git branch -m <nombre>
+Inicializado repositorio Git vacío en /Users/jpexposito/Downloads/git_ejemplo/.git/
+jpexposito@MacBook-Pro-de-Joatham git_ejemplo % 
+
 ```
 
 ###  git status
@@ -31,7 +46,13 @@ __Ejemplo de uso__:
 
 
 ```
- Ejemplo de uso
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git status
+ En la rama master
+
+ No hay commits todavía
+
+ no hay nada para confirmar (crea/copia archivos y usa "git add" para hacerles seguimiento)
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % 
 ```
 
  Los mensajes que podremos ver con este comando pueden ser los siguientes:
@@ -46,7 +67,20 @@ __Ejemplo de uso__:
 __Ejemplo de uso__:
 
 ```
- Ejemplo de uso
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % vi index.html
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % ls
+  index.html
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git add index.html 
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git status        
+ En la rama master
+
+ No hay commits todavía
+
+ Cambios a ser confirmados:
+   (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	 nuevos archivos: index.html
+
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo %
 ```
 
 ### git commit -m «mensaje»
@@ -56,7 +90,14 @@ __Ejemplo de uso__:
 __Ejemplo de uso__:
 
 ```
- Ejemplo de uso
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git commit -m "mi primer mensaje en git"
+ [master (commit-raíz) a9a7835] mi primer mensaje en git
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git status                              
+ En la rama master
+ nada para hacer commit, el árbol de trabajo está limpio
+ jpexposito@MacBook-Pro-de-Joatham git_ejemplo % 
 ```
 
 ### git remote add origin url_del_repositorio
@@ -88,7 +129,6 @@ Con este comando tenemos que tener en cuenta que nuestra llave publica debe de e
 __Ejemplo de uso__:
 
 ```
- Ejemplo de uso
 ```
 
  Como vemos en la imagen se había agregado el archivo README.md, por lo tanto este fue bajado a nuestra versión local del repositorio.
@@ -100,7 +140,13 @@ __Ejemplo de uso__:
 __Ejemplo de uso__:
 
 ```
- Ejemplo de uso
+jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git remote add update git@github.com:jpexposito/test.git
+jpexposito@MacBook-Pro-de-Joatham git_ejemplo % git remote -v                                               
+origin	git@github.com:jpexposito/test_git (fetch)
+origin	git@github.com:jpexposito/test_git (push)
+update	git@github.com:jpexposito/test.git (fetch)
+update	git@github.com:jpexposito/test.git (push)
+jpexposito@MacBook-Pro-de-Joatham git_ejemplo % 
 ```
 
 ### git clone url_del_repositorio nombre_local
