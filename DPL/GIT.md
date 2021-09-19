@@ -211,7 +211,7 @@
 
 - [Herramientas externas para la generación de documentación](GIT/HERRAMIENTAS.md)  
 - [Instalación, configuración y uso de sistemas de control de versiones](GIT/INSTALACION.md)   
-- [Operaciones avanzadas](GIT/OPERACIONES_ESENCIALES.md)   
+- [Operaciones ensenciales](GIT/OPERACIONES_ESENCIALES.md)   
 - [Operaciones avanzadas](GIT/OPERACIONES_AVANZADAS.md)   
 - [Seguridad de los sistemas de control de versiones](GIT/SEGURIDAD.md)  
 - [Historia de un repositorio](GIT/HISTORIA.md)  
