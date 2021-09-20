@@ -128,7 +128,7 @@ En realidad XML es un conjunto de estándares relacionados entre sí y que son:
  - XML Namespaces. Proveen un contexto al que se aplican las marcas de un documento de XML y que sirve para diferenciarlas de otras con idéntico nombre válidas en otros contextos. 
  - XML Schemas. Permiten definir restricciones que se aplicarán a un documento XML. Actualmente los más usados son las DTD. 
 En realidad XML es un conjunto de estándares relacionados entre sí y que son:  
-**Ejercicio resuelto** 
+**Ejemplo**
 ```xml
 <?xml version="1.0" encoding="iso‐8859‐1"?>  
 <!DOCTYPE biblioteca">  
@@ -142,7 +142,7 @@ En realidad XML es un conjunto de estándares relacionados entre sí y que son:
  	 	 	<fecha_pres dia="13" mes="mar" año="2009"></fecha_pres>  
  	 	 	<fecha_devol dia="21" mes="jun" año="2009"></fecha_devol>  
  	 	</prestado>  
- 	</ jee	mplar>  
+ 	</ejemplar>  
  <ejemplar tipo_ejem="revista" titulo="Todo Linux 101. Virtualización en GNU/Linux" editorial="Studio Press">  
  	 	<tipo>  
  	 	 	<revista>  
@@ -152,26 +152,21 @@ En realidad XML es un conjunto de estándares relacionados entre sí y que son:
  	 	<autor nombre="Varios"></autor>  
  	 	<prestado lector="Pedro Picapiedra">  
  	 	 	<fecha_pres dia="12" mes="ene" año="2010"></fecha_pres>   	 	</prestado>  
- 	</ jee	mplar>  
+ 	</ejemplar>  
 </biblioteca>
 ```
 
 ### Comparación de XML con HTML. 
 
- - XML 	
-  - Es un perfil de SGML. 
-  - Especifica cómo deben definirse conjuntos de etiquetas aplicables a un tipo de documento.  
-  - Modelo de hiperenlaces complejo.  
-  - El navegador es una plataforma para el desarrollo de aplicaciones.  
-  - Fin de la guerra de los navegadores y etiquetas propietarias.  
-
- - HTML 
-  - Es una aplicación de SGML. 
-  - Aplica un conjunto limitado de etiquetas sobre un único tipo de documento. 
-  - Modelo de hiperenlaces simple. 
-  - El navegador es un visor de páginas. 
-
-El problema de la "no compatibilidad" y las diferencias entre navegadores ha alcanzado un punto en el que la solución es difícil.
+| XML | HTML |
+| ------------- | ------------- |   
+| Es un perfil de SGML | Es una aplicación de SGML.  |
+| Especifica cómo deben definirse conjuntos de etiquetas aplicables a un tipo de documento.  | Aplica un conjunto limitado de etiquetas sobre un único tipo de documento.  |
+| Modelo de hiperenlaces complejo.  | Modelo de hiperenlaces simple.  |
+| El navegador es una plataforma para el desarrollo de aplicaciones.  | El navegador es un visor de páginas.  |
+| Fin de la guerra de los navegadores y etiquetas propietarias.   | El problema de la "no compatibilidad" y las diferencias entre navegadores ha alcanzado un punto en el que la solución es difícil. |
+|  |  |
+ 
 
  	 
 **Ejemplo**
@@ -181,14 +176,16 @@ El problema de la "no compatibilidad" y las diferencias entre navegadores ha alc
 <!DOCTYPE libro>  
 <libro>  
  	<titulo>XML practico </titulo>  
- 	<autor>SebastienLecomte</autor>  
+ 	<autor>Sebastien Lecomte</autor>  
  	<autor>Thierry Boulanger</autor>  
  	<editorial>Ediciones Eni</editorial>  
  	<isbn>978‐2‐7460‐4958‐1</isbn>  
  	<edicion>1</edicion>  
  	<paginas>347</paginas>  
 <libro>  
-```  
+```
+__Crea el código anterior y ejecutalo en cualquier navegador, para ver su resultado__
+
 ```html 
 <html>  
  	<head>  
@@ -208,20 +205,23 @@ Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:
  	</body>  
 </html>	  
 ```  
-***Ejecuta el código en con un navegador para ver el resultado***  
+__Crea el código anterior y ejecutalo en cualquier navegador, para ver su resultado__
  
 ### Comparación de XML con SGML. 
-
-
-### XML (eXtensible Markup Language). 
-
-
-## XML: estructura y sintaxis.
+| XML | SGML |
+| ------------- | ------------- | 
+| Su uso es sencillo. | Su uso es muy complejo. |
+| Trabaja con documentos bien formados, no exige que estén validados. | Sólo trabaja con documentos válidos. |
+| Facilita el desarrollo de aplicaciones de bajo coste. | Su complejidad hace que las aplicaciones informáticas para procesar SGML sean muy costosas. |
+| Es muy utilizado en informática y en más áreas de aplicación. | Sólo se utiliza en sectores muy específicos. | No hay una compatibilidad con HTML definida. 
+| Compatibilidad e integración con HTML. | Formateo y estilos relativamente complejos.
+| Formateo y estilos fáciles de aplicar. | 
+| No usa etiquetas opcionales. | 
 
 ## Etiquetas.
 
-Los lenguajes de marcas utilizan una serie de etiquetas especiales intercaladas en un documento de texto sin formato. Dichas etiquetas serán posteriormente interpretadas por los intérpretes del lenguaje y ayudan al procesado del documento.  
-Las etiquetas se escriben encerradas entre ángulos, es decir < y >. Normalmente, se utilizan dos etiquetas: una de inicio y otra de fin para indicar que ha terminado el efecto que queríamos presentar. La única diferencia entre ambas es que la de cierre lleva una barra inclinada "/" antes del código. 
+ Los lenguajes de marcas utilizan una serie de etiquetas especiales intercaladas en un documento de texto sin formato. Dichas etiquetas serán posteriormente interpretadas por los intérpretes del lenguaje y ayudan al procesado del documento.  
+ Las etiquetas se escriben encerradas entre ángulos, es decir < y >. Normalmente, se utilizan dos etiquetas: una de inicio y otra de fin para indicar que ha terminado el efecto que queríamos presentar. La única diferencia entre ambas es que la de cierre lleva una barra inclinada "/" antes del código. 
 ``` xml 
 <etiqueta>texto que sufrirá las consecuencias de la etiqueta</etiqueta>  
 ``` 
@@ -232,20 +232,53 @@ Por ejemplo, en HTML
 Al interpretarlo en un navegador se verá así:  
 ***Esto está subrayado***  
  
-Las últimas especificaciones emitidas por el W3C indican la necesidad de que vayan escritas siempre en minúsculas para considerar que el documento está correctamente creado.  
+ Las últimas especificaciones emitidas por el W3C indican la necesidad de que vayan escritas siempre en minúsculas para considerar que el documento está correctamente creado.  
 
 ## Herramientas de edición.
 
 Para trabajar en XML es necesario editar los documentos y luego procesarlos, por tanto tenemos dos tipos de herramientas:  
  - Editores XML 
-Una característica de los lenguajes de marcas es que se basan en la utilización de ficheros de texto plano por lo que basta utilizar un procesador de texto normal y corriente para construir un documento XML. 
+  Una característica de los lenguajes de marcas es que se basan en la utilización de ficheros de texto plano por lo que basta utilizar un procesador de texto normal y corriente para construir un documento XML. 
 
-Para crear documentos XML complejos e ir añadiendo datos es conveniente usar algún editor XML. Estos nos ayudan a crear estructuras y etiquetas de los elementos usados en los documentos, además algunos incluyen ayuda para la creación de otros elementos como DTD, hojas de estilo CSS o XSL, ... El W3C ha desarrollado un editor de HTML, XHTML, CSS y XML gratuito cuyo nombre es Amaya.  
+  Para crear documentos XML complejos e ir añadiendo datos es conveniente usar algún editor XML. Estos nos ayudan a crear estructuras y etiquetas de los elementos usados en los documentos, además algunos incluyen ayuda para la creación de otros elementos como DTD, hojas de estilo CSS o XSL, ... El W3C ha desarrollado un editor de HTML, XHTML, CSS y XML gratuito cuyo nombre es Amaya.  
  - Procesadores XML 
+  Para interpretar el código XML se puede utilizar cualquier navegador. Los procesadores de XML permiten leer los documentos XML y acceder a su contenido y estructura. Un procesador es un conjunto de módulos de software entre los que se encuentra un parser o analizador de XML que comprueba que el documento cumple las normas establecidas para que pueda abrirse. Estas normas pueden corresponderse con las necesarias para trabajar sólo con documentos de tipo válido o sólo exigir que el documento esté bien formado, primeros se conocen como validadores y los segundos como no validadores. El modo en que los procesadores deben leer los datos XML está descrito en la recomendación de XML establecida por W3C.  
+  Para publicar un documento XML en Internet se utilizan los procesadores XSLT, que permiten generar archivos HTML a partir de documentos XML.  
+  Puesto que XML se puede utilizar para el intercambio de datos entre aplicaciones, hay que recurrir a motores independientes que se ejecutan sin que nos demos cuenta. Entre estos destacan "XML para Java" de IBM, JAXP de Sun, etc.
 
-Para interpretar el código XML se puede utilizar cualquier navegador. Los procesadores de XML permiten leer los documentos XML y acceder a su contenido y estructura. Un procesador es un conjunto de módulos de software entre los que se encuentra un parser o analizador de XML que comprueba que el documento cumple las normas establecidas para que pueda abrirse. Estas normas pueden corresponderse con las necesarias para trabajar sólo con documentos de tipo válido o sólo exigir que el documento esté bien formado, primeros se conocen como validadores y los segundos como no validadores. El modo en que los procesadores deben leer los datos XML está descrito en la recomendación de XML establecida por W3C.  
-Para publicar un documento XML en Internet se utilizan los procesadores XSLT, que permiten generar archivos HTML a partir de documentos XML.  
-Puesto que XML se puede utilizar para el intercambio de datos entre aplicaciones, hay que recurrir a motores independientes que se ejecutan sin que nos demos cuenta. Entre estos destacan "XML para Java" de IBM, JAXP de Sun, etc
+  __Nosotros utilizaremos para trabajar un editor de texto inicialmente__ <img src="https://www.easyappcode.com/upload/post-716768416.jpg" alt="Instalacion SublimeText">
+
+## XML (eXtensible Markup Language) Estructura y Sintaxis. 
+
+ El XML, o Lenguaje de Etiquetas Extendido, es un lenguaje de etiquetas creadas por el programador, que estructuran y guardan de forma ordenada la información. No representa datos por sí mismo, solamente organiza la estructura.
+
+ El XML ahorra tiempos de desarrollo y proporciona ventajas, dotando a webs y aplicaciones de una forma realmente potente de guardar la información. Además, se ha convertido en un formato universal que ha sido asimilado por todo tipo de sistemas operativos y dispositivos móviles.
+
+Al igual que en HTML, un documento XML es un documento de texto, en este caso con extensión _.xml_, compuesto de parejas de etiquetas, estructuradas en árbol, que describen una función en la organización del documento, que puede editarse con cualquier editor de texto y que es interpretado por los navegadores web. Es decir, el documento se edita y se guarda en un fichero con extensión .xml (por ejemplo _Alumnos.xml_) con un editor de textos; posteriormente dicho fichero se puede abrir con el navegador para que lo interprete y muestre el resultado. Si el documento XML tiene errores, el navegador no lo mostrará correctamente. Los navegadores no detectan todos los errores; es mejor utilizar un validador XML. Las características básicas de XML son: 
+ - Dado que XML se concibió para trabajar en la Web, es directamente compatible con protocolos
+que ya funcionan, como HTTP y los URL.
+ - Todo documento que verifique las reglas de XML está conforme con SGML.
+ - No se requieren conocimientos de programación para realizar tareas sencillas en XML.
+ - Los documentos XML son fáciles de crear.
+ - La difusión de los documentos XML está asegurada, ya que cualquier procesador de XML puede leer un documento de XML.
+ - El marcado de XML es legible.
+ - El diseño XML es formal y conciso.
+ - XML es extensible, adaptable y aplicable a una gran variedad de situaciones.
+ - XML es orientado a objetos.
+ - Todo documento XML se compone exclusivamente de datos de marcado y datos carácter entremezclados. Los datos carácter son los que forman la verdadera información del documento XML.
+
+ El proceso de creación de un documento XML pasa por varias etapas en las que el éxito de cada una de ellas se basa en la calidad de la anterior. Estas etapas son:
+ - Especificación de requisitos.
+ - Diseño de etiquetas.
+ - Marcado de los documentos
+
+ El marcado en XML consiste en etiquetas que se añaden a un texto para estructurar el contenido del documento. Esta información extra permite a los ordenadores "interpretar" los textos. El marcado es todo lo que se sitúa entre los caracteres _"<"_ y _">"_ o _"&"_ y _";"_.
+
+ El marcado puede ser tan rico como se quiera. Resultará interesante detectar necesidades futuras y crear documentos con una estructura fácilmente actualizable.
+
+ Los documentos XML pueden tener comentarios, que no son procesados por el intérprete XML; éste los ignora. Estos comentarios se incluyen entre las cadenas _"<!--"_ y _"-->"_ y pueden estar en cualquier posición en el documento salvo:
+ - Antes del prólogo.
+ - Dentro de una etiqueta. 
 
 ## Elaboración de documentos XML bien formados.
 
