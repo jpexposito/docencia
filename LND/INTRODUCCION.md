@@ -380,11 +380,11 @@ _Ejemplo._
    
  | Descripción | Carácter |Sustituir por |   
  | -------------| -------------| ------------- |   
- | mayor que  | > |  _&gt;_ |    
- | menor que | <  | _&lt;_ |    
- | ampersand |  &  | _&amp;_ |    
- | comillas dobles  | " |  _&quot;_ |    
- | apóstrofe  | ‘ |  _&apos;_ |    
+ | mayor que  | > |  \&gt; |    
+ | menor que | <  | \&lt; |    
+ | ampersand |  &  | \&amp; |    
+ | comillas dobles  | " |  \&quot; |    
+ | apóstrofe  | ‘ |  \&apos; |    
 
  Por ejemplo, para usar el & en un dato se pondría:
  ```xml
