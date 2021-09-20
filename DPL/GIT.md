@@ -215,3 +215,12 @@
 - [Operaciones avanzadas](GIT/OPERACIONES_AVANZADAS.md)   
 - [Seguridad de los sistemas de control de versiones](GIT/SEGURIDAD.md)  
 - [Historia de un repositorio](GIT/HISTORIA.md)  
+
+## Referencias
+
+ - https://www.drauta.com/5-softwares-de-control-de-versiones
+ - https://es.wikipedia.org/wiki/Subversion_(software)
+ - https://es.wikipedia.org/wiki/Git
+ - https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/git-vs-svn-una-comparativa-del-control-de-versiones/
+ - https://aprendeconalf.es/docencia/git/  
+ 

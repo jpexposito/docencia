@@ -98,14 +98,11 @@ Aunque muchos usuarios se preguntan cuál de los dos programas de control de ver
 #### Estas son las principales ventajas de ambos sistemas:
 
 - __Debes decantarte por Git cuando…__ 
-
  - no quieres depender de una conexión de red permanente, pues quieres trabajar en tu proyecto desde cualquier lugar.
  - quieres seguridad en caso de fallo o pérdida de los repositorios principales.
  - no necesitas contar con permisos especiales de lectura y escritura para los diferentes directorios (aunque, de ser así, será posible y complejo implementarlo).
- - la transmisión rápida de los cambios es una de tus prioridades.
- 
+ - la transmisión rápida de los cambios es una de tus prioridades. 
 - __Subversion será la opción indicada, si…__
-
  - necesitas permisos de acceso basados en rutas de acceso para las diferentes áreas de tu proyecto.
  - deseas agrupar todo tu trabajo en un solo lugar.
  - trabajas con numerosos archivos binarios de gran tamaño.
@@ -113,13 +110,7 @@ Aunque muchos usuarios se preguntan cuál de los dos programas de control de ver
 
 En caso de que las características enumeradas anteriormente no hayan sido decisivas para decantarse por alguno de los dos, siempre es recomendable realizar una prueba con cualquiera de los sistemas de control de versiones. En ambos casos encontrarás el apoyo de una gran comunidad, proveedores de alojamiento de gran calidad como GitHub y ofertas de soporte profesional.
 
-## Referencias
-
- - https://www.drauta.com/5-softwares-de-control-de-versiones
- - https://es.wikipedia.org/wiki/Subversion_(software)
- - https://es.wikipedia.org/wiki/Git
- - https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/git-vs-svn-una-comparativa-del-control-de-versiones/
-
 ## Tareas a realizar
 
- - [Tarea 1: Instalacíon de Git en local](../tareas/tarea-git.md)  
+ - [Tarea 1: Instalacíon de Git en local](tareas/instalacion-git.md)  
+ - [Tarea 1: Manipulación básica de repositorios](tareas/manipulacion-repositorios.md)  

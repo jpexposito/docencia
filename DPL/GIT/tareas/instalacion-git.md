@@ -1,4 +1,4 @@
-# Tarea 1: Instalación de Git en linux: Ubuntu 20
+# Tarea 1: Instalación de Git en linux
 
 Los sistemas de control de versiones como Git son imprescindibles para las prácticas recomendadas del desarrollo de software moderno. El control de versiones le permite realizar un seguimiento de su software a nivel de fuente. Puede rastrear cambios, volver a etapas anteriores y producir ramificaciones para crear versiones alternativas de archivos y directorios.
 
