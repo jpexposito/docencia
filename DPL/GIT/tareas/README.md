@@ -1,4 +1,4 @@
-# Tareas a realizar en la Unidad
+# Tareas a realizar en la Unidad <a><img src="../../img/tarea.png" alt="Tareas a Realizar" style="width:84px;height:84px;"></a>
 
- - [Instalación de Git](instalacion-git.md)
- - [Manipulación básica de repositorios](manipulacion-repositorios.md)
+ - [Tarea 1: Instalacíon de Git en local](instalacion-git.md)  
+ - [Tarea 1: Manipulación básica de repositorios](manipulacion-repositorios.md) 
