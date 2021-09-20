@@ -1,6 +1,6 @@
 # Instalación de SublimeText 3
 
-<img src="https://www.easyappcode.com/upload/post-716768416.jpg" alt="Instalacion SublimeText">
+<img src="https://www.easyappcode.com/upload/post-716768416.jpg" alt="Instalacion SublimeText" style="width:84px;height:84px;>
 
 
 ## Introducción

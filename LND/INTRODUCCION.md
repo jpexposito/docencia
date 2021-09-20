@@ -317,13 +317,13 @@ Si se incluye, el prólogo debe preceder al ejemplar del documento. Su inclusió
  | ISO -8859-2 (Latin-2) | Europa central y oriental | 
  | ISO -8859-3 (Latin-3) | Sudoeste de Europa | 
  | ISO -8859-4 (Latin-4) | Países Escandinavos, Bálticos | 
- | ISO -8859-5 Cirílico | 
- | ISO -8859-6 Árabe | 
- | ISO -8859-7 Griego | 
- | ISO -8859-8 Hebreo | 
- | ISO -8859-9 Turco | 
- | ISO-8859-10 Lapón. Nórdico, esquimal | 
- | EUC-JP oder Shitf_JIS Japonés | 
+ | ISO -8859-5 |  Cirílico | 
+ | ISO -8859-6 |  Árabe | 
+ | ISO -8859-7 |  Griego | 
+ | ISO -8859-8 |  Hebreo | 
+ | ISO -8859-9 |  Turco | 
+ | ISO-8859-10 |  Lapón. Nórdico, esquimal | 
+ | EUC-JP oder Shitf_JIS |  Japonés | 
 
   El valor por defecto para encoding es UTF-8; es decir que ese es el valor que coge cuando no se escribe encoding. Por tanto, las dos líneas siguientes hacen lo mismo:
  ``` xml 
@@ -615,8 +615,7 @@ _Lo correcto sería poner simplemente el número en la edad, sin incluir la pala
 <alumno><nombre>Ramón Gómez</nombre><edad>19</edad></alumno>
 ```
 
-
-# Tareas a realizar en la Unidad <img src="../../../img/tarea.png" alt="Tareas a Realizar" style="width:84px;height:84px;">
+# Tareas a realizar en la Unidad <img src="../img/tarea.png" alt="Tareas a Realizar" style="width:84px;height:84px;">
 
  - [Tarea 1: Instalación de Sublime Text 3](tareas/tarea_instalar_sublime.md)  
  - [Tarea 2: Creación de una agenda en XML](tareas/tarea_agenda.md) 
