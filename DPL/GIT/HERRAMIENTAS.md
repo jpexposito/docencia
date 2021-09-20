@@ -112,7 +112,7 @@ En caso de que las características enumeradas anteriormente no hayan sido decis
 
 ## Tareas a realizar
 
-<a href="tareas/README.md"><img src="../../tarea.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+<a href="tareas/README.md"><img src="../../img/tarea.png" alt="Tareas a Realizar" style="width:42px;height:42px;"></a>
 
  - [Tarea 1: Instalacíon de Git en local](tareas/instalacion-git.md)  
  - [Tarea 1: Manipulación básica de repositorios](tareas/manipulacion-repositorios.md)  
