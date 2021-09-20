@@ -1,4 +1,4 @@
-# Tarea 1: Manipulación de repositorios en Git
+# Tarea 2: Manipulación de repositorios en Git
 
 ## Introducción
 
