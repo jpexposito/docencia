@@ -378,13 +378,13 @@ _Ejemplo._
  - El contenido de los elementos (el dato o información) no puede contener la cadena __]]>__ por compatibilidad con SGML. Además no se pueden utilizar directamente los caracteres indicados a continuación; si se quiere usar alguno de esos caracteres en un dato, debe sustituirse por lo indicado en la columna de la derecha:
 
    
-  | | Carácter | Sustituir por |
- | -------------| ------------- |
- | mayor que  | > |  &gt; | 
- | menor que | <  | &lt; | 
- | ampersand |  &  | &amp; | 
- | comillas dobles  | " |  &quot; | 
- | apóstrofe  | ‘ |  &apos; | 
+ | Descripción | Carácter |Sustituir por |   
+ | -------------| -------------| ------------- |   
+ | mayor que  | > |  &gt; |    
+ | menor que | <  | &lt; |    
+ | ampersand |  &  | &amp; |    
+ | comillas dobles  | " |  &quot; |    
+ | apóstrofe  | ‘ |  &apos; |    
 
  Por ejemplo, para usar el & en un dato se pondría:
  ```xml
