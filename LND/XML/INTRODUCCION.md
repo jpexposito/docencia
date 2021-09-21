@@ -440,7 +440,8 @@ _Lo correcto sería poner simplemente el número en la edad, sin incluir la pala
  - [Tarea 4: Creación de un sistema informático en XML](tareas/tarea_sistema_informatico.md)  
 
 
-<div style="aligin:center">
+
+<div align="center">
  <a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a> <a href="CLASIFICACION.md"><img src="../../img/next.png" alt="XML Clasificación" style="width:42px;height:42px;"> 
 </div>
 
