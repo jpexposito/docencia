@@ -437,10 +437,10 @@ _Lo correcto sería poner simplemente el número en la edad, sin incluir la pala
  - [Tarea 1: Instalación de Sublime Text 3](tareas/tarea_instalar_sublime.md)  
  - [Tarea 2: Creación de una agenda en XML](tareas/tarea_agenda.md) 
  - [Tarea 3: Creación de una receta en XML](tareas/tarea_receta.md) 
- - [Tarea 3: Creación de un sistema informático en XML](tareas/tarea_sistema_informatico.md)  
+ - [Tarea 4: Creación de un sistema informático en XML](tareas/tarea_sistema_informatico.md)  
 
 
-<div style="display: block; margin-left: auto;margin-right: auto;width: 50%;">
+<div style="aligin:center">
  <a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a> <a href="CLASIFICACION.md"><img src="../../img/next.png" alt="XML Clasificación" style="width:42px;height:42px;"> 
 </div>
 
