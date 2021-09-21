@@ -53,15 +53,28 @@ En caso que no se ejecuta la versión 8 se debe configurar las variables de ento
 
 ## Configuración de las variables de entorno
 
-El siguiente paso consiste en establecer  las variables de entorno. Es necesario porque cuando se usa Java, Linux necesita saber dónde está ubicado el programa para ejecutarlo y qué versión de Java usar de forma predeterminada. Para modificar esto, usaremos el editor de texto nano. Primero, abra el archivo en Nano.
+ El siguiente paso consiste en establecer  las variables de entorno. Es necesario porque cuando se usa Java, Linux necesita saber dónde está ubicado el programa para ejecutarlo y qué versión de Java usar de forma predeterminada. Para modificar esto, usaremos el editor de texto nano. Primero, abra el archivo en Nano.
+
+### Listar la versiones de OpenJDK instaladas
+
+ Ejecuta el siguiente comando para verificar que se han descargado las diferentes versiones de OpenJDK.
+
+```
+ ls /usr/lib/jvm
+```
+
+### Actualización de las variables de entorno
+
+ Edita y modifica el fichero profile, con los comandos:
 
 ```
 nano /etc/profile
 ```
+y realiza los siguientes cambios y seleccionando la versión 8:
 
 ```
 # Java version
-JAVA_HOME=/usr/java/_____openJdk_____
+JAVA_HOME=/usr/lib/jvm/_____openJdk_____
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export JAVA_HOME
 export JRE_HOME
