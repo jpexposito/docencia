@@ -439,6 +439,11 @@ _Lo correcto sería poner simplemente el número en la edad, sin incluir la pala
  - [Tarea 3: Creación de una receta en XML](tareas/tarea_receta.md) 
  - [Tarea 3: Creación de un sistema informático en XML](tareas/tarea_sistema_informatico.md)  
 
+<style>
+td, th {
+   border: none!important;
+}
+</style>
 
  | <a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a> | <a href="CLASIFICACION.md"><img src="../../img/next.png" alt="XML Clasificación" style="width:42px;height:42px;"> |
 
