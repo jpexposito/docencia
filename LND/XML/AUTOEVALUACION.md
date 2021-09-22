@@ -11,11 +11,7 @@
 	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  
-	 d
-	  
-	  ```javascript
-	  console.log("I'm a code block!");
-	  ```
+	  __Opción d__
 	  
 	</details>
 
@@ -28,7 +24,12 @@
   - c) Guardan los documentos en el formato universal txt.
   - d) Guardan el formato de los documentos independientemente de la plataforma.
 
-	__RESPUESTA CORRECTA: b)__
+	<details>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+	  
+	  __Opción b__
+	  
+	</details>
 
 - 3.- ¿Cuál de las siguientes líneas es correcta?
   - a) <i>Texto en cursiva
@@ -36,7 +37,12 @@
   - c) <i>Texto en cursiva</i>
   - d) <I>Texto en cursiva<I>
 
-	__RESPUESTA CORRECTA: c)__
+  	<details>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+	  
+	  __Opción c__
+	  
+	</details>
 
 - 4.- Para escribir un documento XML basta con:
   - a) Software especializado para la tecnología XML
@@ -44,7 +50,12 @@
   - c) Un block de notas y un navegador.
   - d) Un editor XML.
 
-	__RESPUESTA CORRECTA: d)__
+	<details>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+	  
+	  __Opción d__
+	  
+	</details>
 
 - 5.-Dato el código XML
 
@@ -71,7 +82,12 @@
   - e) Algunos elementos tienen más de un atributo.
   - f) Se usan mayúsculas en los datos del documento.
 
-__RESPUESTA CORRECTA:  a) b)__
+	<details>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+	  
+	  __Opción a y b__
+	  
+	</details>
 
 - 6.-¿Está "bien formado" el siguiente documento XML?
 
@@ -85,9 +101,13 @@ __RESPUESTA CORRECTA:  a) b)__
 </mensaje>
 ```
 
-	__RESPUESTA CORRECTA:  No está "bien formado", porque hay un espacio entre ? y > de la primera línea. Además el cierre de la etiqueta remitente tiene un espacio después de la barra /. Y la etiqueta
+<details>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+	  __RESPUESTA CORRECTA:  No está "bien formado", porque hay un espacio entre ? y > de la primera línea. Además el cierre de la etiqueta remitente tiene un espacio después de la barra /. Y la etiqueta
 asunto no está cerrada.__
+</details>
 
+	
 
 </div>
 
