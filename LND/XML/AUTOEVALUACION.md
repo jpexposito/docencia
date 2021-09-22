@@ -2,6 +2,15 @@
 
 # AUTOEVALUACION
 
+- 1.- Los lenguajes de marcas se utilizan para:
+ - a) Dar formato a los documentos de texto.
+ - b) Definir la estructura de los datos de un documento.
+ - c) Permitir el intercambio de ficheros entre diferentes aplicaciones y plataformas.
+ - d) Todas las anteriores.
+ 
+ 	<div background-color="lightblue" >
+		Respuesta correcta: d)
+ 	</div>
 
 </div>
 

@@ -8,7 +8,7 @@
  Hay muchos lenguajes basados en XML; Algunos ejemplos son XHTML, MathML, SVG, XUL, XBL, RSS, y RDF. También puedes crear uno propio.
 
 
-  - [Introducción](INTRODUCCIÓN.md)
+  - [Introducción](INTRODUCCION.md)
   - [Clasificación](CLASIFICACION.md)
   - [Herramientas](HERRAMIENTAS.md)
   - [Etiquetas](ETIQUETAS.md)
