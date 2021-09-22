@@ -1,7 +1,7 @@
 
 <div align="justify">
 
-# Clasificación.
+# CLASIFICACIÓN
 
 En los años 70 continúa surgen unos lenguajes informáticos, distintos de los lenguajes de programación, orientados a la gestión de información. Con el desarrollo de los editores y procesadores de texto surgen los primeros lenguajes informáticos especializados en tareas de descripción y estructuración de información: los lenguajes de marcas. Paralelamente, también, surgen otros lenguajes informáticos orientados a la representación, almacenamiento y consulta eficiente de grandes cantidades de datos: lenguajes y sistemas de bases de datos.  
 Los lenguajes de marcas surgieron, inicialmente, como lenguajes formados por el conjunto de códigos de formato que los procesadores de texto introducen en los documentos para dirigir el proceso de presentación (impresión) mediante una impresora. Como en el caso de los lenguajes de programación, inicialmente estos códigos de formato estaban ligados a las características de una máquina, programa o procesador de textos concreto y, en ellos, inicialmente no había nada que permitiese al programador (formateador de documentos en este caso) abstraerse de las características del procesador de textos y expresar de forma independiente a éste la estructura y la lógica interna del documento.  
@@ -205,7 +205,7 @@ _[Visualizar en el navegador el libro.html](ejemplo/libro.html)_
 </div>
 
 <div align="center">
-	<a href="INTRODUCCION.md"><img src="../../img/before.png" alt="In" style="width:42px;height:42px;"></a>
+	<a href="README.md"><img src="../../img/before.png" alt="In" style="width:42px;height:42px;"></a>
  	<a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
  	<a href="ETIQUETAS.md"><img src="../../img/next.png" alt="Etiquetas XML" style="width:42px;height:42px;"> 
 </div>

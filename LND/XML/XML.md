@@ -153,14 +153,15 @@ En el navegador se vería: __Juan & Asociados__
 <precio>365 &#x20AC;</precio> 
  ```
 
-  ```xml
+```xml
  <precio>365 &#8364;</precio>
  ```
 
  Para evitar problemas con las vocales con tilde (á é í ó ú Á É Í Ó Ú) y la ñ (mayúscula o minúscula), los más fiable es utilizar sus códigos __UNICODE__.
 
  __Ejemplo.__
-  ```xml
+
+```xml
 <nombre>José Cañas Álvarez</nombre>
  ```
 
@@ -172,12 +173,12 @@ debería escribirse como:
 ## Elaboración de documentos XML bien formados.
 
   En un documento XML no debe ponerse un elemento que contenga un dato además de otros elementos. Si bien esta situación no genera errores de sintaxis, se dificultará el procesado posterior que pudiera aplicarse al documento. Por ejemplo:
+
 ```xml
- <alumno>
-Juan
-<apellidos>Garrido Fdez.</apellidos>
-</alumno>
- ```
+ <alumno>Juan
+ <apellidos>Garrido Fdez.</apellidos>
+ </alumno>
+```
  Como se ve en el ejemplo, el elemento alumno contiene el dato "Juan" además del elemento apellidos. El dato "Juan" queda mezclado con el elemento apellidos, por lo que no se puede acceder a dicho dato de forma independiente. Por tanto, debe definirse otro elemento para el dato __Juan__, es decir que cada dato debe tener su etiqueta asociada, del modo:
  
 ```xml
@@ -188,6 +189,8 @@ Juan
 ```
 
 Cuando un documento tiene un elemento que se repite porque la información que se desea almacenar así lo requiere, no debe numerarse dicho elemento. Se tiende a añadir el número en el propio nombre del elemento pero no es correcto. Por ejemplo:
+
+__ES INCORRECTO:__ 
 
 ```xml
 <AlumnosCiclo>
@@ -200,7 +203,7 @@ etc.
 </AlumnosCiclo>
 ```
 
- __Lo correcto sería__:
+__ES CORRECTO:__
 
 ```xml
 <AlumnosCiclo>
@@ -421,6 +424,6 @@ __LO CORRECTO SERÍA:__
 
 <div align="center">
     <a href="ETIQUETAS.md"><img src="../../img/before.png" alt="Etiquetas" style="width:42px;height:42px;"></a>
-    <a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
-    <a href="XML.md"><img src="../../img/next.png" alt="XML" style="width:42px;height:42px;"> 
+    <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
+    <a href="XML_BIEN_FORMADOS.md"><img src="../../img/next.png" alt="XML BIEN FORMADOS" style="width:42px;height:42px;"> 
 </div>

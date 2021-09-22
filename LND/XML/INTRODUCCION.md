@@ -1,10 +1,8 @@
 
 <div align="justify">
 
-# Reconocimiento de las características de lenguajes de marcas
 
-
-## Introducción.
+# INTRODUCCIÓN.
 
 Un **lenguaje de marcas** es un modo de codificar un documento donde, junto con el texto, se incorporan etiquetas, marcas o anotaciones con información adicional relativa a la estructura del texto o su formato de presentación. Permiten hacer explícita la estructura de un documento, su contenido semántico o cualquier otra información lingüística o extralingüística que se quiera hacer patente.  
 Todo lenguaje de marcas está definido en un documento denominado DTD (Document Type Definition). En él se establecen las marcas, los elementos utilizados por dicho lenguaje y sus correspondientes etiquetas y atributos, su sintaxis y normas de uso.
@@ -36,15 +34,4 @@ Aunque en la práctica, en un mismo documento pueden combinarse varios tipos dif
     - MathML (Mathematical Markup Language): Su objetivo es expresar el formalismo matemático de tal modo que pueda ser entendido por distintos sistemas y aplicaciones.  
     - VoiceXML (Voice Extended Markup Language) tiene como objetivo el intercambio de información entre un usuario y una aplicación con capacidad de reconocimiento de habla.  
     - MusicXML: Permite el intercambio de partituras entre distintos editores de partituras.   
-
-# Tareas a realizar en la Unidad <img src="../../img/tarea.png" alt="Tareas a Realizar" style="width:84px;height:84px;">
-
- - [Tarea 1: Instalación de Sublime Text 3](tareas/tarea_instalar_sublime.md)  
-
-</div>
-
-<div align="center">
- <a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
- <a href="CLASIFICACION.md"><img src="../../img/next.png" alt="XML Clasificación" style="width:42px;height:42px;"> 
-</div>
 

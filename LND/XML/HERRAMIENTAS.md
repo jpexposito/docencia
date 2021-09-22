@@ -1,7 +1,7 @@
 
 <div align="justify">
 
-# Herramientas de edición.
+# HERRAMIENTAS DE EDICIÓN.
 
 Para trabajar en XML es necesario editar los documentos y luego procesarlos, por tanto tenemos dos tipos de herramientas:  
  - Editores XML 
@@ -21,6 +21,6 @@ Para trabajar en XML es necesario editar los documentos y luego procesarlos, por
 
 <div align="center">
     <a href="HERRAMIENTAS.md"><img src="../../img/before.png" alt="In" style="width:42px;height:42px;"></a>
-    <a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
+    <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
     <a href="XML.md"><img src="../../img/next.png" alt="XML" style="width:42px;height:42px;"> 
 </div>
