@@ -29,10 +29,10 @@
 	</details>
 
 - 3.- ¿Cuál de las siguientes líneas es correcta?
-  - a) <i>Texto en cursiva
-  - b) <i>Texto en cursiva<i>
-  - c) <i>Texto en cursiva</i>
-  - d) <I>Texto en cursiva<I>
+  - a) \<i>Texto en cursiva
+  - b) \<i>Texto en cursiva<i>
+  - c) \<i>Texto en cursiva</i>
+  - d) \<I>Texto en cursiva<I>
 
   	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
