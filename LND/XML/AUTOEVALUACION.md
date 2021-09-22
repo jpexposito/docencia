@@ -100,8 +100,8 @@
 
 <details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  __RESPUESTA CORRECTA:  No está "bien formado", porque hay un espacio entre ? y > de la primera línea. Además el cierre de la etiqueta remitente tiene un espacio después de la barra /. Y la etiqueta
-asunto no está cerrada.__
+	  
+	  __RESPUESTA CORRECTA:  No está "bien formado", porque hay un espacio entre ? y > de la primera línea. Además el cierre de la etiqueta remitente tiene un espacio después de la barra /. Y la etiqueta asunto no está cerrada.__
 </details>
 
 	
