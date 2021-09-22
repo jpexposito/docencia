@@ -13,7 +13,9 @@ Para trabajar en XML es necesario editar los documentos y luego procesarlos, por
   Para publicar un documento XML en Internet se utilizan los procesadores XSLT, que permiten generar archivos HTML a partir de documentos XML.  
   Puesto que XML se puede utilizar para el intercambio de datos entre aplicaciones, hay que recurrir a motores independientes que se ejecutan sin que nos demos cuenta. Entre estos destacan "XML para Java" de IBM, JAXP de Sun, etc.
 
-  __Nosotros utilizaremos para trabajar un editor de texto inicialmente__ <img src="https://www.easyappcode.com/upload/post-716768416.jpg" alt="Instalacion SublimeText" style="width:15%" alt="Sublime text">, conocido como Sublime Text y quebes de instalar.
+  __Nosotros utilizaremos para trabajar un editor de texto inicialmente__ <img src="https://www.easyappcode.com/upload/post-716768416.jpg" alt="Instalacion SublimeText" style="width:4%" alt="Sublime text">, conocido como Sublime Text y quebes de instalar.
+
+  Además y como verás más adelante se puede realizar la edición y trabajo con XML a través de cualquier IDE.
 
 </div>
 
