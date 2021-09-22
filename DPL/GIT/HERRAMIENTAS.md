@@ -1,3 +1,5 @@
+<div align="justify">
+    
 # Herramientas externas para la generación de documentación. Instalación, configuración y uso
 
 ## Introducción 
@@ -110,7 +112,4 @@ Aunque muchos usuarios se preguntan cuál de los dos programas de control de ver
 
 En caso de que las características enumeradas anteriormente no hayan sido decisivas para decantarse por alguno de los dos, siempre es recomendable realizar una prueba con cualquiera de los sistemas de control de versiones. En ambos casos encontrarás el apoyo de una gran comunidad, proveedores de alojamiento de gran calidad como GitHub y ofertas de soporte profesional.
 
-## Tareas a realizar <a href="tareas/README.md"><img src="../../img/tarea.png" alt="Tareas a Realizar" style="width:84px;height:84px;"></a>
-
- - [Tarea 1: Instalacíon de Git en local](tareas/instalacion-git.md)  
- - [Tarea 2: Manipulación básica de repositorios](tareas/manipulacion-repositorios.md)  
+</div> 
