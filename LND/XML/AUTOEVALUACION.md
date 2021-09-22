@@ -48,7 +48,7 @@
   - d) Un editor XML.
 
 	<details>
-	  <summary>__PULSA PARA VER LA RESPUESTA CORRECTA:__</summary>
+	  <summary> __PULSA PARA VER LA RESPUESTA CORRECTA:__ </summary>
 	  
 	  __Opción d__
 	  
