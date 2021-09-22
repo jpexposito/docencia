@@ -9,7 +9,7 @@
   - d) Todas las anteriores.
 
 	<details>
-	  <summary>__PULSA PARA VER LA RESPUESTA CORRECTA:__</summary>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  
 	  __Opción d__
 	  
@@ -22,7 +22,7 @@
   - d) Guardan el formato de los documentos independientemente de la plataforma.
 
 	<details>
-	  <summary>__PULSA PARA VER LA RESPUESTA CORRECTA:__</summary>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  
 	  __Opción b__
 	  
@@ -35,7 +35,7 @@
   - d) <I>Texto en cursiva<I>
 
   	<details>
-	  <summary>__PULSA PARA VER LA RESPUESTA CORRECTA:__</summary>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  
 	  __Opción c__
 	  
@@ -48,7 +48,7 @@
   - d) Un editor XML.
 
 	<details>
-	  <summary> __PULSA PARA VER LA RESPUESTA CORRECTA:__ </summary>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  
 	  __Opción d__
 	  
@@ -80,7 +80,7 @@
   - f) Se usan mayúsculas en los datos del documento.
 
 	<details>
-	  <summary>__PULSA PARA VER LA RESPUESTA CORRECTA:__</summary>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  
 	  __Opción a y b__
 	  
@@ -99,7 +99,7 @@
 ```
 
 <details>
-	  <summary>__PULSA PARA VER LA RESPUESTA CORRECTA:__</summary>
+	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 	  __RESPUESTA CORRECTA:  No está "bien formado", porque hay un espacio entre ? y > de la primera línea. Además el cierre de la etiqueta remitente tiene un espacio después de la barra /. Y la etiqueta
 asunto no está cerrada.__
 </details>
