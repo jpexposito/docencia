@@ -3,6 +3,8 @@
 
 # CLASIFICACIÓN
 
+<img width= "25%" src="https://images2.programmerclick.com/498/42/42d49e1db98e30720d0be5229eb4c7aa.png" alt="GML">
+
 En los años 70 continúa surgen unos lenguajes informáticos, distintos de los lenguajes de programación, orientados a la gestión de información. Con el desarrollo de los editores y procesadores de texto surgen los primeros lenguajes informáticos especializados en tareas de descripción y estructuración de información: los lenguajes de marcas. Paralelamente, también, surgen otros lenguajes informáticos orientados a la representación, almacenamiento y consulta eficiente de grandes cantidades de datos: lenguajes y sistemas de bases de datos.  
 Los lenguajes de marcas surgieron, inicialmente, como lenguajes formados por el conjunto de códigos de formato que los procesadores de texto introducen en los documentos para dirigir el proceso de presentación (impresión) mediante una impresora. Como en el caso de los lenguajes de programación, inicialmente estos códigos de formato estaban ligados a las características de una máquina, programa o procesador de textos concreto y, en ellos, inicialmente no había nada que permitiese al programador (formateador de documentos en este caso) abstraerse de las características del procesador de textos y expresar de forma independiente a éste la estructura y la lógica interna del documento.  
 
@@ -32,12 +34,13 @@ Este marcado estaba exclusivamente orientado a la presentación de la informaci�
  El formato de documentos que se creó como resultado de este trabajo fue GML, cuyo objetivo era describir los documentos de tal modo que el resultado fuese independiente de la plataforma y la aplicación utilizada.  
 
 ## SGML (Standard Generalized Markup Language). 
+
+<img width= "25%" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200424201452/SGML.png" alt="GML">
  
  El formato GML evolucionó hasta que en 1986 dio lugar al estándar ISO 8879 que se denominó SGML. Éste era un lenguaje muy complejo y requería de unas herramientas de software caras. Por ello su uso ha quedado relegado a grandes aplicaciones industriales.   
 
-Ejemplo  
+__Ejemplo__  
 
-**Documento SGML sencillo:**
 ```xml  
 <email>  
  	<remitente>  
@@ -55,7 +58,21 @@ Ejemplo
 ```
 _[Visualizar en el navegador el email.xml](ejemplo/email.xml)_
 
-## HTML (HyperText Markup Language). 
+### Comparación de XML con SGML. 
+| XML | SGML |
+| ------------- | ------------- | 
+| Su uso es sencillo. | Su uso es muy complejo. |
+| Trabaja con documentos bien formados, no exige que estén validados. | Sólo trabaja con documentos válidos. |
+| Facilita el desarrollo de aplicaciones de bajo coste. | Su complejidad hace que las aplicaciones informáticas para procesar SGML sean muy costosas. |
+| Es muy utilizado en informática y en más áreas de aplicación. | Sólo se utiliza en sectores muy específicos. | No hay una compatibilidad con HTML definida. 
+| Compatibilidad e integración con HTML. | Formateo y estilos relativamente complejos.
+| Formateo y estilos fáciles de aplicar. | 
+| No usa etiquetas opcionales. | 
+
+## HTML (HyperText Markup Language).
+
+<img width= "25%" src="https://ui2html.net/es/wp-content/uploads/sites/2/2020/08/que-html5.jpg" alt="HTML">
+
  En 1989/90 Tim Berners‐Lee creó el World Wide Web y se encontró con la necesidad de organizar, enlazar y compatibilizar gran cantidad de información procedente de diversos sistemas. Para resolverlo creó un lenguaje de descripción de documentos llamado HTML, que, en realidad, era una combinación de dos estándares ya existentes:  
   - ASCII: Es el formato que cualquier procesador de textos sencillo puede reconocer y almacenar. Por tanto es un formato que permite la trasferencia de datos entre diferentes ordenadores. 
   - SGML: Lenguaje que permite dar estructura al texto, resaltando los títulos o aplicando diversos formatos al texto. 
@@ -165,7 +182,7 @@ __Ejemplo__
  	<isbn>978‐2‐7460‐4958‐1</isbn>  
  	<edicion>1</edicion>  
  	<paginas>347</paginas>  
-<libro>  
+<libro>
 ```
 _[Visualizar en el navegador el libro.xml](ejemplo/libro.xml)_
 
@@ -191,16 +208,6 @@ Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:
 
 _[Visualizar en el navegador el libro.html](ejemplo/libro.html)_ 
 
-### Comparación de XML con SGML. 
-| XML | SGML |
-| ------------- | ------------- | 
-| Su uso es sencillo. | Su uso es muy complejo. |
-| Trabaja con documentos bien formados, no exige que estén validados. | Sólo trabaja con documentos válidos. |
-| Facilita el desarrollo de aplicaciones de bajo coste. | Su complejidad hace que las aplicaciones informáticas para procesar SGML sean muy costosas. |
-| Es muy utilizado en informática y en más áreas de aplicación. | Sólo se utiliza en sectores muy específicos. | No hay una compatibilidad con HTML definida. 
-| Compatibilidad e integración con HTML. | Formateo y estilos relativamente complejos.
-| Formateo y estilos fáciles de aplicar. | 
-| No usa etiquetas opcionales. | 
 
 </div>
 

@@ -20,11 +20,11 @@ __Ejemplo.__
  Sean los documentos XML que organizan la información sobre los profesores y los alumnos respectivamente del ciclo __DAM__:
 
 ```xml
- <?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
- <alumnos>
-<nombre>Fernando Fernández González</nombre>
-<nombre>Isabel González Fernández</nombre>
-<nombre>Ricardo Martínez López</nombre>
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<alumnos>
+    <nombre>Fernando Fernández González</nombre>
+    <nombre>Isabel González Fernández</nombre>
+    <nombre>Ricardo Martínez López</nombre>
 </alumnos>
 ```
 
@@ -32,14 +32,13 @@ __Ejemplo.__
  Al hacer un documento conjunto sobre los miembros del ciclo ASIR no se distinguirían los nombres de los profesores de los nombres de los alumnos. Para resolverlo definiremos un espacio de nombres para cada contexto. Se pueden definir dentro del elemento raíz o ejemplar, como sigue: 
 
 ```xml
- <?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
-<asistentes xmlns:alumnos="http://DAW/alumnos"
-xmlns:profesores="http://DAW/profesores">
-<alumnos:nombre>Fernando Fernández González</alumnos:nombre>
-<alumnos:nombre>Isabel González Fernández</alumnos:nombre>
-<alumnos:nombre>Ricardo Martínez López</alumnos:nombre>
-<profesores:nombre>Pilar Ruiz Pérez</profesores:nombre>
-<profesores:nombre>Tomás Rodríguez Hernández</profesores:nombre>
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<asistentes xmlns:alumnos="http://DAW/alumnos" xmlns:profesores="http://DAW/profesores">
+    <alumnos:nombre>Fernando Fernández González</alumnos:nombre>
+    <alumnos:nombre>Isabel González Fernández</alumnos:nombre>
+    <alumnos:nombre>Ricardo Martínez López</alumnos:nombre>
+    <profesores:nombre>Pilar Ruiz Pérez</profesores:nombre>
+    <profesores:nombre>Tomás Rodríguez Hernández</profesores:nombre>
 </asistentes>
 ```
 
