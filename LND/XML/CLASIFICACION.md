@@ -1,3 +1,6 @@
+
+<div align="justify">
+
 # Clasificación.
 
 En los años 70 continúa surgen unos lenguajes informáticos, distintos de los lenguajes de programación, orientados a la gestión de información. Con el desarrollo de los editores y procesadores de texto surgen los primeros lenguajes informáticos especializados en tareas de descripción y estructuración de información: los lenguajes de marcas. Paralelamente, también, surgen otros lenguajes informáticos orientados a la representación, almacenamiento y consulta eficiente de grandes cantidades de datos: lenguajes y sistemas de bases de datos.  
@@ -185,7 +188,7 @@ Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:
  	</body>  
 </html>	  
 ```
-  
+
 _[Visualizar en el navegador el libro.html](ejemplo/libro.html)_ 
 
 ### Comparación de XML con SGML. 
@@ -198,3 +201,11 @@ _[Visualizar en el navegador el libro.html](ejemplo/libro.html)_
 | Compatibilidad e integración con HTML. | Formateo y estilos relativamente complejos.
 | Formateo y estilos fáciles de aplicar. | 
 | No usa etiquetas opcionales. | 
+
+</div>
+
+<div align="center">
+	<a href="INTRODUCCION.md"><img src="../../img/before.png" alt="In" style="width:42px;height:42px;"></a>
+ 	<a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
+ 	<a href="ETIQUETAS.md"><img src="../../img/next.png" alt="Etiquetas XML" style="width:42px;height:42px;"> 
+</div>
