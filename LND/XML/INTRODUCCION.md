@@ -1,3 +1,4 @@
+
 <div align="justify">
 
 # Reconocimiento de las características de lenguajes de marcas
@@ -10,7 +11,7 @@ Todo lenguaje de marcas está definido en un documento denominado DTD (Document 
 
 ```xml
 <carta>  
-<fecha>22/11/2006</fecha>  
+<fecha>22/11/2021</fecha>  
 <presentacion>Estimado cliente:</presentacion>  
 <contenido>bla bla bla bla …</contenido>  
 <firma>Don Jose Gutiérrez González</firma>  
