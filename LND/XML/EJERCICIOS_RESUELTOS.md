@@ -145,7 +145,8 @@ El documento XML debe tener grabados los siguientes datos:
 
  Posteriormente el código se ha validado pegándolo en la página http://validator.w3.org/#validate_by_input donde han aparecido 2 avisos ("warnings"), pero ningún error, por lo que el documento está "bien formado". A continuación se ha abierto el fichero .xml con el navegador web. Al estar "bien formado" no aparecen errores y el resultado que muestra es:
 
- <?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+```xml
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
 <!-- Préstamos de una biblioteca -->
 <biblioteca>
 	<nombre>Biblioteca El Estudio</nombre>
