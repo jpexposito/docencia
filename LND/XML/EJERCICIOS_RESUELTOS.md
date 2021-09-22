@@ -19,36 +19,36 @@ Un ejemplo es el siguiente. Se desea diseñar un documento XML "bien formado" qu
 <?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
 <!-- Documento XML: almacenamiento de una agenda personal -->
 <agenda titulo="Agenda para el trabajo">
-<categoria>Importante</categoria>
-<persona>
-<nombre>Juan</nombre>
-<apellidos>Garrido Pinto</apellidos>
-<direccion>
-<calle numero="">Grande</calle>
-<piso letra="A">1</piso>
-<ciudad>Badajoz</ciudad>
-<codigo_postal>06003</codigo_postal>
-</direccion>
-<telefonos>
-<telmovil>622111111</telmovil>
-<telcasa>942232323</telcasa>
-<teltrabajo/> <!-- No tiene tfno del trabajo -->
-</telefonos>
+ <categoria>Importante</categoria>
+ <persona>
+	 <nombre>Juan</nombre>
+	 <apellidos>Garrido Pinto</apellidos>
+	 <direccion>
+	 	<calle numero="">Grande</calle>
+		 <piso letra="A">1</piso>
+		 <ciudad>Badajoz</ciudad>
+		 <codigo_postal>06003</codigo_postal>
+	</direccion>
+	<telefonos>
+	 	<telmovil>622111111</telmovil>
+	 	<telcasa>942232323</telcasa>
+	 	<teltrabajo/> <!-- No tiene tfno del trabajo -->
+	</telefonos>
 </persona>
 <persona>
-<nombre>Jesús</nombre>
-<apellidos>Rodríguez Hdez.</apellidos>
-<direccion>
-<calle numero="7">Mayor</calle>
-<!-- No tiene piso -->
-<ciudad>Zafra</ciudad>
-<codigo_postal>06300</codigo_postal>
-</direccion>
-<telefonos>
-<telmovil>611333333</telmovil>
-<telcasa>924000000</telcasa>
-<teltrabajo>924999999</teltrabajo>
-</telefonos>
+	 <nombre>Jesús</nombre>
+	 <apellidos>Rodríguez Hdez.</apellidos>
+	 <direccion>
+		 <calle numero="7">Mayor</calle>
+		 <!-- No tiene piso -->
+		 <ciudad>Zafra</ciudad>
+		 <codigo_postal>06300</codigo_postal>
+	</direccion>
+	<telefonos>
+	 <telmovil>611333333</telmovil>
+	 <telcasa>924000000</telcasa>
+	 <teltrabajo>924999999</teltrabajo>
+	</telefonos>
 </persona>
 </agenda>
 ```
