@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Operaciones esenciales y avanzadas en GIT
 
 <img width="50%" src="https://yosoy.dev/wp-content/uploads/2014/08/local-remote.png" alt="Top respositorio de codigo">
@@ -164,3 +166,12 @@ __Ejemplo de uso__:
 <img width="50%" src="https://gitbookdown.dallasdatascience.com/img/git_branch_merge.png" alt="fork">
 
  En git se trabaja con branches (ramas en español), originalmente se crea la rama master por defecto, a raíz de esto nosotros podemos crear nuestras propias ramas branch, siendo claro una copia de la rama master en primera instancia, dicho esto con el comando git branch –all podemos ver todas las ramas que tenga el proyecto.
+
+
+<div align="center">
+    <a href="INSTALACION.md"><img src="../../img/before.png" alt="Instalacion" style="width:42px;height:42px;"></a>
+    <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
+    <a href="OPERACIONES_AVANZADAS.md"><img src="../../img/next.png" alt="OPERACIONES AVANZADAS" style="width:42px;height:42px;"> 
+</div>
+
+</div>
