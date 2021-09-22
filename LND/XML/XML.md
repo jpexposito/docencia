@@ -368,7 +368,54 @@ _Lo correcto sería poner simplemente el número en la edad, sin incluir la pala
 <alumno><nombre>Ramón Gómez</nombre><edad>19</edad></alumno>
 ```
 
+ Esta situación se da frecuentemente con las unidades de medida (años, metros, KBytes, Kg, etc.). La unidad de medida no debe guardarse si es la misma para todos los ítems iguales del documento. Como todas la edades anteriores están expresadas en años, no es necesario indicarlo en el propio dato (se da por hecho que son años sin necesidad de escribirlo). Otro ejemplo podría ser el siguiente, suponiendo que todas las RAM se expresan en GB:
 
+__ES INCORRECTO: <RAM>Memoria 4 GB</RAM>__
+__ES CORRECTO: <RAM>4</RAM>__
+ 
+ Ello es así porque de ese modo no se ocupa espacio en disco de forma innecesaria, además de facilitar el procesamiento del documento XML. Podemos indicar como norma general que un dato debe tener un formato fácil de comparar con otros datos (en cuanto a mayúsculas, tildes, espacios, etc.). También puede aplicarse eso por ejemplo a los precios. Si todos van en euros, no es necesario guardar la palabra __euro__ o el símbolo __€__, sólo se almacena el valor numérico. Por otra parte, si un elemento (o atributo) tiene un conjunto limitado de valores posibles, debe mantenerse el mismo formato para todos los valores que coincidan. Por ejemplo, si los valores posibles son __SI__ y __NO__, deben escribirse siempre igual en cuanto a mayúsculas,minúsculas, tildes, espacios, etc. No sería correcto guardar el elemento MayorEdad para varios alumnos como sigue:
+
+__SERÍA INCORRECTO:__
+
+```xml
+<MayorEdad>SI</MayorEdad>
+<MayorEdad>No</MayorEdad>
+<MayorEdad>Si es</MayorEdad>
+<MayorEdad>si</MayorEdad>
+<MayorEdad>No es mayor de edad</MayorEdad>
+```
+
+__LO CORRECTO SERÍA:__
+
+```xml
+<MayorEdad>SI</MayorEdad>
+<MayorEdad>NO</MayorEdad>
+<MayorEdad>SI</MayorEdad>
+<MayorEdad>SI</MayorEdad>
+<MayorEdad>NO</MayorEdad>
+```
+ Otro ejemplo podría ser el elemento <TipoVia> (de una dirección), cuyos valores son __CALLE__, __AVENIDA__ y __PLAZA__. Deberán escribirse respetando siempre el mismo formato; por Ejemplo, no poner una veces __AVENIDA__ y otras __AVDA.__
+
+ Por otra parte, el valor numérico 0 (cero) es conveniente guardarlo siempre como numérico 0 (cero) y no con el texto "Nada" o "No hay" o "No tiene", etc. Por ejemplo, si se desea guardar el número de ausencias al trabajo de empleados.
+
+__SERÍA INCORRECTO:__
+
+```xml
+<ausencias>1<ausencias>
+<ausencias>No tiene<ausencias>
+<ausencias>3<ausencias>
+<ausencias>Ninguna<ausencias>
+```
+
+
+__LO CORRECTO SERÍA:__
+
+```xml
+<ausencias>1<ausencias>
+<ausencias>0<ausencias>
+<ausencias>3<ausencias>
+<ausencias>0<ausencias>
+```
 
 </div>
 
