@@ -187,32 +187,33 @@ __Ejemplo__
 _[Visualizar en el navegador el libro.xml](ejemplo/libro.xml)_
 
 ```html 
-<html>  
- 	<head>  
- 	 	<title>Libro</title>  
- 	</head>  
- 	<body>  
- 	 	<h3>XML practico</h3><br>  
- 	 	<p>autores: Sebastien Lecomte,  
+<html>
+	<head>
+		<title>Libro</title>
+	</head>
+	<body>
+		<h3>XML practico</h3>
+		<br>
+			<p>autores: Sebastien Lecomte,  
 Al interpretar este fichero con un navegador, por ejemplo Mozilla, se obtiene:  
- 	 	Thierry Boulanger</p>  
- 	 	<ul>  
- 	 	 	<li>editorial: Ediciones Eni</li>  
- 	 	 	<li>isbn:978‐2‐7460‐4958‐1</li>  
- 	 	 	<li>edicion: 1 </li>  
- 	 	 	<li>paginas: 347</li>  
- 	 	</ul>  
- 	</body>  
-</html>	  
+ 	 	Thierry Boulanger</p>
+			<ul>
+				<li>editorial: Ediciones Eni</li>
+				<li>isbn:978‐2‐7460‐4958‐1</li>
+				<li>edicion: 1</li>
+				<li>paginas: 347</li>
+			</ul>
+		</body>
+	</html>	  
 ```
 
 _[Visualizar en el navegador el libro.html](ejemplo/libro.html)_ 
 
 
-</div>
-
 <div align="center">
 	<a href="README.md"><img src="../../img/before.png" alt="In" style="width:42px;height:42px;"></a>
  	<a href="INTRODUCCION.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
  	<a href="ETIQUETAS.md"><img src="../../img/next.png" alt="Etiquetas XML" style="width:42px;height:42px;"> 
+</div>
+
 </div>

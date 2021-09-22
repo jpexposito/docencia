@@ -45,3 +45,11 @@ __Ejemplo.__
  En un espacio de nombres, el URI (http://DAM/alumnos o http://DAM/profesores) es sólo una forma de identificar de forma única al recurso (al espacio de nombre), por lo que no tiene que ser una dirección con contenido.
 
  Para saber más: los espacios de nombres tienen una recomendación en W3C, que se puede encontrar en [http://www.w3.org/TR/REC-xml-names/](http://www.w3.org/TR/)REC-xml-names/.
+
+<div align="center">
+    <a href="XML_BIEN_FORMADOS.md"><img src="../../img/before.png" alt="Xml bien formados" style="width:42px;height:42px;"></a>
+    <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
+    <a href="AUTOEVALUACION.md"><img src="../../img/next.png" alt="Autoevaluacion XML" style="width:42px;height:42px;"> 
+</div>
+
+</div>
