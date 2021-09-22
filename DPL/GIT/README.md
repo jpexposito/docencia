@@ -1,9 +1,7 @@
-# GIT 
-
 <div align="justify">
 
 <div align="center" >
- <img src="https://rosolutions.com.mx/blog/wp-content/uploads/2019/02/git.jpeg" width="100px">
+ <img src="https://rosolutions.com.mx/blog/wp-content/uploads/2019/02/git.jpeg" >
 </div> 
 
  Git es el sistema de control de versiones más usado en el mundo. Pero, ¿qué es un sistema de control de versiones? Pues es una aplicación que permite gestionar los cambios que se realizan sobre los elementos de un proyecto o repositorio, guardando así versiones del mismo en todas sus fases de desarrollo.
