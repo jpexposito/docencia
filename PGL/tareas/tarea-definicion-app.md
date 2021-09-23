@@ -4,8 +4,7 @@
 
 <div align="center">
 
-<img width="50%" src="https://www.esdesignbarcelona.com/sites/default/files/img/los-errores-al-crear-una-app-movil-que-debes-evitar-1.jpg
-" alt="Entornos de desarrollo integrado">
+<img width="50%" src="https://www.esdesignbarcelona.com/sites/default/files/img/los-errores-al-crear-una-app-movil-que-debes-evitar-1.jpg" alt="Entornos de desarrollo integrado">
 
 </div>
 
