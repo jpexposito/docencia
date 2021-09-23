@@ -162,8 +162,7 @@ Hay que tener en cuenta que a medida que los teléfonos móviles crecen en popul
 
  __Xcode solo se ejecuta en plataformas macOS__.
 
-<img width="300px" src=" https://conocimientolibre.mx/wp-content/uploads/2020/01/interfaz-xcode.png
-" alt="Xcode de desarrollo integrado">
+<img width="300px" src=" https://conocimientolibre.mx/wp-content/uploads/2020/01/interfaz-xcode.png" alt="Xcode de desarrollo integrado">
 
 ##### Android Studio
 
@@ -254,8 +253,7 @@ Debido a su capacidad para construir aplicaciones tanto nativas como multiplataf
 
  Aparte de las limitaciones de tiempo, existen problemas de tener suficientes recursos disponibles para ejecutar pruebas en cada función de aplicaciones diversificadas. Como resultado, el uso de emuladores ha ganado una popularidad que es una solución para agilizar y facilitar el proceso de prueba para hacerlo más fácil y menos tedioso.
 
-<img  width="100px" src="https://geekflare.com/wp-content/uploads/2020/04/3593965-scaled-e1587206834458.jpg
-" alt="Emuladores">
+<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/3593965-scaled-e1587206834458.jpg" alt="Emuladores">
 
  Antes de continuar, primero aprendamos un "emulador". ¿Así que qué es lo?
 
@@ -281,8 +279,7 @@ Debido a su capacidad para construir aplicaciones tanto nativas como multiplataf
 
 ##### Apetito
 
-<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/1-1-974x628.png
-" alt="Apetito">
+<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/1-1-974x628.png" alt="Apetito">
  
  Apetito es un emulador basado en navegador y se adapta bien a HTML5 y JavaScript.
 
@@ -292,8 +289,7 @@ Debido a su capacidad para construir aplicaciones tanto nativas como multiplataf
 
 ##### LambdaTest
 
-<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/444444-1200x470.png
-" alt="LambdaTest">
+<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/444444-1200x470.png" alt="LambdaTest">
 
  Con una selección de más de 2000 combinaciones diferentes de navegadores y entornos de SO, LambdaTest garantiza que los sitios web y todas las aplicaciones eliminen todos los errores y funcionen sin problemas. Las herramientas de desarrollo integradas son la puerta de entrada a la depuración, también en tiempo real.
 
@@ -304,8 +300,7 @@ Debido a su capacidad para construir aplicaciones tanto nativas como multiplataf
 
 ##### Sauce Labs
 
-<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/3344-1027x628.png
-" alt="Ciclo de vida">
+<img  width="300px" src="https://geekflare.com/wp-content/uploads/2020/04/3344-1027x628.png" alt="Sauce Labs">
 
 La Saucelab's Los simuladores de Android e iOS son un enfoque económico para ejecutar pruebas en aplicaciones móviles. Sus emuladores te permiten llevar prueba de navegador cruzado a una velocidad atractiva a un costo menor que los dispositivos reales.
 
@@ -315,8 +310,7 @@ En resumen, probablemente sean los mejores que existen para proporcionar una bue
 
 ### Ciclo de vida de una aplicación: descubrimiento, instalación, ejecución, actualización y borrado.
 
-<img  width="300px" src="https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-app.jpg
-" alt="Ciclo de vida">
+<img  width="300px" src="https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-app.jpg" alt="Ciclo de vida">
 
  Existe la equivocada creencia de que el objetivo de una app es llegar a publicarse en la App Store (u otra tienda). Hemos trabajado duro durante semanas, meses incluso. Mucha planificación, horas de reuniones con el cliente, diseño, programación, depuración de código… y llega el día en que, al fin, vemos la app disponible para que todo el mundo la pueda descargar. Es el momento de celebrarlo, ¿correcto?
 
@@ -328,15 +322,15 @@ __Todos los seres crecen agitadamente pero luego vuelven a su raíz.__
 
  De modo que no debemos hablar simplemente de desarrollar una app sino de crearla y mantenerla con vida. Para ello describimos los pasos representados en la imagen superior:
 
- - Planificación. No importa cuanto tiempo pases en esta etapa. Piensa que todo el tiempo que inviertes aquí es tiempo que te ahorrarás en las etapas siguientes. Hay que definir bien los objetivos que tiene la app y cuáles van a ser las funcionalidades que habrá que implementar para conseguirlos.
+ - __Planificación__. No importa cuanto tiempo pases en esta etapa. Piensa que todo el tiempo que inviertes aquí es tiempo que te ahorrarás en las etapas siguientes. Hay que definir bien los objetivos que tiene la app y cuáles van a ser las funcionalidades que habrá que implementar para conseguirlos.
 
- - Desarrollo. Diseñadores y programadores trabajando codo con codo para materializar la idea de una forma coherente.
+ - __Desarrollo__. Diseñadores y programadores trabajando codo con codo para materializar la idea de una forma coherente.
 
-- Test. Consiste en probar la app hasta que falla. Es importante que este paso lo lleven a cabo personas externas al equipo de desarrollo. Usuarios random. Como se suele decir: “Lo puedes hacer a prueba de bombas, pero no a prueba de tontos.” Cuando encuentres el fallo vuelve al punto 2. O incluso al punto 1 si los fallos van más allá del desarrollo.
+- __Test__. Consiste en probar la app hasta que falla. Es importante que este paso lo lleven a cabo personas externas al equipo de desarrollo. Usuarios random. Como se suele decir: “Lo puedes hacer a prueba de bombas, pero no a prueba de tontos.” Cuando encuentres el fallo vuelve al punto 2. O incluso al punto 1 si los fallos van más allá del desarrollo.
 
- - Lanzamiento. En el caso de la versión 1 ten en cuenta que vale más una app publicada que una por publicar. No te quedes en el bucle 1-2-3 más tiempo del estrictamente necesario. La app necesita nacer para desarrollarse. Anota las mejoras para la siguiente versión y lanza la app.
+ - __Lanzamiento__. En el caso de la versión 1 ten en cuenta que vale más una app publicada que una por publicar. No te quedes en el bucle 1-2-3 más tiempo del estrictamente necesario. La app necesita nacer para desarrollarse. Anota las mejoras para la siguiente versión y lanza la app.
 
- - Monitorización. Muchos desarrolladores y clientes no saben que esta etapa existe y se sientan a adivinar lo que está ocurriendo con su app basándose únicamente en el número de descargas. Existen muchas formas de conocer en detalle la conducta de los usuarios de nuestra app. Debemos conocerla y paralelamente llevar un seguimiento de los errores y bugs que irán surgiendo.
+ - __Monitorización__. Muchos desarrolladores y clientes no saben que esta etapa existe y se sientan a adivinar lo que está ocurriendo con su app basándose únicamente en el número de descargas. Existen muchas formas de conocer en detalle la conducta de los usuarios de nuestra app. Debemos conocerla y paralelamente llevar un seguimiento de los errores y bugs que irán surgiendo.
 
  El proceso de monitorización nos hará tomar la siguiente decisión. Si la app está bien planteada volveremos a la fase de desarrollo para resolver los errores, mejorarla e implementar nuevas funcionalidades. Empieza la fase de mejoras de la app. En caso contrario será necesaria una nueva etapa de planificación para resolver errores de base que no tienen que ver con programación o diseño.
 
@@ -350,8 +344,7 @@ __Todos los seres crecen agitadamente pero luego vuelven a su raíz.__
 
  Las acciones que podemos llevar a cabo son muchas y muy variadas, y también dependen de la inversión que podamos hacer. Debemos tener preparado material gráfico: teasers, logotipos, notas de prensa, videos, etc. También diseñar una buena campaña para el momento del lanzamiento (o anterior a éste): redes sociales, blogs, publicidad de pago, ASO, etc. Hay que hacer todo el ruido posible, a diario. El marketing es una carrera de fondo que requiere de conocimiento y de constancia. También aquí, la etapa de monitorización nos irá dando pistas sobre nuevas acciones de marketing que vamos a tomar o de cómo optimizar las acciones que se estén llevando a cabo.
 
-<img  width="300px" src="https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-extended.jpg
-" alt="Ciclo de vida y Marketin">
+<img  width="300px" src="https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-extended.jpg" alt="Ciclo de vida y Marketin">
 
 ## Referencias
 
