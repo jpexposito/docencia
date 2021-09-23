@@ -1,4 +1,13 @@
+<div align="justify">
+
 # Definición de la APP a Desarrollar
+
+<div align="center">
+
+<img width="50%" src="https://www.esdesignbarcelona.com/sites/default/files/img/los-errores-al-crear-una-app-movil-que-debes-evitar-1.jpg
+" alt="Entornos de desarrollo integrado">
+
+</div>
 
 ## Introducción
 
@@ -19,3 +28,5 @@
  - Esquema de BBDD.
  - Realizar los pasos y realizar la documentación en tu cuenta de Github.com e incluir la url en el pdf de entrega.
  - Realizar los pasos y subir en un pdf.
+
+</div>
