@@ -17,7 +17,7 @@ __Programa => “La gran caja”__
 __Operaciones => “cajas simples”__
 
 
-<img src="https://jpexposito.com/wp-content/uploads/2021/03/idea-test.png" width="50%" >
+<img src="https://jpexposito.com/wp-content/uploads/2021/03/idea-test.png" width="200px" >
 
 </div>
 
@@ -31,7 +31,7 @@ Ahora vamos a trabajar en encontrar y solventar los problemas que detectemos. Pa
 
  Mi abuela tenía una calculadora para realizar los cálculos necesarios para vender su queso, una o dos veces por semana.
  <div align="center">
- <img src="https://jpexposito.com/wp-content/uploads/2021/03/abuela.png" width="50%" >
+ <img src="https://jpexposito.com/wp-content/uploads/2021/03/abuela.png" width="100px" >
 </div>
  Este ejemplo resulta muy simple, pero pongamos que mi abuela se equivoca, y realiza una división por 0, cuál es el resultado correcto.
  La pregunta que te harás en estos momentos es por qué se producen estos errores, éstas son las principales causas:
@@ -58,7 +58,7 @@ __Los test, tienen como principal misión evitar estos errores, y garantizar un 
  La respuesta es simple. __FORMA PARTE DEL CICLO DE DESARROLLO DE DESARROLLO__
 
  <div align="center">
- <img src=" https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-app.jpg" width="50%" >
+ <img src="https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-app.jpg" width="200px" >
 </div>
 
 </div>
