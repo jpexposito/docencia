@@ -60,8 +60,6 @@ __Los test, tienen como principal misión evitar estos errores, y garantizar un 
  <div align="center">
  <img src="https://cdn-bjcjl.nitrocdn.com/HQYXfZvlijlYvwqzOZEqIWtqVqwJebrr/assets/static/optimized/rev-95dba2d/wp-content/uploads/2020/02/ciclo-de-vida-desarrollo-software-movil.gif" >
 
- <img src="https://e7.pngegg.com/pngimages/751/479/png-clipart-application-lifecycle-management-agile-software-development-product-lifecycle-application-software-technology-development-life-cycle-company-text.png" >
-
 </div>
 
 </div>
