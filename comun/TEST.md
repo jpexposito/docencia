@@ -58,7 +58,7 @@ __Los test, tienen como principal misión evitar estos errores, y garantizar un 
  La respuesta es simple. __FORMA PARTE DEL CICLO DE DESARROLLO DE DESARROLLO__
 
  <div align="center">
- <img src="https://www.imk.es/wp-content/uploads/2015/03/ciclo-de-vida-app.jpg" >
+ <img src="https://exceldata.pe/wp-content/uploads/2017/10/search-engine-machine.gif" >
 </div>
 
 </div>
