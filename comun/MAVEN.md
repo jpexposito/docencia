@@ -1,3 +1,5 @@
+<div align="justify">
+
 # PRIMEROS PASOS EN MAVEN
 
 ## Introducción
@@ -55,7 +57,7 @@ my-app
 
  El ciclo de vida de maven se puede resumir a través de la siguiente imagen:
  <div align="center">
-  <img src="https://jpexposito.com/wp-content/uploads/2021/02/lifecycle-maven.jpg" alt="maven" >
+  <img width="200px" src="https://jpexposito.com/wp-content/uploads/2021/02/lifecycle-maven.jpg" alt="maven" >
   <p>Fuente: Libro Maven Lifecycle</p>
  </div>
 
@@ -76,3 +78,5 @@ my-app
  - mvn idea:idea.
 
  Por último, el conjunto de comandos, para las distintas fases del ciclo de vida de maven, en el siguiente [link](https://jpexposito.com/lets-go-maven/).
+
+</div>
