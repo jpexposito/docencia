@@ -388,8 +388,7 @@ correo, calendario, etc.)
 - Sistemas de Gestión Empresarial: ERP, CRM, Gestión Contable, Gestión de Proyectos, Gestión de Nominas, sistemas eCommerce, etc.
 
 - Criterios de selección de un sistema de información de gestión empresarial: aspectos funcionales, tecnológicos, hoja de ruta, cumplimiento de estándares, software libre o no, coste de licencias, servicio de mantenimiento, etc. 
-
-- Planificación metódica de las tareas a realizar en la implantación de las herramientas de gestión empresarial.
+ s a realizar en la implantación de las herramientas de gestión empresarial.
 
  Profesionalidad y responsabilidad en la consecución de los objetivos finales de la tarea en los plazos marcados.
 
@@ -401,7 +400,7 @@ correo, calendario, etc.)
 
 ## Contenidos del módulo
 
-[Unidad 1: Reconocimiento de las características de lenguajes de marcas](INTRODUCCION.md)    
+[Unidad 1: Reconocimiento de las características de lenguajes de marcas](XML/INTRODUCCION.md)    
 [Unidad 2: HTML](HTML.md)    
 [Unidad 6: RSS](RSS.md)                  
 [Unidad 5: XML y DTD](XML_DTD.md)         

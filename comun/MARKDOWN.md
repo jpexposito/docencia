@@ -91,7 +91,7 @@ Ejemplo.: `[<mensaje>](#visualización-del-contenido) `
  
 - También se pueden subir con la sintaxis de html, que te permite ajustar su tamaño y además indicarle que está en su mismo directorio. `<img src="carpeta\imagen.ext" width="200" heigh="600">` 
 Préstese especial atención a que *img* va pegado a < y que los tamaños se escriben entre dobles comillas, estos se pueden omitir y te cogerá el tamaño propio de la imagen. 
-<img src="img\home.png" width="200" heigh="200">  
+<img src="..\img\home.png" width="200" heigh="200">  
 
 ## Vídeo 
 
