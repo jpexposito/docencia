@@ -17,4 +17,5 @@
 ## Se debe
  - Definir el nombre de la APP
  - Esquema de BBDD.
- 
+ - Realizar los pasos y realizar la documentación en tu cuenta de Github.com e incluir la url en el pdf de entrega.
+ - Realizar los pasos y subir en un pdf.
