@@ -82,6 +82,11 @@ my-app
 
 ## Mi primer proyecto en Maven
  
+
+<div align="center">
+	<img width="300px" src="https://www.sneakerlost.es/hubfs/Como-atraer-y-retener-alumnos-extranjeros-01.png" alt="alumnos">
+</div>
+
  Para comenzar con maven vamos a realizar un pequeño proyecto para entender cuales son sus puntos fuertes y en que nos puede ayudar.
  Debemos ejecutar el siguiente comando:
 
