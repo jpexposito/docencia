@@ -82,11 +82,11 @@ __Para trabajar de forma idónea los test debemos de ayudarnos de [maven](MAVEN.
  El ejemplo que vamos a realizar consiste en realizar una app llamada _Instituto_ que contenga las clases y el alumnado que pertenece a estas.
 
  - Instituto, contiene de 1..n clases, y la clase contienen de 1..m alumnos.
- - La clase _Alumno_ contien:
+ - La clase _Alumno_ contiene:
    - Nombre
    - Apellidos
    - Edad
- - La clase _Clase_ contine:
+ - La clase _Clase_ contiene:
    - Numero
    - Curso
    - Alumnos
@@ -99,26 +99,29 @@ __Para trabajar de forma idónea los test debemos de ayudarnos de [maven](MAVEN.
    - Calcular el número de alumnos que comienzan por A.
  - _Vamos a realizar todo esto de forma estructuturada y con test_.
 
-    <details>
-      <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+<details>
+  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 
-   En primer lugar debemos de crear cada una de las clases que pide el ejercicio, con las distintas propiedades.
-    - [Alumno.java](alumnos/src/main/java/es/iespuerto/jpexposito/Alumno.java)
-    - [Clase.java](alumnos/src/main/java/es/iespuerto/jpexposito/Clase.java)
-    - [Instituto.java](alumnos/src/main/java/es/iespuerto/jpexposito/Instituto.java)
+  En primer lugar debemos de crear cada una de las clases que pide el ejercicio, con las distintas propiedades.
+  - [Alumno.java](alumnos/src/main/java/es/iespuerto/jpexposito/Alumno.java)
+  - [Clase.java](alumnos/src/main/java/es/iespuerto/jpexposito/Clase.java)
+  - [Instituto.java](alumnos/src/main/java/es/iespuerto/jpexposito/Instituto.java)
 
-  Para continuar con la creación de los distintos __test__ de las clases anteriores:
-    - [ClaseTest.java](alumnos/src/test/java/es/iespuerto/jpexposito/ClaseTest.java)
-    - [InsitutoTest.java](alumnos/src/test/java/es/iespuerto/jpexposito/InsitutoTest.java)
-    - [UtilsTest.java](alumnos/src/test/java/es/iespuerto/jpexposito/UtilsTest.java) Como clase de apoyo.
+Para continuar con la creación de los distintos __test__ de las clases anteriores:
+  - [ClaseTest.java](alumnos/src/test/java/es/iespuerto/jpexposito/ClaseTest.java)
+  - [InsitutoTest.java](alumnos/src/test/java/es/iespuerto/jpexposito/InsitutoTest.java)
+  - [UtilsTest.java](alumnos/src/test/java/es/iespuerto/jpexposito/UtilsTest.java) Como clase de apoyo.
 
-  Hemos de ejecutar en la raiz del proyecto
-    ```console
-     mvn clean install
-    ```
-    Obteniendo el listado de test que se ejecutan, así como su resultado. Por último, si ver la cobertura de test que se ha obtenido.
-    [index.html](alumnos/target/jacoco-out/index.html)
-     ```
-    </details>
+Hemos de ejecutar en la raiz del proyecto:
+
+```console
+  mvn clean install
+```
+
+Obteniendo el listado de test que se ejecutan, así como su resultado. Por último, si ver la cobertura de test que se ha obtenido.
+    __alumnos/target/jacoco-out/index.html__.
+
+
+  </details>
 
 </div>
