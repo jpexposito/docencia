@@ -18,9 +18,7 @@
 
 Lo primero debemos de actualizar el sistema con:
 
-```
-  sudo apt-get update
-   
+```   
   sudo apt-get upgrade
   
 ```
@@ -83,6 +81,9 @@ export PATH
 
 
 <a href="https://www.jetbrains.com/es-es/idea/"><img src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png?raw=true" title="Intellij" alt="Intellij"></a>
+
+<img src=" " alt="Intellij">
+
 
 ## Planteamento del Ejercicio (Gestión de Bancos)
 

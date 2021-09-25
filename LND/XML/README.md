@@ -2,8 +2,8 @@
 <div align="justify">
 
 
- <div align="center">
- 	<img align="center" width= "25%" src="../../img/xml.png" alt="XML">
+<div align="center">
+ 	<img width= "25%" src="../../img/xml.png" alt="XML">
 </div>
 
 # XML

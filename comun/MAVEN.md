@@ -79,40 +79,5 @@ my-app
 
  Por último, el conjunto de comandos, para las distintas fases del ciclo de vida de maven, en el siguiente [link](https://jpexposito.com/lets-go-maven/).
 
-
-## Mi primer proyecto en Maven
  
-
-<div align="center">
-	<img width="300px" src="https://www.sneakerlost.es/hubfs/Como-atraer-y-retener-alumnos-extranjeros-01.png" alt="alumnos">
-</div>
-
- Para comenzar con maven vamos a realizar un pequeño proyecto para entender cuales son sus puntos fuertes y en que nos puede ayudar.
- Debemos ejecutar el siguiente comando:
-
-```console 
- mvn archetype:generate -DgroupId=es.iespuerto.instituto -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -Darc
-```
-
- Una vez realizado este paso, y pasados unos segundos debemos impotar el proyecto en nuestro __IDE__ favorito. __Archico->Importar Proyecto__ generalmente.
-
- El ejemplo que vamos a realizar consiste en realizar una app llamada _Instituto_ que contenga las clases y el alumnado que pertenece a estas.
-
- - Instituto, contiene de 1..n clases, y la clase contienen de 1..m alumnos.
- - La clase _Alumno_ contien:
-   - Nombre
-   - Apellidos
-   - Edad
- - La clase _Clase_ contine:
-   - N-umero
-   - Curso
-   - Alumnos
- - La clase _Instituto_ contiene:
-   - Clases.    
- - Métodos/Funciones:
-   - Calcular el número de alumnso por clase.
-   - Calcular el número total de alumnos en el instituto.
-   - Calcular el número total de alumnos mayot de 25 años.
-   - Calcular el número de alumnos que comienzan por A.
- - _Vamos a realizar todo esto de forma estructuturada y con test_.  
 </div>

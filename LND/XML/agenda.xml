@@ -1,0 +1,22 @@
+<personas>
+		<persona>
+			<nombre>Patricia</nombre>
+			<apellidos>Perez Perez</apellidos>
+			<direccion>bla bla</direccion>
+			<telefonos>
+				<personal>6</personal>
+				<fijo>9</fijo>
+				<trabajo>8</trabajo>
+			</telefonos>
+		</person>
+		<persona>
+			<nombre>Laya</nombre>
+			<apellidos>Perez Costa</apellidos>
+			<direccion>ble ble</direccion>
+			<telefonos>
+				<personal>6</personal>
+				<fijo>9</fijo>
+				<trabajo>8</trabajo>
+			</telefonos>
+		</person>
+	</personas>
