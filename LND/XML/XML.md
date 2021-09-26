@@ -105,13 +105,13 @@ _Ejemplo._
 ```xml 
 <?xml version="1.0" encoding="iso-8859-1"?>
 <libro>
-<titulo>XML practico</titulo>
-<autor>Sebastien Lecomte</autor>
-<autor>Thierry Boulanger</autor>
-<editorial>Ediciones Eni</editorial>
-<isbn>978-2-7460-4958-1</isbn>
-<edicion>1</edicion>
-<paginas>347</paginas>
+  <titulo>XML practico</titulo>
+  <autor>Sebastien Lecomte</autor>
+  <autor>Thierry Boulanger</autor>
+  <editorial>Ediciones Eni</editorial>
+  <isbn>978-2-7460-4958-1</isbn>
+  <edicion>1</edicion>
+  <paginas>347</paginas>
 </libro>
 ```
  El elemento raíz o ejemplar es el elemento <libro>, que a su vez está compuesto de los elementos __<titulo>, <autor>, <editorial>, <isbn>, <edicion> y <paginas>__. El elemento __<libro>__ se cierra al final con la etiqueta __</libro>__, por lo que el resto de elementos están todos dentro del  elemento <libro>. En realidad, en todo documento XML, todos sus elementos están dentro (o pertenecen) al elemento raíz o ejemplar. Éste siempre se abre al inicio (<libro> en este caso) y se cierra al final (en este caso </libro>).
@@ -175,16 +175,16 @@ debería escribirse como:
   En un documento XML no debe ponerse un elemento que contenga un dato además de otros elementos. Si bien esta situación no genera errores de sintaxis, se dificultará el procesado posterior que pudiera aplicarse al documento. Por ejemplo:
 
 ```xml
- <alumno>Juan
- <apellidos>Garrido Fdez.</apellidos>
- </alumno>
+<alumno>Juan
+  <apellidos>Garrido Fdez.</apellidos>
+</alumno>
 ```
  Como se ve en el ejemplo, el elemento alumno contiene el dato "Juan" además del elemento apellidos. El dato "Juan" queda mezclado con el elemento apellidos, por lo que no se puede acceder a dicho dato de forma independiente. Por tanto, debe definirse otro elemento para el dato __Juan__, es decir que cada dato debe tener su etiqueta asociada, del modo:
  
 ```xml
 <alumno>
-<nombre>Juan</nombre>
-<apellidos>Garrido Fdez.</apellidos>
+  <nombre>Juan</nombre>
+  <apellidos>Garrido Fdez.</apellidos>
 </alumno>
 ```
 
@@ -194,12 +194,11 @@ __ES INCORRECTO:__
 
 ```xml
 <AlumnosCiclo>
-<alumno1>Juan Garrido</alumno1>
-<alumno2>José Gómez</alumno2>
-<alumno3>Jesús García</alumno3>
-<alumno4>Pedro López</alumno4>
-etc.
-etc.
+  <alumno1>Juan Garrido</alumno1>
+  <alumno2>José Gómez</alumno2>
+  <alumno3>Jesús García</alumno3>
+  <alumno4>Pedro López</alumno4>etc.
+   etc.
 </AlumnosCiclo>
 ```
 
@@ -207,12 +206,11 @@ __ES CORRECTO:__
 
 ```xml
 <AlumnosCiclo>
-<alumno>Juan Garrido</alumno>
-<alumno>José Gómez</alumno>
-<alumno>Jesús García</alumno>
-<alumno>Pedro López</alumno>
-etc.
-etc.
+  <alumno>Juan Garrido</alumno>
+  <alumno>José Gómez</alumno>
+  <alumno>Jesús García</alumno>
+  <alumno>Pedro López</alumno>etc.
+   etc.
 </AlumnosCiclo>
 ```
 
@@ -220,16 +218,14 @@ Escrito de este último modo se facilita el posterior procesado del documento; a
 
 ```xml
 <integrantes>
-<lista_alumnos>
-<alumno>...</alumno>
-<alumno>...</alumno>
-...
-</lista_alumnos>
-<lista_profesores>
-<profesor>...</profesor>
-<profesor>...</profesor>
-...
-</lista_profesores>
+  <lista_alumnos>
+    <alumno>...</alumno>
+    <alumno>...</alumno>...
+  </lista_alumnos>
+  <lista_profesores>
+    <profesor>...</profesor>
+    <profesor>...</profesor>...
+  </lista_profesores>
 </integrantes>
 ```
 
@@ -237,12 +233,10 @@ En ese ejemplo, las etiquetas __<lista_alumnos></lista_alumnos> y <lista_profeso
 
 ```xml
 <integrantes>
-<alumno>...</alumno>
-<alumno>...</alumno>
-...
-<profesor>...</profesor>
-<profesor>...</profesor>
-...
+  <alumno>...</alumno>
+  <alumno>...</alumno>...
+  <profesor>...</profesor>
+  <profesor>...</profesor>...
 </integrantes>
 ```
 
@@ -259,16 +253,18 @@ __Ejemplo__.
 ```xml
 <?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
 <biblioteca>
-<documento tipo_docum="libro" titulo="XML práctico" editorial="Ediciones Eni">
-<tipo> <libro isbn="978-2-7460-4958-1" edicion="1" paginas="347"></libro> </tipo>
-<autor nombre="Sebastien Lecomte"></autor>
-<autor nombre="Thierry Boulanger"></autor>
-<autor nombre="Ángel Belinchon Calleja" funcion="traductor"></autor>
-<prestado lector="Pepito Grillo">
-<fecha_pres dia="13" mes="mar" año="2009"></fecha_pres>
-<fecha_devol dia="21" mes="jun" año="2009"></fecha_devol>
-</prestado>
-</documento>
+  <documento tipo_docum="libro" titulo="XML práctico" editorial="Ediciones Eni">
+    <tipo>
+      <libro isbn="978-2-7460-4958-1" edicion="1" paginas="347"></libro>
+    </tipo>
+    <autor nombre="Sebastien Lecomte"></autor>
+    <autor nombre="Thierry Boulanger"></autor>
+    <autor nombre="Ángel Belinchon Calleja" funcion="traductor"></autor>
+    <prestado lector="Pepito Grillo">
+      <fecha_pres dia="13" mes="mar" año="2009"></fecha_pres>
+      <fecha_devol dia="21" mes="jun" año="2009"></fecha_devol>
+    </prestado>
+  </documento>
 </biblioteca>
 ```
  __Guarda el fichero y ejecutalo con un navegador__
