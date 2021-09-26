@@ -1,4 +1,4 @@
-# MANUALES COMUNES DE LAS DISTINTAS ASIGNATURAS
+# MANUALES COMUNES
 
 ## Introducción
 
@@ -13,4 +13,3 @@
 ## Referencias
 
  - https://github.com/DGIIMUnderground/DGIIM1/blob/master/guias/markdown.md
-

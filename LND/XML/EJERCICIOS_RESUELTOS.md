@@ -4,13 +4,13 @@
 
 ## EJERCICIO 1
 
- Para crear los códigos XML descargaremos el programa "XML Copy Editor", como hemos indicado anteriormente, y lo instalamos en nuestro equipo. Aunque ya este programa nos indica si el documento XML está "Bien-Formado", es conveniente pasarlo por el validador de W3C (por ser la institución oficial).
+ Para crear los códigos XML descargaremos el programa __Sublime Text__, como hemos indicado anteriormente, y lo instalamos en nuestro equipo. Aunque ya este programa nos indica si el documento XML está "Bien-Formado", es conveniente pasarlo por el validador de W3C (por ser la institución oficial).
 
 Un ejemplo es el siguiente. Se desea diseñar un documento XML "bien formado" que permita almacenar una agenda de teléfonos, con una estructura lógica y fácilmente legible. La agenda tendrá el título "Agenda para el trabajo" y la categoría "Importante". De cada persona se desea almacenar el nombre y los apellidos, la dirección (calle, piso, ciudad y CP) y los números de teléfono de casa, trabajo y móvil. Grabar la menos dos personas con los datos:
 
 - Juan Garrido Pinto, en calle Grande, piso 1, letra A, de Badajoz, con CP 06003; tiene 2 teléfonos, el móvil 622111111 y el de casa 942232323.
 
-- Jesús Rodríguez Hdez., en calle Mayor, nº 7, de Zafra, con CP 06300; tiene 3 teléfonos, el móvil 611333333, el de casa 924000000 y el del trabajo 924999999. 
+- Jesús Rodríguez Hdez., en calle Mayor, nº 7, de Zafra, con CP 06300; tiene 3 teléfonos, el móvil 611333333, el de casa 924000000 y el del trabajo 924999999.
 
 <details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
@@ -128,7 +128,7 @@ El documento XML debe tener grabados los siguientes datos:
 ```
 
  Este código se ha escrito con el programa "Sublime Text" en un fichero de texto con extensión .xml. Se ha comprobado si está __Bien-Formado__, instalando el publin __Indent X__.
- 
+
  Debe observarse que algunos datos se han guardado como elementos y otros como atributos. Además se han incorporado comentarios al documento. Cabe destacar que los datos que tienen varias partes (como la dirección y las fechas) se guardan separando cada parte. No es conveniente guardar todo el dato en un sólo elemento o atributo: Es decir, las siguientes líneas no conviene usarlas:
 
 ```xml
@@ -200,5 +200,5 @@ El documento XML debe tener grabados los siguientes datos:
 <div align="center">
     <a href="XML.md"><img src="../../img/before.png" alt="Etiquetas" style="width:42px;height:42px;"></a>
     <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
-    <a href="ESPACIO_NOMBRES.md"><img src="../../img/next.png" alt="XML" style="width:42px;height:42px;"> 
+    <a href="ESPACIO_NOMBRES.md"><img src="../../img/next.png" alt="XML" style="width:42px;height:42px;">
 </div>
