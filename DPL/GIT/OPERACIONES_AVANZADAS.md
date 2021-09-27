@@ -3,7 +3,7 @@
 # OPERACIONES AVANZADAS EN GIT
 
 <div align="center">
-<img src="">
+<img src="https://i1.wp.com/codeyourapps.com/wp-content/uploads/2021/01/3D-infographic2-Recovered-15.png?resize=800%2C500&ssl=1">
 </div>
 
 ## Integrando un repositorio remoto
@@ -38,7 +38,7 @@ Cuando tu cambios en el repositorio local estén listos para ser integrados en e
 ```console
 git push origin <nombre_rama_local>
 ```
-❗️Recuerda que origin es el nombre que le dimos al repositorio remoto.
+❗️Recuerda que _origin_ es el nombre que le dimos al repositorio remoto.
 
 ## Comandos Git para crear ramas
 
@@ -99,12 +99,12 @@ git reset --hard origin/dev
 ## Recomendaciones
 
  Los anteriores son los principales comandos Git que utilizarás en tu día a día a la hora de trabajar en tu repositorio. No obstante, sería recomendable utilizar una serie de recomendaciones y consejos para que tu repositorio no se líe ni pierdas el trabajo realizado:
-  - Sigue este flujo para gestionar las ramas de tu repositorio.
+  - __Sigue este flujo para gestionar las ramas de tu repositorio__.
   - Añade el fichero __.gitignore__ nada más crear tu repositorio local para no ensuciar el repositorio con ficheros innecesarios.
-  - No incluyas en tu repositorio los ficheros de configuración de tu proyecto que crea el IDE de desarrollo.
-  - Haz commits con regularidad en tu repositorio local (siempre y cuando el código esté limpio de fallos).
-  - Solo integra tu repositorio local con el remoto (hacer un push) cuando el código esté realmente listo para compartir y libre de errores.
-  - Para evitar conflictos en el repositorio, intenta seguir el flujo siguiente (es lo que a mí me ha funcionado):
+  - No incluyas en tu repositorio los ficheros de configuración de tu proyecto que crea el IDE de desarrollo. __(.idea)__, __(.netbeans)__, __(.eclipse)__, __etc__.
+  - Haz __commits__ con regularidad en tu repositorio local (siempre y cuando el código esté limpio de fallos).
+  - Solo integra tu repositorio local con el remoto (hacer un push) cuando el código esté realmente listo para compartir y libre de errores. Para ello implementa __test__ para verificar que tu código es estable.
+  - Para evitar conflictos en el repositorio, intenta seguir el flujo siguiente:
 
 ```console
   # Clono de un repositorio remoto: Github, Gitlab, ...
@@ -141,6 +141,12 @@ git reset --hard origin/dev
   git branch -d feature/feature_1
   ...
 ```
+
+<div align="center">
+<img src="https://static.javatpoint.com/tutorial/git/images/git-remote.png">
+</div>
+
+
 <div align="center">
     <a href="OPERACIONES_ESENCIALES.md"><img src="../../img/before.png" alt="Operaciones esenciales" style="width:42px;height:42px;"></a>
     <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>

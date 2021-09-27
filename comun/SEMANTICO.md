@@ -15,6 +15,8 @@ Llamo a este sistema __Versionado Semántico__. Bajo este esquema, los números 
   <img src="https://docs.google.com/drawings/d/e/2PACX-1vRk1PZ0E2PNryW8zsmD-MKJAJ6iSTOPqlvEhUt9nmuUuXdbn5IknEqlDjHkx4Xahwi_RJcDSKeKz49g/pub?w=443&h=172" alt="Versionado Semantico" >
 </div>
 
+# Referencias
+- [Descripción de versionado semánticoE](https://semver.org/lang/es/).
 
 
 </div>
