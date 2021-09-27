@@ -49,7 +49,7 @@ git remote add origin https://server/namespace/project.git
  El estado del repositorio debe ser como el que se muestra en la siguiente imagen:
 
 <div align="center">
-  <img src="https://j2logo.com/wp-content/uploads/git-ramas-principales.jpg" alt="Ramas principales de Git" >
+  <img width="300px" src="https://j2logo.com/wp-content/uploads/git-ramas-principales.jpg" alt="Ramas principales de Git" >
 </div>
 
 
@@ -59,7 +59,7 @@ Los desarrollos de __nuevas funcionalidades__ (_evolutivos_) y __bugfixes__ (_er
 
 
 <div align="center">
-  <img src="https://j2logo.com/wp-content/uploads/git-ramas-principales.jpg" alt="Ramas feature en Git" >
+  <img width="300px" src="https://j2logo.com/wp-content/uploads/git-ramas-feature.jpg" alt="Ramas feature en Git" >
 </div>
 
 _Las reglas para estas ramas son_:
@@ -98,7 +98,7 @@ Es importante la opción __--no-ff__ para que quede constancia en la rama dev de
  Cuando finaliza la versión, la rama _release_ se fusiona con _master_ y _dev_, para asegurarnos de que cualquier cambio realizado no se pierda accidentalmente por un nuevo desarrollo.
 
   <div align="center">
-    <img src="https://j2logo.com/wp-content/uploads/git-ramas-release.jpg" alt="Ramas release en Git" >
+    <img width="300px" src="https://j2logo.com/wp-content/uploads/git-ramas-release.jpg" alt="Ramas release en Git" >
   </div>
 
 
@@ -168,7 +168,7 @@ ha sido incorporada a dev y master, tanto en local como en origin.
  Este tipo de versionado (_x.y.z_) se conoce como versionado semántico, y puedes obtener algo más de información [aquí](..(/../../comun/SEMANTICO.md)).
 
 <div align="center">
-  <img src="https://j2logo.com/wp-content/uploads/git-ramas-hotfix.jpg" alt="Hotfix en Git" >
+  <img width="300px" src="https://j2logo.com/wp-content/uploads/git-ramas-hotfix.jpg" alt="Hotfix en Git" >
 </div>  
 
 ‼️ Es importante recordar eliminar la rama una vez que ha sido incorporada a dev y master, tanto en local como en origin.
