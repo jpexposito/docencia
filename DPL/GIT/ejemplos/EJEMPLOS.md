@@ -9,7 +9,7 @@ cd libro
 ## Ejercicio 1
 
 - Mostrar el historial de cambios del repositorio.
-- Crear la carpeta capitulos y crear dentro de ella el fichero capitulo1.txt con el siguiente texto.
+- Crear la carpeta capítulos y crear dentro de ella el fichero capitulo1.txt con el siguiente texto.
 
 ```console
 Git es un sistema de control de versiones ideado por Linus Torvalds.
@@ -36,7 +36,7 @@ Git es un sistema de control de versiones ideado por Linus Torvalds.
 
 ## Ejercicio 2
 
- - Crear el fichero capitulo2.txt en la carpeta capitulos con el siguiente texto.
+ - Crear el fichero capitulo2.txt en la carpeta capítulos con el siguiente texto.
 
 ```console
 El flujo de trabajo básico con Git consiste en: 1- Hacer cambios en el repositorio. 2- Añadir los cambios a la zona de intercambio temporal. 3- Hacer un commit de los cambios.
@@ -65,7 +65,7 @@ El flujo de trabajo básico con Git consiste en: 1- Hacer cambios en el reposito
 
 ## Ejercicio 3
 
- - Crear el fichero capitulo3.txt en la carpeta capitulos con el siguiente texto.
+ - Crear el fichero capitulo3.txt en la carpeta capítulos con el siguiente texto.
 
 ```console
 Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
@@ -85,28 +85,31 @@ Git permite la creación de ramas lo que permite tener distintas versiones del m
  > git add .
  > git commit -m "Añadido capítulo 3."
  > git log
- > git diff &lt;codigo hash de la primera version>..HEAD
+ > git diff <codigo hash de la primera version>..HEAD
 ```
 
 </details>
 
 ## Ejercicio 4
 
-- Añadir al final del fichero indice.txt la siguiente línea:
+- Crea el fichero índice.txt la siguiente línea:
 ```console
-Capítulo 5: Conceptos avanzados
+Indice de los cápitulos, con conceptos avanzados de git
 ```
 - Añadir los cambios a la zona de intercambio temporal.
-- Hacer un commit de los cambios con el mensaje _Añadido capítulo 5 al índice._.
+- Hacer un commit de los cambios con el mensaje _"Indice de los cápitulos, con conceptos avanzados de git_.
 - Mostrar quién ha hecho cambios sobre el fichero _indice.txt_.
 
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
 ```console
- > echo "Capítulo 5: Conceptos avanzados" >> indice.txt
+ > cat > indice.txt
  > git add .
- > git commit -m "Añadido capítulo 5 al índice."
+ > git commit -m "Se crea el indice."
+ > echo "Indice de los cápitulos, con conceptos avanzados de git" >> indice.txt
+ > git add .
+ > git commit -m "Añadido el índice ."
  > git annotate indice.txt
  ```
 
@@ -114,7 +117,7 @@ Capítulo 5: Conceptos avanzados
 
 ## Ejercicio 5
 
-Crear una nueva rama bibliografia y mostrar las ramas del repositorio.
+Crear una nueva rama bibliografía y mostrar las ramas del repositorio.
 
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
@@ -155,7 +158,7 @@ Ctrl+D
 
 ## Ejercicio 7
 
- - Cambiar a la rama bibliografia.
+ - Cambiar a la rama bibliografía.
  - Crear el fichero bibliografia.txt y añadir la siguiente referencia:
 ```console
 Chacon, S. and Straub, B. Pro Git. Apress.
@@ -180,16 +183,16 @@ Chacon, S. and Straub, B. Pro Git. Apress.
 
 ## Ejercicio 8
 
- - Fusionar la rama bibliografia con la rama master.
+ - Fusionar la rama bibliografía con la rama main.
  - Mostrar la historia del repositorio incluyendo todas las ramas.
- - Eliminar la rama bibliografia.
+ - Eliminar la rama bibliografía.
  - Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.
 
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
  ```console
- > git checkout master
+ > git checkout main
 > git merge bibliografia
 > git log --graph --all --oneline
 > git branch -d bibliografia
@@ -199,21 +202,21 @@ Chacon, S. and Straub, B. Pro Git. Apress.
  </details>
 
 ## Ejercicio 9
- - Crear la rama bibliografia.
- - Cambiar a la rama bibliografia.
+ - Crear la rama bibliografía.
+ - Cambiar a la rama bibliografía.
  - Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias:
 ```cosole
 Scott Chacon and Ben Straub. Pro Git. Apress.
 Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)
 ```
- - Cambiar a la rama master.
+ - Cambiar a la rama main.
  - Cambiar el fichero bibliografia.txt para que  - contenga las siguientes referencias:
 ```console
 Chacon, S. and Straub, B. Pro Git. Apress.
 Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
 ```
  - Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Añadida nueva referencia bibliográfica.”
- - Fusionar la rama bibliografia con la rama master.
+ - Fusionar la rama bibliografía con la rama main.
  - Resolver el conflicto dejando el fichero bibliografia.txt con las referencias:
 ```console
 Chacon, S. and Straub, B. Pro Git. Apress.
@@ -234,7 +237,7 @@ Hodson, R. Ry’s Git Tutorial. Smashwords (2014)
  - Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)
  Ctrl+D
  > git commit -a -m "Añadida nueva referencia bibliográfica."
- > git checkout master
+ > git checkout main
  > cat > bibliografia.txt
  - Chacon, S. and Straub, B. Pro Git. Apress.
  - Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.
