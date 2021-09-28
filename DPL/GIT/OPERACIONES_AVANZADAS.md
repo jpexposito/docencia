@@ -33,7 +33,7 @@ git clone https://github.com/jpexposito/java.git
 
 ## Integrando los cambios en tu repositorio remoto
 
-Cuando tu cambios en el repositorio local estén listos para ser integrados en el repositorio remoto, el comando a ejecutar es:
+Cuando tú cambios en el repositorio local estén listos para ser integrados en el repositorio remoto, el comando a ejecutar es:
 
 ```console
 git push origin <nombre_rama_local>
@@ -98,7 +98,7 @@ git reset --hard origin/dev
 
 ## Recomendaciones
 
- Los anteriores son los principales comandos Git que utilizarás en tu día a día a la hora de trabajar en tu repositorio. No obstante, sería recomendable utilizar una serie de recomendaciones y consejos para que tu repositorio no se líe ni pierdas el trabajo realizado:
+ Los anteriores son los principales comandos Git que utilizarás en tu día a día la hora de trabajar en tu repositorio. No obstante, sería recomendable utilizar una serie de recomendaciones y consejos para que tu repositorio no se líe ni pierdas el trabajo realizado:
   - __Sigue este flujo para gestionar las ramas de tu repositorio__.
   - Añade el fichero __.gitignore__ nada más crear tu repositorio local para no ensuciar el repositorio con ficheros innecesarios.
   - No incluyas en tu repositorio los ficheros de configuración de tu proyecto que crea el IDE de desarrollo. __(.idea)__, __(.netbeans)__, __(.eclipse)__, __etc__.
