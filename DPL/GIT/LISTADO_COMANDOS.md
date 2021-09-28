@@ -2,8 +2,7 @@
 
  Comencemos por describir los comandos de mayor uso:
 
- ## Comandos Básicos
- ___
+## Comandos Básicos
 
 ### init
 
@@ -66,7 +65,6 @@
   Las features realizan un seguimiento de las funciones, las versiones y las correcciones urgentes de las versiones. Estas ramas son temporales y viven solo hasta que se fusionan.
 
 ## Comandos Avanzados
-  ___
 
  A continuación, te indico algunos comandos de Git avanzado:
 
