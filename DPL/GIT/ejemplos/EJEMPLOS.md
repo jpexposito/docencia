@@ -169,7 +169,8 @@ Chacon, S. and Straub, B. Pro Git. Apress.
 
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
- ```console
+
+```console
  > git checkout bibliografia
  > cat > bibliografia.txt
  - Chacon, S. and Straub, B. Pro Git. Apress.
@@ -177,7 +178,7 @@ Chacon, S. and Straub, B. Pro Git. Apress.
  > git add .
  > git commit -m "Añadida primera referencia bibliográfica."
  > git log --graph --all --oneline
- ```
+```
 
  </details>
 

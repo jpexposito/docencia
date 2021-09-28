@@ -33,11 +33,11 @@ comprobamos que tenemos instalado Java en nuestro sistema solo debemos de ejecut
 
 Para instalar Ubuntu Java Open JDK ("la que utilizaremos en 1º").
  - OpenJDK:
-   - 11 
+   - 11
    ```
    sudo apt install openjdk-11-jdk
    ```
-    - 9 
+    - 9
    ```
    sudo apt install openjdk-9-jdk
    ```
@@ -68,9 +68,9 @@ En caso que no se ejecuta la versión 8 se debe configurar las variables de ento
  Edita y modifica el fichero profile, con los comandos:
 
 ```
-nano /etc/profile
+sudo update-alternatives --config java
 ```
-y realiza los siguientes cambios y seleccionando la versión 8:
+y selecciona la version _8_.
 
 ```
 # Java version
@@ -89,7 +89,3 @@ Además el informe debe de contener:
  - Pasos descritos.
  - Carecer faltas de ortografía.
  - Capturas de pantalla con los resultados obtenidos.
-
-
-
-
