@@ -17,7 +17,7 @@
 ## Mostrar los datos de un commit
 
  - __git show__ muestra el usuario, el día, la hora y el mensaje del último commit, así como las diferencias con el anterior.
- - __git show <commit>__ muestra el usuario, el día, la hora y el mensaje del commit indicado, así como las diferencias con el anterior.
+ - __git show \<commit\>__ muestra el usuario, el día, la hora y el mensaje del commit indicado, así como las diferencias con el anterior.
 
 ## Mostrar el historial de cambios de un fichero
 
