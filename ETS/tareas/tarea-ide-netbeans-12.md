@@ -8,21 +8,14 @@
   <img src="https://www.linuxadictos.com/wp-content/uploads/apache-netbeans.jpg" width="250px">
 </div>
 
-  Recuerda que para la instalación de __Netbeans__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
-
-  Para verificarlo recuerda ejecutar el siguiente enlace:
-
-```console
-java -version
-  ```
 
 ## Pasos
 
 ### Prerrequisitos
 
-    Recuerda que para la instalación de __Netbeans__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
+  Recuerda que para la instalación de __Netbeans__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
 
-    Para verificarlo recuerda ejecutar el siguiente enlace:
+  Para verificarlo recuerda ejecutar el siguiente enlace:
 
   ```console
   java -version
@@ -30,9 +23,9 @@ java -version
 
 ## Instalación
 
-    Los paquetes Snap son paquetes de software universales prediseñados que se envían con las bibliotecas y dependencias requeridas por el paquete de software. Son independientes de la distribución y se pueden instalar en cualquier distribución principal de Linux. Los snaps son populares ya que no requieren ninguna dependencia durante la instalación, lo que hace que el proceso de instalación sea fluido y sin errores.
+  Los paquetes Snap son paquetes de software universales prediseñados que se envían con las bibliotecas y dependencias requeridas por el paquete de software. Son independientes de la distribución y se pueden instalar en cualquier distribución principal de Linux. Los snaps son populares ya que no requieren ninguna dependencia durante la instalación, lo que hace que el proceso de instalación sea fluido y sin errores.
 
-    Para instalar la edición Netbeans, ejecute el siguiente comando:
+  Para instalar la edición Netbeans, ejecute el siguiente comando:
 
 ```console
 sudo snap install netbeans --classic
