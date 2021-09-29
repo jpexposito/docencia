@@ -40,6 +40,16 @@ sudo snap install --classic code
     <img src="https://jpexposito.com/wp-content/uploads/2021/02/vsc-trans-1019x1024.png" width="150px">
   </div>
 
+### Extensiones Necesarias
+
+#### Java Extension Pack
+
+  Una vez instalado Visual Studio Code todavía hemos de realizar una serie de pasos antes de comenzar a trabajar. VS Code es un editor muy versátil, gracias a su diseño modular, podemos añadir soporte para JAVA mediante extensiones. Para facilitar más las cosas, disponemos de un __Java Extension Pack__, que contiene las extensiones más populares usadas por los desarrolladores JAVA:
+  - Language Support for Java(TM) de Red Hat
+  - Debugger for Java
+  - Java Test Runner
+  - Maven for Java
+  - Java Dependency Viewer
 
   ## Realización del informe
 
