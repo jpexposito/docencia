@@ -10,7 +10,7 @@
 
 ## Prerrequisitos
 
-  Recuerda que para la instalación de __Netbeans__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
+  Recuerda que para la instalación de __VS-Code__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
 
   Para verificarlo recuerda ejecutar el siguiente enlace:
 

@@ -3,7 +3,7 @@
 # Instalación del IDE IntelliJ IDEA
 
 <div align="center">
-  <img src="http://blog.chuidiang.org/wp-content/uploads/6eqoPNuy.jpg" width="250px">
+  <img src="http://blog.chuidiang.org/wp-content/uploads/6eqoPNuy.jpg" width="150px">
 </div>
 
 
@@ -13,7 +13,7 @@
 
 ### Prerrequisitos
 
-  Recuerda que para la instalación de __Netbeans__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
+  Recuerda que para la instalación de __Intelij__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
 
   Para verificarlo recuerda ejecutar el siguiente enlace:
 
@@ -33,13 +33,14 @@ sudo snap install intellij-idea-community --classic
 
  Esto debería llevar unos minutos y debería continuar sin problemas.
 
- ### Lanzamiento de IntelliJ
+### Lanzamiento de IntelliJ
 
   Para iniciar IntelliJ en Ubuntu, use la aplicación para buscarlo (_Activities o Alt + F1_) como se muestra. Luego haga clic en el ícono de IntelliJ.
 
   Busca un icono similar al siguiente, dado que puede sufrir modificaciones en función de la versión:
+
   <div align="center">
-  <img src="http://blog.chuidiang.org/wp-content/uploads/6eqoPNuy.jpg" width="250px">
+    <img src="http://blog.chuidiang.org/wp-content/uploads/6eqoPNuy.jpg" width="150px">
   </div>
 
 ## Realización del informe
