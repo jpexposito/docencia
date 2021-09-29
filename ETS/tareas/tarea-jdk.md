@@ -71,7 +71,7 @@ En caso que no se ejecuta la versión 8 se debe configurar las variables de ento
 ```console
 sudo update-alternatives --config java
 ```
- y selecciona la version _8_.
+ y selecciona la version _8_, cuyo valor es __java-1.8.0-openjdk-amd64__.
 
  Otra opción es : añadir el siguiente código:
 

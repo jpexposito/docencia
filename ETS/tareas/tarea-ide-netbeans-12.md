@@ -2,20 +2,9 @@
 
 # Instalación del IDE Netbeans 8
 
-  NetBeans es un IDE popular para desarrollar aplicaciones Java. Esto permite desarrollar aplicaciones a partir de un conjunto de componentes de software modulares llamados módulos. NetBeans está disponible para ejecutarse en sistemas operativos populares como Windows, macOS, Linux.
-
 <div align="center">
   <img src="https://ubunlog.com/wp-content/uploads/2018/05/about-NetBeans-IDE-8-2.png.webp" width="250px">
 </div>
-
-Recuerda que para la instalación de __Netbeans__ debes de tener instalado __Java__. Los pasos para realizar su instalación y configuración se encuentra en el siguiente [enlace](tarea-jdk.md).
-
-Para verificarlo recuerda ejecutar el siguiente enlace:
-
-```console
-java -version
-```
-
 
 ## Pasos
 
