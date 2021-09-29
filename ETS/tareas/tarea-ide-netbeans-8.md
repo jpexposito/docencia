@@ -1,5 +1,10 @@
+<div align="justify">
+
 # Instalación del IDE Netbeans 8
 
+<div align="center">
+  <img src="https://ubunlog.com/wp-content/uploads/2018/05/about-NetBeans-IDE-8-2.png.webp" width="250px">
+</div>
 
 ## Pasos
 
@@ -31,3 +36,5 @@ Además el informe debe de contener:
  - Carecer faltas de ortografía.
  - Capturas de pantalla con los resultados. obtenidos.
  - Incluye el enlace de tu cuenta _GitHub_ en el detalle de la tarea.
+
+</div>
