@@ -73,13 +73,9 @@ sudo nano /etc/profile.d/maven.sh
 Pega el siguiente código:
 
 ```
-export JAVA_HOME=/usr/lib/jvm/IMPORTANTE-RESPETAR-LA-VERSION-DE-JAVA-INSTALADA
  export M2_HOME=/opt/maven
  export MAVEN_HOME=/opt/maven
  export PATH=${M2_HOME}/bin:${PATH}
-```
-``` 
-/etc/profile.d/maven.sh
 ```
 
  Guarde y cierre el archivo. Este script se utilizará al iniciar el shell.
@@ -126,4 +122,3 @@ Además el informe debe de contener:
  - Pasos descritos.
  - Carecer faltas de ortografía.
  - Capturas de pantalla con los resultados obtenidos.
-

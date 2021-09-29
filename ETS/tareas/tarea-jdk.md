@@ -46,7 +46,8 @@ Para instalar Ubuntu Java Open JDK ("la que utilizaremos en 1º").
    sudo apt install openjdk-8-jdk
    ```
 La versión que se debe de trabajar es la versión 8. Para ello verificaremos la versión de java que se esta ejecutando con la sentencia:
-```
+
+```console
   java --version
 ```
 En caso que no se ejecuta la versión 8 se debe configurar las variables de entorno.
@@ -59,7 +60,7 @@ En caso que no se ejecuta la versión 8 se debe configurar las variables de ento
 
  Ejecuta el siguiente comando para verificar que se han descargado las diferentes versiones de OpenJDK.
 
-```
+```console
  ls /usr/lib/jvm
 ```
 
@@ -67,18 +68,37 @@ En caso que no se ejecuta la versión 8 se debe configurar las variables de ento
 
  Edita y modifica el fichero profile, con los comandos:
 
-```
+```console
 sudo update-alternatives --config java
 ```
-y selecciona la version _8_.
+ y selecciona la version _8_.
 
-```
+ Otra opción es : añadir el siguiente código:
+
+```console
 # Java version
 JAVA_HOME=/usr/lib/jvm/_____openJdk_____
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export JAVA_HOME
 export JRE_HOME
 export PATH
+```
+
+ en
+
+```console
+/etc/profile.d/java.sh
+```
+Haga que el script sea ejecutable con chmod:
+
+```console
+sudo chmod +x /etc/profile.d/java.sh
+```
+
+Finalmente, cargue las variables de entorno usando el comando de source
+
+```console
+source /etc/profile.d/java.sh
 ```
 
 Realiza un informe indicando los pasos que has seguido para la instalación de OpenJdk y donde se muestre la versión de java que esta corriendo en el sistema, la cual debe indicar la versión 8.
