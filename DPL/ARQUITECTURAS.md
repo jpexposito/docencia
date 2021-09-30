@@ -1,1 +1,0 @@
-# Implantación de arquitecturas web

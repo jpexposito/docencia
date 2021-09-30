@@ -23,10 +23,10 @@ java -version
   - Descargar la versión deseada en este [enlace](https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html). Hemos de descargar la versión __jdk-8u111-nb-8_2-linux-x64.sh__, aceptando _Accept License Agreement_.
   - Una vez que se complete la descarga, navegue hasta el directorio donde se ha descargado el instalador de NetBeans IDE y ejecute el siguiente comando para hacer ejecutable el script del instalador y comenzar a instalarlo.
 
-  ```console
-  chmod +x netbeans-8.2-linux.sh
-  ./netbeans-8.2-linux.sh
-  ```
+```console
+chmod +x jdk-8u111-nb-8_2-linux-x64.sh
+./jdk-8u111-nb-8_2-linux-x64.sh
+```
 
   - Después de ejecutar la secuencia de comandos del instalador anterior, la “Página de bienvenida” del instalador se mostrará de la siguiente manera, haga clic en Siguiente para continuar (o personalice su instalación haciendo clic en Personalizar) para seguir el asistente de instalación.
   -  Luego lea y acepte los términos del acuerdo de licencia, y haga clic en Next para continuar.
