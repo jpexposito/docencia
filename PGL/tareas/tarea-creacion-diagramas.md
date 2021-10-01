@@ -10,7 +10,7 @@
 
 ## Definición
 
- La siguiente tarea consta de la definición de los diagramas necesarios para la creación de la App. Para ello te puedes ayudar de la herramienta online [Gitmind](https://gitmind.com/app/template?lang=es).
+ La siguiente tarea consta de la definición de los diagramas necesarios para la creación de la App. Para ello te puedes ayudar de la herramienta online [Gitmind](https://gitmind.com/app/template?lang=es) o [App-diagrams](https://app.diagrams.net/).
 
 
 ## Se debe
