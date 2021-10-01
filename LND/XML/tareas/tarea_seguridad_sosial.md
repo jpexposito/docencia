@@ -23,7 +23,7 @@
     - Una baja consta de tres elementos: causa (obligatoria), fecha de inicio (obligatorio) y fecha de final (optativa),
   - Listado de prestaciones cobradas: consta de 0 o más elementos prestación, donde se indicará la cantidad percibida (obligatorio), la fecha de inicio (obligatorio) y la fecha de final (obligatorio).
 
-  ## Entrega
+## Entrega
 
-    - Recuerda que debes de generar el informe en __pdf__ + __github__ (enlace en la descripción de la entrega de la tarea).
-    - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
+  - Recuerda que debes de generar el informe en __pdf__ + __github__ (enlace en la descripción de la entrega de la tarea).
+  - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
