@@ -1,6 +1,6 @@
 <div align="justify">
 
-# Tarea Sistema de Información
+# Tarea Sistema de Información de la Seguridad Social
 
 
 <div align="center">
@@ -22,3 +22,8 @@
   - Listado de bajas: que indica las situaciones de baja laboral del empleado. Dicho listado consta de una repetición de 0 o más bajas:
     - Una baja consta de tres elementos: causa (obligatoria), fecha de inicio (obligatorio) y fecha de final (optativa),
   - Listado de prestaciones cobradas: consta de 0 o más elementos prestación, donde se indicará la cantidad percibida (obligatorio), la fecha de inicio (obligatorio) y la fecha de final (obligatorio).
+
+  ## Entrega
+
+    - Recuerda que debes de generar el informe en __pdf__ + __github__ (enlace en la descripción de la entrega de la tarea).
+    - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
