@@ -31,9 +31,10 @@ Proceso:
 - Dejar cocer a fuego lento durante unos 15 minutos.
 -Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.
 
-## Fecha entrega
+## Entrega
 
-  La entrega fuera de hora supondrá un 40% menos de la nota.
+  - Recuerda que debes de generar el informe en __pdf__ + __github__ (enlace en la descripción de la entrega de la tarea).
+  - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
 
 
 <!--

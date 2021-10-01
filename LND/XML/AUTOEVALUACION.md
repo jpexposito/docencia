@@ -1,7 +1,5 @@
 <div align="justify">
 
-[[link]]
-
 # AUTOEVALUACION
 
 - 1.- Los lenguajes de marcas se utilizan para:
@@ -12,9 +10,9 @@
 
 	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  
+
 	  __Opción d__
-	  
+
 	</details>
 
 - 2.- ¿Cuáles son las características comunes de XML y SGML?
@@ -25,9 +23,9 @@
 
 	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  
+
 	  __Opción b__
-	  
+
 	</details>
 
 - 3.- ¿Cuál de las siguientes líneas es correcta?
@@ -38,9 +36,9 @@
 
   	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  
+
 	  __Opción c__
-	  
+
 	</details>
 
 - 4.- Para escribir un documento XML basta con:
@@ -51,9 +49,9 @@
 
 	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  
+
 	  __Opción d__
-	  
+
 	</details>
 
 - 5.-Dato el código XML
@@ -70,7 +68,7 @@
 <fecha_pres dia='13' mes='mar' año='2009'></fecha_pres>
 <fecha_devol/>
 </prestado>
-</documento> 
+</documento>
 </biblioteca>  	
 ```
  Indica cuales de las siguientes expresiones son errores del código anterior.
@@ -83,9 +81,9 @@
 
 	<details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  
+
 	  __Opción a y b__
-	  
+
 	</details>
 
 - 6.-¿Está "bien formado" el siguiente documento XML?
@@ -102,16 +100,16 @@
 
 <details>
 	  <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
-	  
+
 	  __RESPUESTA CORRECTA:  No está "bien formado", porque hay un espacio entre ? y > de la primera línea. Además el cierre de la etiqueta remitente tiene un espacio después de la barra /. Y la etiqueta asunto no está cerrada.__
 </details>
 
-	
+
 
 </div>
 
 <div align="center">
     <a href="XML_BIEN_FORMADOS.md"><img src="../../img/before.png" alt="XML BIEN FORMADOS" style="width:42px;height:42px;"></a>
     <a href="README.md"><img src="../../img/home.png" alt="XML Home" style="width:42px;height:42px;"></a>
-    <a href="EJERCICIOS_RESUELTOS.md"><img src="../../img/next.png" alt="ELERCICICIOS RESUELTOS" style="width:42px;height:42px;"> 
+    <a href="EJERCICIOS_RESUELTOS.md"><img src="../../img/next.png" alt="ELERCICICIOS RESUELTOS" style="width:42px;height:42px;">
 </div>
