@@ -21,9 +21,6 @@
     - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
 
 
-
-<!--
-
  <details>
    <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 
@@ -133,5 +130,4 @@ En el tercer ejercicio hay que crear un XML que ayude a estructurar la informaci
 ```
 
    <details>
--->
 </div>

@@ -86,8 +86,17 @@
 
   Existen dos enfoques en el desarrollo de aplicaciones web:
 
-  - Creación de aplicaciones web con integración de tecnologías de desarrollo
-  - Creación de aplicaciones web con sistemas gestores de contenido
+  - Creación de aplicaciones web con integración de tecnologías de desarrollo. Los lenguajes pueden ser muy diversos:
+
+  <div align="center">
+    <img src="https://www.codebelgium.com/assets/site/postsmedia/best-programming-languages.jpg" width="400px">
+  </div>
+
+  - Creación de aplicaciones web con sistemas gestores de contenido. Existen muchos y en diferentes tecnologías:
+
+  <div align="center">
+    <img src="https://www.mejorcms.com/wp-content/uploads/2020/01/tipos-gestores-contenidos.jpg" width="400px">
+  </div>
 
 </div>
 
