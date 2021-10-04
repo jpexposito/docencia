@@ -1,6 +1,8 @@
 <div align="justify">
 
-# TITULO
+# DESPLIEGUE DE APLICACIONES
+
+En función de la aplicación debemos de aplicar un tipo
 
 <div align="center">
     <a href="README.md"><img src="../../img/before.png" style="width:42px;height:42px;"  />

@@ -2,6 +2,10 @@
 
 # Aplicaciones Web
 
+<div align="center">
+  <img src="https://prod-discovery.edx-cdn.org/media/course/image/2dcbd011-56c5-4e4a-80eb-aa2a080c1164-060866c24c0b.small.png" >
+</div>
+
 ## ¿Qué es la web?
   Según Wikipedia,
 
@@ -10,7 +14,11 @@
 
 ## Página web
 
-  Una página web es un documento electrónico escrito en HTML (HyperText Markup Language). Las páginas web están enlazadas a través de hiperenlaces (links). Mediante un navegador un usuario puede navegar a través de la web siguiendo los hiperenlaces
+<div align="center">
+  <img src="https://pinguinodigital.com/wp-content/uploads/2020/07/estilos-de-p%C3%A1ginas-web1.png.webp" width="400px">
+</div>
+
+  Una página web es un documento electrónico escrito en HTML (HyperText Markup Language). Las páginas web están enlazadas a través de hiperenlaces (links). Mediante un navegador un usuario puede navegar a través de la web siguiendo los hiperenlaces.
 
   Las páginas web enlazan contenidos de naturaleza heterogénea:
   - Imágenes: JPG, GIF, PNG, …
@@ -20,11 +28,20 @@
 
 ## Sitio web
 
+<div align="center">
+  <img src="https://www.comparahosting.com/wp-content/uploads/2020/06/que-es-un-cms.png" width="400px">
+</div>
+
   Un sitio web (o portal) es una colección de páginas web relacionadas entre sí que suelen compartir la primera parte de la dirección web (el dominio). Ejemplos:
   - https://www.ieselcaminas.org: Sitio web del Instituto
   - https://es.wikipedia.org: Sitio web de la Wikipedia en español
 
 ## Aplicación web
+
+<div align="center">
+  <img src="../../img/app-web.png" width="400px">
+</div>
+
 
   Según la Wikipedia,
 
@@ -41,70 +58,37 @@
   - __Información centralizada__. En una aplicación web, no solamente la lógica de negocio está centralizada en el servidor, sino también los datos que se ubican en una base de datos centralizada (en ese servidor u otro destinado a tal fin). La centralización tiene la ventaja de facilitar el acceso a la misma.
   - __Seguridad y copias de seguridad__. Este es un corolario del punto anterior, es decir, una consecuencia. Como disponemos de los datos centralizados es más fácil establecer y llevar el control de una política de copias de seguridad centralizada.
 
+<div align="center">
+    <img src="../../img/comparacion-web.png" >
+</div>
+
 ### Procesamiento de páginas en el lado del servidor
 
   Desde el punto de vista del servidor web, una aplicación Web es un conjunto de páginas Web estáticas y dinámicas. Una página Web estática es aquélla que no cambia cuando un usuario la solicita: el servidor Web envía la página al navegador Web solicitante sin modificarla. Por el contrario, el servidor modifica las páginas Web dinámicas antes de enviarlas al navegador solicitante. La naturaleza cambiante de este tipo de página es la que le da el nombre de dinámica.
 
   _Por ejemplo_, podría diseñar una página para que mostrara los resultados de las notas de un alumno y dejara cierta información fuera (como el nombre del alumno y sus notas) para calcularla cuando la página la solicite un alumno en particular.
 
-### Páginas web estáticas en el servidor
-
-  Un sitio Web estático consta de un conjunto de páginas y de archivos HTML relacionados alojados en un equipo que ejecuta un servidor Web.
-
-  Un servidor Web es un software que suministra páginas Web en respuesta a las peticiones de los navegadores Web. La petición de una página se genera cuando el usuario hace clic en un vínculo de una página Web, elige un marcador en un navegador o introduce una URL en el cuadro de texto Dirección del navegador.
-
-  El contenido final de una página Web estática lo determina el diseñador de la página y no cambia cuando se solicita la página. A continuación se incluye un ejemplo:
-```html
-<html>
-  <head>
-    <title>Implantación de arquitecturas Web</title>
-  </head>
-  <body>
-    <h1>Acerca del módulo</h1>
-    <p>Puesta en producción segura ...</p>
-  </body>
-</html>
-```
-
-  El diseñador escribe todas y cada una de las líneas de código HTML de la página antes de colocarla en el servidor. El código HTML no cambia una vez colocado en el servidor y por ello, este tipo de páginas se denomina página estática.
-
-  Cuando el servidor Web recibe una petición de una página estática, el servidor lee la solicitud, localiza la página y la envía al navegador solicitante, como se muestra en el siguiente ejemplo:
-
-  <div align="center">
-    <img src="https://helpx.adobe.com/en/dreamweaver/using/web-applications/jcr:content/main-pars/image_0.img.png/ds_process_static.png">
-  </div>
-
-  Actualmente esta arquitectura se usa principalmente para:
-  - Páginas personales
-  - Páginas de proyectos software
-  - Documentación técnica (JavaDoc en Java, Maven site, etc…)
-
-### Páginas dinámicas en el servidor
+#### Páginas dinámicas en el servidor
 
   Cuando un servidor Web recibe una petición para mostrar una página Web estática, el servidor la envía directamente al navegador que la solicita. Cuando el servidor Web recibe una petición para mostrar una página dinámica, sin embargo, reacciona de distinta forma: transfiere la página a un software especial encargado de finalizar la página. Este software especial se denomina servidor de aplicaciones.
 
   El servidor de aplicaciones lee el código de la página, finaliza la página en función de las instrucciones del código y elimina el código de la página. El resultado es una página estática que el servidor de aplicaciones devuelve al servidor Web, que a su vez la envía al navegador solicitante. Lo único que el navegador recibe cuando llega la página es código HTML puro. A continuación se incluye una vista de este proceso:
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-    <?php
-      $txt1 = "Learn PHP";
-      $txt2 = "W3Schools.com";
-      $x = 5;
-      $y = 4;
-      echo "<h2>" . $txt1 . "</h2>";
-      echo "Study PHP at " . $txt2 . "<br>";
-      echo $x + $y;
-    ?>
-  </body>
-</html>
 
-```
+  <div align="center">
+    <img src="https://helpx.adobe.com/en/dreamweaver/using/web-applications/jcr:content/main-pars/image_2.img.png/ds_process_complete.png">
+  </div>  
 
-<div align="center">
-  <img src="https://helpx.adobe.com/en/dreamweaver/using/web-applications/jcr:content/main-pars/image_1.img.png/ds_process_dynamic.png
-">
+## Tecnologías de desarrollo Web
+
+  Hoy en día se utilizan páginas dinámicas tanto del lado del servidor como del cliente.
+
+  El impacto de la Web ha propiciado la aparición de una gran cantidad de tecnologías, librerías, herramientas y estilos arquitectónicos para desarrollar una aplicación web. Para facilitar la tarea de escoger cuál es la tecnología más adecuada para un proyecto, es conveniente conocer los elementos más importantes desde un punto de vista de alto nivel para tener una visión global de la programación web.
+
+  Existen dos enfoques en el desarrollo de aplicaciones web:
+
+  - Creación de aplicaciones web con integración de tecnologías de desarrollo
+  - Creación de aplicaciones web con sistemas gestores de contenido
+
 </div>
 
 <div align="center">
