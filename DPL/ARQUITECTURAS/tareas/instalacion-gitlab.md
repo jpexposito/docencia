@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Tarea 1: Instalación de GitLab en linux
 
   En esta tarea vamos a realizar la instalación Gitlab y además vamos a realizar los primeros pasos de configuración.
@@ -90,3 +92,5 @@ Una vez que tenga el servidor y el usuario configurados, estará listo para come
   - Al menos (1 folio indice, al menos 3 desarrollo de la práctica).
   - Carecer faltas de ortografía.
   - Capturas de pantalla con los resultados obtenidos.
+
+</div>
