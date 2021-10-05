@@ -113,8 +113,17 @@ Para esta tarea usaremos el perfil Apache, ya que no será necesario usar una co
   Apache         ALLOW          Anywhere
   Apache (v6)    ALLOW          Anywhere (v6)
   ```
+  Si fuera inactivo debes de ejecutar la siguiente instrucción:
 
-Ahora verificamos que el servicio Apache esté ejecutándose correctamente, con el siguiente comando:
+  ```console
+    sudo ufw enable
+  ```
+  y damos el __Y__.
+
+  Ejecutando el mismo comando __sudo ufw status__, debemos de obtener el resultado esperado.
+
+
+  Ahora verificamos que el servicio Apache esté ejecutándose correctamente, con el siguiente comando:
 
 ```console
   sudo systemctl status apache2
@@ -146,7 +155,7 @@ Ahora verificamos que el servicio Apache esté ejecutándose correctamente, con 
 
 ## Realiza el Informe
 
-  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de _GitLab_.
+  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __Apache__.
 
   Además el informe debe de contener:
    - Titulo de la tarea.
