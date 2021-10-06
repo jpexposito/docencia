@@ -64,7 +64,7 @@ Una vez que tenga el servidor y el usuario configurados, estará listo para come
 
 ### Acceso
 
-  Una vez finalizada la instalación deberemos acceder a un navegador e introducir la ip del servidor. y mi caso haciendo un ifconfig me dice que la ip es la __http://192.168.64.6/__ por lo tanto voy a un navegador y pongo esa ip o localhost.
+  Una vez finalizada la instalación deberemos acceder a un navegador e introducir la ip del servidor. y mi caso haciendo un ifconfig me dice que la ip es la __http:/TU_IP/__ por lo tanto voy a un navegador y pongo esa ip o localhost.
 
   En el primer acceso debes de realizar la configuración del usuario __root__.
 
