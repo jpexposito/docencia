@@ -48,6 +48,13 @@ En mi caso particular la instalación la he realizado a través de __brew__.
    ```console
      multipass launch --name nombre-vm
     ````  
+   - Creación de una nueva máquina virtual, donde _nombre-vm_ es el nombre que deseas dar a la máquina virtual y posee unas características específicas.
+
+  ```console
+    multipass launch --name nombre-vm  -c 8  -m 3G -d 40G
+  ````  
+
+
    - Listado de las máquinas virtuales:
    ```console
      multipass ls  
@@ -73,7 +80,7 @@ En mi caso particular la instalación la he realizado a través de __brew__.
  Primero accedemos a la sesión de Ubuntu instalada. Para ello, deberás lanzar el comando _multipass shell nombre-vm_. Y, a continuación, lanzamos los comandos ya conocidos.
   - __sudo apt update__. Para realizar la actualización de paquetes.
   - __sudo apt install ubuntu-desktop xrdp__. Para instalar el escritorio.
-  - __sudo passwd ubuntu__. Finalmente indicamosla contraseña de usuario, que por defecto es ubuntu.
+  - __sudo passwd ubuntu__. Finalmente indicamos la contraseña de usuario, que por defecto es ubuntu.
 
 Para ver el escritorio, deberás emplear una herramienta de escritorio remoto tipo [__Microsoft Remote Desktop__](https://www.microsoft.com/en-us/p/microsoft-remote-desktop/9wzdncrfj3ps?activetab=pivot:overviewtab). Para acceder a la máquina virtual de Ubuntu, deberemos indicarle la dirección IP. La obtendrás si en Multipass lanzas la orden ip addr. Además, en su debido momento deberás indicar el usuario y contraseña de Ubuntu.
 
@@ -83,16 +90,19 @@ Para ver el escritorio, deberás emplear una herramienta de escritorio remoto ti
 
   Instalar los paquetes de idioma en Linux para su traducción al español:
 
-    - sudo apt-get install language-pack-es
-    - sudo apt-get install language-pack-es-base
-    - sudo apt-get install language-support-es
+  - sudo apt-get install language-pack-es
+  - sudo apt-get install language-pack-es-base
+  - sudo apt-get install language-support-es
+
 
   Si lo que queremos es instalar los diccionarios en español, debemos ejecutar lo siguiente:
-    - sudo apt-get install aspell-es
-    - sudo apt-get install myspell-es
+  - sudo apt-get install aspell-es
+  - sudo apt-get install myspell-es
+
 
   Para traducir los manuales del sistema al español en Linux Ubuntu:
-    - sudo apt-get install manpages-es
+  - sudo apt-get install manpages-es
+
 
   Ahora ya hemos instalado el idioma español en nuestro sistema Linux, pero para configurarlo como idioma por defecto en nuestro sistema, debemos realizar aun un par de pasos más, pero tranquilos que son bastante sencillos, tan solo debemos ir al terminal de nuevo y ejecutar el siguiente comando.
 
