@@ -32,7 +32,7 @@ sudo snap install --classic code
 
    ### Lanzamiento de VS-Code
 
-    Para iniciar Eclipse en Ubuntu, use la aplicación para buscarlo (_Activities o Alt + F1_) como se muestra. Luego haga clic en el ícono de VS-Code.
+    Para iniciar VS-Code en Ubuntu, use la aplicación para buscarlo (_Activities o Alt + F1_) como se muestra. Luego haga clic en el ícono de VS-Code.
 
     Busca un icono similar al siguiente, dado que puede sufrir modificaciones en función de la versión:
 
@@ -50,6 +50,51 @@ sudo snap install --classic code
   - Java Test Runner
   - Maven for Java
   - Java Dependency Viewer
+
+#### Otras extensiones
+
+  Existen extensiones que dejando aparte el tipo de desarrollo que estés realizando, su instalación es casi obligatoria.
+
+##### Visual Studio IntelliCode
+
+  Es una extensión que incorpora inteligencia artificial para ayudarte a codificar. Admite Python, JavaScript / TypeScript y Java.
+
+  → Visual Studio IntelliCode ←
+
+##### Path Intellisense
+
+  Esta extensión permite escribir fácilmente nombres de rutas de archivos.
+
+  → Path intellisense ←
+
+##### Bracket Pair Colorizer
+
+  Nos ayuda a ver más fácilmente el bloque de código que se encuentra entre los caracteres (), {}, [] trazando una línea. Permite configurar otros tipos de caracteres.
+
+  → Bracker Pair Colorized ←
+
+##### GitLens
+
+  Sobrealimenta las capacidades de Git que ya se encuentran integradas en Visual Studio Code. Ayuda a visualizar el autor del código, navegar y explorar sin problemas los repositorios de Git, obtener información valiosa a través de potentes comandos de comparación y mucho más.
+
+  → GitLens ←
+
+##### Prettier
+
+  Herramienta que formatea el código automáticamente, esto permite despreocuparse de si nuestro código esta bien indentado.
+
+  → Prettier ←
+
+##### Color Highlight
+
+  Facilita la visualización de los colores. Rodea el código hexadecimal del color en un rectángulo con el color elegido.
+
+  → Color Highlight ←
+
+##### Indent Rainbow
+
+  Esta extensión colorea la sangría frente a su texto alternando cuatro colores diferentes en cada paso, ayuda a visualizar el correcto indentado del código.
+
 
   ## Realización del informe
 
