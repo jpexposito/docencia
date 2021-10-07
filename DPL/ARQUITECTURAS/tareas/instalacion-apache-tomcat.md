@@ -106,6 +106,30 @@ Para acceder a Tomcat 10 en Ubuntu 20.04 desde un navegador web indicaremos la d
   <img src="https://www.tomares.es/sites/default/files/styles/915x430/public/2018082016063450809_.jpg?itok=ZoAdyoCq"  />
 </div>
 
+
+#### Problemas de acceso a Apache-Tomcat
+
+  Cabe la posibilidad de que puedas experimentar problemas de acceso debido a que el puerto se encuentra ocupado, por otra aplicación. Si fuera este el caso, debes de realizar el cambio de puerto, del _8080_ a _8082_, de forma similar a:
+
+  - Cambia el puerto en _server.xml_
+  ```console
+  <Connector port="8080"       //Change this
+              protocol="HTTP/1.1"
+              connectionTimeout="20000"
+              redirectPort="8443"
+  />
+  ```
+
+  y sustituye por:
+  ```console
+  <Connector port="8082"       //Change this
+              protocol="HTTP/1.1"
+              connectionTimeout="20000"
+              redirectPort="8443"
+  />
+  ```
+  Más información [aquí](https://linuxhint.com/change-default-port-of-tomcat-server/), y realizando un poco de investigación a la hora de resolver cualquier problema.
+
 ## Realiza el Informe
 
   Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __Apache-Tomcat__.
