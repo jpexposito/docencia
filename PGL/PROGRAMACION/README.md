@@ -2,11 +2,17 @@
 
 # Programación de una App
 
-<img width="400px" src="https://www.spanishlearninglab.com/wp-content/uploads/2018/01/rooms-and-parts-of-the-house-in-Spanish-lesson.png" alt="Diagrama de casos de Uso">
 
 ## Introducción
 
   En esta unidad vamos a comenzar a desarrollar nuestra propia app. Inicialmente se realizará en __Java__, dado que es el lenguaje que más conoce el alumno.
+
+## Requisitos
+
+  El alumno debe de haber creado los diagramas especificados:
+  - Modelo Entidad - Relación.
+  - Diagrama de Casos de Uso.
+  - Diagrama de Paquetes.
 
 ## Arquitectura  
 
@@ -42,13 +48,77 @@
   - _El modelo en MVC puede tener demasiadas responsabilidades como obtener los datos de fuentes de datos, informar al controlador sobre cambios en esos datos y prepararlos para que se puedan mostrar en la vista._ __En MVVM el modelo queda totalmente desacoplado de la vista y solo contiene información, nunca acciones para manipularla__.
   - _En MVC no queda muy claro quién se debería encargar de la lógica de presentación ya que el modelo solo debería enviar datos en crudo a la vista y por otro lado, llevar esta lógica a la vista complicaría algunos tests. En MVVM, esta responsabilidad es muy clara y cae en manos del modelo de la vista._
 
+## Componentes arquitectónicos de Android
 
-## Requisitos
+  Estos componentes lanzados por el equipo de Android hace ya un par de años nos facilitan mucho la vida a la hora de implementar un patrón MVVM en Android, además de hacer nuestras aplicaciones más robustas, mantenibles y fáciles de probar.
 
-  El alumno debe de haber creado los diagramas especificados:
-  - Modelo Entidad - Relación.
-  - Diagrama de Casos de Uso.
-  - Diagrama de Paquetes.
+  - LiveData:
+    - Objetos que notifican a la vista cuando hay cambios en la base de datos.
+    - Son conscientes de los ciclos de vida, por lo que nos ayudan a evitar crashes cuando una Activity se detiene por ejemplo.
+    - ViewModel:
+    - Clases responsables de preparar y manejar los datos de una Activity o Fragment.
+    - Permite que los datos sobrevivan a cambios de configuración como rotaciones de pantalla, minimizando el uso de onSaveInstanceState()para guardar y recuperar datos.
+    - Expone la información a través de un LiveData observado desde la vista.
+  - Room:
+    - Librería __ORM (Object-Relational mapping)__: _convierte objetos SQLite a objetos Java/Kotlin automáticamente_.
+    - Validación SQL en tiempo de compilación.
+    - Devuelve objetos LiveData para observar cambios en la base de datos.
+
+### ¿Cómo encajan estos componentes de Android con una arquitectura multicapa?
+
+  El patrón MVVM, al igual que MVC y MVP, es un patrón de diseño utilizado en la capa de presentación de una aplicación, pero una aplicación no se compone solo de esta capa, sino que se complementa con otras capas como la de dominio y la de datos.
+
+  Partiendo de un ejemplo de un concesionario que desea mostrar una lista de coches en su app, veamos un diagrama con todas las capas.
+
+  <div width="400px" align="center">
+    <img src="  https://ahorasomos.izertis.com/solidgear/wp-content/uploads/2019/06/Android-architecture-CLEAN-1.png" alt="Diagrama de casos de Uso">
+  <div>
+
+#### El Ejemplo
+
+  Siguiendo con el ejemplo del concesionario, imaginemos que ya tienen una aplicación Android desarrollada usando el patrón MVC y que quieren cambiarla a MVVM, usando los nuevos componentes de arquitectura de Android. Es buena idea empezar con un caso de uso sencillo como puede ser pedir todos los coches del concesionario, por lo que el diagrama del punto anterior nos será útil para tener una imagen global del cambio a llevar a cabo.
+
+  Lo primero que tenemos que pensar es por dónde vamos a empezar a rearquitecturar la aplicación, siendo lo más natural la capa de datos en mi opinión, para luego ir subiendo hasta la vista.
+  - Datos:
+    - La aplicación del concesionario tenía una clase encargada de acceder a la base de datos y crear objetos con la información obtenida. Este tipo de clases suelen tener multitud de lineas de código encargadas de hacer la transformación de SQLite a objetos Java y viceversa. Para ahorrarnos esta tediosa tarea podemos hacer uso de Room, creando una clase  de modelo Car que definiremos como __@Entity__ y una clase __CarDAO__, en la que incluiremos las consultas que queramos hacer a la base de datos, que en este caso será una para obtener todos los coches.
+    - Lo siguiente es crear el repositorio de coches y lo haremos con una interfaz, CarRepository, que será implementada por __CarRepositoryImpl__. De esta forma cumplimos el principio de inversión de dependencias (dependemos de abstracciones y no implementaciones) y el código queda más desacoplado y fácil de testear.
+    - Adicionalmente, podemos crear dos clases con sus correspondientes interfaces, __LocalCarDataSourceImpl__ que implementa __LocalCarDataSource__ y __RemoteCarDataSourceImpl__ que implementa __RemoteCarDataSource__. Al hacer que el repositorio dependa de interfaces de fuentes de datos, en un futuro podremos utilizar otras como por ejemplo JsonLocalCarDataSource si queremos leer coches de un archivo json en lugar de una base de datos o FirebaseRemoteCarDataSource para leer los coches de una base de datos remota alojada en Firebase, e incluso establecer una jerarquía de fuentes de datos si alguna de ellas fallara.
+  - Dominio:
+  - Si la aplicación del concesionario tenía una arquitectura bien definida, las operaciones de dominio ya deberían existir, sino es así, hay que mover toda la lógica a esta capa.
+  - Siguiendo con el ejemplo de obtener los coches del concesionario, tenemos que crear la operación de dominio GetAllCarsOperation . Esta operación pedirá datos al repositorio, hará con esos datos lo que defina la lógica de negocio y se los devolverá al modelo de la vista.
+- Presentación:
+  - CarViewModel contendrá los datos de los coches en un LiveData que se devuelve al llamar al método cars().
+  - CarsActivity necesita una lista de coches y a partir de ahora deberá pedirlos a través de CarViewModel , así que debemos buscar en el código aquellas llamadas que se hacían de otra forma con MVC y cambiarlas por algo del tipo:
+```java
+
+ carViewModel.cars.observe(this, Observer { cars ->
+         // Update the cars in the adapter
+         cars?.let { adapter.setCars(it) }
+ })
+```
+ Este es un ejemplo básico de como observar cambios en un LiveData sencillo pero imaginaros que no solo queremos traer los coches sino algún error al obtener los coches de una fuente remota de datos o un estado de loading para mostrar un diálogo mientras cargan los datos. Para esto nos hace falta utilizar varias clases como Resourceo NetworkBoundResource, de las cuales podéis encontrar más información en la documentación de Android. Si hacemos uso de esas clases en CarsActivity podemos escuchar diferentes estados:
+```java
+ carViewModel.cars.observe(this, Observer { resource ->
+         when (resource?.status) {
+                 Status.SUCCESS -> {
+                         dismissLoadingDialog()
+                         updateCars(resource.data)
+                 }
+                 Status.ERROR -> {
+                         dismissLoadingDialog()
+                         showError(resource.message)
+
+                 }
+                 Status.LOADING -> {
+                         showLoadingDialog()
+                 }
+ })
+ ```
+
+##  En resumen
+ En esta entrada hemos repasado los conceptos de MVC y MVVM y cómo utilizar los componentes de arquitectura de Android junto con una arquitectura en capas.
+
+ El ejemplo que hemos incluido es un buen punto de partida para los que todavía no habéis empezado a trabajar con los componentes de Android. Si queréis profundizar más en el tema os recomiendo no solo leer la documentación sobre estos componentes sino también aprender Kotlin, ya que es un buen aliado a la hora de hacer estos cambios en una aplicación Android.
 
 
 
