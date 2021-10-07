@@ -9,7 +9,7 @@
  <div align="center">
   <img src="https://jpexposito.com/wp-content/uploads/2021/02/maven-logo.png" alt="maven" >
  </div>
- 
+
  Cuando nosotros necesitamos añadir una librería a nuestro proyecto, lo que se realizaba era acudir a internet y descargar la dependencia en cuestión, pero esto no es una buena práctica.
 
 ## Unos minutos con Maven
@@ -79,5 +79,34 @@ my-app
 
  Por último, el conjunto de comandos, para las distintas fases del ciclo de vida de maven, en el siguiente [link](https://jpexposito.com/lets-go-maven/).
 
- 
+
+ #### Instalación en Linux
+
+   Para realizar la instalación en Linux hemos de ejecutar desde una consola el siguiente comando:
+
+  ```
+   sudo apt install maven
+  ```
+
+   Para verificar la instalación, ejecute mvn -version:
+  ```
+   mvn -version
+  ```
+
+   La salida debería verse así:
+
+  ```
+  Apache Maven 3.6.3
+   Maven home: /usr/share/maven
+   Java version: 11.0.7, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+   Default locale: en_US, platform encoding: UTF-8
+   OS name: "linux", version: "5.4.0-29-generic", arch: "amd64", family: "unix"
+  ```
+
+  Con esto podeís comenzar a disfrutar de un buen compañero de viaje en el desarrollo con Java.
+
+  <div align="center">
+   <img src="https://i1.wp.com/suayed.iztacala.unam.mx/wp-content/uploads/2014/07/despedida.jpg?resize=300%2C225&ssl=1" alt="disfrutar" >
+  </div>
+
 </div>
