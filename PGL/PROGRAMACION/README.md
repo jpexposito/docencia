@@ -2,6 +2,11 @@
 
 # Programación de una App
 
+<div align="center">
+
+  <img width="400px" src="https://www.vivires.com/blog/wp-content/uploads/2017/11/construir-una-casa.jpg">
+
+</div>
 
 ## Introducción
 
@@ -39,7 +44,11 @@
   - __La vista__ presenta _la información_ y es activa, reaccionando a cambios en el modelo, de forma similar a un patrón MVC activo.
   - __El modelo de vista__ es un _actor intermediario_ entre el _modelo y la vista_ y contiene toda la lógica de presentación.
 
-<img src="https://ahorasomos.izertis.com/solidgear/wp-content/uploads/2019/06/MVVMPattern-1.png" alt="Diagrama de casos de Uso">
+<div align="center">
+
+  <img width="400px" src="https://ahorasomos.izertis.com/solidgear/wp-content/uploads/2019/06/MVVMPattern-1.png">
+
+</div>
 
   Ahora que hemos presentado estos dos patrones, __¿por qué usar MVVM en lugar de MVC?__
 
@@ -70,9 +79,9 @@
 
   Partiendo de un ejemplo de un concesionario que desea mostrar una lista de coches en su app, veamos un diagrama con todas las capas.
 
-  <div width="400px" align="center">
-    <img src="  https://ahorasomos.izertis.com/solidgear/wp-content/uploads/2019/06/Android-architecture-CLEAN-1.png" alt="Diagrama de casos de Uso">
-  <div>
+<div align="center">
+  <img width="400px" src="https://ahorasomos.izertis.com/solidgear/wp-content/uploads/2019/06/Android-architecture-CLEAN-1.png">
+</div>
 
 #### El Ejemplo
 
@@ -113,12 +122,12 @@
                          showLoadingDialog()
                  }
  })
- ```
+```
+ ##  En resumen
 
-##  En resumen
- En esta entrada hemos repasado los conceptos de MVC y MVVM y cómo utilizar los componentes de arquitectura de Android junto con una arquitectura en capas.
+  En esta entrada hemos repasado los conceptos de MVC y MVVM y cómo utilizar los componentes de arquitectura de Android junto con una arquitectura en capas.
 
- El ejemplo que hemos incluido es un buen punto de partida para los que todavía no habéis empezado a trabajar con los componentes de Android. Si queréis profundizar más en el tema os recomiendo no solo leer la documentación sobre estos componentes sino también aprender Kotlin, ya que es un buen aliado a la hora de hacer estos cambios en una aplicación Android.
+  El ejemplo que hemos incluido es un buen punto de partida para los que todavía no habéis empezado a trabajar con los componentes de Android. Si queréis profundizar más en el tema os recomiendo no solo leer la documentación sobre estos componentes sino también aprender Kotlin, ya que es un buen aliado a la hora de hacer estos cambios en una aplicación Android.
 
 
 
