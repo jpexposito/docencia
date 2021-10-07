@@ -14,7 +14,7 @@
 
   Necesitará un servidor Ubuntu 20.04 con una cuenta de superusuario no root.
 
-  Además como requisito previo es necesario disponer de __Java__ instalado. Si no sabes como hacerlo, puedes seguir esta [guía](../../comun/JDK-md).
+  Además como requisito previo es necesario disponer de __Java__ instalado. Si no sabes como hacerlo, puedes seguir esta [guía](../../../../comun/JDK-md).
 
 ## Pasos para realizar la instalación en local
 
