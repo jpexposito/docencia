@@ -154,7 +154,7 @@
   - Todo alumno tiene un DNI, un nombre y un apellido, puede que tenga segundo apellido o no.
   - Un alumno escoge una lista de asignaturas donde habrá una o más asignaturas. - Toda asignatura tiene un nombre, un atributo código y un profesor.
   - Un profesor tiene un NRP (Número de Registro Personal), un nombre y un apellido (también puede tener o no un segundo apellido).
-<!--
+
   <details>
   	  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
       Un dtd para este ejemplo sería
@@ -203,7 +203,7 @@
   ```
 
 </details>
--->
+
 
 #### Ejemplo 2
 
