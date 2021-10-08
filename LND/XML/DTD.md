@@ -144,6 +144,322 @@
   <?xml version="1.0" encode="UTF-7" standalone="yes"?>
   ```
 
+### Ejemplos
+
+#### Ejemplo 1
+
+  Un instituto necesita registrar los cursos y alumnos que estudian en él y necesita una DTD para comprobar los documentos XML de los programas que utiliza:
+  - Tiene que haber un elemento raíz listacursos. Tiene que haber uno o más cursos.
+  - Un curso tiene uno o más alumnos.
+  - Todo alumno tiene un DNI, un nombre y un apellido, puede que tenga segundo apellido o no.
+  - Un alumno escoge una lista de asignaturas donde habrá una o más asignaturas. - Toda asignatura tiene un nombre, un atributo código y un profesor.
+  - Un profesor tiene un NRP (Número de Registro Personal), un nombre y un apellido (también puede tener o no un segundo apellido).
+<!--
+  <details>
+  	  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+      Un dtd para este ejemplo sería
+
+  ```
+
+  <!ELEMENT listacursos (curso)+>
+  <!ELEMENT curso (alumno)+>
+  <!ELEMENT alumno (dni, nombre,
+                      ap1, ap2?, listaasignaturas)>
+
+  <!ELEMENT listaasignaturas (asignatura+)>
+  <!ELEMENT asignatura (nombre, profesor)>
+  <!ATTLIST asignatura codigo CDATA #REQUIRED>
+
+  <!ELEMENT profesor (nrp, nombre, ap1, ap2?)>
+
+  <!ELEMENT dni    (#PCDATA)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT ap1    (#PCDATA)>
+  <!ELEMENT ap2    (#PCDATA)>
+  <!ELEMENT nrp    (#PCDATA)>
+  ```
+    Un xml asociado a este ejemplo sería:
+
+  ```xml
+  <listacursos>
+      <curso>
+          <alumno>
+              <dni>44e</dni>
+              <nombre>Juan</nombre>
+              <ap1>Sanchez</ap1>
+              <listaasignaturas>
+                  <asignatura codigo="LM1">
+                      <nombre>Leng marcas</nombre>
+                      <profesor>
+                          <nrp>8</nrp>
+                          <nombre>Oscar</nombre>
+                          <ap1>Gomez</ap1>
+                      </profesor>
+                  </asignatura>
+              </listaasignaturas>
+          </alumno>
+      </curso>
+  </listacursos>
+  ```
+
+</details>
+-->
+
+#### Ejemplo 2
+
+  Un mayorista informático necesita especificar las reglas de los elementos permitidos en las aplicaciones que utiliza en sus empresas, para ello ha indicado los siguientes requisitos:
+  - Una entrega consta de uno o más lotes.
+  - Un lote tiene uno o más palés
+  - Todo palé tiene una serie de elementos: número de cajas, contenido y peso y forma de manipulación.
+  - El contenido consta de una serie de elementos: nombre del componente, procedencia (puede aparecer 0, 1 o más países), número de serie del componente, peso del componente individual y unidad de peso que puede aparecer o no.
+
+<!--
+
+  <details>
+  	  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+      Observa como en la siguiente DTD se pone procedencia? y dentro de ella pais+. Esto nos permite que si aparece la procedencia se debe especificar uno o más países. Sin embargo si no queremos que aparezca ningun pais, el XML no necesita contener un elemento vacío.
+
+      Un dtd para este ejemplo sería
+
+      ```
+      <!ELEMENT entrega (lote+)>
+      <!ELEMENT lote (pale+)>
+      <!ELEMENT pale (numcajas, contenido, peso, formamanipulacion?)>
+      <!ELEMENT numcajas (#PCDATA)>
+      <!ELEMENT peso (#PCDATA)>
+      <!ELEMENT formamanipulacion (#PCDATA)>
+      <!ELEMENT contenido (nombrecomponente, procedencia?,
+                              numserie, peso, unidades)>
+      <!ELEMENT nombrecomponente (#PCDATA)>
+      <!ELEMENT procedencia (pais+)>
+      <!ELEMENT pais (#PCDATA)>
+      <!ELEMENT numserie (#PCDATA)>
+      <!ELEMENT unidades (#PCDATA)>
+      ```
+      Un xml asociado a este ejemplo sería
+
+      ```xml
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE entrega SYSTEM "mayorista.dtd">
+      <entrega>
+        <lote>
+              <pale>
+                <numcajas>3</numcajas>
+                <contenido>
+                      <nombrecomponente>Fuentes</nombrecomponente>
+                      <numserie>3A</numserie>
+                      <peso>2kg</peso>
+                      <unidades>50</unidades>
+                </contenido>
+                <peso>100kg</peso>
+                <formamanipulacion>Manual</formamanipulacion>
+              </pale>
+        </lote>
+        <lote>
+              <pale>
+                <numcajas>2</numcajas>
+                <contenido>
+                      <nombrecomponente>CPUs</nombrecomponente>
+                      <procedencia>
+                        <pais>China</pais>
+                        <pais>Corea del Sur</pais>
+                      </procedencia>
+                      <numserie>5B</numserie>
+                      <peso>100g</peso>
+                      <unidades>1000</unidades>
+                </contenido>
+                <peso>100kg</peso>
+                <formamanipulacion>Manual</formamanipulacion>
+              </pale>
+        </lote>
+      </entrega>
+      ```
+  </details>
+
+-->
+
+
+### Ejemplo 3
+
+  Se desea crear un formato de intercambio de datos para una empresa mayorista de libros con el fin de que sus distintos programas puedan manejar la información interna. El formato de archivo debe tener la siguiente estructura:
+  - El elemento raíz es __operaciones__.
+  - Dentro de __operaciones__ hay uno o más elementos __operacion__.
+  - Una __operacion__ puede ser __venta__, __compra__, o cualquier combinación y secuencia de ellas, pero debe haber al menos una.
+  - Una venta tiene dentro un elemento __titulosvendidos__. Dentro de __titulosvendidos__ se almacenan estos datos:
+    - Uno o más elementos __título__.
+    - La cantidad total de libros vendidos.
+    - Puede haber un elemento. __entregado__ que indique si la entrega se ha realizado.
+    - Debe haber un elemento importe con un atributo obligatorio. llamado «moneda».
+  - Una compra tiene dentro un elemento __tituloscomprados__. Dentro de él hay esto:
+    - Uno o más elementos __titulo_.
+    - Un __proveedor__.
+    - Una fecha de compra, que debe desglosarse en elementos día, mes y año.
+
+  El objetivo final debe ser validar un fichero como este:
+```xml
+<operaciones>
+    <operacion>
+        <venta>
+            <titulosvendidos>
+                <titulo>Don Quijote</titulo>
+                <titulo>Rimas y leyendas</titulo>
+                <cantidadtotal>2000</cantidadtotal>
+                <importe moneda="euros">4400</importe>
+            </titulosvendidos>
+        </venta>
+        <venta>
+            <titulosvendidos>
+                <titulo>Rinconete y Cortadillo</titulo>
+                <titulo>Sainetes</titulo>
+                <cantidadtotal>1000</cantidadtotal>
+                <entregado/>
+                <importe moneda="libras">290</importe>
+            </titulosvendidos>
+        </venta>
+    </operacion>
+    <operacion>
+        <compra>
+            <tituloscomprados>
+                <titulo>De la Tierra a la Luna</titulo>
+                <titulo>Barbarroja</titulo>
+                <proveedor>Editorial EDSA</proveedor>
+                <fechacompra>
+                    <dia>10</dia>
+                    <mes>6</mes>
+                    <anio>2018</anio>
+                </fechacompra>
+            </tituloscomprados>
+        </compra>
+        <venta>
+            <titulosvendidos>
+                <titulo>Cinco semanas en globo</titulo>
+                <titulo>Sainetes</titulo>
+                <cantidadtotal>700</cantidadtotal>
+                <entregado/>
+                <importe moneda="euros">1490</importe>
+            </titulosvendidos>
+        </venta>
+        <compra>
+            <tituloscomprados>
+                <titulo>De la Tierra a la Luna</titulo>
+                <titulo>Barbarroja</titulo>
+                <proveedor>Editorial Recopila</proveedor>
+                <fechacompra>
+                    <dia>2</dia>
+                    <mes>12</mes>
+                    <anio>2017</anio>
+                </fechacompra>
+            </tituloscomprados>
+        </compra>
+    </operacion>
+</operaciones>
+```
+
+<details>
+  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+    La siguiente DTD valida el fichero arriba mostrado:
+
+    ```
+    <!--El elemento raíz es operaciones y dentro de él hay uno o más elementos operación-->
+    <!ELEMENT operaciones (operacion+)>
+    <!--Una operación puede ser ventas o compras, en cualquier orden y repetidas las veces que sea necesario-->
+    <!ELEMENT operacion (venta|compra)+>
+    <!ELEMENT venta (titulosvendidos)>
+    <!--Una venta tiene uno o más titulos, la cantidad de libros vendidos, puede haber un elemento entregado que indique si la entrega se ha realizado, y debe haber un elemento importe con un atributo obligatorio llamado moneda. -->
+    <!ELEMENT titulosvendidos (titulo+, cantidadtotal, entregado?, importe)>
+    <!--Antes de que se nos olvide, fabricamos el elemento importe y su atributo moneda-->
+    <!ELEMENT importe (#PCDATA)>
+    <!ATTLIST importe moneda CDATA #REQUIRED>
+    <!--Fabricamos el titulo y la cantidad total-->
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT cantidadtotal (#PCDATA)>
+    <!--El elemento entregado parece que es un vacío-->
+    <!ELEMENT entregado EMPTY>
+    <!--Una compra tiene:
+
+    -Uno o más títulos comprados.
+    -Nombre de proveedor.
+    -Una fecha de compra, que debe desglosarse en elementos día, mes y año -->
+    <!ELEMENT compra (tituloscomprados)>
+    <!ELEMENT tituloscomprados (titulo+, proveedor, fechacompra)>
+    <!ELEMENT proveedor (#PCDATA)>
+    <!--Desglosamos la fecha -->
+    <!ELEMENT fechacompra (dia, mes, anio)>
+    <!ELEMENT dia  (#PCDATA)>
+    <!ELEMENT mes  (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    ```
+
+</details>
+
+
+### Ejemplo 4
+
+Un fabricante de tractores desea unificar el formato XML de sus proveedores y para ello ha indicado que necesita que los archivos XML cumplan las siguientes restricciones:
+- Un pedido consta de uno o más tractores.
+- Un tractor consta de uno o más componentes.
+- Un componente tiene los siguientes elementos: nombre del fabricante (atributo obligatorio), fecha de entrega (si es posible, aunque puede que no aparezca, si aparece el dia es optativo, pero el mes y el año son obligatorios). También se necesita saber del componente si es frágil o no. También debe aparecer un elemento peso del componente y dicho elemento peso tiene un atributo unidad del peso (kilos o gramos), un elemento número de serie y puede que aparezca o no un elemento kmmaximos indicando que el componente debe sustituirse tras un cierto número de kilómetros.
+
+Un posible fichero de ejemplo que podría validar sería este:
+
+```xml
+<pedido>
+    <tractor>
+        <componente nombrefabricante="Ebro">
+            <fechaentrega>
+                <mes>2018</mes> <anio>2018</anio>
+            </fechaentrega>
+            <fragil/>
+            <peso unidad="kg">12</peso>
+            <numserie>00A</numserie>
+        </componente>
+        <componente nombrefabricante="Avia">
+            <fechaentrega>
+                <dia>12</dia><mes>1</mes><anio>2019</anio>
+            </fechaentrega>
+            <nofragil/>
+            <peso unidad="g">1450</peso>
+            <numserie>00D</numserie>
+            <kmmaximos>25000</kmmaximos>
+        </componente>
+    </tractor>
+    <tractor>
+        <componente nombrefabricante="John Deere">
+            <fragil/>
+            <peso unidad="g">770</peso>
+            <numserie>43Z</numserie>
+        </componente>
+    </tractor>
+</pedido>
+```
+<!--
+<details>
+  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+    La siguiente DTD valida el fichero arriba mostrado:
+
+```
+<!ELEMENT pedido     (tractor)+>
+<!ELEMENT tractor    (componente)+>
+<!ELEMENT componente (fechaentrega?, (fragil|nofragil),
+                      peso, numserie, kmmaximos?)>
+
+<!ELEMENT fechaentrega (dia?, mes, anio)>
+<!ELEMENT dia      (#PCDATA)>
+<!ELEMENT mes      (#PCDATA)>
+<!ELEMENT anio     (#PCDATA)>
+<!ELEMENT fragil   EMPTY>
+<!ELEMENT nofragil EMPTY >
+<!ELEMENT peso     (#PCDATA)>
+<!ATTLIST peso unidad CDATA #REQUIRED>
+<!ELEMENT numserie  (#PCDATA)>
+<!ELEMENT kmmaximos (#PCDATA)>
+<!ATTLIST componente nombrefabricante CDATA #REQUIRED>
+```
+
+</details>
+
+-->
+
 ## Herramientas de creación y validación.
 
   Existen numerosas herramientas de validación, algunas de ellas online y con estas trabajaremos:
