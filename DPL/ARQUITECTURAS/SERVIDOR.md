@@ -2,6 +2,10 @@
 
 # ¿Qué es un Servidor?
 
+<div align="center">
+    <img src="https://www.osgroup.co/wp-content/uploads/2017/07/Qu%C3%A9-es-un-servidor-web-1024x768.jpg">
+</div>
+
   El término servidor tiene dos significados en el ámbito informático. El primero hace referencia al ordenador que pone recursos a disposición a través de una red, y el segundo se refiere al programa  que funciona en dicho ordenador. En consecuencia aparecen dos definiciones de servidor:
 
   - __Definición Servidor (hardware)__: un servidor basado en hardware es una máquina física integrada en una red informática en la que, además del sistema operativo, funcionan uno o varios servidores basados en software. Una denominación alternativa para un servidor basado en hardware es "host" (término inglés para "anfitrión"). En principio, todo ordenador puede usarse como __host__ con el correspondiente software para servidores.
@@ -12,10 +16,9 @@
 
   La puesta a disposición de los servicios del servidor a través de una red informática se basa en el modelo cliente-servidor, concepto que hace posible distribuir las tareas entre los diferentes ordenadores y hacerlas accesibles para más de un usuario final de manera independiente. Cada servicio disponible a través de una red será ofrecido por un servidor (software) que está permanentemente en espera. Este es el único modo de asegurar que los clientes como el navegador web o los clientes de correo electrónico siempre tengan la posibilidad de acceder al servidor activamente y de usar el servicio en función de sus necesidades.
 
-
-  <div align="center">
-    <img src="https://jarroba.com/wp-content/uploads/2019/08/Cliente-y-Servidor-petici%C3%B3n-a-nodos-balanceados-www.Jarroba.com_.png" width="400px" >
-  </div>
+<div align="center">
+    <img src="https://jarroba.com/wp-content/uploads/2019/08/Cliente-y-Servidor-petici%C3%B3n-a-nodos-balanceados-www.Jarroba.com_.png">
+</div>
 
 ### Tipos de servidores
 

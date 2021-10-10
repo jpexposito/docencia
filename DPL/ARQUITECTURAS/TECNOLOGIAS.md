@@ -81,7 +81,7 @@
 
 ### Despliegue de una Aplicación
 
-    Para realizar el despliegue de una aplicación sigue la siguiente [tarea](tareas/despliegue-jsp-apache-tomcat.md).
+  Para realizar el despliegue de una aplicación sigue la siguiente [tarea](tareas/despliegue-jsp-apache-tomcat.md).
 
 <div align="center">
     <a href="README.md"><img src="../../img/before.png" style="width:42px;height:42px;"  />
