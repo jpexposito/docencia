@@ -130,6 +130,19 @@ Para acceder a Tomcat 10 en Ubuntu 20.04 desde un navegador web indicaremos la d
   ```
   Más información [aquí](https://linuxhint.com/change-default-port-of-tomcat-server/), y realizando un poco de investigación a la hora de resolver cualquier problema.
 
+## Cómo añadir usuarios a Tomcat
+
+  Esto es algo bastante sencillo. Para añadir usuarios con capacidad de administrar las aplicaciones desplegadas en nuestro Tomcat sin tener que reiniciar el sevidor, debemos hacer lo siguiente:
+  - Acceder al fichero conf/tomcat-users.xml
+  - Buscar la etiqueta
+  ```
+  <tomcat-users>
+  ```
+  - Justo debajo de la etiqueta añadiremos una entrada parecida a la siguiente (recuerda cambiar la contraseña):
+  ```console
+  <user username="admin" password="admin" roles="manager-gui" />
+  ```
+
 ## Realiza el Informe
 
   Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __Apache-Tomcat__.
