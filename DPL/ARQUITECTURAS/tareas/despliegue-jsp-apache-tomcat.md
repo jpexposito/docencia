@@ -83,7 +83,7 @@
   ```
   Dentro de la carpeta __target__ debes de encontrar un fichero de nombre __app-web-demo.war__. Este nombre se especifica dentro del fichero _pom.xml_, por si tienes curiosidad y deseas cambiarlo.
 
-  _No obstante, si guientes, puedes hacer uso de maven para la construcción de la aplicación web. Para ello, vamos a invocar el siguiente comando, donde alumno, debe de ser las siglas del alumno que esta realizando la tarea_.
+  _No obstante, si quieres, puedes hacer uso de maven para la construcción de la aplicación web. Para ello, vamos a invocar el siguiente comando, donde alumno, debe de ser las siglas del alumno que esta realizando la tarea_.
 
   ```console
   mvn archetype:generate -DgroupId=es.iespuerto.alumno -DartifactId=app-alumno
@@ -102,9 +102,9 @@
   Realiza un informe indicando los pasos que has seguido para la instalación, configuración y despliegue de una app en  __Apache-Tomcat__.
 
   Además el informe debe de contener:
-   - Titulo de la tarea.
+   - Título de la tarea.
    - Nombre y Apellidos.
-   - Indice
+   - Índice
    - Pasos descritos.
    - Capturas de pantalla.
 
@@ -112,7 +112,7 @@
 
   - Se pasará el programa antí copia para verificar autenticidad.
   - __5 faltas de ortografía se baja dos puntos__.
-  - Al menos (1 folio indice, al menos 3 desarrollo de la práctica).
+  - Al menos (1 folio índice, al menos 3 desarrollo de la práctica).
   - Carecer faltas de ortografía.
   - Capturas de pantalla con los resultados obtenidos.
 </div>
