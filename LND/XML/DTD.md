@@ -213,7 +213,6 @@
   - Todo palé tiene una serie de elementos: número de cajas, contenido y peso y forma de manipulación.
   - El contenido consta de una serie de elementos: nombre del componente, procedencia (puede aparecer 0, 1 o más países), número de serie del componente, peso del componente individual y unidad de peso que puede aparecer o no.
 
-<!--
 
   <details>
   	  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
@@ -275,8 +274,6 @@
       </entrega>
       ```
   </details>
-
--->
 
 
 ### Ejemplo 3
@@ -432,7 +429,7 @@ Un posible fichero de ejemplo que podría validar sería este:
     </tractor>
 </pedido>
 ```
-<!--
+
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN</summary>
     La siguiente DTD valida el fichero arriba mostrado:
@@ -458,7 +455,6 @@ Un posible fichero de ejemplo que podría validar sería este:
 
 </details>
 
--->
 
 ## Herramientas de creación y validación.
 
