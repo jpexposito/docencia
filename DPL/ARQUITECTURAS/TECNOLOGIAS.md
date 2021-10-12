@@ -74,6 +74,7 @@
     <img src="https://images1.programmerclick.com/10/a9/a963912e7fca83d2aeb441228d967c8a.png"  />
   </div>
 
+
 ### Instalación y configuración básica
 
   Para realizar la instalación y configuración básica sigue la siguiente [tarea](tareas/instalacion-apache-tocat.md).
@@ -82,6 +83,27 @@
 ### Despliegue de una Aplicación
 
   Para realizar el despliegue de una aplicación sigue la siguiente [tarea](tareas/despliegue-jsp-apache-tomcat.md).
+
+
+## Wildfly
+
+
+### Instalación y configuración básica
+
+    Para realizar la instalación y configuración básica sigue la siguiente [tarea](tareas/instalacion-jboss-wildfly.md).
+
+
+### Despliegue de una Aplicación
+
+    Para realizar el despliegue de una aplicación sigue la siguiente [tarea](tareas/despliegue-jsp-jboss-wildfly.md).
+
+## Cuota de mercado de Servidores de Aplicaciones con Java
+
+  La cuota de mercado de servidores a _30 de septiembre_ es la que muestra la siguiente imagen.
+
+<div align="center">
+  <img src="https://marvel-b1-cdn.bc0a.com/f00000000156946/www.jrebel.com/sites/rebel/files/image/2021-03/application%20server%20java%20technology.png"  />
+</div>
 
 <div align="center">
     <a href="README.md"><img src="../../img/before.png" style="width:42px;height:42px;"  />

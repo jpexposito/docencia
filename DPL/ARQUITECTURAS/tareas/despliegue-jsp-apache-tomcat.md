@@ -59,7 +59,7 @@
 
 ## Creación de una App Web en Java
 
-### Requisitos
+### Requisitos previos
 
   Dado que disponemos de la instalación de [JAVA](../../../comun/JDK.md), vamos a realizar la instalación de [MAVEN](../../../comun/MAVEN.md).
 
