@@ -65,15 +65,19 @@
 
 ### Construcción del proyecto
 
-  En el siguiente enlace dispones de un proyecto de una app en [Java](../../../comun/ejemplos/java), donde debes de realizar los siguientes cambios:
+  En el siguiente [enlace](https://github.com/jpexposito/docencia/tree/master/comun/ejemplos/java/app-web-demo) dispones de un proyecto de una app en [Java](../../../comun/ejemplos/java), donde debes de realizar los siguientes cambios:
   - Fichero __web.xml__. Sustituye:
-  ```console
-     <display-name>app-web-alumno</display-name>  
-     ```
+
+```console
+   <display-name>app-web-alumno</display-name>  
+```
+
   por:
-  ```console
-     <display-name>app-web-aron</display-name>
+
+```console
+   <display-name>app-web-aron</display-name>
   ```
+
   donde _aron_ sería el nombre del alumno.
   - Fichero __index.jsp__. Realiza la sustitución del valor alumno siguiendo el mismo patrón.
 
