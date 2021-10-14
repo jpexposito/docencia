@@ -85,7 +85,7 @@
   ```console
   mvn clean install
   ```
-  Dentro de la carpeta __target__ debes de encontrar un fichero de nombre __app-web-demo.war__. Este nombre se especifica dentro del fichero _pom.xml_, por si tienes curiosidad y deseas cambiarlo.
+  Dentro de la carpeta __target__ debes de encontrar un fichero de nombre __app-web-alumno.war__, donde se especifica dentro del fichero __pom.xml__ en la etiqueta __finalName__. Este nombre se especifica dentro del fichero _pom.xml_, por si tienes curiosidad y deseas cambiarlo.
 
   _No obstante, si quieres, puedes hacer uso de maven para la construcción de la aplicación web. Para ello, vamos a invocar el siguiente comando, donde alumno, debe de ser las siglas del alumno que esta realizando la tarea_.
 
