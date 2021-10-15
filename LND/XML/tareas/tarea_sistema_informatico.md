@@ -15,10 +15,10 @@
   - Pepito Grillo con nif 98765432H teléfono 656566555 email yhyh@yahoo.com, su dirección es Avd. El Pez, 5 de Suances CP 39401. Su nota es "apto" y no tiene faltas de asistencia.
 
 
-  ## Entrega
+## Entrega
 
-    - Recuerda que debes de generar el informe en __pdf__ + __github__ (enlace en la descripción de la entrega de la tarea).
-    - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
+  - Recuerda que debes de generar el informe en __pdf__ + __github__ (enlace en la descripción de la entrega de la tarea).
+  - La entrega fuera de hora supondrá un __40%__ menos de la __nota__.
 
 
  <details>
