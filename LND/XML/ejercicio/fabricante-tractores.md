@@ -1,4 +1,3 @@
-<!--
 <div align="justify">
 
 # FABRICA DE TRACTORES
@@ -65,4 +64,3 @@ Se pide realizar el fichero __dtd__, que valide este fichero o el que el alumno 
 
   <img width="600px" src="https://www.legaltoday.com/wp-content/uploads/2020/10/teletrabajo4-1024x576.jpg">
 </div>
--->
