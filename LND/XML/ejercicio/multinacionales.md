@@ -1,5 +1,5 @@
 <div align="justify">
-<!--
+
 # MULTINACIONAL
 
 
@@ -34,4 +34,3 @@ Se pide realizar el fichero __dtd__ y __xml__ correspondiente, que valide este f
 
   <img width="600px" src="https://aws.admagazine.com/prod/designs/v1/assets/1260x630/96113.jpg">
 </div>
--->

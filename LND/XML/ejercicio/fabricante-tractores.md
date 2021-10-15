@@ -58,9 +58,37 @@ Se pide realizar el fichero __dtd__, que valide este fichero o el que el alumno 
   - Recuerda que debes de crear el informe en __pdf__ (con tu interpretación),junto con el __dtd__ , generando un zip y subirlo a la plataforma.
   La __no entrega en plazo supone la no corrección del ejercicio con la correspondiente nota (0)__
 
+<!--
 <div align="center">
 
   __A TRABAJAR__
 
   <img width="600px" src="https://www.legaltoday.com/wp-content/uploads/2020/10/teletrabajo4-1024x576.jpg">
 </div>
+-->
+
+<details>
+  <summary>PULSA PARA VER LA SOLUCIÓn CORRECTA:</summary>
+
+  - Un dtd válido sería:
+
+  ```
+    <!ELEMENT pedido     (tractor)+>
+    <!ELEMENT tractor    (componente)+>
+    <!ELEMENT componente (fechaentrega?, (fragil|nofragil),
+                          peso, numserie, kmmaximos?)>
+
+    <!ELEMENT fechaentrega (dia?, mes, anio)>
+    <!ELEMENT dia      (#PCDATA)>
+    <!ELEMENT mes      (#PCDATA)>
+    <!ELEMENT anio     (#PCDATA)>
+    <!ELEMENT fragil   EMPTY>
+    <!ELEMENT nofragil EMPTY >
+    <!ELEMENT peso     (#PCDATA)>
+    <!ATTLIST peso unidad CDATA #REQUIRED>
+    <!ELEMENT numserie  (#PCDATA)>
+    <!ELEMENT kmmaximos (#PCDATA)>
+    <!ATTLIST componente nombrefabricante CDATA #REQUIRED>
+  ```
+
+</details>
