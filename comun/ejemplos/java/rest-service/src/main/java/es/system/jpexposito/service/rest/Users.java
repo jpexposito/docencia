@@ -27,8 +27,7 @@ public class Users {
     };
 
     /**
-     *
-     * @return Response list Users
+     * @return Retorna la lista de usuarios
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -71,7 +70,7 @@ public class Users {
     @Path("/create")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createUser(User user) {
+    public Response create(User user) {
 
         this.lista.add(user);
         //return Response.status(Status.CREATED).build();
@@ -87,7 +86,7 @@ public class Users {
      *         error y el userRequest viene null.
      */
     @PUT
-    @Path("/updateUser")
+    @Path("/update")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateUser(User user) {
@@ -113,7 +112,7 @@ public class Users {
      * @return Response
      */
     @DELETE
-    @Path("/deleteUser/{name}")
+    @Path("/delete/{name}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteUser(@PathParam("name") String name) {
         User found = null;
