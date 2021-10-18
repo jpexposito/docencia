@@ -15,7 +15,6 @@
   Definir un __xml__ y __dtd__ que represente la imagen anterior .
 
 
-<!--
  <details>
    <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
@@ -75,6 +74,5 @@
 
  ```
  </details>
--->
 
 </div>
