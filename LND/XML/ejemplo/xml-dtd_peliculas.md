@@ -4,7 +4,7 @@
 
 
 <div align="center">
-  <img width="300px" src="https://www.e4e-soluciones.com/wp-content/uploads/2020/04/factura-de-la-luz-1000x675.jpg">
+  <img src="https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2020/04/28/cine-peliculas-estreno-plataformas-streaming-00.png">
 </div>
 
 ## Se pide
@@ -21,46 +21,42 @@
   Ejemplo de xml:
   ```xml
   <cartelera>
-<película código="p1" duración="152" año="2002">
-<título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
-<título_original>Old School</título_original>
-<nacionalidad>Estados Unidos</nacionalidad>
-<género>Comedia</género>
-<clasificación edad="tp"/>
-<sinopsis>
-Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero que agarra. Frank se ha casado y su matrimonio nada
+  <película código="p1" duración="152" año="2002">
+    <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
+    <título_original>Old School</título_original>
+    <nacionalidad>Estados Unidos</nacionalidad>
+    <género>Comedia</género>
+    <clasificación edad="tp"/>
+    <sinopsis>Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero que agarra. Frank se ha casado y su matrimonio nada
 tiene que ver con las juergas salvajes que organizaban años atrás. Y Beanie es
-un padre de familia que se muere por recuperar su alocada juventud. Pero las cosas cambian cuando Beanie sugiere que creen su propia fraternidad, en la nueva casa que Mitch tiene junto al campus de la universidad. Una ocasión para revivir tiempos gloriosos, hacer nuevos amigos y de volver a sus viejas, salvajes y desmadradas juergas de estudiantes.
-</sinopsis>
-<director>Todd Philips</director>
-<reparto>
-<actor>Luke Wilson</actor>
-<actor>Will Farrel</actor>
-<actor>Vince Vaughn</actor>
-</reparto>
-<web>http://www.uip.es</web>
-<cartel>caratulas/Aquellas juergas.jpg</cartel>
-</película>
-<película código="p17" duración="06">
-<título>EL ORO DE MOSCÚ</título>
-<nacionalidad>España</nacionalidad>
-<género>Comedia</género>
-<sin_clasificar/>
-<sinopsis>
-Por una extraña coincidencia del destino, alguien recibe una información extraconfidencial de un anciano en sus últimos segundos de vida: el secreto mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo comunica secretamente a un supuesto amigo. Ambos inician una aventura rocambolesca y llena de misterio. Ante la inutilidad de sus intentos y muy a
-su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el pozo sin fondo que conlleva descifrar el enigma.
-</sinopsis>
-<director>Jesús Bonilla</director>
-<reparto>
-<actor>Jesús Bonilla</actor>
-<actor>Santiago Segura</actor>
-<actor>Alfredo Landa</actor>
-<actor>Concha Velasco</actor>
-<actor>Antonio Resines</actor>
-<actor>Gabino Diego, María Barranco</actor>
-<actor>María Barranco</actor>
-</reparto>
-</película>
+un padre de familia que se muere por recuperar su alocada juventud. Pero las cosas cambian cuando Beanie sugiere que creen su propia fraternidad, en la nueva casa que Mitch tiene junto al campus de la universidad. Una ocasión para revivir tiempos gloriosos, hacer nuevos amigos y de volver a sus viejas, salvajes y desmadradas juergas de estudiantes.</sinopsis>
+    <director>Todd Philips</director>
+    <reparto>
+      <actor>Luke Wilson</actor>
+      <actor>Will Farrel</actor>
+      <actor>Vince Vaughn</actor>
+    </reparto>
+    <web>http://www.uip.es</web>
+    <cartel>caratulas/Aquellas juergas.jpg</cartel>
+  </película>
+  <película código="p17" duración="06">
+    <título>EL ORO DE MOSCÚ</título>
+    <nacionalidad>España</nacionalidad>
+    <género>Comedia</género>
+    <sin_clasificar/>
+    <sinopsis>Por una extraña coincidencia del destino, alguien recibe una información extraconfidencial de un anciano en sus últimos segundos de vida: el secreto mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo comunica secretamente a un supuesto amigo. Ambos inician una aventura rocambolesca y llena de misterio. Ante la inutilidad de sus intentos y muy a
+su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el pozo sin fondo que conlleva descifrar el enigma.</sinopsis>
+    <director>Jesús Bonilla</director>
+    <reparto>
+      <actor>Jesús Bonilla</actor>
+      <actor>Santiago Segura</actor>
+      <actor>Alfredo Landa</actor>
+      <actor>Concha Velasco</actor>
+      <actor>Antonio Resines</actor>
+      <actor>Gabino Diego, María Barranco</actor>
+      <actor>María Barranco</actor>
+    </reparto>
+  </película>
 </cartelera>
   ```
 
@@ -71,40 +67,29 @@ su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el 
  ```xml
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
-<!DOCTYPE factura [
+<!DOCTYPE cartelera [
 
- <!ELEMENT factura (datos_empresa, datos_cliente, datos_factura)>
- <!ELEMENT datos_empresa (nombre,dir,poblacion,provincia,cif,telefono?,fax?)>
- <!ELEMENT datos_cliente (nombre, dir_env, poblacion, provincia)>
- <!ELEMENT datos_factura (fecha, linea*, base, cuota_iva, total)>
- <!ELEMENT linea (ref, desc, cant, precio, importe)>
- <!ELEMENT ref (#PCDATA)>
- <!ELEMENT desc (#PCDATA)>
- <!ELEMENT cant (#PCDATA)>
- <!ELEMENT precio (#PCDATA)>
- <!ELEMENT importe (#PCDATA)>
- <!ELEMENT nombre (#PCDATA)>
- <!ELEMENT dir (#PCDATA)>
- <!ELEMENT poblacion (#PCDATA)>
- <!ELEMENT provincia (#PCDATA)>
- <!ELEMENT cif (#PCDATA)>
- <!ELEMENT telefono EMPTY>
- <!ELEMENT fax EMPTY>
- <!ELEMENT dir_env (#PCDATA)>
- <!ELEMENT fecha (#PCDATA)>
- <!ELEMENT base (#PCDATA)>
- <!ELEMENT cuota_iva (#PCDATA)>
- <!ELEMENT total (#PCDATA)>
 
- <!ATTLIST factura n_fac ID #REQUIRED>
- <!ATTLIST telefono num_tel CDATA #FIXED "917776688">
- <!ATTLIST fax num_fax CDATA #FIXED "917776699">
- <!ATTLIST datos_cliente n_cli ID #REQUIRED>
- <!ATTLIST datos_factura n_ped ID #REQUIRED>
- <!ATTLIST datos_factura iva NMTOKEN #REQUIRED>
- <!ATTLIST datos_factura f_pago (efectivo|tarjeta|plazos) #REQUIRED>
- <!ATTLIST datos_factura moneda CDATA #FIXED "euro">
- <!ATTLIST poblacion cod_postal CDATA "">
+ <!ELEMENT cartelera (película)*>
+ <!ELEMENT película (título, título_original?, nacionalidad, género, (clasificación | sin_clasificar), sinopsis, director, reparto, web?, cartel?) >
+ <!ELEMENT título (#PCDATA)>
+ <!ELEMENT título_original (#PCDATA)>
+ <!ELEMENT nacionalidad (#PCDATA)>
+ <!ELEMENT género (#PCDATA)>
+ <!ELEMENT clasificación EMPTY>
+ <!ELEMENT sin_clasificar EMPTY>
+ <!ELEMENT sinopsis (#PCDATA)>
+ <!ELEMENT director (#PCDATA)>
+ <!ELEMENT reparto (actor)+>
+ <!ELEMENT web (#PCDATA)>
+ <!ELEMENT cartel (#PCDATA)>
+ <!ELEMENT actor (#PCDATA)>
+
+
+ <!ATTLIST película código ID #REQUIRED>
+ <!ATTLIST película duración CDATA "">
+ <!ATTLIST película año CDATA "2003">
+ <!ATTLIST clasificación edad (8 | 12 | 16 | 18 | tp) #REQUIRED>
 ]>
  ```
  </details>
