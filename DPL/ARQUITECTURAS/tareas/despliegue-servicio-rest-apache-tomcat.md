@@ -48,7 +48,15 @@
 
 ### Problemas durante el despliegue
 
-  Si se producen problemas en el despliegue del servicio, puedes verificar el problema en la fichero __catalina_fecha__ que se encuentra alojado en la carpeta logs de __Tomcat__.
+  Si se producen problemas en el despliegue del servicio, puedes verificar el problema en los ficheros que se encuentran alojado en la carpeta __logs__ de __Tomcat__. Los ficheros ha los que hemos de prestar atención son:
+  - __catalina_fecha__.
+  - __localhost_fecha__. En este fichero se mostraran los problemas de acceso, dependencias de librerías etc, como lo siguiente:
+  ```console
+  SEVERE [http-nio-8082-exec-6] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [Jersey Web Application] in web application [/rest-service] threw load() exception
+        java.lang.ClassNotFoundException: com.sun.jersey.spi.container.servlet.ServletContainer
+
+  ```
+  Para solventar ese tipo de problemas hemos de incluir las librerías en el war o dentro de la carpeta __shared__ de __Tomcat__, tal y como se describía en el siguiente [enlace](../TECNOLOGIAS.md).
 
 ### Mejoras en el servicio
 

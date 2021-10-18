@@ -73,7 +73,6 @@ public class Users {
     public Response create(User user) {
 
         this.lista.add(user);
-        //return Response.status(Status.CREATED).build();
         return Response.ok(lista).build();
 
     }
@@ -106,7 +105,6 @@ public class Users {
     }
 
     /**
-     * URL: http://localhost:8080/API_REST_WS-RS/api/users/deleteUser/Rosa
      *
      * @param name
      * @return Response
