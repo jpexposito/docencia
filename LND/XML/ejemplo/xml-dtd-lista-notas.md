@@ -29,7 +29,6 @@
 </lista_de_notas>
   ```
 
-<!--
  <details>
    <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
@@ -46,6 +45,6 @@
 
  ```
  </details>
--->
+
 
 </div>
