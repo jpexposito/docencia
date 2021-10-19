@@ -51,12 +51,14 @@
   Si se producen problemas en el despliegue del servicio, puedes verificar el problema en los ficheros que se encuentran alojado en la carpeta __logs__ de __Tomcat__. Los ficheros ha los que hemos de prestar atención son:
   - __catalina_fecha__.
   - __localhost_fecha__. En este fichero se mostraran los problemas de acceso, dependencias de librerías etc, como lo siguiente:
+
   ```console
   SEVERE [http-nio-8082-exec-6] org.apache.catalina.core.StandardContext.loadOnStartup Servlet [Jersey Web Application] in web application [/rest-service] threw load() exception
         java.lang.ClassNotFoundException: com.sun.jersey.spi.container.servlet.ServletContainer
 
   ```
-  Para solventar ese tipo de problemas hemos de incluir las librerías en el war o dentro de la carpeta __lib__ de __Tomcat__, tal y como se describía en el siguiente [enlace](../TECNOLOGIAS.md), o dentro de la carpeta __WEB-INFO/lib__ del proyecto.
+
+  Para solventar ese tipo de problemas hemos de incluir las librerías en el war o dentro de la carpeta __lib__ de __Tomcat__, tal y como se describía en el siguiente [enlace](../TECNOLOGIAS.md), o dentro de la carpeta __target/rest-service/WEB-INF/lib__ del proyecto.
 
 ### Mejoras en el servicio
 
@@ -73,6 +75,82 @@
    - Pasos descritos.
    - Capturas de pantalla.
 
+## Referencias
+
+  Referencias para la resolución de la tarea:
+  - [Migración de Tomcat 10 a 9](https://tomcat.apache.org/migration-10.html)
+  - [Dependencias de librerías en Tomcat 10](https://qastack.mx/programming/9373081/how-to-set-up-jax-rs-application-using-annotations-only-no-web-xml)
+  - [Using Jersey 3x + Jetty to develop endpoints](https://mkyong.com/java/java-lang-noclassdeffounderror-jakarta-servlet-servletinputstream/)
+
+<details>
+  <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+
+  Los problemas que se detectan en el despliegue son varios. El primero de ellos relacionado con la librería __com.sun.jersey.spi.container.servlet.ServletContainer__. Como resultaría normal, el alumno buscará las librerías que se encuentran en el fichero __pom.xml__, para desplegarlas en la carpeta __lib__ de Tomcat 10__. Esta acción no será necesaria, dado que el proyecto al estar creado con ___Maven___ generará la capeta ___WEB_INF/lib___ por defecto incluyendo las librerías.
+  Otra opción que ha podido atacar, es el cambio de librerías, añadiendo por ejemplo, las siguientes:
+  ```xml
+
+<dependency>
+  <groupId>com.sun.jersey</groupId>
+  <artifactId>jersey-server</artifactId>
+  <version>1.17.1</version>
+</dependency>
+<dependency>
+  <groupId>com.sun.jersey</groupId>
+  <artifactId>jersey-core</artifactId>
+  <version>1.17.1</version>
+</dependency>
+<dependency>
+  <groupId>com.sun.jersey</groupId>
+  <artifactId>jersey-servlet</artifactId>
+  <version>1.17.1</version>
+</dependency>
+
+  ```
+
+  Problemas que el alumno debe afrontar:
+    - Solventar los problemas de librerías. En este caso __Maven__ hará el trabajo por nosotros.
+    - Compilar el servicio con __JAVA 15__ o superior. Esto esta motivado a que el paquete para el despliegue del servicio cambia de __Tomcat 9 a 10__, y el paquete para la construcción de servicios cambia, pasado de __javax__ a __jakarta__. Este cambio queda reflejado en el fichero __pom.xml__.
+
+```xml
+    <!--
+    <dependency>
+      <groupId>javax.ws.rs</groupId>
+      <artifactId>javax.ws.rs-api</artifactId>
+      <version>2.1.1</version>
+    </dependency>
+    -->
+
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
+    </dependency>
+```
+
+  Además de los cambios especificados, con la nueva versión existe la posibilidad de eliminar el fichero de configuración ___WEB_INF/web.xml___, e indicarlo en el plugin de Maven, que construye el war:
+
+```xml
+
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+
+```
+
+  Por último sólo es necesario crear el fichero __ApplicationConfig__, que debe contener el __Path__ para el despliegue del servicio __rest__. Si prestamos atención a este fichero, veremos, que cumple la función del fichero __web.xml_
+
+```java
+@ApplicationPath("rest")
+public class ApplicationConfig extends Application {
+}
+```
+
+  Lo importe es que el alumno haya comprobado lo complejo que puede llegar a ser el despliegue de una solución en __Tomcat__, dado que no se tiene el control de las librerías implicadas, suponiendo un desafío para el responsable del _servidor de aplicaciones_.   
+</details>
 
 
 </div>
