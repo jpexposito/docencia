@@ -80,6 +80,7 @@
   Referencias para la resolución de la tarea:
   - [Migración de Tomcat 10 a 9](https://tomcat.apache.org/migration-10.html)
   - [Dependencias de librerías en Tomcat 10](https://qastack.mx/programming/9373081/how-to-set-up-jax-rs-application-using-annotations-only-no-web-xml)
+  - [Using Jersey 3x + Jetty to develop endpoints](https://mkyong.com/java/java-lang-noclassdeffounderror-jakarta-servlet-servletinputstream/)
 
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN</summary>
