@@ -58,7 +58,7 @@
 
   ```
 
-  Para solventar ese tipo de problemas hemos de incluir las librerías en el war o dentro de la carpeta __lib__ de __Tomcat__, tal y como se describía en el siguiente [enlace](../TECNOLOGIAS.md), o dentro de la carpeta __WEB-INFO/lib__ del proyecto.
+  Para solventar ese tipo de problemas hemos de incluir las librerías en el war o dentro de la carpeta __lib__ de __Tomcat__, tal y como se describía en el siguiente [enlace](../TECNOLOGIAS.md), o dentro de la carpeta __target/rest-service/WEB-INF/lib__ del proyecto.
 
 ### Mejoras en el servicio
 
