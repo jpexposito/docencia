@@ -12,7 +12,7 @@
 - Clasificar los lenguajes de programación.
 
 
-### Tipos de software 
+### Tipos de software
 
 - **De sistema** (Sistema operativo, drivers -controladores-)
 - **De aplicación** (Suite ofimática, Navegador, Edición de imagen, ...)
@@ -29,7 +29,7 @@ almacena de forma permanente los archivos ejecutables y los archivos de datos.
 
 - **Memoria RAM** :
 almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
- 
+
 - **CPU** :
 lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
 
@@ -46,7 +46,7 @@ La CPU se llama también UCP (en inglés), procesador o microprocesador.
 
 - __Código fuente__: archivo de texto legible escrito en un lenguaje de programación.
 - __Código objeto__ (intermedio): archivo binario no ejecutable.
-- __Código ejecutable__: archivo binario ejecutable. 
+- __Código ejecutable__: archivo binario ejecutable.
 
 Sólo válido para **lenguajes compilados: C, C++, Java**.
 
@@ -66,7 +66,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 - [Ingeniería del software](https://es.wikipedia.org/wiki/Ingenier%C3%ADa_de_software)
 
 
-### Desarrollo de software 
+### Desarrollo de software
 
 <img align="center" src="../img/pasos-desarrollo-software.png" alt="Fases principales del desarrollo de software">
 
@@ -82,7 +82,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 
 #### __ANÁLISIS__
 
-- Se determina y define claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
+- Se determina y define claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar.
 - La **especificación de requisitos** debe:
   - Ser completa y sin omisiones
   - Ser concisa y sin trivialidades
@@ -146,7 +146,7 @@ En **lenguajes interpretados** no exite código objeto, ni binario. Solo código
 - PRUEBAS de unidades: __Módulos utilizables__
 - PRUEBAS de integración: __Sistema utilizable__
 - PRUEBAS del sistema: __Sistema aceptado__
-- Documentación: __Documentación técnica y de usuario__ 
+- Documentación: __Documentación técnica y de usuario__
 - MANTENIMIENTO: __Informes de errores y control de cambios__
 
 
@@ -218,10 +218,10 @@ El trabajo con una metodología de desarrollo de software permite reducir el niv
 ### Prototipos (III)
 
 - Tipos de prototipos:
-  - __Prototipos rápidos__ 
+  - __Prototipos rápidos__
     - El prototipo puede estar desarrollado usando otro lenguaje y/o herramientas.
     - Finalmente el prototipo se desecha.
-  - __Prototipos evolutivos__ 
+  - __Prototipos evolutivos__
     - El prototipo está diseñado en el mismo lenguaje y herramientas del proyecto.
     - El prototipo se usa como base para desarrollar el proyecto.
 
@@ -278,6 +278,30 @@ Pizarra kanban
 <img align="center" src="../img/metodologia-kanban.png" alt="Pizarra kanban">
 
 
+##### Algunas Herramientas Online
+
+###### Trello
+
+Trello fue vendida por la nada despreciable suma de 425 millones de dólares. La popular aplicación de productividad ya cuenta con 19 millones de usuarios registrados y es considerada por muchos una de las mejores aplicaciones para aplicar el método Kanban para organizar tareas. Esto no quiere decir que sea la única, hay muchas opciones similares.
+
+<img align="center" src="https://images.ctfassets.net/rz1oowkt5gyp/7pYWhpQ3vnntxoShaImNws/777fabbf069416489167ab92027ce086/board.png?w=1200&fm=webp" alt="Pizarra kanban">
+
+
+###### KanbanFlow
+
+  KanbanFlow como su nombre lo deja bien claro, es un tablero Kanban que te permite organizar tu trabajo de una forma visual y te ayuda a simplificar la comunicación en equipo para aumentar tu productividad. Es una aplicación sumamente sencilla que se enfoca completamente en la popular técnica de productividad.
+
+  <img align="center" src="https://i.blogs.es/0d08a2/kanbanflowboard_1000/1366_2000.png" alt="Pizarra kanban">
+
+
+###### Archmule
+
+  Archmule es una alternativa genial y bastante simplificada a Trello. Funciona de la misma manera, un gran tablero con columnas desde las que puedes arrastrar diferentes tareas en forma de tarjetas. También tienes una página de inicio en la que se te muestra un resumen con lo más importante de cada actualización de cada equipo o proyecto que sigues.
+
+  <img align="center" src="https://i.blogs.es/36368a/hero-devices/1366_2000.png" alt="Pizarra kanban">
+
+  Existen otras muchas herramientas [Online](https://www.genbeta.com/a-fondo/ocho-alternativas-gratuitas-a-trello-para-gestionar-tareas-y-equipos).
+
 #### __Scrum (I)__
 
 - Modelo de desarrollo incremental.
@@ -300,7 +324,7 @@ __Valores__
 - Comunicación
 - Retroalimentación
 - Valentía o coraje
-- Respeto o humildad 
+- Respeto o humildad
 
 
 #### __XP (Programación extrema) (II)__
@@ -358,8 +382,8 @@ __Características__
 ### JAVA (I)
 
 - Lenguajes compilado e interpretado.
-- El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. 
-- Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. 
+- El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__.
+- Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo.
 - Después este __bytecode__ __se interpreta__ para ejecutarlo.
 
 
@@ -368,9 +392,9 @@ __Características__
 - Ventajas:
   - Estructurado y Orientado a Objetos
   - Relativamente fácil de aprender
-  - Buena documentación y base de usuarios 
+  - Buena documentación y base de usuarios
 - Desventajas:
-  - Menos eficiente que los lenguajes compilados 
+  - Menos eficiente que los lenguajes compilados
 
 
 ### Tipos (I)
@@ -395,13 +419,13 @@ __Características__
   - Estructurados: C
   - Orientados a objetos: Java
   - Multiparadigma: C++, Javascript
-- Los lenguajes orientados a objetos son también lenguajes estructurados. 
+- Los lenguajes orientados a objetos son también lenguajes estructurados.
 - Muchos de estos lenguajes son compilados.
 
 
 ### Tipos (IV)
 
-- Tipos de lenguajes según nivel de abstracción: 
+- Tipos de lenguajes según nivel de abstracción:
   - Bajo nivel: ensamblador
   - Medio nivel: C
   - Alto nivel: C++, Java
@@ -410,8 +434,8 @@ __Características__
 ### Evolución
 
 - Código binario
-- Ensamblador 
-- Lenguajes estructurados 
+- Ensamblador
+- Lenguajes estructurados
 - Lenguajes orientados a objetos
 
 
