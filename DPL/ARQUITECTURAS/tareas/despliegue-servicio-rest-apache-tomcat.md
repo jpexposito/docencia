@@ -124,7 +124,7 @@
 
   ```
 
-_Esta opción conlleva solventaría el problema, dado que el proyecto compila de la misma forma, y sólo será necesario añadir las dependencias necesarias en el fichero_ __pom.xml__, _para que MAVEN haga el trabajo de inclusión den la carpeta_ ___WEB-INF/lib___, _por nosotros_.
+_Esta opción solventaría el problema, dado que el proyecto compila de la misma forma, y sólo será necesario añadir las dependencias necesarias en el fichero_ __pom.xml__, _para que MAVEN haga el trabajo de inclusión den la carpeta_ ___WEB-INF/lib___, _por nosotros_.
 
 ___Esta última opción también vamos a descartarla, por no ser óptima, e ir a una versión de la librería jersey que no se utiliza en la actualidad (v1)___.
 
