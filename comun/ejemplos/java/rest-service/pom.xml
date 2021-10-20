@@ -123,11 +123,9 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>11.0.7</version>
         <configuration>
-          <!--
           <webApp>
             <contextPath>/rest-service</contextPath>
           </webApp>
-          -->
           <httpConnector>
             <port>8082</port>
           </httpConnector>

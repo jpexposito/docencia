@@ -82,10 +82,27 @@
   - [Dependencias de librerías en Tomcat 10](https://qastack.mx/programming/9373081/how-to-set-up-jax-rs-application-using-annotations-only-no-web-xml)
   - [Using Jersey 3x + Jetty to develop endpoints](https://mkyong.com/java/java-lang-noclassdeffounderror-jakarta-servlet-servletinputstream/)
 
+<!--
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+-->
+  Los problemas que se detectan en el despliegue son varios. El primero de ellos relacionado con la librería __com.sun.jersey.spi.container.servlet.ServletContainer__. Como resultaría normal, el alumno buscará las librerías que se encuentran en el fichero __pom.xml__, para desplegarlas en la carpeta __lib__ de __Tomcat 10__. Esta acción no será necesaria, dado que el proyecto al estar creado con ___Maven___, generará la capeta ___target/rest-service/WEB-INF/lib___ por defecto incluyendo las librerías. Es decir, se encuentran incluidas dentro del __rest-service.war__.
 
-  Los problemas que se detectan en el despliegue son varios. El primero de ellos relacionado con la librería __com.sun.jersey.spi.container.servlet.ServletContainer__. Como resultaría normal, el alumno buscará las librerías que se encuentran en el fichero __pom.xml__, para desplegarlas en la carpeta __lib__ de Tomcat 10__. Esta acción no será necesaria, dado que el proyecto al estar creado con ___Maven___ generará la capeta ___WEB_INF/lib___ por defecto incluyendo las librerías.
+
+  _Cabe destacar que aunque no sería la solución óptima, sería la que se busca en la tarea, ya que, al estar las librerías en el servidor de aplicaciones, la aplicación arrancará y ejecutará, pero será tedioso para conseguirlo. Recuerda la estructura de carpetas de __Tomcat_.
+
+<div align="center">
+  <img src="https://www.sitesbay.com/servlet/images/hierarchy-of-tomcat.png"  />
+</div>
+
+  Y la estructura de un proyecto __Web__ (Servlet, Jsp, Html, Rest/Soap) sería el siguiente, sólo incluyendo lo que sea necesario para su despliegue y funcionamiento.
+
+<div align="center">
+  <img src="https://www.sitesbay.com/servlet/images/directory-structure3.png"  />
+</div>
+
+  _Como resulta evidente esa solución no sería la correcta, dado que cualquier otra aplicación entraría en_ __CONFLICTO DE LIBRERIAS__ _de forma inmediata al arrancar_.
+
   Otra opción que ha podido atacar, es el cambio de librerías, añadiendo por ejemplo, las siguientes:
   ```xml
 
@@ -107,9 +124,15 @@
 
   ```
 
-  Problemas que el alumno debe afrontar:
-    - Solventar los problemas de librerías. En este caso __Maven__ hará el trabajo por nosotros.
-    - Compilar el servicio con __JAVA 15__ o superior. Esto esta motivado a que el paquete para el despliegue del servicio cambia de __Tomcat 9 a 10__, y el paquete para la construcción de servicios cambia, pasado de __javax__ a __jakarta__. Este cambio queda reflejado en el fichero __pom.xml__.
+_Esta opción conlleva solventaría el problema, dado que el proyecto compila de la misma forma, y sólo será necesario añadir las dependencias necesarias en el fichero_ __pom.xml__, _para que MAVEN haga el trabajo de inclusión den la carpeta_ ___WEB-INF/lib___, _por nosotros_.
+
+___Esta última opción también vamos a descartarla, por no ser óptima, e ir a una versión de la librería jersey que no se utiliza en la actualidad (v1)___.
+
+### ___Solución Óptima___
+
+  Veamos los problemas que debería resolver el responsable del servidor de aplicaciones, para comunicarselo al desarrollador:
+  - Solventar los problemas de librerías. En este caso __Maven__ hará el trabajo por nosotros.
+  - Compilar el servicio con __JAVA 15__ o superior. Esto esta motivado a que el paquete para el despliegue del servicio cambia de __Tomcat 9 a 10__, y el paquete para la construcción de servicios cambia, pasando de __javax__ a __jakarta__ el package. Este cambio queda reflejado en el fichero __pom.xml__.
 
 ```xml
     <!--
@@ -149,7 +172,50 @@ public class ApplicationConfig extends Application {
 }
 ```
 
-  Lo importe es que el alumno haya comprobado lo complejo que puede llegar a ser el despliegue de una solución en __Tomcat__, dado que no se tiene el control de las librerías implicadas, suponiendo un desafío para el responsable del _servidor de aplicaciones_.   
+  ___Lo importe es que el alumno haya comprobado lo complejo que puede llegar a ser el despliegue de una solución en Tomcat, dado que no se tiene el control de las librerías implicadas, suponiendo un desafío para el responsable del _servidor de aplicaciones___.  
+
+  Por último __Tomcat__ nos engaña, dado que no despliega en _htpp:....../rest/users_, si no en __htpp:....../rest-service/rest/users__
+
+
+### Evita el trabajo de Monos
+
+  El trabajo que has realizado ha sido tedioso, verificando cambios, a nivel de librerías, y más adelante a nivel de configuración. Realizando múltiples despliegues, etc. En resumen trabajo de:
+
+  <div align="center">
+    <img src="https://static.ideal.es/www/pre2017/multimedia/noticias/201507/20/media/cortadas/mono--575x323.jpg"  />
+  </div>
+
+   ___BUEN TRABAJO SI LO HAS REALIZADO, ESE ERA EL OBJETIVO___.
+
+  Existe un camino intermedio, para __reproducir el problema__ y poder llegar a una solución, y se trata de __jetty__ como __servidor de aplicaciones__. Para ejecutarlo y reproducir el problema o el funcionamiento sin tener que desplegar en __Tomcat__, tenéis a vuestra disposición el siguiente _plugin_:
+
+```xml
+<plugin>
+  <groupId>org.eclipse.jetty</groupId>
+  <artifactId>jetty-maven-plugin</artifactId>
+  <version>11.0.7</version>
+  <configuration>
+    <webApp>
+      <contextPath>/rest-service</contextPath>
+    </webApp>
+    <httpConnector>
+      <port>8082</port>
+    </httpConnector>
+  </configuration>
+</plugin>
+```
+  Ejecución:
+  -  mvn jetty:run. Despliega la solución en un servidor local, el puerto __8082__, y la ruta __/rest-service__, simulando __Tomcat__.
+  - Control C. Para la parada del servidor.
+
+
+  <div align="center">
+
+  ___¡¡¡ LO PROMETIDO ES DEUDA !!!___
+
+
+  </div>
+
 </details>
 
 
