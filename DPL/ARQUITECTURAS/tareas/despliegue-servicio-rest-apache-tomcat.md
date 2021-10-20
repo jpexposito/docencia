@@ -172,7 +172,7 @@ public class ApplicationConfig extends Application {
 }
 ```
 
-  ___Lo importe es que el alumno haya comprobado lo complejo que puede llegar a ser el despliegue de una solución en Tomcat, dado que no se tiene el control de las librerías implicadas, suponiendo un desafío para el responsable del _servidor de aplicaciones___.  
+___Lo importe es que el alumno haya comprobado lo complejo que puede llegar a ser el despliegue de una solución en Tomcat, dado que no se tiene el control de las librerías implicadas, suponiendo un desafío para el responsable del _servidor de aplicaciones___.  
 
   Por último __Tomcat__ nos engaña, dado que no despliega en _htpp:....../rest/users_, si no en __htpp:....../rest-service/rest/users__
 
@@ -215,8 +215,8 @@ public class ApplicationConfig extends Application {
 
 
   </div>
-
+<!--
 </details>
-
+-->
 
 </div>
