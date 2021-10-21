@@ -39,7 +39,7 @@
   Abra una terminal y ejecute el siguiente comando:
 
 ```console
-  wget https://github.com/wildfly/wildfly/releases/download/25.0.0.Final/wildfly-25.0.0.Final.zip
+  wget https://github.com/wildfly/wildfly/releases/download/25.0.0.Final/wildfly-25.0.0.Final.tar.gz
 ```
 
   Vamos a instalar Wildfly 10 en Ubuntu 20.04 LTS preparando la plataforma como un servicio más que corra en el sistema utilizando su propio usuario y grupo. Hemos de realizar cada uno de los siguientes pasos:
@@ -49,9 +49,12 @@ sudo groupadd -r wildfly
 sudo useradd -r -g wildfly -d /opt/wildfly -s /sbin/nologin wildfly
 ```
   - Descomprimimos el paquete que acabamos de descargar directamente en su ubicación definitiva:
+
 ```console
-sudo tar xf /tmp/wildfly-25.0.0.Final.zip -C /opt/
+  tar -xvzf wildfly-25.0.0.Final.tar.gz
+  sudo mv wildfly-25.0.0.Final /opt/wildfly
 ```
+
   - Creamos un link simbólico al directorio:
 
   ```console
@@ -61,19 +64,38 @@ sudo tar xf /tmp/wildfly-25.0.0.Final.zip -C /opt/
   - Damos acceso al usuario y grupo wildfly:
 
   ```console
-    sudo chown -RH wildfly: /opt/wildfly
+    sudo chown -R wildfly:wildfly /opt/wildfly
+    sudo chown -R wildfly:wildfly /opt/wildfly/
   ```
   - Configurar e iniciar el servicio. :
 
   ```console
   sudo mkdir -p /etc/wildfly
+  sudo cp /opt/wildfly/docs/contrib/scripts/systemd/wildfly.conf /etc/wildfly/
+  
+  ```
+  - Podemos visualizar el fichero de configuración de arranque, donde veremos que tiene por defecto el arranque standalone:
+  
+  ```console
+  sudo nano /etc/wildfly/wildfly.conf
+  ```
+  
+  Obteniendo:
+  
+  ```console                      
+    # The configuration you want to run
+    WILDFLY_CONFIG=standalone.xml
 
-sudo cp /opt/wildfly/docs/contrib/scripts/systemd/wildfly.conf /etc/wildfly/
+    # The mode you want to run
+    WILDFLY_MODE=standalone
 
-sudo nano /etc/wildfly/wildfly.conf
-
-**WILDFLY_BIND=0.0.0.0**
-
+    # The address to bind to
+    WILDFLY_BIND=0.0.0.0
+  ```
+  Continuamos lanzando los siguientes comandos para configurar el arranque:
+  
+```console
+  
 sudo cp /opt/wildfly/docs/contrib/scripts/systemd/launch.sh /opt/wildfly/bin/
 
 sudo sh -c 'chmod +x /opt/wildfly/bin/*.sh'
@@ -152,13 +174,21 @@ Added user 'admin123' to file
   Hemos de realizar la configuración. Ejecuta el siguiente comando:
 ```console
   sudo nano /etc/wildfly/wildfly.conf
-
+```
+  
+  Obteniendo algo similar:
+  
+```console  
   WILDFLY_CONSOLE_BIND=0.0.0.0
-
+  #Nos permite restringir la configuracion de accesso
+```
+  
+  
+```console  
   sudo nano /opt/wildfly/bin/launch.sh
 ```
 
-  lanzando:
+  y verificando que se encuentra:
 ```console
   $WILDFLY_HOME/bin/domain.sh -c $2 -b $3 -bmanagement $4
 
@@ -189,6 +219,8 @@ Added user 'admin123' to file
   cd /opt/wildfly/bin/
   ./jboss-cli.sh --connect
 ```
+  
+  En la siguiente entrega veremos como realizar la instalación de aplicaciones a través de la consola web y la consola cli.
 
   Como puedes ver __WildFly__, en su defecto _Jboss_ es un mundo.
 
