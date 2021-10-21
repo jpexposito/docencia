@@ -278,3 +278,9 @@ Added user 'admin123' to file
   - Capturas de pantalla con los resultados obtenidos.
 
 </div>
+
+## Referencias y Documentación
+
+- [Documentación Oficial](https://docs.wildfly.org/).
+
+
