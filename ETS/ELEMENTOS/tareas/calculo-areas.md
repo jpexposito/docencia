@@ -22,14 +22,14 @@
 
 ## Realización del informe
 
-    Realiza un informe indicando los pasos que has seguido para la instalación de NetBeans 8 y donde se muestre cada uno de los pasos detallados, pasos y problemas encontrados.
-    Además el informe debe de contener:
-     - Titulo de la tarea.
-     - Nombre y Apellidos.
-     - Indice.
-     - Pasos descritos.
-     - Carecer faltas de ortografía.
-     - Capturas de pantalla con los resultados. obtenidos.
-     - Incluye el enlace de tu cuenta _GitHub_ en el detalle de la tarea.
+  Realiza un informe indicando los pasos que has seguido para la definición de requisitos y donde se muestre si fuera necesario los problemas encontrados.
+  Además el informe debe de contener:
+   - Titulo de la tarea.
+   - Nombre y Apellidos.
+   - Indice.
+   - Pasos descritos.
+   - Carecer faltas de ortografía.
+   - Capturas de pantalla con los resultados. obtenidos.
+   - Incluye el enlace de tu cuenta _GitHub_ en el detalle de la tarea.
 
 <div>
