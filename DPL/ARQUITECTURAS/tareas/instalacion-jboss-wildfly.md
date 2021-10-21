@@ -121,7 +121,26 @@ sudo systemctl daemon-reload
 
 ### Configurar a Wildfly
 
-  Vamos a permitir el tráfico por un puerto específico, por ejemplo el puerto __8083__:
+  Vamos a permitir el tráfico por un puerto específico, por ejemplo el puerto __8083__. Hemos de modificar el puerto __8080__, por __8083__. Para ello hemos de modificar la etiqueta:
+  
+  ```console  
+  <socket-binding name="http" port="${jboss.http.port:8080}"/>
+  ```
+  
+  por
+  
+  ```console  
+  <socket-binding name="http" port="${jboss.http.port:8083}"/>
+  ```
+  
+  en el siguiente fichero
+  
+  ```console
+  sudo nano /opt/wildfly/standalone/configuration/standalone.xml 
+  ```
+  
+  y permitimos el tráfico con el puerto:
+  
   ```console
   sudo ufw allow 8083/tcp
   ```
@@ -212,13 +231,28 @@ Added user 'admin123' to file
 
   sudo systemctl restart wildfly
 ```  
-
+<!--
   y abriríamos la consola de _cli_
 
 ```console
   cd /opt/wildfly/bin/
   ./jboss-cli.sh --connect
 ```
+-->
+  
+  Si lo deseamos o es necesario podemos abrir el acceso a la consola de administración modificando el fichero __standalone.xml__ indicado anteriormente, y buscando la siguiente entrada :
+
+  ```console  
+    <interfaces>
+        <interface name="management">
+            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
+        </interface>
+        <interface name="public">
+            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
+        </interface>
+    </interfaces>  
+  ```
+  Eliminando o comentando las etiquetas __inet-address__, o indicando la __ip publica__ o __0.0.0.0__, según necesidades.
   
   En la siguiente entrega veremos como realizar la instalación de aplicaciones a través de la consola web y la consola cli.
 
@@ -226,7 +260,7 @@ Added user 'admin123' to file
 
 ## Realiza el Informe
 
-  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __WildFly__.
+  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __WildFly__. Además del acceso a la consola de administración, etc, así como los diferentes pasos o problemas encontrados durante la instalación.
 
   Además el informe debe de contener:
    - Titulo de la tarea.
