@@ -87,6 +87,116 @@
 
 El diagrama siguiente refleja como funciona la estructuración de tipos de los XML Schema.
 
+Así, por ejemplo un tipo simple que no lleve ninguna restricción se puede indicar con el campo type de un element como hacíamos antes:
+  ```xml
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:element name="cantidad" type="xsd:integer"/>
+</xsd:schema>
+  ```
+Sin embargo, si queremos indicar alguna restricción adicional ya no podremos usar el atributo type. Deberemos reescribir nuestro esquema así:
+
+```xml
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:simpleType>
+    Aquí irán las restricciones, que hemos omitido por ahora.
+   </xsd:simpleType>
+</xsd:schema>
+  ```
+
+#### Ejercicio:edad de los trabajadores
+
+  Se desea crear un esquema que permita validar la edad de un trabajador, que debe tener un valor entero de entre 16 y 65.
+
+  Por ejemplo, este XML debería validarse:
+
+```xml
+<edad>28</edad>
+  ```
+Pero este no debería validarse:
+
+```xml
+<edad>-3</edad>
+```
+La solución podría ser algo así:
+
+```xml
+<xsd:schema
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="edad"
+                 type="tipoEdad"/>
+    <xsd:simpleType name="tipoEdad">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="16"/>
+            <xsd:maxInclusive value="65"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
+```
+
+##### Ejercicio: peso de productos
+
+Se desea crear un esquema que permita validar un elemento peso, que puede tener un valor de entre 0 y 1000 pero aceptando valores con decimales, como por ejemplo 28.88
+
+Una posible solución sería:
+
+```xml
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="peso" type="tipoPeso"/>
+  <xsd:simpleType name="tipoPeso">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="1000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
+```
+
+#### Ejercicio: pagos validados
+
+Crear un esquema que permita validar un elemento pago en el cual puede haber cantidades enteras de entre 0 y 3000 euros.
+
+```xml
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="pago" type="tipoPago"/>
+  <xsd:simpleType name="tipoPago">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="3000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
+```
+
+#### Ejercicio: validación de DNIs
+  Crear un esquema que permita validar un único elemento dni que valide el patrón de 7-8 cifras + letra que suelen tener los DNI en España:
+
+```xml
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="dni" type="tipoDNI"/>
+  <xsd:simpleType name="tipoDNI">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{7,8}[A-Z]"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
+```
+
+### Uniendo la herencia y el sistema de tipos
+
+  Llegados a este punto ocurre lo siguiente:
+
+  Por un lado tenemos que especificar si nuestros tipos serán simples o complejos (los cuales a su vez pueden ser complejos con contenido simple o complejos con contenido complejo).
+
+  Por otro lado se puede hacer herencia ampliando cosas (extensión) o reduciendo cosas (restricciones a los valores).
+
+  Se deduce por tanto que no podemos aplicar todas las «herencias» a todos los tipos:
+
+  Los tipos simples no pueden tener atributos ni subelementos, por lo tanto les podremos aplicar restricciones pero nunca la extensión.
+
+  Los tipos complejos (independientemente del tipo de contenido) sí pueden tener otras cosas dentro por lo que les podremos aplicar tanto restricciones como extensiones.
+
 
 
 </div>
