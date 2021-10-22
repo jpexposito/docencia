@@ -88,39 +88,78 @@
 </facturas>
   ```
 
-<!--
  <details>
    <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
  ```xml
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <!DOCTYPE facturas[
 
-<!DOCTYPE cartelera [
+  <!-- Entidades con las imágenes de las carátulas de las películas-->
+  <!ENTITY foto_p0360 SYSTEM "caratulas/p0360.jpg" NDATA jpg>  
+  <!ENTITY foto_p0437 SYSTEM "caratulas/p0437.jpg" NDATA jpg>
+  <!ENTITY foto_p1201 SYSTEM "caratulas/p1201.jpg" NDATA jpg>
 
+  <!-- Elemento raiz: facturas -->
+  <!ELEMENT facturas (factura*)>
 
- <!ELEMENT cartelera (película)*>
- <!ELEMENT película (título, título_original?, nacionalidad, género, (clasificación | sin_clasificar), sinopsis, director, reparto, web?, cartel?) >
- <!ELEMENT título (#PCDATA)>
- <!ELEMENT título_original (#PCDATA)>
- <!ELEMENT nacionalidad (#PCDATA)>
- <!ELEMENT género (#PCDATA)>
- <!ELEMENT clasificación EMPTY>
- <!ELEMENT sin_clasificar EMPTY>
- <!ELEMENT sinopsis (#PCDATA)>
- <!ELEMENT director (#PCDATA)>
- <!ELEMENT reparto (actor)+>
- <!ELEMENT web (#PCDATA)>
- <!ELEMENT cartel (#PCDATA)>
- <!ELEMENT actor (#PCDATA)>
+  <!-- Elemento factura -->
+  <!ELEMENT factura (datos_cliente, datos_factura)>
 
+  <!-- Elemento datos_cliente -->
+  <!ELEMENT datos_cliente (nombre, apellido, apellido, dni, tfno)>
+  <!ATTLIST datos_cliente
+     ident ID #REQUIRED>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT apellido (#PCDATA)>
+  <!ELEMENT dni (#PCDATA)>
+  <!ELEMENT tfno (#PCDATA)>
 
- <!ATTLIST película código ID #REQUIRED>
- <!ATTLIST película duración CDATA "">
- <!ATTLIST película año CDATA "2003">
- <!ATTLIST clasificación edad (8 | 12 | 16 | 18 | tp) #REQUIRED>
-]>
+  <!-- Elemento datos_factura -->
+  <!ELEMENT datos_factura (resguardo, (alquileres | compras | (alquileres,compras)))>
+
+  <!-- Elemento resguardo -->
+  <!ELEMENT resguardo (forma_pago, importe_total)>
+  <!ELEMENT forma_pago (#PCDATA)>
+  <!ELEMENT importe_total (#PCDATA)>
+
+  <!-- Elemento alquileres -->
+  <!ELEMENT alquileres (fecha, peliculas)>
+  <!-- Elementos fecha -->
+  <!ELEMENT fecha (#PCDATA)>
+  <!-- Elemento peliculas -->
+  <!ELEMENT peliculas (pelicula+)>
+
+  <!-- Elemento pelicula -->
+  <!ELEMENT pelicula (titulo, genero, duracion, actores)>
+  <!ATTLIST pelicula
+     id_pelicula ID #REQUIRED
+     valoracion CDATA ""
+     caratula ENTITY #IMPLIED>
+
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT genero (#PCDATA)>
+  <!ELEMENT duracion (#PCDATA)>
+  <!-- Elemento actores -->
+  <!ELEMENT actores (actor, actor, actor)>
+  <!ELEMENT actor (nombre, apellido, apellido)>
+
+  <!-- Elemento compras -->
+  <!ELEMENT compras (dvds | cintas | (dvds,cintas))>
+  <!-- Elemento dvds -->
+  <!ELEMENT dvds (dvd+)>
+  <!-- Elemento dvd -->
+  <!ELEMENT dvd (extras?, titulo, fecha_salida_mercado)>
+  <!ELEMENT extras EMPTY>
+  <!ELEMENT fecha_salida_mercado (#PCDATA)>
+  <!-- Elemento cintas -->
+  <!ELEMENT cintas (cinta+)>
+  <!-- Elemento cinta -->
+  <!ELEMENT cinta (titulo, formato, rebobinado?)>
+  <!ELEMENT formato (#PCDATA)>
+  <!ELEMENT rebobinado EMPTY>
+ ]>
  ```
  </details>
--->
+
 
 </div>

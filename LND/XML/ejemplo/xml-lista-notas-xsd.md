@@ -9,7 +9,7 @@
 
 ## Se pide
 
-  Definir una DTD que valide el documento XML que se muestra a continuación.
+  Definir una __XSD__ que valide el documento XML que se muestra a continuación.
 
   Ejemplo de xml:
   ```xml
