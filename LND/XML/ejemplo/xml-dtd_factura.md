@@ -9,7 +9,7 @@
 
 ## Se pide
 
-  Definir una DTD que valide el documento XML que se muestra a continuación. 
+  Definir una DTD que valide el documento XML que se muestra a continuación.
   Se deben tener en cuenta las siguientes características:
   - El número de factura (n_fac), número de cliente (n_cli) y número de pedido (n_ped) son valores únicos, por cada factura, cliente y pedido distintos, y son obligatorios.
   - Los números de teléfono (telefono) y fax (fax) de la empresa no tienen porqué aparecer en la factura, pero siempre que lo hagan deberán tener los mismos valores (teléfono 917776688, fax 917776699).
@@ -72,7 +72,6 @@
 </factura>
   ```
 
-<!--
  <details>
    <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
@@ -116,6 +115,5 @@
 ]>
  ```
  </details>
--->
 
 </div>

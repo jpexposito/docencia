@@ -1,6 +1,6 @@
 <div align="justify">
 
-# Ejercicio Clase Factura
+# Ejercicio Clase Película
 
 
 <div align="center">
@@ -60,7 +60,6 @@ su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el 
 </cartelera>
   ```
 
-<!--
  <details>
    <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
@@ -93,6 +92,5 @@ su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el 
 ]>
  ```
  </details>
--->
 
 </div>
