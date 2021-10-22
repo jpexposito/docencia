@@ -11,7 +11,7 @@
 
   Definir una DTD que valide el documento XML que se muestra a continuación. ___Corrige aquello que consideres importante___.
 
-  Proporcionar un XML y DTD que permita validar los documentos del videoclub según los requisitos abajo indicados. Crear un ejemplar de documento XML con 2 facturas que sea de tipo válido según esta DTD.
+  Proporcionar un DTD que permita validar los documentos del videoclub según los requisitos abajo indicados. Crear un ejemplar de documento XML con 2 facturas que sea de tipo válido según esta DTD.
   Una cadena de videoclubs quiere emplear una base de datos para almacenar información referente a las facturas que se hacen a los clientes. Esta información es la siguiente:
   - En un mismo documento se puede guardar información de varias facturas.
   - Cada factura está formada por dos tipos de información: datos de cliente y datos del ticket de factura propiamente dichos.
@@ -26,7 +26,66 @@
 
   Ejemplo de xml:
   ```xml
-  
+  <facturas>
+   <factura>
+      <datos_cliente ident="c01">
+      <nombre>Antonio</nombre>
+  <apellido>Moreno</apellido>
+  <apellido>Flores</apellido>
+  <dni>123456789X</dni>
+  <tfno>916663322</tfno>
+   </datos_cliente>
+
+   <datos_factura>
+      <resguardo>
+     <forma_pago>efectivo</forma_pago>
+ <importe_total>35</importe_total>
+  </resguardo>
+  <alquileres>
+     <fecha>12/01/2007</fecha>
+ <peliculas>
+    <pelicula id_pelicula="p320" caratula="foto_p0360">
+       <titulo>AQUELLAS JUERGAS UNIVERSITARIAS</titulo>
+   <genero>Comedia</genero>
+   <duracion>97min</duracion>
+   <actores>
+      <actor>
+     <nombre>Luke</nombre>
+                 <apellido>Wilson</apellido>
+                 <apellido></apellido>
+  </actor>  
+      <actor>
+   <nombre>Will</nombre>
+                 <apellido>Farrel</apellido>
+                 <apellido></apellido>
+  </actor>  
+      <actor>
+   <nombre>Vince</nombre>
+                 <apellido>Vaughn</apellido>
+                 <apellido></apellido>
+  </actor>  
+   </actores>
+     </pelicula>
+ </peliculas>
+  </alquileres>
+  <compras>
+     <dvds>
+    <dvd>
+       <extras/>
+   <titulo>El oro de Moscú</titulo>
+   <fecha_salida_mercado>2006</fecha_salida_mercado>
+    </dvd>
+ </dvds>
+ <cintas>
+    <cinta>
+       <titulo>Gladiator</titulo>
+   <formato>VHS</formato>
+    </cinta>
+ </cintas>
+  </compras>
+   </datos_factura>
+   </factura>
+</facturas>
   ```
 
 <!--
