@@ -87,6 +87,7 @@
 
 El diagrama siguiente refleja como funciona la estructuración de tipos de los XML Schema.
 
+![](https://oscarmaestre.github.io/lenguajes_marcas/_images/Esquema-tipos.png)
 Así, por ejemplo un tipo simple que no lleve ninguna restricción se puede indicar con el campo type de un element como hacíamos antes:
   ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
