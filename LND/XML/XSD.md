@@ -296,13 +296,15 @@ Crear un esquema que permita validar un elemento pago en el cual puede haber can
   <cantidad divisa="dolar">abc</cantidad>
 ```
 
-   <details>
-     <summary>PULSA PARA VER LA RESPUESTA:</summary>
-      Crearemos un tipo llamado __«tipoCantidad»__. Dicho tipo ya no puede ser un simpleType ya que necesitamos que haya atributos. Como no necesitamos que tenga dentro __subelementos__ entonces este complexType llevará dentro un __simpleContent__ (y no un __complexContent__).
+<details>
+   <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
-      Aparte de eso, como queremos __«ampliar»__ un elemento para que acepte tener dentro un atributo obligatorio __«cantidad»__ usaremos una __<extension>__. Así, el posible esquema sería este:
+   Crearemos un tipo llamado __«tipoCantidad»__. Dicho tipo ya no puede ser un simpleType ya que necesitamos que haya atributos. Como no necesitamos que tenga dentro __subelementos__ entonces este complexType llevará dentro un __simpleContent__ (y no un __complexContent__).
 
-      ```xml
+  Aparte de eso, como queremos __«ampliar»__ un elemento para que acepte tener dentro un atributo obligatorio __«cantidad»__ usaremos una __<extension>__. Así, el posible esquema sería este:
+
+  ```xml
+
       <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
         <xsd:element name="cantidad" type="tipoCantidad"/>
         <xsd:complexType name="tipoCantidad">
@@ -316,7 +318,7 @@ Crear un esquema que permita validar un elemento pago en el cual puede haber can
       ```
 ##### Solución al atributo con solo ciertos valores
 
-  Ahora tendremos que crear dos tipos. Uno para el elemento __cantidad__ y otro para el atributo __divisa__. Llamaremos a estos tipos __tipoCantidad__ y __tipoDivisa__.
+Ahora tendremos que crear dos tipos. Uno para el elemento __cantidad__ y otro para el atributo __divisa__. Llamaremos a estos tipos __tipoCantidad__ y __tipoDivisa__.
 
   La solución comentada puede encontrarse a continuación. Como puede verse, hemos includo __comentarios__. Pueden insertarse etiquetas annotation que permiten incluir anotaciones de diversos tipos, siendo la más interesante la etiqueta ___documentation___ que nos permite incluir comentarios.
 
@@ -367,10 +369,14 @@ Crear un esquema que permita validar un elemento pago en el cual puede haber can
   </xsd:schema>
   ```
 
+</details>
+
 ### Ejercicios propuestos
 
   Vamos a realizar dos ejercicios para comprobar si el alumno ha entendido los conceptos:
+
   -[Lista Notas](ejemplo/xml-lista-notas-xsd.md).
+
   -[Lista Vehículos](ejemplo/xml-lista-vehiculos-xsd.md).
 
 </div>
