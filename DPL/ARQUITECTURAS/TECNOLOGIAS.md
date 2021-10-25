@@ -90,12 +90,31 @@
 
 ### Instalación y configuración básica
 
-    Para realizar la instalación y configuración básica sigue la siguiente [tarea](tareas/instalacion-jboss-wildfly.md).
+  Para realizar la instalación y configuración básica sigue la siguiente [tarea](tareas/instalacion-jboss-wildfly.md).
+
+### Arquitectura de directorios en wildfly
+
+  La estructura de directorios sigue la arquitectura de _redhat_, dado que como se ha descrito es una producto gratuito de esta empresa, y en concreto del servicior de aplicaciones ___JBOSS___, de pago.
+
+  Para consultar la estructura de directorios pulsa el siguiente [enlace](https://access.redhat.com/documentation/es-es/jboss_enterprise_application_platform/6.3/html/installation_guide/installation_structure).
+
+  Vamos a centrarnos en la estructura de directorios ___standalone___.
+
+
+
+| Nombre |	Propósito |
+| ------------- | ------------- |
+| _configuration/_ |	Los archivos de configuración para el servidor autónomo. Estos archivos se modifican por medio de la consola de administración y el CLI de administración y no se debe modificar directamente.|
+| _deployments/_ | Información sobre los servicios implementados. El servidor autónomo incluye un escaner de implementación de manera que pueda poner los archivadores en este directorio a implementarse. Sin embargo, el enfoque que se recomienda es administrar las implementaciones usando la consola de administración o CLI de administración.|
+| _data/_ |	Información sobre los servicios implementados. Los servicios se implementan usando la consola de administración y el CLI de administración en lugar de un escaner de implementación. Por lo tanto no ponga archivos en este directorio manualmente.|
+| _log/_ |	Contiene los archivos de registro del tiempo de ejecución para el host y los controladores de procesos, los cuales ejecutan en la instancia local.|
+| _lib/_ |	Bibliotecas externas, las cuales pertenecen al modo del servidor autónomo. Vacío por defecto.|
+| _tmp/_ |	Contiene datos temporales tales como los archivos que pertenecen al mecanismo de clave compartida que el CLI de administración utiliza para autenticar a los usuarios locales en el servidor.|
 
 
 ### Despliegue de una Aplicación
 
-    Para realizar el despliegue de una aplicación sigue la siguiente [tarea](tareas/despliegue-jsp-jboss-wildfly.md).
+  Para realizar el despliegue de una aplicación sigue la siguiente [tarea](tareas/despliegue-rest-ws-jboss-wildfly.md).
 
 ## Cuota de mercado de Servidores de Aplicaciones con Java
 

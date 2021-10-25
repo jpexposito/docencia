@@ -7,16 +7,16 @@
 </div>
 
 
-  En esta tarea, instalaremos el contenedor de aplicaciones __Wildfly__ en _Ubuntu 20.04_, de modo que podremos desplegar aplicaciones [JAVA](../../../comun/JDK.md).
+  En esta tarea, instalaremos el contenedor de aplicaciones __Wildfly__ en _Ubuntu 20.04_, de modo que podremos desplegar aplicaciones [JAVA](../../../COMUN/JDK.md).
 
 
 ## Requisitos previos
 
   Necesitará un servidor Ubuntu 20.04 con una cuenta de _superusuario_ no root.
 
-  Además como requisito previo es necesario disponer de __Java__ instalado. Si no sabes como hacerlo, puedes seguir esta [guía](../../../comun/JDK.md).
+  Además como requisito previo es necesario disponer de __Java__ instalado. Si no sabes como hacerlo, puedes seguir esta [guía](../../../COMUN/JDK.md).
 
-  Además y para ir adelantando para siguientes tareas, debes realizar la instalación de [MAVEN](../../../comun/MAVEN.md).
+  Además y para ir adelantando para siguientes tareas, debes realizar la instalación de [MAVEN](../../../COMUN/MAVEN.md).
 
 ## Pasos para realizar la instalación en local
 
@@ -34,12 +34,12 @@
 
   Vamos a descargar _Wildfly_  para Ubuntu 20.04 LTS desde la página de [descargas](https://www.wildfly.org/) del sitio oficial, donde encontraremos la última versión estable.
 
-  Encontraremos el paquete en varios formato _tar.gz_, que podremos descargar directamente desde el navegador o, si trabajamos remotamente, desde consola con el comando wget:
+  Encontraremos el paquete en varios formato _ZIP_, que podremos descargar directamente desde el navegador o, si trabajamos remotamente, desde consola con el comando wget:
 
   Abra una terminal y ejecute el siguiente comando:
 
 ```console
-  wget https://github.com/wildfly/wildfly/releases/download/25.0.0.Final/wildfly-25.0.0.Final.tar.gz
+  wget https://github.com/wildfly/wildfly/releases/download/25.0.0.Final/wildfly-25.0.0.Final.zip
 ```
 
   Vamos a instalar Wildfly 10 en Ubuntu 20.04 LTS preparando la plataforma como un servicio más que corra en el sistema utilizando su propio usuario y grupo. Hemos de realizar cada uno de los siguientes pasos:
@@ -49,52 +49,30 @@ sudo groupadd -r wildfly
 sudo useradd -r -g wildfly -d /opt/wildfly -s /sbin/nologin wildfly
 ```
   - Descomprimimos el paquete que acabamos de descargar directamente en su ubicación definitiva:
-
 ```console
-  tar -xvzf wildfly-25.0.0.Final.tar.gz
-  sudo mv wildfly-25.0.0.Final /opt/wildfly-25.0.0.Final
+sudo tar xf /tmp/wildfly-25.0.0.Final.zip -C /opt/
 ```
-
   - Creamos un link simbólico al directorio:
 
   ```console
-  sudo ln -s /opt/wildfly-25.0.0.Final /opt/wildfly
+  sudo ln -s /opt/wildfly-25.0.0.Final.zip /opt/wildfly
 
   ```
   - Damos acceso al usuario y grupo wildfly:
 
   ```console
-    sudo chown -R wildfly:wildfly /opt/wildfly
-    sudo chown -R wildfly:wildfly /opt/wildfly/
+    sudo chown -RH wildfly: /opt/wildfly
   ```
   - Configurar e iniciar el servicio. :
 
   ```console
   sudo mkdir -p /etc/wildfly
-  sudo cp /opt/wildfly/docs/contrib/scripts/systemd/wildfly.conf /etc/wildfly/
 
-  ```
-  - Podemos visualizar el fichero de configuración de arranque, donde veremos que tiene por defecto el arranque standalone:
+sudo cp /opt/wildfly/docs/contrib/scripts/systemd/wildfly.conf /etc/wildfly/
 
-  ```console
-  sudo nano /etc/wildfly/wildfly.conf
-  ```
+sudo nano /etc/wildfly/wildfly.conf
 
-  Obteniendo:
-
-  ```console                      
-    # The configuration you want to run
-    WILDFLY_CONFIG=standalone.xml
-
-    # The mode you want to run
-    WILDFLY_MODE=standalone
-
-    # The address to bind to
-    WILDFLY_BIND=0.0.0.0
-  ```
-  Continuamos lanzando los siguientes comandos para configurar el arranque:
-
-```console
+**WILDFLY_BIND=0.0.0.0**
 
 sudo cp /opt/wildfly/docs/contrib/scripts/systemd/launch.sh /opt/wildfly/bin/
 
@@ -121,26 +99,7 @@ sudo systemctl daemon-reload
 
 ### Configurar a Wildfly
 
-  Vamos a permitir el tráfico por un puerto específico, por ejemplo el puerto __8083__. Hemos de modificar el puerto __8080__, por __8083__. Para ello hemos de modificar la etiqueta:
-
-  ```console  
-  <socket-binding name="http" port="${jboss.http.port:8080}"/>
-  ```
-
-  por
-
-  ```console  
-  <socket-binding name="http" port="${jboss.http.port:8083}"/>
-  ```
-
-  en el siguiente fichero
-
-  ```console
-  sudo nano /opt/wildfly/standalone/configuration/standalone.xml
-  ```
-
-  y permitimos el tráfico con el puerto:
-
+  Vamos a permitir el tráfico por un puerto específico, por ejemplo el puerto __8083__:
   ```console
   sudo ufw allow 8083/tcp
   ```
@@ -193,21 +152,13 @@ Added user 'admin123' to file
   Hemos de realizar la configuración. Ejecuta el siguiente comando:
 ```console
   sudo nano /etc/wildfly/wildfly.conf
-```
 
-  Obteniendo algo similar:
-
-```console  
   WILDFLY_CONSOLE_BIND=0.0.0.0
-  #Nos permite restringir la configuracion de accesso
-```
 
-
-```console  
   sudo nano /opt/wildfly/bin/launch.sh
 ```
 
-  y verificando que se encuentra:
+  lanzando:
 ```console
   $WILDFLY_HOME/bin/domain.sh -c $2 -b $3 -bmanagement $4
 
@@ -231,36 +182,19 @@ Added user 'admin123' to file
 
   sudo systemctl restart wildfly
 ```  
-<!--
+
   y abriríamos la consola de _cli_
 
 ```console
   cd /opt/wildfly/bin/
   ./jboss-cli.sh --connect
 ```
--->
-
-  Si lo deseamos o es necesario podemos abrir el acceso a la consola de administración modificando el fichero __standalone.xml__ indicado anteriormente, y buscando la siguiente entrada :
-
-  ```console  
-    <interfaces>
-        <interface name="management">
-            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
-        </interface>
-        <interface name="public">
-            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
-        </interface>
-    </interfaces>  
-  ```
-  Eliminando o comentando las etiquetas __inet-address__, o indicando la __ip publica__ o __0.0.0.0__, según necesidades.
-
-  En la siguiente entrega veremos como realizar la instalación de aplicaciones a través de la consola web y la consola cli.
 
   Como puedes ver __WildFly__, en su defecto _Jboss_ es un mundo.
 
 ## Realiza el Informe
 
-  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __WildFly__. Además del acceso a la consola de administración, etc, así como los diferentes pasos o problemas encontrados durante la instalación.
+  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __WildFly__.
 
   Además el informe debe de contener:
    - Titulo de la tarea.
@@ -278,7 +212,3 @@ Added user 'admin123' to file
   - Capturas de pantalla con los resultados obtenidos.
 
 </div>
-
-## Referencias y Documentación
-
-- [Documentación Oficial](https://docs.wildfly.org/).
