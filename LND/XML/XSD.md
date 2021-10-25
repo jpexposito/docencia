@@ -187,16 +187,11 @@ Crear un esquema que permita validar un elemento pago en el cual puede haber can
 ### Uniendo la herencia y el sistema de tipos
 
   Llegados a este punto ocurre lo siguiente:
-
-  Por un lado tenemos que especificar si nuestros tipos serán simples o complejos (los cuales a su vez pueden ser complejos con contenido simple o complejos con contenido complejo).
-
-  Por otro lado se puede hacer herencia ampliando cosas (extensión) o reduciendo cosas (restricciones a los valores).
-
-  Se deduce por tanto que no podemos aplicar todas las «herencias» a todos los tipos:
-
-  Los tipos simples no pueden tener atributos ni subelementos, por lo tanto les podremos aplicar restricciones pero nunca la extensión.
-
-  Los tipos complejos (independientemente del tipo de contenido) sí pueden tener otras cosas dentro por lo que les podremos aplicar tanto restricciones como extensiones.
+  - Por un lado tenemos que especificar si nuestros tipos serán simples o complejos (los cuales a su vez pueden ser complejos con contenido simple o complejos con contenido complejo).
+  - Por otro lado se puede hacer herencia ampliando cosas (extensión) o reduciendo cosas (restricciones a los valores).
+  - Se deduce por tanto que no podemos aplicar todas las «herencias» a todos los tipos:
+    - _Los tipos simples no pueden tener atributos ni subelementos_, por lo tanto les podremos aplicar restricciones pero nunca la extensión.
+    - _Los tipos complejos (independientemente del tipo de contenido)_ sí pueden tener otras cosas dentro por lo que les podremos aplicar tanto restricciones como extensiones.
 
 ### Restricciones
 
