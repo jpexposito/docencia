@@ -41,7 +41,7 @@
     </vehiculo>
   </vehiculos>
   ```
-<!--
+
  <details>
    <summary>PULSA PARA VER LA RESPUESTA:</summary>
 
@@ -108,6 +108,5 @@
 
  ```
  </details>
--->
 
 </div>
