@@ -29,7 +29,7 @@
 
 ### Instalación de Servicio Hello-RS
 
-  Una vez descargado el [Wildfly quickstart ejemplos](https://github.com/wildfly/quickstart/), se debe de acceder al directori  helloworld-rs y ejecurar el siguiente comando:
+Una vez descargado el [Wildfly quickstart ejemplos](https://github.com/wildfly/quickstart/), se debe de acceder al directori  __helloworld-rs__ y ejecurar el siguiente comando:
 
 ```console
   mvn clean install
@@ -39,13 +39,13 @@
 
 ### Instalación de Servicio Hello-WS
 
-    Una vez descargado el [Wildfly quickstart ejemplos](https://github.com/wildfly/quickstart/), se debe de acceder al directori  helloworld-rs y ejecurar el siguiente comando:
+  Una vez descargado el [Wildfly quickstart ejemplos](https://github.com/wildfly/quickstart/), se debe de acceder al directori  __helloworld-ws__ y ejecurar el siguiente comando:
 
   ```console
     mvn clean install
   ```
-    Una vez realizada la compilación se debe de acudir a la instalación de _wildfly_, acudimos a la pestama __deployments__. A continuación pulsamos sobre la pestaña __+__, y seleccionamos la carpeta donde se encuentra el proyecto _helloworld-rs_. En concreto debe de ser la ruta _helloworld-rs/target/helloworld-rs.war.
-    Una vez desplegado el servicio acude a la url de despliegue _ip:8083/helloworld-rs_, y verifica el despliegue correcto del servicio.  
+  Una vez realizada la compilación se debe de acudir a la instalación de _wildfly_, acudimos a la pestama __deployments__. A continuación pulsamos sobre la pestaña __+__, y seleccionamos la carpeta donde se encuentra el proyecto _helloworld-ws_. En concreto debe de ser la ruta _helloworld-rs/target/helloworld-rs.war.
+  Una vez desplegado el servicio acude a la url de despliegue _ip:8083/helloworld-ws_, y verifica el despliegue correcto del servicio.  
 
 ## Realiza el Informe
 
