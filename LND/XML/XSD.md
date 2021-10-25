@@ -198,6 +198,184 @@ Crear un esquema que permita validar un elemento pago en el cual puede haber can
 
   Los tipos complejos (independientemente del tipo de contenido) sí pueden tener otras cosas dentro por lo que les podremos aplicar tanto restricciones como extensiones.
 
+### Restricciones
 
+  Como se ha dicho anteriormente la forma más común de trabajar es crear tipos que en unos casos aplicarán modificaciones en los tipos ya sea añadiendo cosas o restringiendo posibilidades. En este apartado se verá como aplicar restricciones.
+
+  Si queremos aplicar restricciones para un tipo simple las posibles restricciones son:
+  - __minInclusive__ para indicar el menor valor numérico permitido.
+  - __maxInclusive__ para indicar el mayor valor numérico permitido.
+  - __minExclusive__ para indicar el menor valor numérico que ya no estaría permitido.
+  - __maxExclusive__ para indicar el mayor valor numérico que ya no estaría permitido.
+  - __totalDigits__ para indicar cuantas posibles cifras se permiten.
+  - __fractionDigits__ para indicar cuantas posibles cifras decimales se permiten.
+  - __length__ para indicar la longitud exacta de una cadena.
+  - __minLength__ para indicar la longitud mínima de una cadena.
+  - __maxLength__ para indicar la longitud máxima de una cadena.
+  - __enumeration__ para indicar los valores aceptados por una cadena.
+  - __pattern__ para indicar la estructura aceptada por una cadena.
+
+  Si queremos aplicar restricciones para un tipo complejo con contenido las posibles restricciones son las mismas de antes, pero además podemos añadir el elemento __<attribute>__ así como las siguientes.
+  - __sequence__ para indicar una secuencia de elementos
+  - __choice__ para indicar que se debe elegir un elemento de entre los que aparecen.
+
+### Atributos
+
+  En primer lugar es muy importante recordar que si queremos que un elemento tenga atributos entonces ya no se puede considerar que sea de tipo simple. Se debe usar ___FORZOSAMENTE___ un __complexType__. Por otro lado en los XML Schema todos los atributos son siempre opcionales, si queremos hacerlos obligatorios habrá que añadir un __«required»__.
+
+  Un atributo se define de la siguiente manera:
+
+  ```
+    <xsd:attribute name="fechanacimiento" type="xsd:date" use="required"/>
+  ```
+
+  Esto define un atributo llamado nombre que aceptará solo fechas como valores válidos y que además es obligatorio poner siempre.
+
+### Trabajando con Ejemplos
+
+#### Ejemplos 1
+
+  Crear un esquema que permita verificar algo como lo siguiente:
+
+  ```xml
+  <cantidad>20</cantidad>
+  ```
+
+  Se necesita que la cantidad tenga solo valores aceptables entre -30 y +30.
+
+   <details>
+     <summary>PULSA PARA VER LA RESPUESTA:</summary>
+
+     La primera pregunta que debemos hacernos es ¿necesitamos crear un tipo simple o uno complejo?. _Dado que nuestro único elemento no tiene subelementos ni atributos dentro podemos afirmar que solo necesitamos un tipo simple_. (___RECUERDA SIEMPRE UTILIZAR EL MÍNIMO DE MEMORIA POSIBLE___).
+
+     Como aparentemente nuestro tipo necesita usar solo valores numéricos y además son muy pequeños nos vamos a limitar a usar un __short__. Sobre ese short pondremos una restriccion que permita indicar los valores mínimo y máximo.
+
+   ```xml
+     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="cantidad">
+          <xs:simpleType>
+              <xs:restriction base="xs:short">
+                  <xs:minInclusive value="-30"/>
+                  <xs:maxInclusive value="30"/>
+              </xs:restriction>
+          </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+   ```
+
+   Este esquema dice que el elemento raíz debe ser cantidad. Luego indica que es un tipo simple y dentro de él indica que se va a establecer una restricción teniendo en mente que se va a «heredar» del tipo short. En concreto se van a poner dos restricciones, una que el valor mínimo debe ser -30 y otra que el valor máximo debe ser 30.
+
+   Existe una alternativa más recomendable, que es separar los elementos de los tipos. De esa manera, se pueden «reutilizar» las definiciones de tipos.
+
+   ```xml
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="cantidad" type="tipoCantidades">
+      </xs:element>
+      <xs:simpleType name="tipoCantidades">
+              <xs:restriction base="xs:short">
+                  <xs:minInclusive value="-30"/>
+                  <xs:maxInclusive value="30"/>
+              </xs:restriction>
+      </xs:simpleType>
+      </xs:schema>
+   ```
+   Obsérvese que hemos puesto el tipo por separado y le hemos dado el nombre __tipoCantidades__. El elemento raíz tiene su nombre y su tipo en la misma línea.
+
+   </details>
+
+
+#### Ejemplos 2 (Cantidades limitadas con atributo divisa)
+
+  Se desea crear un esquema para validar XML en los que haya un solo elemento raíz llamado cantidad en el que se debe poner siempre un atributo «divisa» que indique en qué moneda está una cierta cantidad. El atributo divisa siempre será una cadena y la cantidad siempre será un tipo numérico que acepte decimales (por ejemplo float). El esquema debe validar los archivos siguientes:
+
+  ```xml
+    <cantidad divisa="euro">20</cantidad>
+    <cantidad divisa="dolar">18.32</cantidad>
+
+  ```
+
+  Pero no debe validar ninguno de los siguientes:
+
+```xml
+  <cantidad>20</cantidad>
+  <cantidad divisa="dolar">abc</cantidad>
+```
+
+   <details>
+     <summary>PULSA PARA VER LA RESPUESTA:</summary>
+      Crearemos un tipo llamado __«tipoCantidad»__. Dicho tipo ya no puede ser un simpleType ya que necesitamos que haya atributos. Como no necesitamos que tenga dentro __subelementos__ entonces este complexType llevará dentro un __simpleContent__ (y no un __complexContent__).
+
+      Aparte de eso, como queremos __«ampliar»__ un elemento para que acepte tener dentro un atributo obligatorio __«cantidad»__ usaremos una __<extension>__. Así, el posible esquema sería este:
+
+      ```xml
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <xsd:element name="cantidad" type="tipoCantidad"/>
+        <xsd:complexType name="tipoCantidad">
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:float">
+                    <xsd:attribute name="divisa" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:schema>
+      ```
+##### Solución al atributo con solo ciertos valores
+
+  Ahora tendremos que crear dos tipos. Uno para el elemento __cantidad__ y otro para el atributo __divisa__. Llamaremos a estos tipos __tipoCantidad__ y __tipoDivisa__.
+
+  La solución comentada puede encontrarse a continuación. Como puede verse, hemos includo __comentarios__. Pueden insertarse etiquetas annotation que permiten incluir anotaciones de diversos tipos, siendo la más interesante la etiqueta ___documentation___ que nos permite incluir comentarios.
+
+  ```xml
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="cantidad" type="tipoCantidad"/>
+      <xsd:annotation>
+          <xsd:documentation>
+          A continuación creamos el tipo cantidad
+          </xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexType name="tipoCantidad">
+          <xsd:annotation>
+              <xsd:documentation>
+              Como solo va a llevar atributos debemos
+              usar un simpleContent
+              </xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleContent>
+              <xsd:annotation>
+                  <xsd:documentation>
+                  Como queremos "ampliar" un tipo/clase
+                  para que lleve atributos usaremos
+                  una extension
+                  </xsd:documentation>
+              </xsd:annotation>
+              <xsd:extension base="xsd:float">
+                  <xsd:attribute name="divisa" type="tipoDivisa"/>
+              </xsd:extension>
+          </xsd:simpleContent>
+      </xsd:complexType>
+      <xsd:annotation>
+          <xsd:documentation>
+          Ahora tenemos que fabricar el "tipoDivisa" que indica
+          los posibles valores válidos para una divisa. Estas
+          posibilidades se crean con una "enumeration". Nuestro
+          tipo es un "string" y como vamos a restringir los posibles
+          valores usaremos "restriction"
+          </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleType name="tipoDivisa">
+          <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="euros"/>
+              <xsd:enumeration value="dolares"/>
+              <xsd:enumeration value="yenes"/>
+          </xsd:restriction>
+      </xsd:simpleType>
+  </xsd:schema>
+  ```
+
+### Ejercicios propuestos
+
+  Vamos a realizar dos ejercicios para comprobar si el alumno ha entendido los conceptos:
+  -[Lista Notas](ejemplo/xml-lista-notas-xsd.md).
+  -[Lista Vehículos](ejemplo/xml-lista-vehiculos-xsd.md).
 
 </div>
