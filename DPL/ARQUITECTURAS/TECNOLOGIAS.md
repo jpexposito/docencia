@@ -101,7 +101,6 @@
   Vamos a centrarnos en la estructura de directorios ___standalone___.
 
 
-
 | Nombre |	Propósito |
 | ------------- | ------------- |
 | _configuration/_ |	Los archivos de configuración para el servidor autónomo. Estos archivos se modifican por medio de la consola de administración y el CLI de administración y no se debe modificar directamente.|
@@ -120,9 +119,26 @@
 
   La cuota de mercado de servidores a _30 de septiembre_ es la que muestra la siguiente imagen.
 
+  <div align="center">
+    <img src="https://marvel-b1-cdn.bc0a.com/f00000000156946/www.jrebel.com/sites/rebel/files/image/2021-03/application%20server%20java%20technology.png"  />
+  </div>
+
+## Nginx
+
 <div align="center">
-  <img src="https://marvel-b1-cdn.bc0a.com/f00000000156946/www.jrebel.com/sites/rebel/files/image/2021-03/application%20server%20java%20technology.png"  />
+  <img src="https://www.xn--apaados-6za.es/images/images3921/Nginx.jpg"  />
 </div>
+
+  Nginx, pronunciado como “engine-ex”, es un servidor web de código abierto que, desde su éxito inicial como servidor web, ahora también es usado como proxy inverso, cache de HTTP, y balanceador de carga.
+
+  Algunas compañías de alto perfil que utilizan Nginx incluyen Autodesk, Atlassian, Intuit, T-Mobile, GitLab, DuckDuckGo, Microsoft, IBM, Google, Adobe, Salesforce, VMWare, Xerox, LinkedIn, Cisco, Facebook, Target, Citrix Systems, Twitter, Apple , Intel, y muchos más (fuente).
+
+  Nginx creado originalmente por Igor Sysoev, y tuvo su primer lanzamiento público en octubre de 2004. Igor concibió inicialmente el software como una respuesta al problema C10K, que se refiere al problema de rendimiento de manejar 10,000 conexiones concurrentes.
+
+  Debido a que sus raíces yacen en la optimización del rendimiento bajo escala, Nginx a menudo supera a otros populares servidores web en pruebas de rendimiento (Benchmarks), especialmente en situaciones con contenido estático y/o un elevado número de solicitudes concurrentes.
+
+  Para realizar la instalación, en un servidor de linux Ubuntu, consulta el siguiente [enlace](tareas/instalacion-nginx.md).
+
 
 <div align="center">
     <a href="README.md"><img src="../../img/before.png" style="width:42px;height:42px;"  />
