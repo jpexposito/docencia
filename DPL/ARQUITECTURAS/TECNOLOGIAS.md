@@ -146,10 +146,53 @@
 
   [Fuente](https://news.netcraft.com/archives/category/web-server-survey/).
 
-<div align="center">
-    <a href="README.md"><img src="../../img/before.png" style="width:42px;height:42px;"  />
-    <a href="README.md"><img src="../../img/home.png"  style="width:42px;height:42px;" />
-    <a href="CONCEPTOS.md"><img src="../../img/next.png" style="width:42px;height:42px;" />
-</div>
+## Apache vs. Nginx: ¿Qué servidor web es la mejor opción?
+
+
+  __Nginx__ puede ser más del doble de rápido que Apache cuando sirve contenido estático.
+
+  Si estás ejecutando muchos sitios web desde el mismo servidor, Apache puede funcionar mejor.
+
+  __Nginx y Apache__ combinados sirven a más del 50% de la web. Pero Apache ha experimentado un declive en los últimos años, a favor de Nginx. _¿Nginx es realmente mejor y hay algún beneficio al usar Apache?_.
+
+### Nginx es más nuevo y más rápido
+
+    __Nginx__ es mucho más ligero que Apache. Este es un problema arraigado en el diseño: bajo el capó, Apache debe crear un nuevo hilo de proceso para cada conexión. Y aunque puede procesar 10 subprocesos a una velocidad comparable a __Nginx__, cuando se amplía a cientos de conexiones simultáneas, __Nginx__ toma la delantera decisiva.
+
+  <div align="center">
+    <img src="https://www.xn--apaados-6za.es/images/images3921/Apache-Nginx.jpg" />
+  </div>
+
+    Nginx funciona de manera diferente y puede procesar múltiples conexiones dentro de un solo hilo de proceso. Está diseñado para funcionar también como un proxy inverso simple, por lo que en lugar de traer la sobrecarga de un servidor web completo, simplemente está diseñado para mover bytes de datos de un lugar a otro. ___Nginx puede ser más del doble de rápido que Apache cuando sirve contenido estático, y mucho menos intensivo en CPU al hacerlo, lo que lo hace excelente para ejecutarse en sistemas de baja potencia.___
+
+    Sin embargo, esta velocidad solo importa cuando se entrega contenido estático a muchos usuarios a la vez. Cuando comienzas a ofrecer contenido dinámico, el cuello de botella se encuentra en otra parte, como en tu motor PHP, tu aplicación web o tu base de datos.
+
+    _Debido a que Nginx también es un proxy inverso, puedes usarlo frente a otro servidor (incluso Apache) específicamente para alojar contenido estático. Un ejemplo útil son las aplicaciones de nodo de renderizado del lado del servidor, donde las solicitudes HTTP a páginas dinámicas deben reenviarse a un servidor que ejecuta Express, pero los recursos estáticos (imágenes, hojas de estilo, etc.) se pueden atender desde Nginx. La sobrecarga al hacer esto es mínima y puede acelerar significativamente el contenido estático._
+
+### Apache es más configurable
+
+  __Apache__ está más enfocado en ser un servidor web y tiene algunas características útiles como archivos de configuración basados en directorios y hosts virtuales. Esto facilita la ejecución de varios sitios en el mismo servidor. Por ejemplo, puedes agregar un bloque VirtualHost como este a /etc/__httpd/conf/httpd.conf__:
+
+  ```xml
+    <VirtualHost 127.0.0.1:80>
+      DocumentRoot /var/www/html
+      ServerName www.misite.com
+    </VirtualHost>
+  ```
+  Esto hará que Apache enrute todas las solicitudes a _www.misite.com_ a una carpeta específica, que puede tener su propia configuración independiente de otros sitios que se ejecutan en el servidor. Esto se puede aumentar aún más con archivos __.htaccess__, que pueden sobrescribir la configuración del servidor para una carpeta específica. Sin embargo, ejecutar sitios con archivos __.htaccess__ es más lento que usar la configuración global, y solo se recomienda en los casos en los que desea permitir que otros usuarios modifiquen la configuración del servidor para un directorio sin tocar la configuración global (el alojamiento compartido es el principal ejemplo de esto).
+
+  Nginx también puede servir varios dominios desde un solo servidor y enrutarlos a sus propias carpetas, pero simplemente no es tan configurable, especialmente con una falta de funcionalidad similar a __.htaccess__. Pero, si realmente necesitas ese tipo de funcionalidad, puedes usar _Nginx_ como un proxy inverso para acceder al contenido servido en otro lugar, incluso ejecutándose en otra instancia de Nginx o en múltiples contenedores Docker.
+
+  Apache también tiene un soporte de complementos mucho mejor, [en forma de módulos](https://maven.apache.org/plugins/index.html) que se pueden cargar dinámicamente sin reiniciar el servidor. _Nginx_ también admite módulos, pero solo la carga de módulos agregados recientemente, por lo que muchos módulos aún requieren que se parchee el binario.
+
+### ¿Qué servidor deberías elegir?
+
+  A pesar de las deficiencias, ambos son servidores web decentes. Ambos son gratuitos y de código abierto, aunque Nginx tiene una versión de pago llamada [Nginx Plus](https://www.nginx.com/products/nginx/) que agrega un equilibrador de carga de software sobre _Nginx_ de código abierto. Ambos servidores son seguros, tienen buenas comunidades de soporte y son fáciles de configurar. Si bien Nginx gana en velocidad, ambos son comparables en el servicio de contenido dinámico.
+
+  ___Si no estás seguro de cuál usar, elige Nginx. En general, si estás ejecutando un sistema Unix, Nginx es una buena opción simplemente debido a su velocidad y facilidad de uso. Si necesitas más configuración, especialmente si estás ejecutando muchos sitios web desde el mismo servidor, Apache puede funcionar mejor.___
+
+  __Nginx__ y __Apache__ son totalmente compatibles con cualquier sistema Unix, incluido FreeBSD. Si bien _Nginx_ tiene técnicamente una versión que se ejecuta en Windows, no es la mejor. Apache es totalmente compatible con Windows y, como tal, es el servidor web de referencia en esa plataforma.
+
+
 
 </div>
