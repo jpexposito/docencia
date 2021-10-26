@@ -13,7 +13,26 @@
 
   <details>
     <summary>PULSA PARA VER UNA APROXIMACIÓN A LA SOLUCIÓN:</summary>
-    Existen dos técnicas para calcular el número de días entre dos fechas. La primera de ellas es contar los días con ayuda de un calendario poco a poco. Por otro lado, puedes sumar y restar para hacer el cálculo sabiendo los días que tiene cada mes para obtener el resultado correcto. De cualquier forma la manera más sencilla para calcular el número de días transcurridos entre dos fechas es usar la calculadora.
+
+  Para la resolución del problema hemos de tener en cuenta:
+  - Fecha de inicio.
+    - Hora de inicio.
+  - Fecha de fin.
+    - Hora de fin.
+  - Nº días del mes (28/30/31).
+
+  Acciones que debe de realizar la aplicación:
+  - Dame la fecha de inicio.
+  - Dame la fecha de fin.
+
+  Podríamos realizar una función que pida la fecha:
+    - La función _pedir fecha de inicio llama a esta función._
+    - La función _pedir fecha de fin llama a esta función._
+
+  Realizar la resta de fechas teniendo en cuenta:
+      - Fecha de inicio y hora.
+      - Fecha de inicio y hora.
+      - Año bisiesto?.
 
   </details>
 
