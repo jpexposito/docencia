@@ -26,8 +26,8 @@
   - Dame la fecha de fin.
 
   Podríamos realizar una función que pida la fecha:
-    - La función _pedir fecha de inicio llama a esta función._
-    - La función _pedir fecha de fin llama a esta función._
+  - La función _pedir fecha de inicio llama a esta función._
+  - La función _pedir fecha de fin llama a esta función._
 
   Realizar la resta de fechas teniendo en cuenta:
       - Fecha de inicio y hora.
