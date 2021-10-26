@@ -131,7 +131,7 @@
 
   Nginx, pronunciado como “engine-ex”, es un servidor web de código abierto que, desde su éxito inicial como servidor web, ahora también es usado como proxy inverso, cache de HTTP, y balanceador de carga.
 
-  Algunas compañías de alto perfil que utilizan Nginx incluyen Autodesk, Atlassian, Intuit, T-Mobile, GitLab, DuckDuckGo, Microsoft, IBM, Google, Adobe, Salesforce, VMWare, Xerox, LinkedIn, Cisco, Facebook, Target, Citrix Systems, Twitter, Apple , Intel, y muchos más (fuente).
+  Algunas compañías de alto perfil que utilizan Nginx incluyen _Autodesk, Atlassian, Intuit, T-Mobile, GitLab, DuckDuckGo, Microsoft, IBM, Google, Adobe, Salesforce, VMWare, Xerox, LinkedIn, Cisco, Facebook, Target, Citrix Systems, Twitter, Apple , Intel_, y muchos más.
 
   Nginx creado originalmente por Igor Sysoev, y tuvo su primer lanzamiento público en octubre de 2004. Igor concibió inicialmente el software como una respuesta al problema C10K, que se refiere al problema de rendimiento de manejar 10,000 conexiones concurrentes.
 
@@ -139,6 +139,12 @@
 
   Para realizar la instalación, en un servidor de linux Ubuntu, consulta el siguiente [enlace](tareas/instalacion-nginx.md).
 
+
+  <div align="center">
+    <img src="../../img/rango-servidores.png"  />
+  </div>
+
+  [Fuente](https://news.netcraft.com/archives/category/web-server-survey/).
 
 <div align="center">
     <a href="README.md"><img src="../../img/before.png" style="width:42px;height:42px;"  />
