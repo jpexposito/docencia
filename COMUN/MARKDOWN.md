@@ -1,7 +1,7 @@
 # MANUAL BÁSICO DE MARKDOWN
 
 ## Estéticas
- - Para hacer títulos anteponer dos almohadillas \##
+ - Para hacer títulos anteponer dos almohadillas \#
  - Los subtítulos con \## y \###
  - <--- este punto tan molón se hace con \- al princio de la línea
  - **Texto en negrita**:  \** texto en negrita \**
