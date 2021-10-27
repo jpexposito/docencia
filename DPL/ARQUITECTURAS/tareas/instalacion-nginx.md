@@ -3,7 +3,7 @@
 # Cómo instalar Nginx en Linux
 
 ## Introducción
-  
+
   Nginx es uno de los servidores web más populares del mundo y aloja algunos de los sitios más grandes y con mayor tráfico en Internet. Es una opción ligera que se puede utilizar como servidor web o proxy inverso.
 
   En esta guía, explicaremos cómo instalar Nginx en su servidor de Ubuntu 20.04, adaptar el firewall, administrar el proceso de Nginx y configurar bloques de servidor para alojar más de un dominio desde un solo servidor.
@@ -43,7 +43,7 @@
 
   ```console
     sudo ufw app list
-  ``` 
+  ```
   Debería obtener un listado de los perfiles de aplicación:
 
   ```console
@@ -54,7 +54,7 @@
     Nginx HTTPS
     OpenSSH
   ```  
-  
+
   Como se muestra en el resultado, hay tres perfiles disponibles para Nginx:
   - _Nginx Full_: este perfil abre el puerto 80 (tráfico web normal, no cifrado) y el puerto 443 (tráfico TLS/SSL cifrado)
   _ _Nginx HTTP_: este perfil abre solo el puerto 80 (tráfico web normal, no cifrado)
@@ -63,19 +63,19 @@
   Se recomienda habilitar el perfil más restrictivo, que de todos modos permitirá el tráfico que configuró. En este momento, solo tendremos que permitir el tráfico en el puerto 80.
 
   Puede habilitarlo escribiendo lo siguiente:
-  
+
   ```console
     sudo ufw allow 'Nginx HTTP'
    ```
 
   Puede verificar el cambio escribiendo lo siguiente:
-  
+
   ```console
     sudo ufw status
    ```
 
   El resultado indicará el tráfico de HTTP que se permite:
-  
+
   ```console
     Status: active
 
@@ -89,7 +89,7 @@
 
 ## Paso 3: Comprobar su servidor web
 
-  Al final del proceso de instalación, Ubuntu 20.04 inicia Nginx. El 
+  Al final del proceso de instalación, Ubuntu 20.04 inicia Nginx. El
 servidor web ya debería estar activo.
 
   Realice una verificación con systemd init para asegurarse de que el servicio esté en ejecución escribiendo lo siguiente:
@@ -99,7 +99,7 @@ servidor web ya debería estar activo.
   ```
 
    Con la siguiente salida:
-  
+
   ```console
     ● nginx.service - A high performance web server and a reverse proxy server
        Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
@@ -112,10 +112,16 @@ servidor web ya debería estar activo.
                ├─2369 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
                └─2380 nginx: worker process
   ```
-           
+
   Como lo confirma este resultado, el servicio se inició correctamente. Sin embargo, la mejor forma de comprobarlo es solicitar una página de Nginx.
 
+  __En caso de no salir activo, debe existir un problema de puertos, concretamente el puerto 80 debe de estar ocupado por otro servicio__.
+
+  _Debes de consultar el fichero de logs, para verificar el puerto ocupado_.
+
   Puede acceder a la página de aterrizaje predeterminada de Nginx para confirmar que el software funcione correctamente dirigiéndose a la dirección IP de su servidor. Si no conoce la dirección IP de su servidor, puede buscarla con la herramienta icanhazip.com, que le proporcionará su dirección IP pública tal como la recibió de otra ubicación en Internet:
+
+  ___Esto sólo es necesario si estuvieras configurando un servidor que se encuentra en la nube___.
 
   ```console
     curl -4 icanhazip.com
@@ -124,7 +130,7 @@ servidor web ya debería estar activo.
   Cuando tenga la dirección IP de su servidor, introdúzcala en la barra de direcciones de su navegador:
 
   ```console
-    http://your_server_ip
+    http://your_server_ip:puerto
   ```  
 
   __Debería de mostrar que se ejecuta correctamente Nginx.__
@@ -141,9 +147,9 @@ servidor web ya debería estar activo.
   ```console
     sudo systemctl stop nginx
   ```
- 
+
   Para iniciar el servidor web cuando no esté activo, escriba lo siguiente:
-  
+
   ```console
     sudo systemctl start nginx
   ```
@@ -159,19 +165,19 @@ servidor web ya debería estar activo.
    ```console
     sudo systemctl reload nginx
    ```
-  
+
   De forma predeterminada, Nginx está configurado para iniciarse automáticamente cuando lo haga el servidor. Si no es lo que quiere, deshabilite este comportamiento escribiendo lo siguiente:
 
   ```console
     sudo systemctl disable nginx
   ```
-  
+
   Para volver a habilitar el servicio de modo que se cargue en el inicio, puede escribir lo siguiente:
 
   ```console
     sudo systemctl enable nginx
   ```
-  
+
   Ya aprendió los comandos de administración básicos y debería estar listo para configurar el sitio para alojar más de un dominio.
 
 ## Paso 5: Configurar bloques de servidor (recomendado)
@@ -184,22 +190,22 @@ servidor web ya debería estar activo.
 
 ```console
   sudo mkdir -p /var/www/your_domain/html
-``` 
-  
+```
+
   A continuación, asigne la propiedad del directorio con la variable de entorno $USER:
 
 ```console
   sudo chown -R $USER:$USER /var/www/your_domain/html
-``` 
-  
+```
+
   Los permisos de los roots web deberían ser correctos si no modificó el valor umask, que establece permisos de archivos predeterminados. Para asegurarse de que sus permisos sean correctos y permitir al propietario leer, escribir y ejecutar los archivos, y a la vez conceder solo permisos de lectura y ejecución a los grupos y terceros, puede ingresar el siguiente comando
 
  ```console
   sudo chmod -R 755 /var/www/your_domain
- ``` 
-  
+ ```
+
   A continuación, cree una página de ejemplo index.html utilizando nano o su editor favorito:
- 
+
  ```console
     nano /var/www/your_domain/html/index.html
  ```
@@ -256,24 +262,24 @@ ___REALIZA ESTE PROCEDIMIENTO SOBRE UN PUERTO DISPONIMBLE, POR EJEMPLO 8084___.
  ```console
   sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
  ```
- 
+
   Ahora, contamos con dos bloques de servidor habilitados y configurados para responder a las solicitudes conforme a las directivas listen y server_name (puede obtener más información sobre cómo Nginx procesa estas directivas aquí):
   - __your_domain__: responderá a las solicitudes de your_domain y www.your_domain.
   - __default__: responderá a cualquier solicitud en el puerto 80 que no coincida con los otros dos bloques.
-  
+
   Para evitar un problema de memoria de depósito de hash que pueda surgir al agregar nombres de servidor, es necesario aplicar ajustes a un valor en el archivo _/etc/nginx/nginx.conf_. Abra el archivo:
- 
+
   ```console
     sudo nano /etc/nginx/nginx.conf
   ```
 
   Encuentre la directiva server_names_hash_bucket_size y borre el símbolo # para eliminar el comentario de la línea. Si utiliza nano, presione CTRL y w para buscar rápidamente palabras en el archivo.
- 
+
  ```console
   /etc/nginx/nginx.conf
  ```
 
- ```console 
+ ```console
   http {
     ...
     server_names_hash_bucket_size 64;
@@ -288,14 +294,14 @@ ___REALIZA ESTE PROCEDIMIENTO SOBRE UN PUERTO DISPONIMBLE, POR EJEMPLO 8084___.
 
  ```console
   sudo nginx -t
- ``` 
+ ```
 
   Si no hay problemas, reinicie Nginx para habilitar los cambios:
- 
+
  ```console
   sudo systemctl restart nginx
  ```
-  
+
   Con esto, Nginx debería proporcionar su nombre de dominio. Puede probarlo visitando http://your_domain, donde debería ver algo como esto:
 
 
@@ -330,6 +336,6 @@ ___REALIZA ESTE PROCEDIMIENTO SOBRE UN PUERTO DISPONIMBLE, POR EJEMPLO 8084___.
   - __5 faltas de ortografía se baja dos puntos__.
   - Al menos (1 folio indice, al menos 3 desarrollo de la práctica).
   - Carecer faltas de ortografía.
-  - Capturas de pantalla con los resultados obtenidos. 
+  - Capturas de pantalla con los resultados obtenidos.
 
 </div>
