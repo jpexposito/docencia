@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Cómo instalar PHP en Ubuntu 20.04
 
   Vamos a instalar PHP en Ubuntu 20.04 LTS desde los repositorios de la distribución, por lo que previamente actualizaremos las listas de paquetes:
@@ -90,3 +92,5 @@
 ### Configuración de subdominios
 
   LLeva la misma configuración a los subdominios que hayas creado en tareas anteriores.
+
+</div>
