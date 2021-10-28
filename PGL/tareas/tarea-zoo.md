@@ -3,7 +3,7 @@
 # Aplicación Zoo
 
 <div align="center">
-  <img src="https://m.media-amazon.com/images/I/91-iku+OfDL._SL1500_.jpg" >
+  <img src="https://m.media-amazon.com/images/I/91-iku+OfDL._SL1500_.jpg" width="600px" >
 </div>
 
 ## Se Plantea
