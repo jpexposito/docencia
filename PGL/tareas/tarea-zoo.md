@@ -16,7 +16,7 @@
 ## Se pide
 
   - Realizar una App __sin interfaz gráfica__.
-  - Implementar la arquitectura de la App en __MVC__. (es.system.alumno), donde alumno es quien realiza la tarea.
+  - Implementar la arquitectura de la App en __MVC__. (_es.system.alumno_), donde alumno es quien realiza la tarea.
   - Prueba de la aplicación a través de __test Android__ y una base de datos embebida tipo __Sqlite__.
   - Crud de operaciones sobre: __animales/especie/zoo__.
 
