@@ -316,6 +316,7 @@ Crear un esquema que permita validar un elemento pago en el cual puede haber can
         </xsd:complexType>
       </xsd:schema>
       ```
+
 ##### Solución al atributo con solo ciertos valores
 
 Ahora tendremos que crear dos tipos. Uno para el elemento __cantidad__ y otro para el atributo __divisa__. Llamaremos a estos tipos __tipoCantidad__ y __tipoDivisa__.
@@ -378,5 +379,8 @@ Ahora tendremos que crear dos tipos. Uno para el elemento __cantidad__ y otro pa
   -[Lista Notas](ejemplo/xml-lista-notas-xsd.md).
 
   -[Lista Vehículos](ejemplo/xml-lista-vehiculos-xsd.md).
+
+  -[Codigos y Sedes](ejemplo/xml-codigos-sedes-xsd.md).
+
 
 </div>
