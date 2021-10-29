@@ -17,10 +17,9 @@
 
   Cuando haya conflictos, siempre debemos crear primero la restricción y luego la extensión.
 
-<!--
   <details>
     <summary>PULSA PARA VER LA RESPUESTA:</summary>
-    
+
   Así, creamos primero esto:
   ```xml
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -57,4 +56,3 @@
   </xsd:schema>
   ```
 </details>
--->

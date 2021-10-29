@@ -28,11 +28,11 @@ Los valores del atributo __mes__ son de tipo cadena y tienen que coincidir con u
     - Dirección2: Paseo de la Esperanza 15, 1º A, Madrid
     - 28005 Madrid
 
+<!--
 <details>
   <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
 ```xml
 <?xml version='1.0' encoding="ISO-8859-1"?>
-<!--VICTORIA MONTÓN,marzo 2011, XMLSchemaAvanzados_04_personas.xml-->
 
 <personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="personas.xsd">
@@ -72,18 +72,12 @@ con el __xsd__ _personas.xsd_:
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
- <!-- ======================================== -->
- <!--  Definiciones de tipos simples     -->
- <!--========================================-->
-
- <!-- ========== Tipo "tipoDia" ============ -->
  <xsd:simpleType name="tipoDia">
  <xsd:restriction base="xsd:positiveInteger">
  <xsd:minInclusive value="1"/>
  <xsd:maxInclusive value="31"/>
  </xsd:restriction>
  </xsd:simpleType>
- <!-- ========== Tipo "tipoMes" ============ -->
    <xsd:simpleType name="tipoMes">
       <xsd:restriction base="xsd:string">
          <xsd:enumeration value="Enero"/>
@@ -100,48 +94,35 @@ con el __xsd__ _personas.xsd_:
   <xsd:enumeration value="Diciembre"/>
       </xsd:restriction>
    </xsd:simpleType>
- <!-- ========== Tipo "tipoAnyo" ============ -->
+
  <xsd:simpleType name="tipoAnyo">
  <xsd:restriction base="xsd:positiveInteger">
  <xsd:minInclusive value="1900"/>
  <xsd:maxInclusive value="2011"/>
  </xsd:restriction>
  </xsd:simpleType>
- <!-- ========== Tipo "tipoNombre" ============ -->
+
  <xsd:simpleType name="tipoNombre">
  <xsd:restriction base="xsd:string">
  <xsd:maxLength value="50"/>
  </xsd:restriction>
  </xsd:simpleType>
- <!-- ========== Tipo "tipoCodPostal" ============ -->
  <xsd:simpleType name="tipoCodPostal">
  <xsd:restriction base="xsd:positiveInteger">
  <xsd:totalDigits value="5"/>
  </xsd:restriction>
  </xsd:simpleType>
 
- <!-- =================================================== -->
- <!-- Definiciones de elementos de tipos simples -->
- <!-- =================================================== -->
-
- <!-- ========== Elementos de tipo string ========== -->
  <xsd:element name="nombre" type="tipoNombre"/>
  <xsd:element name="apellidos" type="tipoNombre"/>
  <xsd:element name="calle" type="tipoNombre"/>
  <xsd:element name="poblacion" type="tipoNombre"/>
  <xsd:element name="provincia" type="tipoNombre"/>
 
- <!-- ========== Otros elementos de tipo simple ========== -->
  <xsd:element name="varon"/>
  <xsd:element name="hembra"/>
  <xsd:element name="cpostal" type="tipoCodPostal"/>
 
-
- <!-- ========================================== -->
- <!-- Definiciones de elementos de tipo complejo -->
- <!-- ========================================== -->
-
- <!-- ========== Elemento "nacimiento" ========== -->
  <xsd:element name="nacimiento">
  <xsd:complexType>
  <xsd:simpleContent>
@@ -154,7 +135,6 @@ con el __xsd__ _personas.xsd_:
  </xsd:complexType>
  </xsd:element>
 
- <!-- ========== Elemento "direccion" ========== -->
  <xsd:element name="direccion">
  <xsd:complexType>
  <xsd:sequence>
@@ -166,7 +146,6 @@ con el __xsd__ _personas.xsd_:
  </xsd:complexType>
  </xsd:element>
 
- <!-- ========== Elemento "personas" ========== -->
  <xsd:element name="personas">
  <xsd:complexType>
  <xsd:sequence>
@@ -174,7 +153,7 @@ con el __xsd__ _personas.xsd_:
  </xsd:sequence>
  </xsd:complexType>
  </xsd:element>
- <!-- ========== Elemento "persona" ========== -->
+
  <xsd:element name="persona">
  <xsd:complexType>
  <xsd:sequence>
@@ -193,5 +172,6 @@ con el __xsd__ _personas.xsd_:
 ```
 
 </details>
+-->
 
 </div>
