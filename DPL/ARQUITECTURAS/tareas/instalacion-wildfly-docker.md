@@ -29,7 +29,7 @@
   docker.io/jboss/wildfly:25.0.0.Final
   ```
 
-  Ahora toca ver el listado de imagenes descargada
+  Ahora toca ver el listado de imágenes descargadas
 
   ```console
   sudo docker images
