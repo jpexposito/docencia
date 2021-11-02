@@ -116,7 +116,7 @@
   ```
   sudo docker rm [container-name|container-id]
   ```
-	- Force stop and remove
+  - Force stop and remove
   ```
   docker rm -f $(docker ps-aq)
   ```
