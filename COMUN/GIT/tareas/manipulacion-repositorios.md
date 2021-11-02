@@ -2,7 +2,7 @@
 
 ## Introducción
 
- La siguiente tarea tiene como objetivo que el alumno se familiarice con la creación y manipulación de repositorios en _GIT_. Para conseguirlo se irán describiendo los pasos necesarios para la realización de cada una de las acciones necesarias. 
+ La siguiente tarea tiene como objetivo que el alumno se familiarice con la creación y manipulación de repositorios en _GIT_. Para conseguirlo se irán describiendo los pasos necesarios para la realización de cada una de las acciones necesarias.
 
 ## Requisitos previos
 
@@ -14,7 +14,7 @@
 ### Tarea: Configuración
 
  Configurar Git definiendo el nombre del usuario, el correo electrónico y activar el coloreado de la salida. Mostrar la configuración final.
- 
+
 ```
   git config --global user.name "Your-Full-Name"
   git config --global user.email "your-email-address"
@@ -53,16 +53,16 @@
  git status
  git add indice.txt
  git status
-``` 
+```
 
-### Tarea: Realizando Commit´s 
+### Tarea: Realizando Commit´s
 
  Realizar un commit de los últimos cambios con el mensaje __Añadido índice de la asignatura DPL.__ y ver el estado del repositorio.
 
 ```
 git commit -m "Añadido índice de la asignatura DPL."
 git status
-``` 
+```
 
 ### Tarea: Modificación de ficheros
 
@@ -84,7 +84,7 @@ Ctrl+D
 git diff
 git add indice.txt
 git commit -m "Añadido los capitulos 3"
-``` 
+```
 
 ### Tarea: Historial
 
@@ -101,7 +101,7 @@ git show
 
 ## Informe:
 
-Realiza un informe indicando los pasos que has seguido para la instalación de la versión _2.29.3_ de _GIT_ y se muestre la versión de _GIT_ que esta corriendo en el sistema, la cual debe indicar la versión 2.29.3.
+Realiza un informe indicando los pasos que has seguido.
 Además el informe debe de contener:
  - Titulo de la tarea.
  - Nombre y Apellidos.
@@ -114,4 +114,4 @@ Además el informe debe de contener:
 - + 5 faltas de ortografía se baja dos puntos.
 - Al menos (1 folio indice, al menos 3 desarrollo de la práctica)
 - Carecer faltas de ortografía.
-- Capturas de pantalla con los resultados obtenidos. 
+- Capturas de pantalla con los resultados obtenidos.
