@@ -74,8 +74,60 @@
   Al usar las plantillas, los desarrolladores pueden aprovechar los mismos flujos de trabajo y pueden centrarse en el código y no en el resto de configuraciones.
 
 
+## Comandos básicos
+
+  - Run a container in interactive mode
+  ```
+  sudo docker run -it rhel7/rhel bash [root@.../]#cat /etc/redhat-release
+  	 #Run a bash shell inside an image and check the release inside a container
+  ```
+  - Run a container in detached mode:
+  ```
+  sudo docker run --name mywildfly -d -p 8080:8080 jboss/wildfly
+  ```
+  - Run a detached container in a previously created container network:
+  ```
+  sudo docker network create mynetwork
+  sudo docker run --name mywildfly-net -d --net mynetwork -p
+   8080:8080 jboss/wildfly
+  ```
+  - Run a detached container mounting a local folder inside the container:
+  ```
+  sudo docker run --name mywildfly-volume -d -v myfolder/:/opt/jboss/wildfly/standalone/deployments/ -p 8080:8080 jboss/wildflyjboss/wildfly
+  ```
+  - Follow the logs of a specific container:
+  ```
+  sudo docker logs -f mywildfly
+  sudo docker logs -f [container-name|container-id]
+  ```
+  - List containers:
+  ```
+  sudo docker ps
+  ```
+  - List only active containers
+  ```
+  sudo docker ps -a
+  ```
+  - __Stop__ a container:
+  ```
+  sudo docker stop [container-name|container-id]
+  ```
+  - Remove a container:
+  ```
+  sudo docker rm [container-name|container-id]
+  ```
+	- Force stop and remove
+  ```
+  docker rm -f $(docker ps-aq)
+  ```
+  - Execute a new process in an existing container:
+  ```
+  sudo docker exec -it mywildfly bash
+  ```
+
 ## Referencias
 
+  - [Acceso y configuración de contenedores](https://design.jboss.org/redhatdeveloper/marketing/docker_cheatsheet/cheatsheet/images/docker_cheatsheet_r2v2.pdf)
   - [gitlab-docker](https://docs.gitlab.com/ee/install/docker.html).
 
 
