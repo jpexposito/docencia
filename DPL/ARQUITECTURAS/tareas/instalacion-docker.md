@@ -90,7 +90,7 @@
   Para verificar si puede acceder a imágenes y descargarlas de Docker Hub, escriba lo siguiente:
 
 ```console
-  docker run hello-world
+  sudo docker run hello-world
 ```
 
   El resultado indicará que Docker funciona de forma correcta:
@@ -142,7 +142,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED
 
   Para ver el último contenedor que creó, páselo al conmutador -l:
 ```console
-  docker ps -l
+  sudo docker ps -l
 ```
 
   ```console
