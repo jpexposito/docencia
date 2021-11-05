@@ -44,4 +44,5 @@ Escribir un XML Schema para el siguiente documento XML, e incluir los cambios ne
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>
+</details>
   ```
