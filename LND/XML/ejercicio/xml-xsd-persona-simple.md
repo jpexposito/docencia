@@ -19,7 +19,7 @@ Escribir un XML Schema para el siguiente documento XML, e incluir los cambios ne
 	<comentario>buena gente...</comentario>
 </persona>
 
-<!--
+
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓn CORRECTA:</summary>
   - Un xsd válido sería:
