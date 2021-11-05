@@ -18,7 +18,7 @@ Escribir un XML Schema para el siguiente documento XML, e incluir los cambios ne
 	</datos>
 	<comentario>buena gente...</comentario>
 </persona>
-```
+
 <!--
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓn CORRECTA:</summary>
@@ -45,4 +45,3 @@ Escribir un XML Schema para el siguiente documento XML, e incluir los cambios ne
 	</xsd:complexType>
 </xsd:schema>
   ```
--->
