@@ -28,9 +28,10 @@ Los valores del atributo __mes__ son de tipo cadena y tienen que coincidir con u
     - Dirección2: Paseo de la Esperanza 15, 1º A, Madrid
     - 28005 Madrid
 
-<!--
+
 <details>
   <summary>PULSA PARA VER LA RESPUESTA CORRECTA:</summary>
+
 ```xml
 <?xml version='1.0' encoding="ISO-8859-1"?>
 
@@ -73,44 +74,45 @@ con el __xsd__ _personas.xsd_:
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
  <xsd:simpleType name="tipoDia">
- <xsd:restriction base="xsd:positiveInteger">
- <xsd:minInclusive value="1"/>
- <xsd:maxInclusive value="31"/>
- </xsd:restriction>
+   <xsd:restriction base="xsd:positiveInteger">
+     <xsd:minInclusive value="1"/>
+     <xsd:maxInclusive value="31"/>
+   </xsd:restriction>
  </xsd:simpleType>
    <xsd:simpleType name="tipoMes">
       <xsd:restriction base="xsd:string">
-         <xsd:enumeration value="Enero"/>
-         <xsd:enumeration value="Febrero"/>
-         <xsd:enumeration value="Marzo"/>
-  <xsd:enumeration value="Abril"/>
-  <xsd:enumeration value="Mayo"/>
-  <xsd:enumeration value="Junio"/>
-  <xsd:enumeration value="Julio"/>
-  <xsd:enumeration value="Agosto"/>
-  <xsd:enumeration value="Septiembre"/>
-  <xsd:enumeration value="Octubre"/>
-  <xsd:enumeration value="Noviembre"/>
-  <xsd:enumeration value="Diciembre"/>
+        <xsd:enumeration value="Enero"/>
+        <xsd:enumeration value="Febrero"/>
+        <xsd:enumeration value="Marzo"/>
+        <xsd:enumeration value="Abril"/>
+        <xsd:enumeration value="Mayo"/>
+        <xsd:enumeration value="Junio"/>
+        <xsd:enumeration value="Julio"/>
+        <xsd:enumeration value="Agosto"/>
+        <xsd:enumeration value="Septiembre"/>
+        <xsd:enumeration value="Octubre"/>
+        <xsd:enumeration value="Noviembre"/>
+        <xsd:enumeration value="Diciembre"/>
       </xsd:restriction>
    </xsd:simpleType>
 
  <xsd:simpleType name="tipoAnyo">
- <xsd:restriction base="xsd:positiveInteger">
- <xsd:minInclusive value="1900"/>
- <xsd:maxInclusive value="2011"/>
- </xsd:restriction>
+   <xsd:restriction base="xsd:positiveInteger">
+     <xsd:minInclusive value="1900"/>
+     <xsd:maxInclusive value="2011"/>
+   </xsd:restriction>
  </xsd:simpleType>
 
  <xsd:simpleType name="tipoNombre">
- <xsd:restriction base="xsd:string">
- <xsd:maxLength value="50"/>
- </xsd:restriction>
- </xsd:simpleType>
+   <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="50"/>
+   </xsd:restriction>
+   </xsd:simpleType>
+
  <xsd:simpleType name="tipoCodPostal">
- <xsd:restriction base="xsd:positiveInteger">
- <xsd:totalDigits value="5"/>
- </xsd:restriction>
+   <xsd:restriction base="xsd:positiveInteger">
+     <xsd:totalDigits value="5"/>
+   </xsd:restriction>
  </xsd:simpleType>
 
  <xsd:element name="nombre" type="tipoNombre"/>
@@ -125,46 +127,46 @@ con el __xsd__ _personas.xsd_:
 
  <xsd:element name="nacimiento">
  <xsd:complexType>
- <xsd:simpleContent>
- <xsd:extension base="xsd:string">
- <xsd:attribute name="dia" type="tipoDia"/>
- <xsd:attribute name="mes" type="tipoMes"/>
- <xsd:attribute name="anyo" type="tipoAnyo"/>
- </xsd:extension>
- </xsd:simpleContent>
+   <xsd:simpleContent>
+     <xsd:extension base="xsd:string">
+       <xsd:attribute name="dia" type="tipoDia"/>
+       <xsd:attribute name="mes" type="tipoMes"/>
+       <xsd:attribute name="anyo" type="tipoAnyo"/>
+     </xsd:extension>
+   </xsd:simpleContent>
  </xsd:complexType>
  </xsd:element>
 
  <xsd:element name="direccion">
  <xsd:complexType>
- <xsd:sequence>
- <xsd:element ref="calle" maxOccurs="unbounded"/>
- <xsd:element ref="poblacion" maxOccurs="unbounded"/>
- <xsd:element ref="provincia" maxOccurs="unbounded"/>
- <xsd:element ref="cpostal" maxOccurs="unbounded"/>
- </xsd:sequence>
+   <xsd:sequence>
+     <xsd:element ref="calle" maxOccurs="unbounded"/>
+     <xsd:element ref="poblacion" maxOccurs="unbounded"/>
+     <xsd:element ref="provincia" maxOccurs="unbounded"/>
+     <xsd:element ref="cpostal" maxOccurs="unbounded"/>
+   </xsd:sequence>
  </xsd:complexType>
  </xsd:element>
 
  <xsd:element name="personas">
- <xsd:complexType>
- <xsd:sequence>
- <xsd:element ref="persona" maxOccurs="unbounded"/>
- </xsd:sequence>
- </xsd:complexType>
+   <xsd:complexType>
+     <xsd:sequence>
+       <xsd:element ref="persona" maxOccurs="unbounded"/>
+     </xsd:sequence>
+   </xsd:complexType>
  </xsd:element>
 
  <xsd:element name="persona">
  <xsd:complexType>
- <xsd:sequence>
- <xsd:element ref="nombre"/>
- <xsd:element ref="nacimiento" minOccurs="0" maxOccurs="1"/>
- <xsd:element ref="direccion" maxOccurs="unbounded"/>
- <xsd:choice>
- <xsd:element ref="varon"/>
- <xsd:element ref="hembra"/>
- </xsd:choice>
- </xsd:sequence>
+   <xsd:sequence>
+     <xsd:element ref="nombre"/>
+     <xsd:element ref="nacimiento" minOccurs="0" maxOccurs="1"/>
+     <xsd:element ref="direccion" maxOccurs="unbounded"/>
+     <xsd:choice>
+       <xsd:element ref="varon"/>
+       <xsd:element ref="hembra"/>
+     </xsd:choice>
+   </xsd:sequence>
  </xsd:complexType>
  </xsd:element>
 
@@ -172,6 +174,6 @@ con el __xsd__ _personas.xsd_:
 ```
 
 </details>
--->
+
 
 </div>
