@@ -67,12 +67,11 @@
               <xs:element name="domicilio" type="tDomicilio" maxOccurs="unbounded"/>
             </xs:sequence>
           </xs:complexType>
-
- <xs:complexType name="tDomicilio">
- <xs:sequence>
- <xs:element name="nombre" type="xs:string"/>
- </xs:sequence>
- <xs:attribute name="tipo" type="xs:string"/>
+          <xs:complexType name="tDomicilio">
+           <xs:sequence>
+             <xs:element name="nombre" type="xs:string"/>
+           </xs:sequence>
+            <xs:attribute name="tipo" type="xs:string"/>
         </xs:complexType>
     </xs:schema>
 ```
