@@ -31,7 +31,7 @@
 
 ### Construcción del proyecto
 
-  En el siguiente [enlace](https://github.com/jpexposito/docencia/tree/master/comun/ejemplos/java/app-web-demo) dispones de un proyecto de una app en [Java](../../../comun/ejemplos/java), donde debes de realizar los siguientes cambios:
+  En el siguiente [enlace](https://github.com/jpexposito/docencia/tree/master/COMUN/ejemplos/java/app-web-demo) dispones de un proyecto de una app en [Java](../../../COMUN/ejemplos/java), donde debes de realizar los siguientes cambios:
   - Fichero __web.xml__. Sustituye:
 
 ```console
