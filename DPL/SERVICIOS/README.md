@@ -1,5 +1,6 @@
 # ADMINISTRACIÓN DE SERVICIOS WEB
 
+
 En este tema vamos a trabajar:
 - Rutas y permisos. Permiso de lectura vs permiso de ejecución.
 - Listado de directorios.
@@ -17,3 +18,7 @@ En este tema vamos a trabajar:
 - Generación de un certificado auto-firmado.
 - Instalación de un certificado.
 - Control de acceso por certificado de cliente.
+
+
+Indice de contenidos:
+- [Ficheros Estáticos](FICHEROS-ESTATICOS.md)
