@@ -1,9 +1,6 @@
 FROM jboss/wildfly
 
-#COPY targer/app-web-demo.war app-web-demo.war 
-
 ARG WAR_FILE=target/*.war
-##COPY ${JAR_FILE} app.jar
 
 ADD ${ARG} /opt/jboss/wildfly/standalone/deployments/
 
