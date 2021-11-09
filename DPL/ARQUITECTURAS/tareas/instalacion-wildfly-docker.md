@@ -84,7 +84,7 @@
 
   De este modo, si accedemos a la url: __172.17.0.1:5000__ veremos la instalación de __wildfly__.
 
-  ## Realiza el Informe
+## Realiza el Informe
 
     Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de __wildfly__ en __Docker__.
 
@@ -95,7 +95,7 @@
      - Pasos descritos.
      - Capturas de pantalla.
 
-  ### A tener en cuenta:
+### A tener en cuenta:
 
     - Se pasará el programa antí copia para verificar autenticidad.
     - __5 faltas de ortografía se baja dos puntos__.

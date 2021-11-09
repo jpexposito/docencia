@@ -22,6 +22,14 @@ ___La gran ventaja de usar Compose es que puede definir la pila de la aplicació
     docker-compose version
   ```
 
+## ¿Cuál es la diferencia entre Docker y Docker Compose?
+
+  En principio, se sabe que docker utiliza un fichero para automatizar la creación de imágenes que se lee desde un archivo Dockerfile. Siendo este un documento de texto que contiene todos los comandos que un usuario puede llamar desde línea de comandos para ensamblar una imagen.
+
+  Docker Compose es una herramienta que permite definir y ejecutar aplicaciones Docker compuesto por varios contenedores, simplificando el uso de Docker y entender de una manera sencilla.
+
+  Docker Compose permite un tipo de sintaxis más elaborado y fácil de entender, por tal razón le ha ganado la batalla en la composición de scripts para contenerización. El fichero de instrucciones que utiliza Docker Compose es docker-compose.yml haciendo diferencia con el fichero .Dockerfile .
+
 ## Creación del archivo de Compose
 
   En la raíz del proyecto de la aplicación, cree un archivo denominado __docker-compose.yml__.

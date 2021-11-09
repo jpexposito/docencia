@@ -4,7 +4,7 @@
 
   Anteriormente hemos dicho que inicialmente la carpeta raíz del sitio web creado por Apache es /var/www/html y que el nombre del archivo índice o por defecto es index.html. Pero, ¿Cómo se puede modificar este comportamiento y otros del servidor Apache? Modificando los archivos de configuración. Vamos a verlo.
 
-Para modificar la configuración del servidor Apache, podemos editar el archivo principal de configuración /etc/apache2/apache2.conf o editar alguno de los archivos que incluye este archivo. Hay un gran número de directivas que podemos usar para la configuración del servidor. La siguiente tabla describe las que se pueden considerar directivas necesarias para realizar una configuración básica.
+  Para modificar la configuración del servidor Apache, podemos editar el archivo principal de configuración /etc/apache2/apache2.conf o editar alguno de los archivos que incluye este archivo. Hay un gran número de directivas que podemos usar para la configuración del servidor. La siguiente tabla describe las que se pueden considerar directivas necesarias para realizar una configuración básica.
 
 Directivas de configuración básica
 Directiva	Descripción	Ejemplo de uso
