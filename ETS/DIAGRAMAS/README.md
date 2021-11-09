@@ -50,7 +50,7 @@ UML es un lenguaje, por lo que debemos usar su notación concreta para cada elem
 **Para diseñar un diagrama de casos de uso se comienza por reconocer los actores y los casos de uso, para posteriormente relacionarlos.**
 
 <div align="center">
-  <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=400&tok=61c229&media=apuntes:bank_use_case.png"  />
+  <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=400&tok=61c229&media=apuntes:bank_use_case.png" />
 </div>
 
 ### Relaciones entre casos de uso
@@ -65,8 +65,7 @@ Las principales relaciones entre casos de uso son las de inclusión y extensión
 - __Extensión__: Un caso de uso extiende de otro, cuando hace algo similar pero amplía la funcionalidad. La idea es muy similar a la de herencia en programación.
 
   <div align="center">
-    <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=500&tok=49a2b7&media=apuntes:extends_use_case_example.png
-  "  />
+    <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=500&tok=49a2b7&media=apuntes:extends_use_case_example.png"  />
   </div>
 
 ### Diagramas de Clases
