@@ -8,11 +8,18 @@
   <img src="https://folderit.net/wp-content/uploads/2014/06/uml-logo.jpg"  />
 </div>
 
+
   Es un lenguaje de modelado universal para el campo del desarrollo de software que sirve de estándar a la hora de diseñar los sistemas.
 
   _No es un lenguaje para crear programas_ sino para diseñar partes del mismo, su estructura, cómo se relaciona con otras partes del programa, cómo se comporta o funciona ante un usuario, los estado por los que puede pasar en su ejecución, etc. **UML es un lenguaje, por lo que usa unos símbolos concretos para cada modelo**.
 
   Dentro de la familia de diagramas UML hay tipos más usados habitualmente, aunque cada uno tiene su finalidad:
+
+  <div align="center">
+    <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?cache=&w=900&h=450&tok=bb96cb&media=apuntes:diagramas_uml.png"  />
+  </div>
+
+
 
 ### Diagramas de Casos de Uso
 
@@ -35,16 +42,38 @@ UML es un lenguaje, por lo que debemos usar su notación concreta para cada elem
 - __Relaciones__: Relacionan a los actores con los casos de uso, aunque en algunos casos también permiten relacionar unos casos de uso con otros.
 - __Un rectángulo__ se usa para representar los límites del sistema, si es necesario.
 
+<div align="center">
+  <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=400&tok=45df1c&media=apuntes:notacion_caso_de_uso.png
+"  />
+</div>
+
 **Para diseñar un diagrama de casos de uso se comienza por reconocer los actores y los casos de uso, para posteriormente relacionarlos.**
 
+<div align="center">
+  <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=400&tok=61c229&media=apuntes:bank_use_case.png"  />
+</div>
 
 ### Relaciones entre casos de uso
 
 Las principales relaciones entre casos de uso son las de inclusión y extensión. Muchas veces se suelen confundir:
 - __Inclusión__: Un caso de uso inicial incluye a otro caso de uso secundaria, cuando para realizar el caso de uso inicial se debe _obligatoriamente_ realizar el caso de uso secundario.
+
+  <div align="center">
+    <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=500&tok=535536&media=apuntes:include_use_case_example.png"  />
+  </div>
+
 - __Extensión__: Un caso de uso extiende de otro, cuando hace algo similar pero amplía la funcionalidad. La idea es muy similar a la de herencia en programación.
 
+  <div align="center">
+    <img src="http://entornos.codeandcoke.com/lib/exe/fetch.php?w=500&tok=49a2b7&media=apuntes:extends_use_case_example.png
+  "  />
+  </div>
+
 ### Diagramas de Clases
+
+___EN CONSTRUCCIÓN___
+
+<!--
 
 Un diagrama de clases nos ayuda a tener un enfoque de las relaciones entre las clases que conforman un programa. Está compuesto de los siguientes elementos:
 
@@ -64,29 +93,16 @@ El UML se representa por una _caja_ con 3 secciones:
 #### Visibilidad
 
 Se coloca alguno de los siguientes símbolos delante del nombre del miembro de la clase (atributo o método):
-+
-
-Público
-
-\-
-
-Privado
-
-#
-
-Protegido
-
-~
-
-Default (Package-private)
+- \+ __Público__.
+- \- __Privado__.
+- \# __Protegido__.
+- \~ __Default (Package-private)__.
 
 #### Tipos de miembros
 
 Los miembros de una clase pueden ser: instancias o clasificadores.
-
-*   Instancias: tienen como ámbito una instancia (objeto) específica.
-
-*   Clasificadores: (miembros estáticos) son los mismos para todas las instancias de esa clase. No dependen del estado del objeto (instancia). Se representan con su nombre **_subrayado_**.
+* Instancias: tienen como ámbito una instancia (objeto) específica.
+* Clasificadores: (miembros estáticos) son los mismos para todas las instancias de esa clase. No dependen del estado del objeto (instancia). Se representan con su nombre **_subrayado_**.
 
 
 [![](/lib/exe/fetch.php?w=500&tok=42994a&media=apuntes:uml_class_relation.png)](/lib/exe/detail.php?id=apuntes%3Adiagramas&media=apuntes:uml_class_relation.png "apuntes:uml_class_relation.png")
@@ -183,11 +199,12 @@ Se conoce con este término el proceso de obtener un modelo a partir del código
 Existen distintas herramientas para obtener el diagrama de clases a partir de un código fuente ya creado. También podemos crear un diagrama de una bbdd a partir del código sql con el que hemos definido la base de datos.
 
 PhpMyAdmin y MySQL WorkBench permiten realizar ingeniería inversa a partir de una base de datos. Para Java existe la herramienta ArgoUML y también existen diversos pluggins para hacerlo desde Eclipse.
+-->
 
-Prácticas
----------
+### Prácticas
 
-1.  Modelado del comportamiento de un programa. Diagrama de casos de uso.
+
+1.  Modelado del comportamiento de un programa que calcula las area. Diagrama de casos de uso.
 
 2.  Modelado de la estructura de un programa. Diagramas de clases.
 
