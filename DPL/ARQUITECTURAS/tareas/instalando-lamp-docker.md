@@ -96,7 +96,7 @@ ___Vamos___ a instalar __php__ en la versión __8.0.0__ con __apache__.
           command: --default-authentication-plugin=mysql_native_password
           environment:
               MYSQL_DATABASE: dbname
-              MYSQL_USER: root
+              MYSQL_USER: admin
               MYSQL_PASSWORD: test
               MYSQL_ROOT_PASSWORD: test
           volumes:
@@ -112,7 +112,7 @@ ___Vamos___ a instalar __php__ en la versión __8.0.0__ con __apache__.
           ports:
               - 8000:80
           environment:
-              MYSQL_USER: root
+              MYSQL_USER: admin
               MYSQL_PASSWORD: test
               MYSQL_ROOT_PASSWORD: test
   volumes:
@@ -165,7 +165,7 @@ volumes aplica una definición de donde sincronización entre ficheros, así com
       command: --default-authentication-plugin=mysql_native_password
       environment:
           MYSQL_DATABASE: dbname
-          MYSQL_USER: root
+          MYSQL_USER: admin
           MYSQL_PASSWORD: test
           MYSQL_ROOT_PASSWORD: test
       volumes:
@@ -200,7 +200,7 @@ Este bloque tiene menos atributos y básicos como los que ya hemos abordado:
      ports:
          - 8000:80
      environment:
-         MYSQL_USER: root
+         MYSQL_USER: admin
          MYSQL_PASSWORD: test
          MYSQL_ROOT_PASSWORD: test
 ```
@@ -313,11 +313,11 @@ Este bloque tiene menos atributos y básicos como los que ya hemos abordado:
 
 ## Se pide
 
-  Realizar la construcción de los contenedores docker, con el fin de poder desplegar cualquier de las aplicaciones creadas por el alumno en la asignatura de __servidor__.
+  Realizar la construcción de los contenedores docker, con el fin de poder desplegar cualquier de las aplicaciones creadas por el alumno en la asignatura de __servidor__, verificando el despliegue de la aplicación seleccionada, así como el acceso correcto a __phpmyadmin__.
 
 ## Realiza el Informe
 
-  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la creación de los contenedores para __LAMP__ en __Docker__, verificando el despliegue de la aplicación seleccionada, así como el acceso correcto a __phpmyadmin__.
+  Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la creación de los contenedores para __LAMP__ en __Docker__.
 
   Además el informe debe de contener:
    - Titulo de la tarea.
