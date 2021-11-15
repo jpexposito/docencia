@@ -1,4 +1,4 @@
-<div align=__justify__>
+<div align="justify">
 
 # Construcción de un documento XSD en función de un XML
 
@@ -10,7 +10,7 @@
   Vamos a echar un vistazo a este documento XML llamado __shiporder.xml__ :
 
 ```xml
-<?xml version=__1.0__ encoding=__UTF-8__?>
+<?xml version=__1.0__ encoding="UTF-8"?>
 
 <shiporder orderid=__889923__
 xmlns:xsi=__http://www.w3.org/2001/XMLSchema-instance__

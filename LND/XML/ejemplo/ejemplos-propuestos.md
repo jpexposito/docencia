@@ -71,8 +71,8 @@
 
   Escribir el contenido del archivo “fichas.xsd” que permita validarlo, teniendo en cuenta que:
   - Tanto el atributo numero como el elemento “código” utilizan la misma restricción que solamente les
-  permite tomar un valor entero expresado con dos dígitos comprendidos entre "00" y "19".
-  - El atributo letra puede tomar por valor una de las siguientes letras: "X", "Y" o "Z". La restricción debe
+  permite tomar un valor entero expresado con dos dígitos comprendidos entre __00__ y __19__.
+  - El atributo letra puede tomar por valor una de las siguientes letras: __X__, __Y__ o __Z__. La restricción debe
   definirse de forma que solamente pueda ser utilizada por dicho atributo.
   - Para cada ficha se tiene que indicar un número, obligatoriamente. Sin embargo, la letra es opcional.
 
@@ -94,7 +94,7 @@
 
   Escribir el contenido del archivo “fichas.xsd” que permita validarlo, teniendo en cuenta que el elemento “clave”
   debe poder tomar por valor un mínimo de cuatro caracteres y un máximo de diez. Dichos caracteres pueden ser
-  indistintamente letras mayúsculas o minúsculas de la "a" a la "z", o dígitos del "0" al "9". La restricción
+  indistintamente letras mayúsculas o minúsculas de la __a__ a la __z__, o dígitos del __0__ al __9__. La restricción
   solamente podrá aplicarse al elemento “clave”.
   Para ello, se debe utilizar xs:pattern y también:
   - xs:minLength que permite especificar la longitud mínima.
