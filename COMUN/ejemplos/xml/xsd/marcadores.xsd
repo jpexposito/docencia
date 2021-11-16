@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+<!--
+   <xs:element name="tnombre" type="xs:string" />
+   <xs:element name="tdescripcion" type="xs:string" />
+   <xs:element name="turl" type="xs:string" />
+-->
+
+<xs:simpleType name="stringtype">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="urltype">
+  <xs:restriction base="xs:string">
+   <xs:pattern value="http[s]?://www.[A-Z,a-z,0-9]+.[A-Z,a-z]{2,3}[.[A-Z,a-z]{2,3}]?" />
+   </xs:restriction>
+</xs:simpleType>
+
+
+
+
+   <!--
+   <xs:element name="pagina">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="nombre"/>
+            <xs:element ref="descripcion"/>
+            <xs:element ref="url"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   -->
+
+   <xs:element name="pagina">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="nombre" type="stringtype"/>
+            <xs:element name="descripcion" type="stringtype"/>
+            <xs:element name="url" type="urltype"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="marcadores">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="pagina" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+</xs:schema>

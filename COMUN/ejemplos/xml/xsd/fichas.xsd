@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="nombre" type="xs:string" />
+   <!--xs:element name="tiniciales" type="xs:string" /-->
+   <xs:element name="edad" type="xs:positiveInteger" />
+
+   <xs:simpleType name="tiniciales">
+      <xs:restriction base="xs:string">
+         <!--
+         <xs:pattern value="[A-Z,a-z]{2-4}">
+         
+         </xs:pattern>
+      -->
+
+         <xs:minInclusive value="2"/>
+         <xs:maxInclusive value="4"/>
+
+      </xs:restriction>
+   </xs:simpleType>
+
+   <xs:element name="ficha">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="nombre" />
+            <xs:element name="iniciales" type="tiniciales" />
+            <xs:element ref="edad" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+</xs:schema>
