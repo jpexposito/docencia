@@ -55,7 +55,7 @@ El objetivo de esta práctica es la puesta en marcha de dos sitios web utilizand
 
 Queremos construir en nuestro servidor web apache dos sitios web con las siguientes características:
 
-* El nombre de dominio del primero será ``www.iespuerto.org``, su directorio base será ``/var/www/iespuerto`` y contendrá una página llamada ``index.html``, donde sólo se verá una bienvenida a la página del Instituto Gonzalo Nazareno.
+* El nombre de dominio del primero será ``www.iespuerto.org``, su directorio base será ``/var/www/iespuerto`` y contendrá una página llamada ``index.html``, donde sólo se verá una bienvenida a la página del Instituto IES Puerto.
 * En el segundo sitio vamos a crear una página donde se pondrán noticias por parte de los departamento, el nombre de este sitio será ``www.departamentospuerto.org``, y su directorio base será ``/var/www/departamentos``. En este sitio sólo tendremos una página inicial ``index.html``, dando la bienvenida a la página de los departamentos del instituto.
 
 Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:
