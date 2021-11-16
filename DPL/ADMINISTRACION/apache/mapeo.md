@@ -24,7 +24,7 @@ URL ``http://www.mapeo.com/documentos`` y visualice los ficheros del ``/home/usu
 
 5. Con la directiva ``ErrorDocument`` se puede crear [Respuesta de error personalizadas](http://httpd.apache.org/docs/2.4/custom-error.html). Todo esto se puede llevar a cabo en el fichero ``/etc/apache2/conf-available/localized-error-pages.conf``. Después de leer sobre el tema realiza los siguientes ejercicios.
 
-* Cuando no se encuentre una página (error 404) por un mensje de error.
+* Cuando no se encuentre una página (error 404) por un mensaje de error.
 * Crea un alias llamado ``error`` que corresponda a ``/srv/mapeo/error``. Dentro de ese directorio crea páginas personalizadas para visualizar cuando  se produzca un error 404 y cuando se tenga un forbidden (403). Configura el sistema para que se redireccione a estas páginas cuando se produce un error.
 * Descomenta en el fichero ``localized-error-pages.conf`` las líneas adecuadas para tener los mensajes de error traducidos a los diferentes idiomas. Para que funcione tienes que hacer dos cosas:
 	* Activar el módulo ``include``.
