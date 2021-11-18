@@ -13,4 +13,5 @@ Diferentes Ejemplos realizados en clase de Casos de Uso:
 - [Casos Uso Instituto](instituto-norte.md).
 - [Casos Uso Gestión de Fincas](gestion-fincas.md).
 - [Casos Uso Gps](gps.md).
+- [Casos Uso Cajero](cajero.md).
 </div>
