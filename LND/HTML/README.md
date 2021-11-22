@@ -1,4 +1,4 @@
-# Curso de HTML y CSS desde Cero
+# HTML y CSS
 
 <!--
 ## Indice
