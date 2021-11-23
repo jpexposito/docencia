@@ -44,8 +44,8 @@
 
   La arquitectura estará formada por:
   - Un __balanceador__ de carga, implementado con un Apache HTTP Server configurado como proxy inverso. Este se encuentra ya instalado, y sólo requiere la instalación.
-  - Una capa de front-end, formada por cuatro servidores web con la aplicación corriendo. Aplicación Web(__jsp__) que hemos utilizado en otras tareas. Para ello necesitará crear:
-    - 4 instancias de la aplicación desplegadas en otras ocasiones basada en __jsp__, y puerto, tal y como se ha realizado en otras tareas(__8081, 8082, 8083, 8084__).
+  - Una capa de front-end, formada por cuatro servidores web con la aplicación corriendo. Aplicación Web [__jsp__](https://github.com/jpexposito/docencia/tree/master/COMUN/ejemplos/java/app-web-demo) que hemos utilizado en otras tareas. Para ello necesitará crear:
+    - 4 instancias de la aplicación desplegadas en otras ocasiones basada en [__jsp__](https://github.com/jpexposito/docencia/tree/master/COMUN/ejemplos/java/app-web-demo), y puerto, tal y como se ha realizado en otras tareas(__8081, 8082, 8083, 8084__).
   - Recuerda que en la instalación de nodos o servicios necesarios, también sería posible instalar un servidor de BBDD en MySql por ejemplo, pero en este caso no será necesario.  
 
 ### Activación de los módulos necesarios en Apache
