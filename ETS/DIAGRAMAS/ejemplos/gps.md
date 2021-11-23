@@ -10,7 +10,7 @@
 
   En esta aplicación un administrador registra unos GPS especiales con 4G y les asigna un nombre. Básicamente el nombre es la matrícula del camión o furgoneta.
 
-P ara la aplicación un GPS y un vehículo es la misma cosa.
+  Para la aplicación un GPS y un vehículo es la misma cosa.
 
   El administrador programa unas rutas para cada transporte con una fecha/hora de salida, fecha/hora de llegada (prevista). Y de esa manera se puede conocer qué vehículos están operativos en un momento determinado.
 
@@ -21,5 +21,9 @@ P ara la aplicación un GPS y un vehículo es la misma cosa.
 ## Se pide:
 
   Realice el diagrama de casos de uso del sistema GPSPuerto.
+
+  <!--
+  [Solución en Casos de Uso](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&nav=1&title=gps.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D18l2tf7L_WNP5hujetdGB8zo_i4wY0_oY%26export%3Ddownload)
+  -->
 
 <div>

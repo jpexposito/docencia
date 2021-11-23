@@ -15,7 +15,7 @@
   Define la gestión del sistema a través de un diagrama de clases, utilizando esta [herramienta](https://app.diagrams.net/).
 
 <!--
-[Solución en Casos de Uso](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&layers=1&nav=1&title=Instituto-Norte.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1XHUV2E-jg44wef6NHL2gN-YsidMrNh3P%26export%3Ddownload)
+[Solución en Casos de Uso](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&nav=1&page-id=MdgCTeif4w8w-GhGRQs_&title=gestion-fincas.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1XTHyaiyaDhYnLFjTjKzrq90aRzx7LJiT%26export%3Ddownload)
 -->
 
 </div>

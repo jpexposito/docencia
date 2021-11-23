@@ -9,7 +9,7 @@
 </br>
 
 <div align="center">
-  <img src="http://httpd.apache.org/docs/trunk/es/images/reverse-proxy-arch.png" >
+  <img src="https://jelastic.com/blog/wp-content/uploads/2014/10/server-diagram_2.png" >
 </div>
 
 
@@ -68,11 +68,36 @@
     sudo systemctl reload nginx
   ```
   - Accede a __midominio.com__ e indica cual es la respuesta.
+  - Vamos a añadir un poco más de configuración y ver el comportamiento:
+    - Edite el archivo /etc/nginx/sites-available/midominio.com.conf y añada la siguiente configuración:
+  ```console
+  http {
+      upstream server_group_wildfly {
+          least_conn;
+          server http://localhost:8081/app-web-demo;
+          server http://localhost:8082/app-web-demo;
+          server http://localhost:8083/app-web-demo;
+          server http://localhost:8084/app-web-demo backup;
+      }
 
+      server {
+          location / {
+              proxy_pass http://server_group_wildfly;
+          }
+      }
+  }
+  ```
 
-Tendremos que reemplazar IP-HTTP-SERVER-1, IP-HTTP-SERVER-2, IP-HTTP-SERVER-3, y IP-HTTP-SERVER-4, en nuestro caso deberá de ser __localhost__ para las máquinas que estamos utilizando como Front-End.
+  - La directiva least_conn en el grupo de hosts llamado backend define que NGINX envíe las peticiones entre los servidores __localhost 8081-8083__, ___dependiendo del host que tenga el menor número de conexiones activas___. __NGINX__ utiliza eñ servidor __localhost:8084__ sólo como respaldo en caso de que los otros dos hosts no estén disponibles.
+  - Con la directiva __proxy_pass__ establecida en http://server_group_wildfly, __NGINX__ actúa como un proxy inverso y utiliza el grupo de hosts backend para distribuir las peticiones basándose en la configuración de este grupo.
 
+  En lugar del método de equilibrio de carga least_conn, puede especificar:
+  - __No hay método para utilizar round robin y distribuir las peticiones de manera uniforme entre los servidores__.
+  - __ip_hash__ para enviar solicitudes de una dirección de cliente al mismo servidor basándose en un hash calculado a partir de los tres primeros octetos de la dirección IPv4 o de la dirección IPv6 completa del cliente.
+  - __hash__ para determinar el servidor basándose en una clave definida por el usuario, que puede ser una cadena, una variable o una combinación de ambas. El parámetro consistent configura que NGINX distribuya las peticiones entre todos los servidores basándose en el valor de la clave hash definida por el usuario.
+  - __random__ para enviar solicitudes a un servidor seleccionado al azar.
 
+Realiza cambios en el método de establecer el servidor de destino, indicando por ejemplo __random__, de manera que verifiques el comportamiento. Además, puedes parar las instancias entre la __8081:8083__, para determinar si el nodo que se encuentra en __backup__ realiza su función correctamente.
 ## Realiza el Informe
 
   Realiza un informe indicando los pasos que has seguido para la instalación y se muestre la instalación de _Balanceo carga Apache_, con 4 nodos en __Wildfly, jsp, y Docker__. Describe cada uno de los pasos que has realizado.
