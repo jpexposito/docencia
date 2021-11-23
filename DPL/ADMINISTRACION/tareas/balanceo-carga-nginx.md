@@ -57,7 +57,7 @@
 
     location / {
         #La configuración del proxy.
-        proxy_pass http://localhost:8083/app-web-demo;
+        proxy_pass http://localhost:8083/app-web-demo/;
     }
   }
 
@@ -74,10 +74,10 @@
   http {
       upstream server_group_wildfly {
           least_conn;
-          server http://localhost:8081/app-web-demo;
-          server http://localhost:8082/app-web-demo;
-          server http://localhost:8083/app-web-demo;
-          server http://localhost:8084/app-web-demo backup;
+          server http://localhost:8081/app-web-demo/;
+          server http://localhost:8082/app-web-demo/;
+          server http://localhost:8083/app-web-demo/;
+          server http://localhost:8084/app-web-demo/ backup;
       }
 
       server {
