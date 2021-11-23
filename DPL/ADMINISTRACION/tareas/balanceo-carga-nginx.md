@@ -57,7 +57,7 @@
 
     location / {
         #La configuración del proxy.
-        proxy_pass http://localhost:8083/app-web-demo;
+        proxy_pass http://localhost:8083/app-web-demo/;
     }
   }
 
@@ -88,7 +88,7 @@
   }
   ```
 
-  - La directiva least_conn en el grupo de hosts llamado backend define que NGINX envíe las peticiones entre los servidores __localhost 8081-8083__, ___dependiendo del host que tenga el menor número de conexiones activas___. __NGINX__ utiliza eñ servidor __localhost:8084__ sólo como respaldo en caso de que los otros dos hosts no estén disponibles.
+  - La directiva least_conn en el grupo de hosts llamado backend define que NGINX envíe las peticiones entre los servidores __localhost 8081-8083__, ___dependiendo del host que tenga el menor número de conexiones activas___. __NGINX__ utiliza el servidor __localhost:8084__ sólo como respaldo en caso de que los otros dos hosts no estén disponibles.
   - Con la directiva __proxy_pass__ establecida en http://server_group_wildfly, __NGINX__ actúa como un proxy inverso y utiliza el grupo de hosts backend para distribuir las peticiones basándose en la configuración de este grupo.
 
   En lugar del método de equilibrio de carga least_conn, puede especificar:
