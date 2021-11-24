@@ -71,7 +71,7 @@
   - Vamos a añadir un poco más de configuración y ver el comportamiento:
     - Edite el archivo /etc/nginx/sites-available/midominio.com.conf y añada la siguiente configuración:
   ```console
-  http {
+
       upstream server_group_wildfly {
           least_conn;
           server http://localhost:8081/app-web-demo/;
@@ -85,7 +85,7 @@
               proxy_pass http://server_group_wildfly;
           }
       }
-  }
+  
   ```
 
   - La directiva least_conn en el grupo de hosts llamado backend define que NGINX envíe las peticiones entre los servidores __localhost 8081-8083__, ___dependiendo del host que tenga el menor número de conexiones activas___. __NGINX__ utiliza eñ servidor __localhost:8084__ sólo como respaldo en caso de que los otros dos hosts no estén disponibles.
