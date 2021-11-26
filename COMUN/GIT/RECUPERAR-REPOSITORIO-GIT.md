@@ -2,6 +2,13 @@
 
 # RECUPERAR UN REPOSITORIO EN GIT
 
+
+  <div align="center" >
+   <img src="https://www.todomecanica.com/images/blog/2016/febrero/mecanico-automotriz.jpg" width="400px">
+  </div>
+
+  </br>
+
   Supongamos que estamos trabajando sobre un repositorio, por ejemplo [libro](https://github.com/jpexposito/libro). Para ello hemos realizado un clonado.
 
   ```console
