@@ -35,7 +35,7 @@
 
 ## Eliminar el directorio .git
 
-    Si la solución anterior no ha funcionado debemos de realizar:
+  Si la solución anterior no ha funcionado debemos de realizar:
 
   ```console
   mv  libro libro_backup
