@@ -16,5 +16,6 @@ Diferentes Ejemplos realizados en clase de Casos de Uso:
 - [Casos Uso Cajero](cajero.md).
 - [Bonos Vip](bonosvip.md).
 - [Casos Uso Biblioteca](biblioteca.md).
+- [Casos Uso Venta](venta.md).
 
 </div>
