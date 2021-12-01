@@ -26,16 +26,25 @@
 
 ## Especificación de Casos de Uso:
 
-
 <div align="center">
   <img src="https://static3.abc.es/Media/201503/25/39295348--644x362.jpg" />
 </div>
+
+## Índice
+  - [Introducción](#introducción).
+  - [Descripción](#descripción).
+  - [Especificación de actores](#especificación-de-actores).
+  - [Especificación de casos de uso](#especificación-de-casos-de-uso-1).
 
 ### Introducción
 
   El presente documento especifica el __diagrama de casos de uso__ de la aplicación __GPSNorte__ solicitada por la empresa de transporte del norte de Tenerife.
 
   Este documento trata a grandes rasgos, los casos de uso identificados, así como los actores que intervienen en ellos.
+
+  <div align="center">
+    <img src="img/gps.png" />
+  </div>
 
 ### Descripción
 
