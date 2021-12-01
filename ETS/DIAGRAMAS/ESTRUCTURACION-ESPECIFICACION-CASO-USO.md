@@ -54,6 +54,31 @@ La siguiente es la lista de preguntas que permiten identificar a los actores que
 - ¿Qué otros sistemas utilizan el Sistema?
 - ¿Ocurre algo en algún momento específico?
 
+
+La especificación de una caso de uso debe describir el modo
+en que un actor interactúa con el sistema. Es una narración que describe el rol desempeñado por los actor en su interacción con el sistema.
+
+Lo más importante de los casos de uso es su descripción, mucho más que los diagramas de casos de uso.
+
+Aunque hay descripciones de media página, y algunas de __30__, es más habitual que ocupen entre __5 y 15__ páginas.
+
+
+|  Actor | XXX (Nombre del Actor) |
+|---|---|
+| Descripción  | _Breve descripción del actor_  |
+| Características  | _Características que describen al actor_ |
+| Relaciones | _Relaciones que tiene con otros actores. Básicamente cuando realiza las mismas acciones que otro actor._  |
+| Referencias | _Que casos de uso realiza_ |   
+|  Notas |  _Notas adicionales_ |
+| Autor  | _Quien desarrolla la especificación del actor_ |
+|Fecha | _Fecha de la especificación_ |
+
+|  Atributo |||
+|---|---|---|
+| _Nombre_  | _Descripción_  | _Tipo_ |
+| | |
+
+
 ___El diagrama de CU no debe reflejar ni el flujo de control ni el flujo de datos, sino de asociaciones que son canales de comunicación.___
 
   Los casos de uso reflejan las relaciones entre los actores y los casos de uso.
@@ -79,36 +104,26 @@ ___El diagrama de CU no debe reflejar ni el flujo de control ni el flujo de dato
 
   |  Caso de Uso	CU | XXX  |
   |---|---|
-  | Fuentes  | <Stakeholders que proporcionaron información de esta funcionalidad>  |
-  | Actor  |  Actores que participan en el caso de uso |
-  | Descripción | Descripción del caso de uso  | 
-  | Flujo básico | Descripción del paso.  |
-  | Pre-condiciones | Que debe ocurrir con anterioridad  |  
-  | Post-condiciones  | Que debe ocurrir con posterioridad  |  
-  |  Requerimientos trazados |   |
-  |  Notas |  Notas adicionales |
+  | Fuentes  | _Documento que sustenta el caso de uso_  |
+  | Actor  |  _Actores que participan en el caso de uso_ |
+  | Descripción | _Descripción del caso de uso_  |
+  | Flujo básico | _Descripción paso a paso de la ejecución. (1->2->3.)_ |
+  | Pre-condiciones | _Que debe ocurrir con anterioridad_  |  
+  | Post-condiciones  | _Que debe ocurrir con posterioridad_  |  
+  |  Requerimientos | _Que debe de exister para que el caso de uso se ejecute. Ej: Tarjeta de crédito_  |
+  |  Notas |  _Notas adicionales_ |
+  | Autor  | _Quien desarrolla la especificación del actor_ |
+  |Fecha | _Fecha de la especificación_ |
 
 
+## Ejemplos de especificación de Casos de Uso
 
+  La especificación de casos de uso, se realiza tanto en sistema públicos como privados. Algunos ejemplos en sistemas públicos son:
+  - [Comunidad autónoma de Andalucía](https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/416).
+  - [Comunidad autónoma de Canarias](http://www.gobiernodecanarias.org/platino/ext/doc/servicio-spic/2.0/CasosDeUso/CasosDeUso.html).
 
+  Como podemos observar la especificación de los casos de uso difiere un función de las necesidades y de las personas a las que este destinada el documento.
 
-Flujos alternos	1. Titulo del FA
-Descripción del FA
-2. Titulo del FA
-Descripción del FA.
-Pre-condiciones	1. Titulo del Precondición
-Descripción del PRC
-Post-condiciones	1. Titulo del Poscondiciones
-Descripción de la PTC
-Requerimientos trazados	1. Titulo del requerimiento
-Descripción del requerimiento o porqué se enlaza a el desde este caso de uso
-Puntos de inclusión	1. Título del punto de inclusión
-Descripción del punto de inclusión
-Puntos de extensión	1. Título del punto de extensión
-Descripción del punto de extensión
-Notas	1. Titulo de la Nota
-Descripción de la nota
-
-
+  En la [Comunidad autónoma de Andalucía](https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/416), se ha descrito la especificación a uso general, mientras que en la [Comunidad autónoma de Canarias](http://www.gobiernodecanarias.org/platino/ext/doc/servicio-spic/2.0/CasosDeUso/CasosDeUso.html), se ha descrito la especificación para un perfil técnico que hará uso del sistema y que se combina con otros diagramas.
 
 </div>
