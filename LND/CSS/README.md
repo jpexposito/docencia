@@ -91,7 +91,7 @@
 
 ### Método 2: Interno (la etiqueta style)
 
-  Otra forma es incluir el código CSS usando la etiqueta HTML <style>. Por ejemplo, así:
+  Otra forma es incluir el código CSS usando la etiqueta HTML \<style\>. Por ejemplo, así:
 
 ```html
   	<html>
@@ -176,6 +176,6 @@ _Ahora coloca los dos ficheros en la misma carpeta. Recuerda grabar los ficheros
 
   Y ahora sin parar pasa a la lección siguiente en la que examinaremos algunas de la propiedades de CSS.
 
-  
+___Vamos a ver diferentes ejemplos de uso en CSS en___ [www.w3schools.com](https://www.w3schools.com/css/).
 
 </div>
