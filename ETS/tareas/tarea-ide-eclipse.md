@@ -41,7 +41,7 @@
     </div>
 
 
-  ## Realización del informe
+## Realización del informe
 
   Realiza un informe indicando los pasos que has seguido para la instalación de NetBeans 8 y donde se muestre cada uno de los pasos detallados, pasos y problemas encontrados.
   Además el informe debe de contener:
