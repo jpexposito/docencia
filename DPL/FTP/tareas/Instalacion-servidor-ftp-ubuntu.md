@@ -3,7 +3,7 @@
 # INSTALACIÓN Y ADMINISTRACIÓN DE SERVIDORES DE TRANSFERENCIA DE ARCHIVOS
 
 <div align="center">
-  <img src="https://www.redeszone.net/app/uploads-redeszone.net/2019/11/portada-core-ftp.png" >
+  <img src="https://www.solvetic.com/uploads/tutorials/monthly_02_2017/92cb9d0f7130667c0cb2bcb20219fdee.png" >
 </div>
 
 ## Introducción
