@@ -30,10 +30,11 @@ ___PROPORCIONA EL INTERCAMBIO ENTRE DOS (CLIENTE <-> SERVIDOR)___
 
 ### ¿Cuáles son las ventajas y desventajas del FTP?
 
-El FTP tiene un par de ventajas que merece la pena mencionar. Debido a que lleva vigente bastante tiempo, la mayoría de la gente ya está familiarizada con él. Y hay muchas herramientas para el ordenador (como FileZilla, WinSCP y Cyberduck, entre otras) que simplifican mucho el uso del FTP. También debemos destacar que cuenta con dos funciones muy útiles, como la capacidad de transferir varios archivos a la vez, de reanudar una transferencia cuando se pierde la conexión y de programar transferencias.
-Sin embargo, hay una desventaja bastante significativa asociada al FTP, y es la falta de seguridad. El FTP se inventó en 1970 y, como tal, antecede a muchas medidas de ciberseguridad en las que actualmente confiamos en el mundo moderno. No se diseñó para ser un protocolo seguro y las transferencias FTP no están cifradas. Esto implica que los hackers pueden leer con relativa facilidad tus contraseñas, nombres de usuario y otros datos confidenciales si capturan tus paquetes de datos (p. ej., mediante un ataque de captura de paquetes).
+  El FTP tiene un par de ventajas que merece la pena mencionar. Debido a que lleva vigente bastante tiempo, la mayoría de la gente ya está familiarizada con él. Y hay muchas herramientas para el ordenador (como FileZilla, WinSCP y Cyberduck, entre otras) que simplifican mucho el uso del FTP. También debemos destacar que cuenta con dos funciones muy útiles, como la capacidad de transferir varios archivos a la vez, de reanudar una transferencia cuando se pierde la conexión y de programar transferencias.
 
-Debido a estas brechas de seguridad, la compatibilidad con el FTP es cada vez menor y han surgido diferentes opciones que lo reemplazan, como el SFTP, HTTPS, AS2 y FTPS. En 2020, Google Chrome desactivó el FTP por defecto y Firefox eliminó el FTP de su código. Por tanto, si sigues usando servidores FTP para procesos importantes de tu empresa, puede que haya llegado el momento de buscar una alternativa. Ahora, veamos con detenimiento uno de estas soluciones que lo reemplazan: el SFTP.
+  Sin embargo, hay una desventaja bastante significativa asociada al FTP, y es la falta de seguridad. El FTP se inventó en 1970 y, como tal, antecede a muchas medidas de ciberseguridad en las que actualmente confiamos en el mundo moderno. No se diseñó para ser un protocolo seguro y las transferencias FTP no están cifradas. Esto implica que los hackers pueden leer con relativa facilidad tus contraseñas, nombres de usuario y otros datos confidenciales si capturan tus paquetes de datos (p. ej., mediante un ataque de captura de paquetes).
+
+  Debido a estas brechas de seguridad, la compatibilidad con el FTP es cada vez menor y han surgido diferentes opciones que lo reemplazan, como el SFTP, HTTPS, AS2 y FTPS. En 2020, Google Chrome desactivó el FTP por defecto y Firefox eliminó el FTP de su código. Por tanto, si sigues usando servidores FTP para procesos importantes de tu empresa, puede que haya llegado el momento de buscar una alternativa. Ahora, veamos con detenimiento uno de estas soluciones que lo reemplazan: el SFTP.
 
 ### ¿Qué es el SFTP?
 
@@ -42,5 +43,11 @@ Debido a estas brechas de seguridad, la compatibilidad con el FTP es cada vez me
 ## Reflexión
 
   Si bien es cierto que el __FTP es una opción muy efectiva para transferir archivos, también lo es que está algo desfasada__ y otros protocolos de red ya disponibles la han superado, como el __SFTP__ como servicio.
+
+  En modo gráfico, la principal diferencia sera:
+
+  <div align="center">
+    <img src="https://cdn.educba.com/academy/wp-content/uploads/2019/10/FTP-vs-SFTP.png.webp" >
+  </div>
 
 </div>
