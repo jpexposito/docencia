@@ -167,5 +167,6 @@ __El primer método se puede utilizar directamente en el ejemplo anterior__.
 ## Referencias
 
 - [¿Qué es sftp?](https://www.strato.es/faq/hosting/que-es-sftp-y-como-se-utiliza/).
+- [Operadores Básicos en Docker](https://docs.docker.com/engine/reference/run/).
 
 </div>
