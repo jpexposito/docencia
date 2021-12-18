@@ -239,7 +239,8 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
     </pais>
   </geografia-mundial>
 ```
-  ___VERIFICA TU SOLUCIÓN___
+___VERIFICA TU SOLUCIÓN___
+
 </details>
 
 - Corrige el siguiente documento XML para que esté bien formado:
