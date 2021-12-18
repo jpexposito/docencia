@@ -133,6 +133,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
   <autor>barto</autor>
   </peliculas>
   ```
+  ___VERIFICA TU SOLUCIÓN___
   </details>
 
 - Corrige el siguiente documento XML para que esté bien formado:
@@ -182,7 +183,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
     <http>www.example.org</http>
   </texto>
   ```
-
+  ___VERIFICA TU SOLUCIÓN___
   </details>
 
 
@@ -238,6 +239,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
     </pais>
   </geografia-mundial>
 ```
+  ___VERIFICA TU SOLUCIÓN___
 </details>
 
 - Corrige el siguiente documento XML para que esté bien formado:
@@ -285,6 +287,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
     <programa nombre="Inkscape" licencia="GPL" />
   </programas>
   ```
+  ___VERIFICA TU SOLUCIÓN___
   </details>
 
 - Corrige el siguiente documento XML para que esté bien formado:
@@ -337,6 +340,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
   ```
   _Nota_: Además de ello, intenta no utilizar __ñ__.
 
+  ___VERIFICA TU SOLUCIÓN___
   </details>
 
 
@@ -385,6 +389,8 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
     <patinete velocidad-maxima="50 km/h" />
   </mediosDeTransporte>
   ```
+
+  ___VERIFICA TU SOLUCIÓN___
   </details>
 
 - Crea un documento XML bien formado que almacene una agenda en la que cada contacto tenga un nombre sólo, y un número aleatorio de emails y teléfonos.
@@ -396,5 +402,8 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
 - Crea un documento XML bien formado que almacene los datos que se encuentran en esta hoja de cálculo.
 
 - Crea un documento XML bien formado que almacene los datos que se encuentran en esta base de datos.
+
+
+___NOTA:EVITA UTILIZAR CARACTERES LATINOS COMO Ñ O ´.___
 
 </div>
