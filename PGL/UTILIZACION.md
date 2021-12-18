@@ -1,4 +1,4 @@
-# Utilización de librerías multimedia integradas:
+# Librerías multimedia integradas:
 
 ## Conceptos sobre aplicaciones multimedia.
 
