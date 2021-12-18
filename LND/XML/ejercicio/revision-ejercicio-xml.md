@@ -220,6 +220,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
       ...
     </geografia-mundial>
   ```
+
   La etiqueta de cierre no puede contener atributos:
 
   _ErrorError at line 6, column 24: not well-formed (invalid token)_.
@@ -239,6 +240,7 @@ Realiza los siguientes ejercicios sobre el lenguaje de marcas XML.
     </pais>
   </geografia-mundial>
 ```
+
 ___VERIFICA TU SOLUCIÓN___
 
 </details>
@@ -252,6 +254,7 @@ ___VERIFICA TU SOLUCIÓN___
     <programa nombre="OpenOffice.org" licencia=LGPL />
     <programa nombre="Inkscape" licencia="GPL" />
   </programas>
+
   ```
   <details>
     <summary>PULSA PARA VER LA RESPUESTA:</summary>
