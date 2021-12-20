@@ -1,6 +1,6 @@
 <div align="justify">
 
-# EJERICICOS REPASO XML
+# EJERCICIOS REPASO XML
 
 
 <div align="center">
