@@ -1,7 +1,7 @@
 <div align="justify">
 
-# Servicios implicados en el despliegue de una aplicación Web (Despliegue de aplicaciones web).
-
+# Servicios implicados en el despliegue de una aplicación Web (Despliegue de aplicaciones web).  
+  
 <div align="center">
   <img src="https://cybercom.com/images/18.403ac7ba177db4f8d1a35bae/1614864782653/CI_CD_przezroczyste.png" width="500px" />
 </div>
