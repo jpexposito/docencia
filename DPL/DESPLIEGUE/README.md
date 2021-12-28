@@ -1,7 +1,7 @@
 <div align="justify">
 
 # Servicios implicados en el despliegue de una aplicación Web (Despliegue de aplicaciones web).  
-  
+
 <div align="center">
   <img src="https://cybercom.com/images/18.403ac7ba177db4f8d1a35bae/1614864782653/CI_CD_przezroczyste.png" width="500px" />
 </div>
@@ -104,7 +104,33 @@ ___En este tema nos vamos a ir realizando una serie de preguntas, para llegar fi
 
   <div align="center">
     <img src="https://www.techuz.com/blog/wp-content/uploads/2019/06/CI-CD_Banner-1.jpg" width="600px" />
-  </div>  
+  </div>
+
+  Existen numerosas herramientas para lograr este objetivo. El uso de una u otras depende del lenguajes, OpenSource(Si/No), etc.
+
+## Herramientas comunes de CI/CD
+
+  Las herramientas de CI/CD son útiles para que los equipos automaticen el desarrollo, la implementación y las pruebas. Hay algunas que gestionan específicamente la integración (CI), otras que abordan el desarrollo y la implementación (CD), y algunas que se especializan en las pruebas permanentes u otras funciones relacionadas.
+
+  Una de las herramientas open source más conocidas para la CI/CD es el servidor de automatización [Jenkins](https://www.jenkins.io/), __cuyo diseño permite gestionar cualquier sistema, desde un servidor sencillo de CI hasta un centro completo de CD__.
+
+  [Tekton Pipelines](https://tekton.dev/) es un marco para las plataformas Kubernetes que ofrece una experiencia estándar de CI/CD en la nube con contenedores.
+
+  Además de Jenkins y Tekton Pipelines, estas son otras herramientas open source de CI/CD que le podrían interesar:
+  - [Spinnaker](https://spinnaker.io/): plataforma de CD diseñada para los __entornos multicloud__.
+  - [GoCD](https://www.gocd.org/): servidor de CI/CD que se enfoca en la creación de modelos y la visualización.
+  - [Concourse](https://concourse-ci.org/): sistema open source de automatización constante.
+  - [Screwdriver](https://screwdriver.cd/): plataforma de diseño creada para la distribución continua.
+
+  Es posible que a los equipos también les convenga adquirir las herramientas gestionadas de CI/CD, que ofrecen muchos proveedores. Los principales proveedores de nube pública ofrecen soluciones de CI/CD, junto con __GitLab, CircleCI, Travis CI, Atlassian Bamboo__ y muchos más.
+
+  Además, es probable que cualquier herramienta que sea fundamental para DevOps forme parte de un proceso de CI/CD. Las herramientas para la automatización de la configuración (como __Ansible, Chef y Puppet__), los tiempos de ejecución de los contenedores (como __Docker, rkt y cri-o__) y la organización en contenedores (Kubernetes) no son herramientas específicas de CI/CD, pero aparecen en muchos de sus flujos de trabajo.
+
+  <div align="center">
+    <img src="https://cd.foundation/wp-content/uploads/sites/78/2020/09/cicdlist.png" />
+  </div>
+
+
 
 ## Referencias
 - [Integración y despliegue continuo en Redhat](https://www.redhat.com/es/topics/devops/what-is-ci-cd).
