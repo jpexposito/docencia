@@ -96,7 +96,7 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
       <xsd:element ref="autor" maxOccurs="unbounded"/>
       <xsd:element ref="fecha"/>
       <xsd:element ref="ISBN"/>
-      <xsd:element ref=":editor"/>
+      <xsd:element ref="editor"/>
       </xsd:sequence>
       <xsd:attribute name="categoria" use="required">
       <xsd:simpleType>
@@ -115,7 +115,7 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
     <xsd:element name="catalogoLibros">
       <xsd:complexType>
       <xsd:sequence>
-      <xsd:element ref="cat:libro" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="libro" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
       </xsd:complexType>
       </xsd:element>

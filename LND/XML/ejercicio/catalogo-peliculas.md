@@ -1,6 +1,6 @@
 <div align="justify">
 
-# CATALOGO DE LIBROS
+# CATALOGO DE PELICULAS
 
 
 <div align="center">
