@@ -80,13 +80,12 @@ Dado el siguiente documento XML definir un XML schema que valide este documento,
 ```
 Se pide realizar el fichero __xsd__, que realice la validación, con las restricciones indicadas.
 
-<!--
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
   - Un xsd válido sería:
 
-  ```
+  ```xml
   <?xml version="1.0" encoding="ISO-8859-1" ?>
   <xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
   <xsd:element name="t?ulo" type="xsd:string"/>
@@ -152,6 +151,5 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
   </xsd:element>
 </xsd:schema>
   ```
-  -->
 
 </details>
