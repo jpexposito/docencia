@@ -34,6 +34,95 @@ revisor CDATA “”>
 ```
 Se pide realizar el fichero __xsd__, que realice la validación, con las restricciones indicadas.
 
+<details>
+  <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
+
+  - Un xsd válido sería:
+
+  ```xml
+  <?xml version="1.0" encoding="ISO-8859-1"?>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+
+    <xsd:simpleType name="tipoMes">
+      <xsd:restriction base="xsd:positiveInteger">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="12"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="tipoAnyo">
+      <xsd:restriction base="xsd:positiveInteger">
+      <xsd:minInclusive value="1900"/>
+      <xsd:maxInclusive value="2011"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="tipoNombre">
+      <xsd:restriction base="xsd:string">
+      <xsd:minLength value="0"/>
+      <xsd:maxLength value="100"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="tipoISBN">
+      <xsd:restriction base="xsd:string">
+      <xsd:minLength value="13"/>
+      <xsd:maxLength value="17"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="titulo" type="tipoNombre"/>
+    <xsd:element name="autor" type="tipoNombre"/>
+    <xsd:element name="mes" type="tipoMes"/>
+    <xsd:element name="anyo" type="tipoAnyo"/>
+    <xsd:element name="ISBN" type="tipoISBN"/>
+    <xsd:element name="editor" type="tipoNombre"/>
+
+    <xsd:element name="fecha">
+      <xsd:complexType>
+      <xsd:sequence>
+      <xsd:element ref="mes" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="anyo"/>
+      </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="libro">
+      <xsd:complexType>
+      <xsd:sequence>
+      <xsd:element ref="titulo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="autor" maxOccurs="unbounded"/>
+      <xsd:element ref="fecha"/>
+      <xsd:element ref="ISBN"/>
+      <xsd:element ref=":editor"/>
+      </xsd:sequence>
+      <xsd:attribute name="categoria" use="required">
+      <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="autobiografia"/>
+      <xsd:enumeration value="noficcion"/>
+      <xsd:enumeration value="ficcion"/>
+      </xsd:restriction>
+      </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="enstock" type="xsd:boolean" default="false"/>
+      <xsd:attribute name="revisor" type="xsd:string" default=""/>
+      </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="catalogoLibros">
+      <xsd:complexType>
+      <xsd:sequence>
+      <xsd:element ref="cat:libro" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      </xsd:complexType>
+      </xsd:element>
+  </xsd:schema>
+  ```
+
+</details>
 
 
 </div>
