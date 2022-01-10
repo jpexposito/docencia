@@ -34,7 +34,7 @@ revisor CDATA “”>
 ```
 Se pide realizar el fichero __xsd__, que realice la validación, con las restricciones indicadas.
 
-
+<!--
 
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
@@ -141,3 +141,6 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
   ```
 
 </details>
+
+-->
+</div>
