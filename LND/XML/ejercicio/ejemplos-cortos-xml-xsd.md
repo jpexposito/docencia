@@ -46,6 +46,7 @@
   2. Ejercicio:
 
   Dado el archivo "personas.xsd":
+
   ```xml
   <?xml version="1.0" encoding="UTF-8"?>
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -160,6 +161,7 @@
     6. Ejercicio:
 
     Dado el siguiente xml:
+
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
   <aeropuerto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
