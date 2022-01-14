@@ -2,18 +2,12 @@
 
 # Ejercicios cortos xml-xsd
 
-<!--
-<div align="center">
-  <img width="300px" src="https://www.spgtalleres.com/_images/news/248/7562_modal.jpg">
-</div>
-
--->
   El siguiente ejercicio tiene como objetivo trabajar distintos elementos de tipo xml-xsd.
 
   1. Ejercicio:
     Dado el documento "marcadores.xml":
 
-    ```xml
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
       <marcadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="marcadores.xsd">
@@ -33,21 +27,24 @@
             <url>http://www.w3.org/</url>
          </pagina>
       </marcadores>
-    ```
+
+  ```
+
 
     Define el fichero __xsd que realice la validación__.
+
 
     <details>
       <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
-
     </details>
+
 
   2. Ejercicio:
 
   Dado el archivo "personas.xsd":
 
-  ```xml
+```xml
   <?xml version="1.0" encoding="UTF-8"?>
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="personas">
@@ -66,7 +63,7 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  ```
+```
 
   Utilizando los elementos "nombre", "ciudad" y "edad", escribir el código de un documento XML que pueda ser validado por "personas.xsd" y que almacene la siguiente información:
   - "Eva vive en París y tiene 25 años."
@@ -86,7 +83,7 @@
   - El atributo “nacimiento” es de tipo “date”.
   - El elemento “comentario” no es obligatorio; si aparece lo hace sólo 1 vez.
 
-  ```xml
+```xml
   <?xml version="1.0" encoding="ISO-8859-1"?>
   <persona nacimiento="1999-10-20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="XMLSchemaBasicos03_persona.xsd"   >
@@ -97,7 +94,8 @@
       </datos>
       <comentario>buena gente...</comentario>
   </persona>
-  ```
+```
+
   ___Realiza la mejor validación xsd que sea posible___.
 
   <details>
@@ -111,7 +109,7 @@
 
   En el siguiente ejemplo se define un elemento llamado "letras" con la restricción de que puede tomar por valor cero o más (*) letras minúsculas de la _"a"_ a la _"z"_:
 
-  ```xml
+```xml
   <xs:element name="letras">
      <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -119,7 +117,8 @@
         </xs:restriction>
      </xs:simpleType>
   </xs:element>
-  ```
+```
+
   __Nota__: los paréntesis de la expresión regular se pueden omitir, escribiendo simplemente: [a-z]*
 
   Realizar los cambios necesarios en el código del ejemplo anterior para que "letras" pueda tomar por valor uno o más pares (+) de letras, y cada par de letras deberá estar formado por una letra mayúscula seguida de otra minúscula. Por ejemplo, "HoLa" sería admitido, pero no lo sería "Hola", "HOLa", "hola", etc.
@@ -133,7 +132,7 @@
 
   Dado el siguiente documento XML:
 
-  ```xml
+```xml
   <?xml version="1.0" encoding="UTF-8"?>
     <fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="fichas.xsd">
@@ -146,13 +145,13 @@
           <clave>ag32Ue7AFF</clave>
        </ficha>
     </fichas>
-    ```
+```
 
-    Escribir el contenido del archivo __"fichas.xsd"__ que permita validarlo, teniendo en cuenta que el elemento "clave" debe poder tomar por valor un mínimo de cuatro caracteres y un máximo de diez. Dichos caracteres pueden ser indistintamente letras mayúsculas o minúsculas de la "a" a la "z", o dígitos del "0" al "9". La restricción solamente podrá aplicarse al elemento "clave".
+  Escribir el contenido del archivo __"fichas.xsd"__ que permita validarlo, teniendo en cuenta que el elemento "clave" debe poder tomar por valor un mínimo de cuatro caracteres y un máximo de diez. Dichos caracteres pueden ser indistintamente letras mayúsculas o minúsculas de la "a" a la "z", o dígitos del "0" al "9". La restricción solamente podrá aplicarse al elemento "clave".
 
-    Para ello, se debe utilizar __xs:pattern__ y también:
-    - __xs:minLength__ que permite especificar la longitud mínima.
-    - __xs:maxLength__ que permite especificar la longitud máxima.
+  Para ello, se debe utilizar __xs:pattern__ y también:
+  - __xs:minLength__ que permite especificar la longitud mínima.
+  - __xs:maxLength__ que permite especificar la longitud máxima.
 
     <details>
       <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
@@ -162,7 +161,7 @@
 
     Dado el siguiente xml:
 
-    ```xml
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
   <aeropuerto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="aeropuerto.xsd">
@@ -184,7 +183,7 @@
      </vuelos>
      <fecha>2013-12-20</fecha>
   </aeropuerto>
-  ```
+```
 
   Escribir el código del archivo "aeropuerto.xsd" que permita validarlo, teniendo en cuenta que:
   - No debe utilizarse ni group ni attributeGroup.
