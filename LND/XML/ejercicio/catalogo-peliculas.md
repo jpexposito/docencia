@@ -26,55 +26,55 @@ Dado el siguiente documento XML definir un XML schema que valide este documento,
  xsi:noNamespaceSchemaLocation="XMLSchemaAvanzados06_cartelera.xsd">
 
   <película código="1" duración="152" año="2002">
- <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
- <título_original>Old School</título_original>
- <nacionalidad>Estados Unidos</nacionalidad>
- <género>Comedia</género>
- <clasificación edad="tp"/>
- <sinopsis>
- Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son
-  exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en
- la cama con el primero que agarra. Frank se ha casado y su matrimonio nada
-   tiene que ver con las juergas salvajes que organizaban años atrás. Y Beanie es
-   un padre de  familia que se muere por recuperar su alocada juventud. Pero las
-   cosas cambian cuando Beanie sugiere que creen su propia fraternidad, en la
-   nueva casa que Mitch tiene junto al campus de la universidad. Una ocasión para
-   revivir tiempos gloriosos, hacer nuevos amigos y de volver a sus viejas,
-   salvajes y desmadradas juergas de estudiantes.
- </sinopsis>
- <director>Todd Philips</director>
- <reparto>
- <actor>Luke Wilson</actor>
- <actor>Will Farrel</actor>
- <actor>Vince Vaughn</actor>
- </reparto>
- <web>http://www.uip.es</web>
- <cartel>caratulas/Aquellas juergas.jpg</cartel>
-  </película>
-  <película código="17" duración="06">
- <título>EL ORO DE MOSCÚ</título>
- <nacionalidad>España</nacionalidad>
- <género>Comedia</género>
- <sin_clasificar/>
- <sinopsis>
-   Por una extraña coincidencia del destino, alguien recibe una información
-   extraconfidencial de un anciano en sus últimos segundos de vida: el secreto
-   mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo
-   comunica secretamente a un supuesto amigo. Ambos inician una aventura
-   rocambolesca y llena de misterio. Ante la inutilidad de sus intentos y muy a
-   su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el
-   pozo sin fondo que conlleva descifrar el enigma.
+   <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
+   <título_original>Old School</título_original>
+   <nacionalidad>Estados Unidos</nacionalidad>
+   <género>Comedia</género>
+   <clasificación edad="tp"/>
+   <sinopsis>
+   Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son
+    exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en
+   la cama con el primero que agarra. Frank se ha casado y su matrimonio nada
+     tiene que ver con las juergas salvajes que organizaban años atrás. Y Beanie es
+     un padre de  familia que se muere por recuperar su alocada juventud. Pero las
+     cosas cambian cuando Beanie sugiere que creen su propia fraternidad, en la
+     nueva casa que Mitch tiene junto al campus de la universidad. Una ocasión para
+     revivir tiempos gloriosos, hacer nuevos amigos y de volver a sus viejas,
+     salvajes y desmadradas juergas de estudiantes.
    </sinopsis>
- <director>Jesús Bonilla</director>
- <reparto>
- <actor>Jesús Bonilla</actor>
- <actor>Santiago Segura</actor>
- <actor>Alfredo Landa</actor>
- <actor>Concha Velasco</actor>
- <actor>Antonio Resines</actor>
- <actor>Gabino Diego, María Barranco</actor>
- <actor>María Barranco</actor>
- </reparto>
+   <director>Todd Philips</director>
+   <reparto>
+   <actor>Luke Wilson</actor>
+   <actor>Will Farrel</actor>
+   <actor>Vince Vaughn</actor>
+   </reparto>
+   <web>http://www.uip.es</web>
+   <cartel>caratulas/Aquellas juergas.jpg</cartel>
+    </película>
+    <película código="17" duración="06">
+   <título>EL ORO DE MOSCÚ</título>
+   <nacionalidad>España</nacionalidad>
+   <género>Comedia</género>
+   <sin_clasificar/>
+   <sinopsis>
+     Por una extraña coincidencia del destino, alguien recibe una información
+     extraconfidencial de un anciano en sus últimos segundos de vida: el secreto
+     mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo
+     comunica secretamente a un supuesto amigo. Ambos inician una aventura
+     rocambolesca y llena de misterio. Ante la inutilidad de sus intentos y muy a
+     su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el
+     pozo sin fondo que conlleva descifrar el enigma.
+     </sinopsis>
+   <director>Jesús Bonilla</director>
+   <reparto>
+   <actor>Jesús Bonilla</actor>
+   <actor>Santiago Segura</actor>
+   <actor>Alfredo Landa</actor>
+   <actor>Concha Velasco</actor>
+   <actor>Antonio Resines</actor>
+   <actor>Gabino Diego, María Barranco</actor>
+   <actor>María Barranco</actor>
+   </reparto>
   </película>
 </cartelera>
 ```
@@ -88,11 +88,11 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
   ```xml
   <?xml version="1.0" encoding="ISO-8859-1" ?>
   <xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
-  <xsd:element name="t?ulo" type="xsd:string"/>
-  <xsd:element name="t?ulo_original" type="xsd:string"/>
+  <xsd:element name="titulo" type="xsd:string"/>
+  <xsd:element name="titulo_original" type="xsd:string"/>
   <xsd:element name="nacionalidad" type="xsd:string"/>
-  <xsd:element name="g?ero" type="xsd:string"/>
-  <xsd:element name="clasificaci?" type="tipoClasificaci?"/>
+  <xsd:element name="genero" type="xsd:string"/>
+  <xsd:element name="clasificacion" type="tipoClasificacion"/>
   <xsd:element name="sin_clasificar"/>
   <xsd:element name="sinopsis" type="xsd:string"/>
   <xsd:element name="director" type="xsd:string"/>
@@ -114,7 +114,7 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
   		<xsd:element ref="titulo"/>
   		<xsd:element ref="titulo_original" minOccurs="0"/>
   		<xsd:element ref="nacionalidad"/>
-  		<xsd:element ref="g?ero"/>
+  		<xsd:element ref="genero"/>
   		<xsd:choice>
   			<xsd:element ref="clasificacion"/>
   			<xsd:element ref="sin_clasificar"/>
@@ -127,7 +127,7 @@ Se pide realizar el fichero __xsd__, que realice la validación, con las restric
   	</xsd:sequence>
   	<xsd:attribute name="codigo" type="xsd:positiveInteger"/>
   	<xsd:attribute name="duracion" type="xsd:positiveInteger"/>
-  	<xsd:attribute name="a?" type="xsd:positiveInteger" default="2003"/>
+  	<xsd:attribute name="año" type="xsd:positiveInteger" default="2003"/>
   </xsd:complexType>
   <xsd:complexType name="tipoReparto">
   	<xsd:sequence>

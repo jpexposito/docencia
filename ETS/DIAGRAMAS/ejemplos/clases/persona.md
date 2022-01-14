@@ -47,7 +47,6 @@
 
   Recuérdese que las clases son entidades que encapsulan información, se trata por tanto de ver qué información de la lista anterior está relacionada entre sí y ver la forma de encapsularla en sus respectivas clases.
 
-<!--  
 
 ### Clase Nif
 
@@ -92,9 +91,15 @@
 
 ### Persona – Socio
 
-  En este caso resulta que los atributos de la clase Persona son un subconjunto de los de la clase Socio y semánticamente tiene sentido que la clase Socio sea una especialización de la clase Persona.
+  En este caso resulta que __los atributos de la clase Persona son un subconjunto de los de la clase Socio y semánticamente tiene sentido que la clase Socio sea una especialización de la clase Persona__.
 
-  Obsérvese que los atributos que hereda la clase especializada no se representan. Obsérvese también que la flecha que representa esta relación va desde la clase hija a la clase madre, tiene linea continua, punta de flecha cerrada, no tiene cardinalidad y no está etiquetada por ningún rol.
+  <div align="center">
+    <img src="  https://joanpaon.files.wordpress.com/2013/07/1.png" width="300px">
+  </div>
+
+  </br>
+
+  Obsérvese que _los atributos que hereda la clase especializada no se representan. Obsérvese también que la flecha que representa esta relación va desde la clase hija a la clase madre, tiene linea continua, punta de flecha cerrada, no tiene cardinalidad y no está etiquetada por ningún rol_.
 
 ### Asociación
 
@@ -104,28 +109,38 @@
 
   Aun a riesgo de resultar tedioso pero con el objetivo de que resulte lo más clarificador posible, el análisis de la relación entre estas dos clases se realizará paso a paso.
 
-### Roles
+#### Roles
 
   Esta asociación es evidente. La clase Socio tiene un campo de tipo Fecha, dicho de otra manera, la clase Socio tiene una referencia a un objeto de la clase Fecha. Así considerado este campo pasa a ser el rol de la relación que vincula a ambas clases. Por lo tanto, desaparece de la clase Socio y aparece en la linea de vinculación junto a la clase de su tipo.
 
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/110.png" width="300px">
+  </div>
 
 ### Navegabilidad
 
   Ahora hay que abordar la navegabilidad tratando de ver si desde una clase se puede ir a la otra. Es evidente que la clase Fecha no tiene información de la clase Socio por lo que la navegabilidad desde la clase Fecha no es posible. Sin embargo, la clase Socio tiene una referencia a la clase Fecha por lo que si es viable la navegabilidad en este sentido. La navegabilidad se expresa con una punta de flecha abierta puesta en el lado de la clase a la que se llega.
 
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/19.png" width="300px">
+  </div>
+
 ### Cardinalidades
 
   El siguiente paso es abordar las cardinalidades o multiplicidades, es decir el número de instancias de cada clase que intervienen en la relación. Para resolver este paso hay que preguntar: «¿Por cada instancia de una de las dos clases cuantas instancias de la otra clase pueden en extremo intervenir como mínimo (Cardinalidad mínima) y como máximo (Cardinalidad máxima)?». Y luego hacer las preguntas al revés.
 
-  Cuántas fechas de alta como mínimo tiene cada socio : 1
-  Cuántas fechas de alta como máximo tiene cada socio: 1
-  Cuántos socios se dan de alta como mínimo en una fecha: 0
-  Cuántos socios se dan de alta como máximo en una fecha: Varios
+  - Cuántas fechas de alta como mínimo tiene cada socio : 1
+  - Cuántas fechas de alta como máximo tiene cada socio: 1
+  - Cuántos socios se dan de alta como mínimo en una fecha: 0
+  - Cuántos socios se dan de alta como máximo en una fecha: Varios
 
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/116.png" width="300px">
+  </div>
 
   Obsérvese que cuando la cardinalidad mínima y máxima coinciden sólo se representa una de ellas. Obsérvese también que cuando la cardinalidad máxima es múltiple y la cardinalidad mínima es cero refiere una cardinalidad múltiple opcional y se representa con un asterisco.
 
-### Todo – Parte
+#### Todo – Parte
 
   El siguiente paso consiste en considerar qué clase es PARTE y qué clase es TODO. Dicho de otro modo quién contiene a quién. En este caso la discriminación es trivial: la clase Socio es la parte TODO porque tiene una referencia a la clase Fecha que es la parte PARTE.
 
@@ -133,11 +148,19 @@
 
   El siguiente paso consiste en determinar si la relación entre las clases es de agregación o de composición. Para que la relación sea de composición es condición necesaria que la cardinalidad de la parte TODO sea 1. Como este no es el caso la relación es de agregación.
 
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/115.png" width="300px">
+  </div>
+
   Obsérvese que el rombo se ha representado en blanco.
 
 #### Persona – Fecha
 
   El mismo razonamiento empleado para relacionar las clases Socio y Fecha se puede emplear para relacionar las clases Persona y Fecha.
+
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/114.png" width="300px">
+  </div>
 
   Esta vez el rol de la clase Fecha en la relación cambia. Obsérvese como ha desaparecido el campo correspondiente a la fecha de nacimiento de la clase Persona.
 
@@ -147,19 +170,28 @@
 
   Además, semánticamente hablando, si desaparece la parte TODO (el objeto de la clase Persona), la existencia de la parte PARTE (el objeto de la clase Nif), carece de sentido y debería desaparecer también. Esta dependencia existencial apunta a una relación de tipo Composición.
 
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/16.png" width="300px">
+  </div>
+
   Obsérvese que el rombo se ha representado relleno en negro. Obsérvese también que el campo correspondiente al Nif ha desaparecido de la clase persona pasando a ser el rol de la relación.
 
 #### Persona – Nombre
 
   La relación entre la clase Persona y la clase Nombre es muy parecida a la relación existente entre la clase Persona y la clase Fecha.
 
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/17.png" width="300px">
+  </div>
+
   Obsérvese que al trasladar el campo nombre al rol de la relación, el diagrama que representa la clase Persona ya no contiene ningún atributo.
 
-  Diagrama de clases completo
+## Diagrama de clases completo
+
   Bueno, ahora se trata de ponerlo todo junto en un único diagrama.
 
-  Este ejercicio está disponible como un archivo ZIP que se corresponde con un proyecto de la herramienta UML llamada Modelio. Para abrirlo hay que importar este proyecto desde su menú principal.
-
--->
+  <div align="center">
+    <img src="https://joanpaon.files.wordpress.com/2013/07/18.png" width="500px">
+  </div>
 
 </div>

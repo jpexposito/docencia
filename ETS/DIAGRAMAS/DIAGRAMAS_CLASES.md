@@ -11,7 +11,6 @@
 ## Introducción
 
   En esta Unidad aprenderemos a:
-
   - Identificar las herramientas para la elaboración de diagramas de clases.
   - Interpretar el significado de diagramas de clases.
   - Generar código a partir de un diagrama de clases.
@@ -60,7 +59,7 @@
   Tanto los atributos como las funciones incluyen al principio de su descripción la visibilidad que tendrá. Esta visibilidad se identifica escribiendo un símbolo y podrá ser:
   - __(+) Pública__. Representa que se puede acceder al atributo o función desde cualquier lugar de la aplicación.
   - __(-) Privada__. Representa que se puede acceder al atributo o función únicamente desde la misma clase.
-  __(#) Protegida__. Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las clases que hereden de ella (clases derivadas).
+  - __(#) Protegida__. Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las clases que hereden de ella (clases derivadas).
 
   _Estos tres tipos de visibilidad son los más comunes. No obstante, pueden incluirse otros en base al lenguaje de programación que se esté usando (no es muy común). Por ejemplo: (/) Derivado o (~) Paquete._
 
@@ -89,6 +88,7 @@
   </div>
 
 ##### Tipos de relaciones
+
   Un diagrama de clases incluye los siguientes tipos de relaciones:
   - __Asociación__.
   - __Agregación__.
@@ -106,6 +106,7 @@
   <div align="center">
     <img src="https://diagramasuml.com/wp-content/uploads/2018/08/clases2.png" width="350px">
   </div>
+
 
 ##### Agregación
 
@@ -171,7 +172,7 @@ Un ejemplo de esta relación podría ser la siguiente:
   Su representación es similar a las clases, pero indicando arriba la palabra <<interface>>.
 
   <div align="center">
-    <img src="https://diagramasuml.com/wp-content/uploads/2018/08/clases15.png" width="200px">
+    <img src="https://diagramasuml.com/wp-content/uploads/2018/08/clases15.png" width="150px">
   </div>
 
 ### Cómo dibujar un diagrama de clases
@@ -179,20 +180,19 @@ Un ejemplo de esta relación podría ser la siguiente:
   Los diagramas de clase van de la mano con el diseño orientado a objetos. Por lo tanto, saber lo básico de este tipo de diseño es una parte clave para poder dibujar diagramas de clase eficaces.
   Este tipo de diagramas son solicitados cuando se está describiendo la vista estática del sistema o sus funcionalidades. Unos pequeños pasos que puedes utilizar de guía para construir estos diagramas son los siguientes:
   - __Identifica los nombres de las clase__.
-  - El primer paso es identificar los objetos primarios del sistema. Las clases suelen corresponder a sustantivos dentro del dominio del problema.
+  - El __primer paso__ es _identificar los objetos primarios del sistema_. __Las clases suelen corresponder a sustantivos dentro del dominio del problema__.
   - __Distingue las relaciones__.
   - __El siguiente paso es determinar cómo cada una de las clases u objetos están relacionados entre sí. Busca los puntos en común y las abstracciones entre ellos; esto te ayudará a agruparlos al dibujar el diagrama de clase.__
   - __Crea la estructura__.
-  Primero, agrega los nombres de clase y vincúlalos con los conectores apropiados, prestando especial atención a la cardinalidad o las herencias. Deja los atributos y funciones para más tarde, una vez que esté la estructura del diagrama resuelta.
+  _Primero, agrega los nombres de clase y vincúlalos con los conectores apropiados, prestando especial atención a la cardinalidad o las herencias. Deja los atributos y funciones para más tarde, una vez que esté la estructura del diagrama resuelta_.
 
 ### Buenas prácticas en la construcción del diagrama de clases
 
-  Te recomendamos seguir estas indicaciones o consejos, que, aunque no son obligatorios, harán que tus diagramas de clases sean de mayor utilidad:
-
-  Los diagramas de clase pueden tender a volverse incoherentes a medida que se expanden y crecen. Es mejor evitar la creación de diagramas grandes y dividirlos en otros más pequeños que se puedan vincular entre sí más adelante.
-  Usando la notación de clase simple, puedes crear rápidamente una visión general de alto nivel de su sistema. Se puede crear un diagrama detallado por separado según sea necesario, e incluso vincularlo al primero para una referencia fácil.
-  Cuantas más líneas se superpongan en sus diagramas de clase, más abarrotado se vuelve y, por tanto, más se complica utilizarlo. El lector se confundirá tratando de encontrar el camino. Asegúrate de que no haya dos líneas cruzadas entre sí, a no ser que no haya más remedio.
-  Usa colores para agrupar módulos comunes. Diferentes colores en diferentes clases ayudan al lector a diferenciar entre los diversos grupos.
+  Te recomiendo seguir estas indicaciones o consejos, que, aunque no son obligatorios, harán que tus diagramas de clases sean de mayor utilidad:
+  - Los diagramas de clase pueden tender a volverse incoherentes a medida que se expanden y crecen. Es mejor evitar la creación de diagramas grandes y dividirlos en otros más pequeños que se puedan vincular entre sí más adelante.
+  - Usando la notación de clase simple, puedes crear rápidamente una visión general de alto nivel de su sistema. Se puede crear un diagrama detallado por separado según sea necesario, e incluso vincularlo al primero para una referencia fácil.
+  - Cuantas más líneas se superpongan en sus diagramas de clase, más abarrotado se vuelve y, por tanto, más se complica utilizarlo. El lector se confundirá tratando de encontrar el camino. Asegúrate de que no haya dos líneas cruzadas entre sí, a no ser que no haya más remedio.
+  - Usa colores para agrupar módulos comunes. Diferentes colores en diferentes clases ayudan al lector a diferenciar entre los diversos grupos.
 
 ### Ejemplos de diagrama de clases
 
