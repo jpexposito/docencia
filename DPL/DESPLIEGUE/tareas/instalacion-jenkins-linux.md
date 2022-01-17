@@ -10,7 +10,7 @@
 
   La siguiente tarea tiene como objetivo realizar la instalación de jenkins en un servidor linux, en concreto __Ubuntu 20.04__.
 
-## objetivo
+## Objetivo
 
   El objetivo es instalar herramientas para la automatización de despliegue de aplicaciones.
 
@@ -24,6 +24,12 @@
   ```
 
   - El puerto de configuración será el ___8080___.
+
+  Siendo el resultado final:
+
+  ```console
+  www.antonioic.com:8080
+  ```
   - A continuación realiza los pasos descritos en el siguiente [enlace](../JENKINS.md).
 
 
