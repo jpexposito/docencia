@@ -27,18 +27,35 @@
             <url>http://www.w3.org/</url>
          </pagina>
       </marcadores>
-
   ```
 
+  Define el fichero __xsd que realice la validación__.
 
-    Define el fichero __xsd que realice la validación__.
+  <details>
+    <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="marcadores">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="pagina" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nombre" type="xs:string"/>
+                  <xs:element name="descripcion" type="xs:string"/>
+                  <xs:element name="url" type="xs:string"/>
+                 </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    ```
 
-    <details>
-      <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
-
-    </details>
-
+  </details>
 
   2. Ejercicio:
 
@@ -72,6 +89,14 @@
   <details>
     <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="personas.xsd">
+      <persona><nombre>Eva</nombre> vive en <ciudad>París</ciudad> y tiene <edad>25</edad> años.</persona>
+      <persona><nombre>Giovanni</nombre> vive en <ciudad>Florencia</ciudad> y tiene <edad>26</edad> años.</persona>
+    </personas>
+    ```
 
   </details>
 
@@ -101,6 +126,31 @@
   <details>
     <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
+    ```xml
+    <?xml version = "1.0" encoding="ISO-8859-1"?>
+      <xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+
+       <xsd:element name="persona" type="tipoPersona"/>
+       <xsd:element name="comentario" type="xsd:string"/>
+
+       <xsd:complexType name="tipoPersona">
+        <xsd:sequence>
+         <xsd:element name="datos"     type="info"/>
+         <xsd:element ref="comentario" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="nacimiento" type="xsd:date"/>
+       </xsd:complexType>
+
+       <xsd:complexType name="info">
+        <xsd:sequence>
+         <xsd:element name="nombre"    type="xsd:string"/>
+         <xsd:element name="apellidos" type="xsd:string"/>
+         <xsd:element name="dni"       type="xsd:string"/>
+        </xsd:sequence>
+       </xsd:complexType>
+
+      </xsd:schema>
+    ```
 
   </details>
 
@@ -126,6 +176,15 @@
   <details>
     <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
+    ```xml
+    <xs:element name="letras">
+     <xs:simpleType>
+        <xs:restriction base="xs:string">
+           <xs:pattern value="([A-Z][a-z])+"/>
+        </xs:restriction>
+     </xs:simpleType>
+    </xs:element>
+    ```
   </details>
 
   5. Ejercicio:
@@ -155,6 +214,35 @@
 
     <details>
       <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
+
+      ```xml
+      <?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="fichas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ficha" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="clave">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="[a-zA-Z0-9]*"/>
+                          <xs:minLength value="4"/>
+                          <xs:maxLength value="10"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:schema>
+
+      ```
     </details>
 
     6. Ejercicio:
@@ -197,5 +285,43 @@
   <details>
     <summary>PULSA PARA VER LA SOLUCIÓN CORRECTA:</summary>
 
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="aeropuerto">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="vuelos">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="vuelo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="diario" minOccurs="0"/>
+                        <xs:element name="origen" type="xs:string"/>
+                        <xs:element name="destino" type="xs:string"/>
+                        <xs:element name="hora-salida" type="xs:time"/>
+                        <xs:element name="hora-llegada" type="xs:time"/>
+                      </xs:sequence>
+                      <xs:attribute name="código" type="xs:ID" use="required"/>
+                      <xs:attribute name="estado" default="E">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:pattern value="[CER]"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="fecha" type="xs:date"/>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    ```
 
   </details>
