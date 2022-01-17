@@ -75,10 +75,10 @@ ___En este tema nos vamos a ir realizando una serie de preguntas, para llegar fi
   - __Monitoreo de los cambios__. Estando los cambios en el entorno de producción, es muy importante monitorear constantemente la aplicación para evitar que los usuarios tengan una mala experiencia con ella. Es recomendable al momento de realizar el despliegue a producción realizarse en una hora que no perturbe a muchos usuarios, para realizar las respectivas pruebas en el entorno y que de esta manera se pueda solucionar rápidamente el problema o se puedan revertir los cambios a tiempo.
 
   Teniendo en cuenta todo lo anteriormente descrito, hemos de hacer uso de herramientas que favorezcan:
-    - La Planificación.
-    - Pruebas.
-    - Despliegue.
-    - Monitorización.
+   - La Planificación.
+   - Pruebas.
+   - Despliegue.
+   - Monitorización.
 
 ### ¿Cuáles son las ventajas?
   - __Se reduce el riesgo en el que la aplicación se rompa__. Esta es una principales razones para usar múltiples entornos, de esta manera se reduce el riesgo de que los cambios tengan un impacto negativo.
