@@ -262,78 +262,74 @@ __Nota__: _El servidor predeterminado de Jenkins NO está cifrado, por lo que lo
   En el fichero __plugins.txt__ incluimos cada plugin que queremos que se instale en Jenkins. Se incluye un plugin por línea, tal y como puede verse a continuación:
 
   ```
-  ace-editor
-  analysis-core
-  ant
-  antisamy-markup-formatter
-  apache-httpcomponents-client-4-api
-  authentication-tokens
-  branch-api
-  build-monitor-plugin
-  build-pipeline-plugin
-  checkstyle
-  cloudbees-folder
-  conditional-buildstep
-  copyartifact  
-  credentials
-  credentials-binding
-  deploy
-  display-url-api
-  docker-commons
-  docker-workflow
-  durable-task
-  findbugs
-  git
-  github
-  github-api
-  git-client
-  git-server
-  gradle
-  greenballs
-  handlebars
-  jackson2-api
-  javadoc
-  jquery
-  jquery-detached
-  jsch
-  junit
-  mailer
-  matrix-project
-  maven-plugin
-  momentjs
-  nested-view
-  parameterized-trigger
-  pipeline-build-step
-  pipeline-graph-analysis
-  pipeline-input-step
-  pipeline-milestone-step
-  pipeline-model-api
-  pipeline-model-declarative-agent
-  pipeline-model-definition
-  pipeline-model-extensions
-  pipeline-rest-api
-  pipeline-stage-step
-  pipeline-stage-tags-metadata
-  pipeline-stage-view
-  plain-credentials
-  pmd
-  run-condition
-  scm-api
-  script-security  
-  ssh-credentials
-  structs
-  token-macro
-  workflow-aggregator
-  workflow-api
-  workflow-basic-steps
-  workflow-cps
-  workflow-cps-global-lib
-  workflow-durable-task-step
-  workflow-job
-  workflow-multibranch
-  workflow-scm-step
-  workflow-step-api
-  workflow-support
+ace-editor
+ant
+antisamy-markup-formatter
+apache-httpcomponents-client-4-api
+authentication-tokens
+branch-api
+build-monitor-plugin
+build-pipeline-plugin
+cloudbees-folder
+conditional-buildstep
+copyartifact  
+credentials
+credentials-binding
+deploy
+display-url-api
+docker-commons
+docker-workflow
+durable-task
+git
+github
+github-api
+git-client
+git-server
+gradle
+greenballs
+handlebars
+jackson2-api
+javadoc
+jquery
+jquery-detached
+jsch
+junit
+mailer
+matrix-project
+maven-plugin
+momentjs
+nested-view
+parameterized-trigger
+pipeline-build-step
+pipeline-graph-analysis
+pipeline-input-step
+pipeline-milestone-step
+pipeline-model-api
+pipeline-model-declarative-agent
+pipeline-model-definition
+pipeline-model-extensions
+pipeline-rest-api
+pipeline-stage-step
+pipeline-stage-tags-metadata
+pipeline-stage-view
+plain-credentials
+run-condition
+scm-api
+script-security  
+ssh-credentials
+structs
+token-macro
+workflow-aggregator
+workflow-api
+workflow-basic-steps
+workflow-cps
+workflow-cps-global-lib
+workflow-durable-task-step
+workflow-job
+workflow-multibranch
+workflow-scm-step
+workflow-step-api
+workflow-support
   ```
 #### docker-compose.yml
 
