@@ -54,6 +54,6 @@
 
 ## Referencias
   - [Jenkins](https://www.jenkins.io/).
-  - [Instalación de Jenkins en Linux](https://www.jenkins.io/doc/book/installing/linux/).
+  - [Instalación de Jenkins en Docker](https://www.jenkins.io/doc/book/installing/docker/).
 
 </div>
