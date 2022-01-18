@@ -364,6 +364,8 @@ Indico a continuación para que sirven las líneas más relevantes de este fiche
   - __En las líneas 9 y 10__ se exponen los puertos __8080__ y __50000__ respectivamente.
   - __Las líneas de la 12 a la 15__ sirven para definir el volumen _jenkins_home_. Este volumen se utiliza para que los cambios que realicemos en la configuración de Jenkins persistan incluso tras la destrucción del contenedor.
 
+Además debemos crearnos un archivo llamado install-plugins.sh desde el siguiente [enlace](https://github.com/jenkinsci/docker/blob/master/install-plugins.sh)
+
 ### Construcción de la imagen
 
   Para construir la imagen ejecutamos el siguiente comando:
