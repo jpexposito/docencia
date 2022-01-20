@@ -160,7 +160,47 @@ Los pipelines no son nuevos, llevamos años utilizándolos.
   - __stage(‘Construir’)__: Define la etapa de __‘Construir’__. Este bloque es opcional en los __Scripted Pipelines__, pero, facilitará la lectura de cada una de las fases y tareas a seguir en la interfaz de Jenkins.
   - __//__: Esta parte contiene cada uno de los pasos a realizar en la etapa de “Construir”.
 
-##### Ejemplo de un Pipeline Jenkins
+  Un ejemplo más complejo sería:
+
+  <div align="center">
+    <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/4.png" width="500px" />
+  </div>
+
+### Tipos de Pipeline en Jenkins
+
+Existen dos tipos de definición de Pipelines en Jenkins:
+- Declarando el fichero _Jenkinsfile_, que contiene el Pipeline.
+- Declarando el Pipeline en el mismo proyecto de Jenkins.
+
+Los pasos para realizarlo son:
+1. Creación de __Pipeline__
+<div align="center">
+  <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/seven.png" width="500px" />
+</div>
+
+2. Define el nombre de __Pipeline__
+<div align="center">
+  <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/eight.png" width="500px" />
+</div>
+3. Selecciona el tipo de __Pipeline__
+<div align="center">
+  <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/nine.png" width="500px" />
+</div>
+4. Definición del __Pipeline__ dentro de __Jenkins__.
+<div align="center">
+  <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/ten.png" width="500px" />
+</div>
+4. Obtención del __Pipeline__ en el proyecto __Git__ a través del fichero __Jenkinsfile__.
+<div align="center">
+  <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/eleven.png" width="500px" />
+</div>
+5. Configuración del __Pipeline__ en el proyecto __Git__ a través del fichero __Jenkinsfile__.
+<div align="center">
+  <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/twelve.png" width="500px" />
+</div>
+
+
+#### Ejemplo de un Pipeline Jenkins
 
   Aquí puedes ver un ejemplo más completo de un Pipeline Jenkins, utilizando la sintaxis declarativa.
 
@@ -191,7 +231,105 @@ Los pipelines no son nuevos, llevamos años utilizándolos.
   }  
 ```
 
+##### Ejemplo de un Pipeline Jenkins en distintos lenguajes
+
+  A continuación a vamos a realizar la construcción de distintos __Pipeline__ en algunos de los lenguajes que podemos trabajar.
+
+###### Java Jenkinsfile (Declarative Pipeline)
+
+  ```
+  pipeline {
+      agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+      stages {
+          stage('build') {
+              steps {
+                  sh 'mvn --version'
+              }
+          }
+      }
+  }
+  ```
+
+###### Node.js / JavaScript Jenkinsfile (Declarative Pipeline)
+
+  ```
+  pipeline {
+      agent { docker { image 'node:16.13.1-alpine' } }
+      stages {
+          stage('build') {
+              steps {
+                  sh 'node --version'
+              }
+          }
+      }
+  }
+  ```
+
+###### Ruby Jenkinsfile (Declarative Pipeline)
+
+  ```
+  pipeline {
+      agent { docker { image 'ruby:3.0.3-alpine' } }
+      stages {
+          stage('build') {
+              steps {
+                  sh 'ruby --version'
+              }
+          }
+      }
+  }
+  ```
+
+###### Python Jenkinsfile (Declarative Pipeline)
+
+  ```
+  pipeline {
+      agent { docker { image 'python:3.10.1-alpine' } }
+      stages {
+          stage('build') {
+              steps {
+                  sh 'python --version'
+              }
+          }
+      }
+  }
+  ```
+
+###### PHP Jenkinsfile (Declarative Pipeline)
+
+  ```
+  pipeline {
+      agent { docker { image 'php:8.1.0-alpine' } }
+      stages {
+          stage('build') {
+              steps {
+                  sh 'php --version'
+              }
+          }
+      }
+  }
+  ```
+
+###### Go Jenkinsfile (Declarative Pipeline)
+
+  ```
+  pipeline {
+      agent { docker { image 'golang:1.17.5-alpine' } }
+      stages {
+          stage('build') {
+              steps {
+                  sh 'go version'
+              }
+          }
+      }
+  }
+  ```
+
+
+
+
 ## Referencias
   - [Pipelines en Jenkins](https://www.jenkins.io/doc/book/pipeline/).
+  - [Ejemplos de Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/).
 
 </div>
