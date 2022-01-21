@@ -49,4 +49,113 @@ xsi:noNamespaceSchemaLocation="registro.xsd">
   - Los posibles departamentos de la empresa a los que puede pertenecer un empleado son administración, informática o marketing. De tal forma que, para cada empleado, sólo uno de ellos debe escribirse en el documento XML mediante un elemento vacío, como en este caso se ha escrito <marketing />.
   - No hay que definir más tipos de datos que los indicados en el ejercicio: tipoPersona y tipoPersonaAmpliado.
 
+
+  <!--
+  <details>
+    <summary>PULSA PARA VER LA RESPUESTA:</summary>
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="registro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="personas"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:group name="personas">
+    <xs:sequence>
+        <xs:element name="usuario" minOccurs="0" maxOccurs="unbounded" type="tipoPersona"/>
+        <xs:element name="empleado" minOccurs="0" maxOccurs="unbounded" type="tipoPersonaAmpliado"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="tipoPersonaAmpliado">
+    <xs:complexContent>
+      <xs:extension base="tipoPersona">
+        <xs:sequence>
+          <xs:element name="departamento">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:group ref="departamentosEmpresa"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="tipoPersona">
+    <xs:sequence>
+      <xs:group ref="datosPersona"/>
+    </xs:sequence>
+    <xs:attribute name="identificador" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[UE]\d{1,5}"/>
+          </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:group name="datosPersona">
+    <xs:sequence>
+
+      <xs:element name="apellidos-y-nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z ]{1,30},[a-zA-Z ]{1,20}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{1,15}@[a-z]{1,25}[.][a-z]{2,4}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="conexiones">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="conexión" minOccurs="0"
+             maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:positiveInteger">
+                    <xs:attributeGroup ref="atributosConexion"/>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:group>
+
+  <xs:attributeGroup name="atributosConexion">
+    <xs:attribute name="fecha" type="xs:date" use="required"/>
+    <xs:attribute name="hora" type="xs:time" use="required"/>
+  </xs:attributeGroup>
+
+  <xs:group name="departamentosEmpresa">
+    <xs:choice>
+      <xs:element name="administración"/>
+      <xs:element name="informática"/>
+      <xs:element name="marketing"/>
+    </xs:choice>
+  </xs:group>
+
+</xs:schema>
+
+  ```
+
 </div>  
