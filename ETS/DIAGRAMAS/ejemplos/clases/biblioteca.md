@@ -14,4 +14,7 @@
   - Realiza	 un	 diagrama	 de	 clases	 y	 añade	 los	 métodos	 necesarios	 para realizar	 el	 préstamo	 y devolución	de	libros.
   Realiza	un	diagrama	de	casos	de	usos.
 
+<!--
+[Solución](https://viewer.diagrams.net/?highlight=0000ff&layers=1&nav=1#G11pz1krQUVgHft1j4fEh8tEBW6Ox9tHPe)
+-->
 </div>
