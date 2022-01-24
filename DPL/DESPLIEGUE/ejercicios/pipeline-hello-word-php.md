@@ -22,7 +22,7 @@
 
   Esta tarea de clase consisten en realizar el siguiente ejemplo.
 
-  1. Crear un repositorio en tu cuenta de __github__, de nombre __php-helloworld__.
+  1. Crear un repositorio en tu cuenta de __github__, de nombre __hello-word-php-apache__.
   2. Clona el clona el proyecto en local.
   3. Crea la carpeta __src__. Añade un fichero __index.php__, , que contenga contenido en el lenguaje __php__ y una imagen personalizada y tu nombre.
   4. Vuelve a la _raiz del proyecto_.
@@ -34,12 +34,20 @@
   EXPOSE 80
   ```
 
-
   Realiza la busqueda de la última imagen de php en [docker](https://hub.docker.com/_/php/), e incluye su referencia.
 
-  6. Realiza un __push__ con todos los cambios.
-  7. Crea el __Pipeline__ dentro de tu instalación de __Jenkins.alumno__, sincronizando desde tu cuenta de __github__ _(www.github.com/alumno/hello-word-php-apache.git)_ o _similar_.
-  8. Ejecuta el __Pipeline__, y verificar que se ha realizado de forma correcta visualizando el navegador.
+  6. Crea el fichero _Jenkinfile_, que tenga como misión realizar el despliegue. Tiene que tener acciones similares a:
+
+  ```
+  git clone this repository
+  sudo docker build -t hello-word-php-apache .
+  sudo docker run -p 80:80 hello-word-php-apache
+  ```
+
+  7. Realiza un __push__ con todos los cambios.
+  8. Crea el __Pipeline__ dentro de tu instalación de __Jenkins.alumno__, sincronizando desde tu cuenta de __github__ _(www.github.com/alumno/hello-word-php-apache.git)_ o _similar_.
+  9. Ejecuta el __Pipeline__, y verificar que se ha realizado de forma correcta visualizando el navegador.
+  10. ___Nota:___. Debes de tener cuidado con los puertos dado que colisionar con los puertos de tu dominio.
 
 ## Evaluación. Realiza el Informe
 
