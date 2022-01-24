@@ -16,3 +16,5 @@
   - La información que se desea almacenar por cada turista es el código de turista, nombre y apellidos, dirección y teléfono.
   - Por otra parte, hay que tener en cuenta la siguiente información:
     - A la cadena de agencias le interesa conocer que sucursal ha contratado el turista.
+    - A la hora de viajar el turista puede elegir cualquiera de los vuelos que ofrece la cadena, y en que clase (turista o primera) desea viajar.
+    - De igual manera, el turista se puede hospedar en cualquiera de los hoteles que ofrece la cadena, y elegir el régimen de hospedaje (media pensión o pensi n completa). Siendo significativa la fecha de llegada y de partida.
