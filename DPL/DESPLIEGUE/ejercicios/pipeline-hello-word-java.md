@@ -1,6 +1,6 @@
 <div align="justify">
 
-# Creación de los Pipeline en Php
+# Creación de los Pipeline en Java
 
 <div align="center">
   <img src="img/jenkis-apache-github.png" width="300px" />
@@ -24,7 +24,6 @@
   Esta tarea de clase consisten en realizar el siguiente ejemplo.
 
   1. Clona el proyecto que se encuentra en el siguiente [enlace](https://github.com/jpexposito/docencia/tree/master/COMUN/ejemplos/java/app-web-demo).
-
   Renombra el directorio padre a __hello-word-java-apache-tomcat__.
   2. En primer se debe de realizar la modificación el fichero __Dockerfile__. Para ello verifica inicialmente como funciona la imagen de __apache-tomcat__ en el siguiente [enlace](https://hub.docker.com/_/tomcat).
   3. Como pequeña guia de lo que debes de realizar. El fichero __Dockerfile__ debe de contener algo similar a:
