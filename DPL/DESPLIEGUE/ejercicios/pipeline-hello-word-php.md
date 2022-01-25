@@ -36,7 +36,7 @@
 
   Realiza la busqueda de la última imagen de php en [docker](https://hub.docker.com/_/php/), e incluye su referencia.
 
-  6. Crea el fichero _Jenkinfile_, que tenga como misión realizar el despliegue. Tiene que tener acciones similares a:
+  6. Crea el fichero _Jenkinsfile_, que tenga como misión realizar el despliegue. Tiene que tener acciones similares a:
 
   ```
   git clone this repository
