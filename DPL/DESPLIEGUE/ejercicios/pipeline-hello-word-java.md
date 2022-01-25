@@ -39,7 +39,7 @@
     EXPOSE 8082
     CMD ["catalina.sh", "run"]
   ```
-  __Nota__: El puerto __8082__ o el que seleccione el alumno.    
+__Nota__: El puerto __8082__ o el que seleccione el alumno.    
   4. Vuelve a la _raiz del proyecto_.
   5. Crea el fichero __Jenkinsfile__. Incluye el siguiente contenido:
 
@@ -71,25 +71,25 @@
       }
   }
   ```
-    - __State Test Junit__. Debe de ejecutar el comando:
+  - __State Test Junit__. Debe de ejecutar el comando:
 
     ```java
       mvn clean test
     ```
 
-    - __State Build__. Debe de ejecutar el comando:
+  - __State Build__. Debe de ejecutar el comando:
 
     ```java
       mvn clean package
     ```
 
-    - __State Deploy__. Debe de ejecutar el comando:
+  - __State Deploy__. Debe de ejecutar el comando:
 
     ```
      Sentencias Docker
     ```
 
-    - __Test Integration__. Debe de ejecutar el comando:
+  - __Test Integration__. Debe de ejecutar el comando:
 
     ```
      Verificar que la aplicación esta desplegada a través de un  (wget -m http://www.example.com).
