@@ -41,7 +41,7 @@
   ```
   __Nota__: El puerto __8082__ o el que seleccione el alumno.    
   4. Vuelve a la _raiz del proyecto_.
-  5. Crea el fichero __Jenkinfile__. Incluye el siguiente contenido:
+  5. Crea el fichero __Jenkinsfile__. Incluye el siguiente contenido:
 
   ```
   pipeline {
@@ -72,24 +72,32 @@
   }
   ```
     - __State Test Junit__. Debe de ejecutar el comando:
+
     ```java
       mvn clean test
     ```
+
     - __State Build__. Debe de ejecutar el comando:
+
     ```java
       mvn clean package
     ```
+
     - __State Deploy__. Debe de ejecutar el comando:
+
     ```
      Sentencias Docker
     ```
+
     - __Test Integration__. Debe de ejecutar el comando:
+
     ```
      Verificar que la aplicación esta desplegada a través de un  (wget -m http://www.example.com).
      Verificar que el fichero descargado contiene el nombre del alumno.
      https://ubunlog.com/buscar-cadenas-o-patrones-texto-sin-formato/
     ```
-  6. Sube el proyecto a tu repositorio de github _(www.github.com/alumno/hello-word-php-apache.git)_ o _similar_..
+
+  6. Sube el proyecto a tu repositorio de github _(www.github.com/alumno/hello-word-php-apache.git)_ o _similar_.
   7. Crea el __Pipeline__ dentro de tu instalación de __Jenkins.alumno__, sincronizando desde tu cuenta de __github__ _(www.github.com/alumno/hello-word-java-apache-tomcat.git)_ o _similar_.
   8. Ejecuta el __Pipeline__, y verificar que se ha realizado de forma correcta
 
@@ -113,7 +121,7 @@
   - Capturas de pantalla con los resultados obtenidos.
 
 ## Referencias
-  - [Pipeline Php Apache](https://github.com/mfieldhouse/docker-php-helloworld).
+  - [Creación de un Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/).
 
 
 
