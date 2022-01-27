@@ -194,4 +194,8 @@
     <img src="https://joanpaon.files.wordpress.com/2013/07/18.png" width="500px">
   </div>
 
+  </br>
+
+  [Representación en programación](https://github.com/jpexposito/diagrama-clases).
+
 </div>
