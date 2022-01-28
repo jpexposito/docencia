@@ -289,5 +289,7 @@
 ### Ejemplo
 
   En el siguiente [enlace veremos un ejemplo](https://www.w3schools.com/xml/xpath_examples.asp) para la utilización de __XPath__.
+  - [Ejemplo de XPath](https://oscarmaestre.github.io/lenguajes_marcas/ejercicios/xpath/anexo_ejercicios_xpath.html?highlight=xpath).
+
 
 </div>
