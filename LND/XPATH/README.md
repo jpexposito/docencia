@@ -113,10 +113,181 @@
 
   Las expresiones pueden incluir desde operaciones (veremos el conjunto de operadores en XPath) hasta llamadas a funciones más o menos complejas. Sin embargo el tipo más común de expresión en __XPath__ se llama “location Path” (ruta de localización). La sintaxis de los “location Path” es similar a la utilizada en sistemas Unix y Linux para movernos por el  rbol de directorios y subcarpetas en el sistema de archivos:
 
-  __Ejemplo: /instituto/curso/alumno/nombre__   es un location Path que devolver  un conjunto de nodos, en este caso los formados por TODOS los nodos elemento <nombre> de nuestro fichero. Esto tendremos que tenerlo en cuenta, muchas veces un location Path hace referencia no a un  nico elemento sino a todos los elementos del árbol que cumplen esa ruta de localización.
+  __Ejemplo: /instituto/curso/alumno/nombre__ es un location Path que devolver  un conjunto de nodos, en este caso los formados por TODOS los nodos elemento <nombre> de nuestro fichero. Esto tendremos que tenerlo en cuenta, muchas veces un location Path hace referencia no a un  nico elemento sino a todos los elementos del árbol que cumplen esa ruta de localización.
 
   En el ejemplo que acabamos de ver tendr amos que leer la ruta como:
   “Todos los nodos “nombre” que cuelguen de cualquier nodo “alumno” que a su vez cuelgue de cualquier nodo “curso” que a su vez cuelgue del nodo principal “instituto”.
 
   Si se diera el caso de que no hay en nuestro fichero ning n elemento que cumpla con este location Path se devolver a una lista vacía. En otro caso se devolver  una lista de referencias (o apuntadores) a cada nodo que cumplir  con los requisitos de la localización.
+
+  En el ejemplo que acabamos de ver tendr amos que leer la ruta como:
+  __“Todos los nodos “nombre” que cuelguen de cualquier nodo “alumno” que a su vez cuelgue de cualquier nodo “curso” que a su vez cuelgue del nodo principal “instituto”__.
+
+  Si se diera el caso de que no hay en nuestro fichero ningún elemento que cumpla con este location Path se devolver a una lista vacía. En otro caso se devolver una lista de referencias (o apuntadores) a cada nodo que cumplieran con los requisitos de la localización.
+
+## W3C y XPath
+
+  ___Según el W3C, XPath (que ya va por su versión 3.0) es un lenguaje diseñado para acceder a las distintas partes de un archivo XML. En nuestro caso nos va a resultar de mucha utilidad combinado con XSLT, que se verá un poco después___.
+
+  XPath se basa en expresiones. Así, dado un archivo XML y una expresión XPath se dice que la expresión «se evalúa» y se obtiene un resultado que puede ser:
+  - Una lista de nodos.
+  - Un boolean (true o false)
+  - Un float.
+  - Una cadena.
+
+  XPath también ofrece algunas funciones de utilidad que se asemejan a las de algunos lenguajes de programación.
+
+### Acceso a elementos
+
+  El mecanismo de acceso en XPath es muy similar al acceso a directorios que ofrecen algunos sistemas operativos. Para los ejemplos siguientes se usará el siguiente archivo XML.
+
+  ```xml
+  <inventario>
+      <producto codigo="AAA-111">
+          <nombre>Teclado</nombre>
+          <peso unidad="g">480</peso>
+      </producto>
+      <producto codigo="ACD-981">
+          <nombre>Monitor</nombre>
+          <peso unidad="kg">1.8</peso>
+      </producto>
+      <producto codigo="DEZ-138">
+          <nombre>Raton</nombre>
+          <peso unidad="g">50</peso>
+      </producto>
+  </inventario>
+  ```
+
+  Así dado este archivo tenemos las expresiones siguientes:
+
+  Si usamos la expresión /inventario se selecciona el nodo inventario que cuelga de la raíz. Como puede verse la raíz en XPath es un elemento conceptual, no existe como elemento. Además, dado como es XML solo puede haber un elemento en la raíz. Así, el resultado de evaluar la expresión /inventario para el archivo de ejemplo produce el resultado siguiente:
+
+  ```xml
+  <inventario>
+      <producto codigo="AAA-111">
+          <nombre>Teclado</nombre>
+          <peso unidad="g">480</peso>
+      </producto>
+      <producto codigo="ACD-981">
+          <nombre>Monitor</nombre>
+          <peso unidad="kg">1.8</peso>
+      </producto>
+      <producto codigo="DEZ-138">
+          <nombre>Raton</nombre>
+          <peso unidad="g">50</peso>
+      </producto>
+  </inventario>
+  ```
+
+  Como puede verse, obtenemos el propio archivo original. Sin embargo, podemos movernos a través del árbol XML de forma similar a un árbol de directorios. Y obsérvese que decimos «similar». Observemos por ejemplo que dentro de <inventario> hay 3 elementos <producto>. Si pensamos en la expresión XPath /inventario/producto puede que pensemos que obtendremos el primer producto (el que tiene el código AAA-111), sin embargo una expresión XPath se parece a una consulta SQL, y lo que obtiene la expresión es «todo elemento <producto> que sea hijo de <inventario>. Es decir, el fichero siguiente (que no es XML, sino una lista de nodos):
+
+  ```xml
+  <producto codigo="AAA-111">
+      <nombre>Teclado</nombre>
+      <peso unidad="g">480</peso>
+  </producto>
+
+  <producto codigo="ACD-981">
+      <nombre>Monitor</nombre>
+      <peso unidad="kg">1.8</peso>
+  </producto>
+
+
+  <producto codigo="DEZ-138">
+      <nombre>Raton</nombre>
+      <peso unidad="g">50</peso>
+  </producto>
+  ```
+
+  En cualquier lista podemos acceder a sus elementos como si fuese un vector. Sin embargo en XPath los vectores empiezan por 1. Por lo cual la expresión /inventario/producto[1] produce este resultado:
+
+  ```xml
+  <producto codigo="AAA-111">
+      <nombre>Teclado</nombre>
+      <peso unidad="g">480</peso>
+  </producto>
+  ```
+
+  Y la expresión /inventario/producto[3] produce este:
+
+  ```xml
+  <producto codigo="DEZ-138">
+      <nombre>Raton</nombre>
+      <peso unidad="g">50</peso>
+  </producto>
+  ```
+  Obsérvese que no existe el elemento 4 y que por tanto la expresión /inventario/producto[4] producirá un error. Otro aspecto relevante es que no deben confundirse los vectores con las condiciones (que el W3C llama «predicados»), y con las cuales podremos seleccionar nodos que cumplan ciertas condiciones De hecho, una buena forma de verlos es asumir que en los corchetes siempre se ponen condiciones y que si hay un número como por ejemplo el 2 nos referimos a la condicion «extraer el elemento cuya posición es igual a 2.
+
+  Dado un elemento, también podemos extraer un cierto atributo usando la arroba @. Así, la expresión /inventario/producto[3]/@codigo devuelve como resultado ACD-981, que es el atributo código del tercer elemento producto que está dentro de inventario el cual cuelga de la raíz.
+
+  Supongamos que deseamos extraer el producto cuyo código sea «AAA-111». Si usamos /inventario/producto extraemos todos los elementos producto hijos de inventario, pero recordemos que entre corchetes podemos poner condiciones. Dado que queremos comprobar si @codigo = «AAA-111», la expresión correcta será /inventario/producto[@codigo="AAA-111"], la cual nos devuelve lo siguiente:
+
+  ```xml
+  <producto codigo="AAA-111">
+      <nombre>Teclado</nombre>
+      <peso unidad="g">480</peso>
+  </producto>
+  ```
+  De hecho se puede profundizar aún más y usar la expresión /inventario/producto[@codigo="AAA-111"]/nombre que extrae los nombres de los elementos producto cuyo código sea «AAA-111». Y aún más para extraer solo el texto de los elementos nombre usando la expresión /inventario/producto[@codigo="AAA-111"]/nombre/text(). Como vemos en esta última expresión ya hemos usado una función, en concreto text().
+
+  En una condicion podemos referirnos a cualquier hijo de un nodo, así por ejemplo, podemos extraer los productos cuyo peso sea mayor de 50 usando /inventario/producto[peso>=50]. Sin embargo, sabemos que la unidad es importante, por lo que en realidad podemos extraer los que pesen más de 50 gramos usando esto /inventario/producto[peso>=50 and peso/@unidad="g"].
+
+  Si se observa despacio el fichero, se observará que en realidad el tercer producto debería aparecer también. Para ello debemos ampliar la expresión convirtiendo los 50 g a kg, es decir comparando con 0.005 kg y la expresión siguiente /inventario/producto[(peso>=50 and peso/@unidad="g") or (peso>=0.005 and peso/@unidad="kg")].
+
+  Utilizando XPath y XSLT veremos que podemos transformar un XML en casi cualquier otro XML utilizando la potencia combinada de ambos lenguajes.
+
+### Adaptación y transformación de XML
+
+  Muy a menudo va a ocurrir que un cierto formato XML va a ampliarse o a modificarse o simplemente se necesita convertir un documento XML en otro con un formato distinto.
+
+  Supongamos una estructura como la siguiente:
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <catalogo>
+          <libro>
+                  <title>Don Quijote</title>
+                  <autor>Cervantes</autor>
+          </libro>
+          <libro>
+                  <title>Poeta en Nueva York</title>
+                  <autor>Lorca</autor>
+          </libro>
+  </catalogo>
+  ```
+
+  Supongamos que un cierto sitio se necesita almacenar la información de esta forma:
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <listadolibros>
+          <libro>
+                  <titulo autor="Cervantes">Don Quijote</titulo>
+          </libro>
+          <libro>
+                  <titulo autor="Lorca">
+                  Poeta en Nueva York
+                  </titulo>
+          </libro>
+  </listadolibros>
+  ```
+
+  En general, para poder modificar o presentar los XML se puede hacen varias cosas:
+  - En primer lugar, se puede usar CSS para poder cargar los documentos XML en un navegador y mostrarlos de forma aceptable.
+  - Se pueden utilizar otras tecnologías para transformar por completo la estructura del XML.
+  - Se puede usar un lenguaje llamado XSLT (Xml Stylesheet Language Transformation) para convertir el XML en otro distinto.
+  - Se puede utilizar XSL:FO (Xml Stylesheet Language: Formatting Objects) cuando se desee convertir el documento en algo que se desee imprimir (normalmente un PDF).
+
+### Sintaxis XPath
+
+  En el siguiente enlace se encuentra la [sintaxis xpath](https://www.w3schools.com/xml/xpath_syntax.asp).
+
+### Conclusión
+
+  XPath permite realizar la extranción y transformación de ficheros xml a través expresiones. Esta transformación se puede realizar en cualquier lenguaje de programación.
+
+### Ejemplo
+
+  En el siguiente [enlace veremos un ejemplo](https://www.w3schools.com/xml/xpath_examples.asp) para la utilización de __XPath__.
+
 </div>
