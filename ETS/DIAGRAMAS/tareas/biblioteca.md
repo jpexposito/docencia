@@ -9,7 +9,7 @@
 
 </br>
 
-Una biblioteca tiene copias de libros. Estos últimos se caracterizan por su nombre, a o y autor.
+Una biblioteca tiene copias de libros. Estos últimos se caracterizan por su nombre, año y autor.
 - Un libro está relacionado con una categoría (novela, teatro, poesía, ensayo) así como también con una editorial.
 - Los autores se caracterizan por su nombre y fecha de nacimiento. Se considera que el autor sólo tiene una nacionalidad.
 - Cada copia tiene un identificador, y puede estar en la biblioteca, prestada, con retraso o en reparación.
