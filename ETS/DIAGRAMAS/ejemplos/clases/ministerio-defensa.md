@@ -17,4 +17,6 @@ Consideraciones de diseño:
 - Los soldados de una misma compañía pueden estar destinados en diferentes cuarteles, es decir, una compañía puede estar ubicada en varios cuarteles, y en un cuartel puede haber varias compañías. Eso si, un soldado sólo esta en un cuartel.
 - Un soldado realiza varios servicios a lo largo de la milicia. Un mismo servicio puede ser realizado por más de un soldado (con independencia de la compañía), siendo significativa la fecha de realización.
 
+- [Solución](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=ministerio-defensa-diagrama-clases.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1SKzA5dA6_Q0ut0JOnqErcfHOTWBY8b6X%26export%3Ddownload)
+
 </div>
