@@ -45,7 +45,7 @@
             <y>12</y>
         </p2>
     </rectangulo>
-    <!-- Infinidad de elementos más -->
+
 </grafico>
   ```
 

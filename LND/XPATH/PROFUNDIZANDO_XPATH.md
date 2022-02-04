@@ -38,7 +38,7 @@ Para todos los ejemplos siguiente vamos a tomar como referencia el siguiente doc
 
   Para probar XPath podemos utilizar el software libre [BaseX](https://basex.org/) o cualquier otro que comentamos aquí.
 
-  Y de manera online podemos utilizar [xpathtester](http://www.xpathtester.com/xpath).
+  Y de manera online podemos utilizar [xpather](http://xpather.com/).
 
 ## Direccionamiento o localización
 
