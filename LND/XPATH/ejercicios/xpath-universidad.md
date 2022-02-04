@@ -16,17 +16,17 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
 <universidad>
 
     <nombre>Universidad de Victoria</nombre>
-    <pais>EspaÃ±a</pais>
+    <pais>Espania</pais>
 
 <!-- CARRERAS -->
 
     <carreras>
 
         <carrera id="c01">
-            <nombre>I.T. InformÃ¡tica</nombre>
+            <nombre>I.T. Informatica</nombre>
             <plan>2003</plan>
             <creditos>250</creditos>
-            <centro>Escuela de InformÃ¡tica</centro>
+            <centro>Escuela de Informatica</centro>
         </carrera>
 
         <carrera id="c02">
@@ -41,7 +41,7 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
             <plan>2001</plan>
             <creditos>280</creditos>
             <centro>Facultad de Ciencias Sociales</centro>
-            <subdirector>Alfonso MartÃ­n  Luque</subdirector>
+            <subdirector>Alfonso Marti­n  Luque</subdirector>
         </carrera>
 
         <carrera id="c04">
@@ -52,7 +52,7 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
         </carrera>
 
         <carrera id="c05">
-            <nombre>Lic. BiologÃ­a</nombre>
+            <nombre>Lic. Biologia</nombre>
             <plan>2001</plan>
             <creditos>175</creditos>
             <centro>Facultad de Ciencias Experimentales</centro>
@@ -71,21 +71,21 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
     <asignaturas>
 
         <asignatura id="a01" titulacion="c01">
-            <nombre>OfimÃ¡tica</nombre>
+            <nombre>Ofimatica</nombre>
             <creditos_teoricos>3</creditos_teoricos>
             <creditos_practicos>1.5</creditos_practicos>
             <trimestre>1</trimestre>
         </asignatura>
 
         <asignatura id="a02" titulacion="c01">
-            <nombre>IngenierÃ­a del Software</nombre>
+            <nombre>Ingenieria del Software</nombre>
             <creditos_teoricos>6</creditos_teoricos>
             <creditos_practicos>1.5</creditos_practicos>
             <trimestre>2</trimestre>
         </asignatura>
 
         <asignatura id="a03" titulacion="c02">
-            <nombre>AdministraciÃ³n de Empresas</nombre>
+            <nombre>Administracion de Empresas</nombre>
             <creditos_teoricos>4</creditos_teoricos>
             <creditos_practicos>1.5</creditos_practicos>
             <trimestre>1</trimestre>
@@ -99,21 +99,21 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
         </asignatura>
 
         <asignatura id="a05" titulacion="c04">
-            <nombre>PedagogÃ­a</nombre>
+            <nombre>Pedagogia</nombre>
             <creditos_teoricos>4</creditos_teoricos>
             <creditos_practicos>1.5</creditos_practicos>
             <trimestre>2</trimestre>
         </asignatura>
 
         <asignatura id="a06" titulacion="c03">
-            <nombre>DidÃ¡ctica</nombre>
+            <nombre>Didactica</nombre>
             <creditos_teoricos>4</creditos_teoricos>
             <creditos_practicos>3</creditos_practicos>
             <trimestre>2</trimestre>
         </asignatura>
 
         <asignatura id="a07" titulacion="c04">
-            <nombre>TecnologÃ­a de los Alimentos</nombre>
+            <nombre>Tecnologi­a de los Alimentos</nombre>
             <creditos_teoricos>1.5</creditos_teoricos>
             <creditos_practicos>7.5</creditos_practicos>
             <trimestre>2</trimestre>
@@ -156,8 +156,8 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
         </alumno>
 
         <alumno id="e02">
-            <apellido1>PÃ©rez</apellido1>
-            <apellido2>GarcÃ­a</apellido2>
+            <apellido1>Perez</apellido1>
+            <apellido2>Garci­a</apellido2>
             <nombre>Luisa</nombre>
             <sexo>Mujer</sexo>
             <estudios>
@@ -172,7 +172,7 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
         </alumno>
 
         <alumno id="e03" beca="si">
-            <apellido1>PÃ©rez</apellido1>
+            <apellido1>Perez</apellido1>
             <apellido2>Romero</apellido2>
             <nombre>Fernando</nombre>
             <sexo>Hombre</sexo>
@@ -188,9 +188,9 @@ Vamos a trabajar con el fichero __universidad.xml__ que se muestra.
         </alumno>
 
         <alumno id="e04">
-            <apellido1>AvalÃ³n</apellido1>
-            <apellido2>JimÃ©nez</apellido2>
-            <nombre>MarÃ­a</nombre>
+            <apellido1>Avalan</apellido1>
+            <apellido2>Jimenez</apellido2>
+            <nombre>Maria</nombre>
             <sexo>Mujer</sexo>
             <estudios>
                 <carrera codigo="c01"/>
