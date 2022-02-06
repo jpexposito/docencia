@@ -36,14 +36,58 @@
   </br>
 
   - Mostrar el nombre del instituto.
+
+  ```
+  /ies/nombre
+  ```
+
   - Mostrar la página web del instituto sin etiquetas.
+
+  ```
+  /ies/web/text()
+  ```
+
   - Mostrar el nombre de los ciclos formativos sin etiquetas.
+
+    ```
+    /ies/ciclos/ciclo/nombre/text()
+    ```
+
   - Mostrar las siglas por las que se conocen los ciclos formativos.
+
+    ```
+    /ies/ciclos/ciclo/@id
+    ```
+
   - Mostrar los años en los que se publicaron los decretos de los ciclos formativos.
+
+    ```
+    /ies/ciclos/ciclo/decretoTitulo/@año
+    ```
+
   - Mostrar toda la información de los ciclos formativos de grado medio.
+
+    ```
+    /ies/ciclos/ciclo[grado="Medio"]
+    ```
+
   - Mostrar los nombres de los ciclos formativos de grado superior.
+
+    ```
+    /ies/ciclos/ciclo[grado="Superior"]/nombre
+    ```
+
   - Mostrar los nombres de los ciclos formativos anteriores a 2020 sin etiquetas.
+
+    ```
+    /ies/ciclos/ciclo[decretoTitulo/@año<2020]/nombre/text()
+    ```
+
   - Mostrar los nombres de los ciclos formativos de 2008 o de 2010.
+
+    ```
+    /ies/ciclos/ciclo[decretoTitulo/@año=2008 or decretoTitulo/@año=2010]/nombre
+    ```
 
 2. Teniendo en cuenta el siguiente __XML__. Escriba las expresiones _XPath_ que devuelvan la respuesta deseada.
 
@@ -82,11 +126,41 @@
   </br>
 
  - Mostrar el nombre sin etiquetas de los módulos que se imparten en el instituto.
+
+   ```
+   /ies/modulos/modulo/nombre/text()
+   ```
+
  - Mostrar el nombre de los módulos que se imparten en ciclo formativo ASIR.
+
+   ```
+   /ies/modulos/modulo[ciclo="ASIR"]/nombre
+   ```
+
  - Mostrar el nombre de los módulos que se imparten en segundo curso de cualquier ciclo formativo.
+
+   ```
+   /ies/modulos/modulo[curso="2"]/nombre
+   ```
+
  - Mostrar el nombre de los módulos que tengan menos de 5 horas semanales.
+
+   ```
+   /ies/modulos/modulo[horasSemanales<5]/nombre
+   ```
+
  - Mostrar el nombre de los módulos que se imparten en el primer curso del ciclo formativo ASIR.
+
+   ```
+   /ies/modulos/modulo[curso=1 and ciclo="ASIR"]/nombre
+   /ies/modulos/modulo[curso=1][ciclo="ASIR"]/nombre
+   ```
+
  - Mostrar las horas semanales sin etiquetas de los módulos que se imparten en más de 3 horas semanales.
+
+   ```
+   /ies/modulos/modulo[horasSemanales>3]/horasSemanales/text()
+   ```
 
 3. Teniendo en cuenta el siguiente __XML__. Escriba las expresiones _XPath_ que devuelvan la respuesta deseada.
 
@@ -144,10 +218,44 @@
   </br>
 
   - Mostrar los nombres de los módulos del ciclo de "Sistemas Microinformáticos y Redes".
+
+    ```
+    /ies/ciclos/ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id
+    /ies/modulos/modulo[ciclo="SMR"]/nombre/text()
+    /ies/modulos/modulo[ciclo=/ies/ciclos/ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id]/nombre
+    ```
+
   - Mostrar los nombres de los ciclos formativos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información".
+
+    ```
+    /ies/modulos/modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo/text()
+    /ies/ciclos/ciclo[@id="ASIR"]/nombre
+    /ies/ciclos/ciclo[@id=/ies/modulos/modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo/text()]/nombre
+    ```
+
   - Mostrar los nombres de los módulos de ciclos de Grado Superior.
+
+    ```
+    /ies/ciclos/ciclo[grado="Superior"]/@id
+    /ies/modulos/modulo[ciclo="ASIR"]/nombre
+    /ies/modulos/modulo[ciclo=/ies/ciclos/ciclo[grado="Superior"]/@id]/nombre
+    ```
+
   - Mostrar los nombres de los módulos de los ciclos formativos cuyo título se aprobó en 2020.
+
+    ```
+    /ies/ciclos/ciclo[decretoTitulo/@año=2020]/@id
+    /ies/modulos/modulo[ciclo="SMR"]/nombre
+    /ies/modulos/modulo[ciclo=/ies/ciclos/ciclo[decretoTitulo/@año=2020]/@id]/nombre
+    ```
+
   - Mostrar los grados de los ciclos formativos con módulos de primer curso.
+
+    ```
+    /ies/modulos/modulo[curso=1]/ciclo
+    /ies/ciclos/ciclo[@id="ASIR"]/grado
+    /ies/ciclos/ciclo[@id=/ies/modulos/modulo[curso=1]/ciclo]/grado
+    ```
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 
