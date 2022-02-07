@@ -1,4 +1,0 @@
-
-# XQUERY
-
-## Introducción

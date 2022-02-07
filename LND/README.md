@@ -11,7 +11,7 @@
 
  - Criterios de evaluación:
 
-    - Se han identificado las características generales de los lenguajes de marcas. 
+    - Se han identificado las características generales de los lenguajes de marcas.
 
     - Se han reconocido las ventajas que proporcionan en el tratamiento de la información.
 
@@ -31,7 +31,7 @@
 
 ### Utiliza lenguajes de marcas para la transmisión de información a través de la Web analizando la estructura de los documentos e identificando sus elementos.
 
- - Criterios de evaluación: 
+ - Criterios de evaluación:
 
     - Se han identificado y clasificado los lenguajes de marcas relacionados con la Web y sus diferentes versiones.
 
@@ -65,9 +65,9 @@
 
     - Se ha comprobado la funcionalidad y el acceso a los canales.
 
-    - Se han utilizado herramientas específicas como agregadores y directorios de canales. 
+    - Se han utilizado herramientas específicas como agregadores y directorios de canales.
 
-### Establece mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura. 
+### Establece mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.
 
  - Criterios de evaluación:
 
@@ -87,7 +87,7 @@
 
     - Se han documentado las descripciones.
 
-### Realiza conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento. 
+### Realiza conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.
 
  - Criterios de evaluación:
 
@@ -167,7 +167,7 @@
 
 - Identificación de las características propias del lenguaje XML.
 
-- Lenguajes de marcas: tipos y clasificación de los más relevantes. 
+- Lenguajes de marcas: tipos y clasificación de los más relevantes.
 
 - Lenguaje XML: estructura y sintaxis.
 
@@ -203,7 +203,7 @@
 
 - Validación de páginas XHTML y de hojas de estilos CSS utilizando herramientas de validación automática de la W3C.
 
-- Elaboración de documentación de un proyecto web. 
+- Elaboración de documentación de un proyecto web.
 
 - Lenguajes de marcas de entornos web. HTML y XHTML.
 
@@ -387,7 +387,7 @@ correo, calendario, etc.)
 
 - Sistemas de Gestión Empresarial: ERP, CRM, Gestión Contable, Gestión de Proyectos, Gestión de Nominas, sistemas eCommerce, etc.
 
-- Criterios de selección de un sistema de información de gestión empresarial: aspectos funcionales, tecnológicos, hoja de ruta, cumplimiento de estándares, software libre o no, coste de licencias, servicio de mantenimiento, etc. 
+- Criterios de selección de un sistema de información de gestión empresarial: aspectos funcionales, tecnológicos, hoja de ruta, cumplimiento de estándares, software libre o no, coste de licencias, servicio de mantenimiento, etc.
  s a realizar en la implantación de las herramientas de gestión empresarial.
 
  Profesionalidad y responsabilidad en la consecución de los objetivos finales de la tarea en los plazos marcados.
@@ -407,5 +407,5 @@ correo, calendario, etc.)
 [Unidad 9: XSLT](XSLT.md)             
 [Unidad 7: XSD](XSD.md)        
 [Unidad 8: XPATH](XPATH.md)          
-[Unidad 10: RSS](XQUERY.md)        
+[Unidad 10: XQUERY](XQUERY.md)        
 [Unidad 11: Sistemas de gestión de información](SISTEMAS.md)        
