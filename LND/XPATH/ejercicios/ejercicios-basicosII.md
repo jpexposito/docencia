@@ -45,35 +45,158 @@
             <y>12</y>
         </p2>
     </rectangulo>
-
-</grafico>
+  </grafico>
   ```
 
  - Todas las circunferencias.
+
+  ```
+  /grafico/circunferencia
+  ```
+
  - La cuarta recta.
+
+ ```
+ /grafico/recta[4]
+ ```
+
  - Los centros de las circunferencias.
+
+ ```
+ /grafico/circunferencia/centro
+ ```
+
  - El último punto.
+
+ ```
+ /grafico/punto[last()]
+ ```
+
  - El rectángulo con identificador e32.
+
+ ```
+ /grafico/rectangulo[@id="e32"]
+ ```
+
  - Todos los radios de las circunferencias.
+
+ ```
+ /grafico/circunferencia/radio
+ ```
+
  - El radio de la circunferencia de identificador e2.
+
+ ```
+ /grafico/circunferencia[@id="e2"]/radio
+ ```
+
  - El radio de la quinta circunferencia.
+
+ ```
+ /grafico/circunferencia[5]/radio
+ ```
+
  - Todos los radios de circunferencia mayores de 10.
+
+ ```
+ /grafico/circunferencia/radio[.>10]
+ ```
+
  - Las unidades en las que se han expresado todos los números.
+
+ ```
+ /grafico/@unidades
+ ```
+
  - El identificador de la quinta entidad de dibujo.
+
+ ```
+ /grafico/*[5]/@id
+ ```
+
  - Las rectas cuyo punto inicial (p1) sea el centro de coordenadas (0,0).
+
+ ```
+ /grafico/recta[p1/x/text()=0][p1/y/text()=0]
+ ```
+
  - Las rectas cuyo punto inicial esté en el segundo cuadrante.
+
+ ```
+ /grafico/recta[p1/x/text()<=0][p1/y/text()>=0]
+ ```
+
  - Los puntos que se encuentren en el cuarto cuadrante.
+
+ ```
+ /grafico/punto[x/text()>=0][y/text()<=0]
+ ```
+
  - El cuarto de los rectángulos
+
+ ```
+ /grafico/rectangulo[4]
+ ```
+
  - Todas las coordenadas y de todas las rectas.
+
+ ```
+ /grafico/recta/y
+ ```
+
  - Todas las coordenadas y de todas las entidades de dibujo.
+
+ ```
+ /grafico//y
+ ```
+
  - Los puntos finales de todos los rectángulos.
+
+ ```  
+ /grafico/rectangulo/p2
+ ```
+
  - Todas las rectas cuya coordenada x del punto inicial sea mayor que la coordenada x del punto final.
+
+ ```
+ /grafico/recta[p1/x/text()>p2/x/text()]
+ ```
+
  - ¿Cuántos puntos hay en total?
+
+ ```
+ count(/grafico/punto)
+ ```
+
  - ¿Cuántos puntos hay en el primer cuadrante?
+
+ ```
+ count(/grafico/punto[x/text()>=0][y/text()>0])
+ ```
+
  - ¿Cuántas circunferencias tienen radio mayor de 20?
+
+ ```
+ count(/grafico/circunferencia[radio/text()>20])
+ ```
+
  - ¿Cuántas entidades de dibujo hay en total?
+
+ ```
+ count(/grafico/*)
+ ```
+
  - ¿Cuántas coordenadas x hay definidas en total?
+
+ ```
+ count(/grafico//x)
+ ```
+
  - Todas los rectángulos cuyo lado horizontal sea el doble de largo que el vertical.
+
+ ```
+ /grafico/rectangulo[p2/x/text()-p1/x/text()=2*(p2/y/text()-p1/y/text())]
+ ```
 
   2. Dada la solución propuesta para almacenar la información sobre las facturas de una empresa, determinar la expresión XPath que selecciona:
 
@@ -108,18 +231,76 @@
   ```
 
   - Las facturas que tenían algún descuento.
-  - Las facturas anteriores al año en curso.
-  - El número de facturas a las que se les aplicó un descuento mayor del 5%.
-  - Las facturas a nombre de "Perico de los Palotes".
-  - Las facturas con cinco productos diferentes.
-  - Las productos de la factura con identificador "f1" cuyo iva fuese del 21%.
-  - Todas las facturas en las que se facturó algún ratón.
-  - Todas las facturas en las que el número total de artículos comprados fuese de más de 10.Investigue si hay alguna función que sirva para sumar.
-  - El número de facturas de emitidas en noviembre de 2012.
-  - Las facturas emitidas a residentes en Cazorla.
-  - El número de facturas que sólo contienen un producto.
-  Las facturas sin productos gravados al 21.
 
+  ```
+  /facturacion/factura[descuento]
+  ```
+
+  - Las facturas anteriores al año en curso.
+
+  ```
+  /facturacion/factura[@fecha<"2013-01-01"]
+  ```
+
+  - El número de facturas a las que se les aplicó un descuento mayor del 5%.
+
+  ```
+  /facturacion/factura/[descuento/text()>5][descuento/@unidad="porcentaje"]
+  ```
+
+  - Las facturas a nombre de "Perico de los Palotes".
+
+  ```
+  /facturacion/factura[cliente/nombre/text()="Perico de los Palotes"]
+  ```
+
+  - Las facturas con cinco productos diferentes.
+
+  ```
+  /facturacion/factura[count(productos)=5]
+  ```
+
+  - Las productos de la factura con identificador "f1" cuyo iva fuese del 21%.
+
+  ```
+  /facturacion/factura[@id="f1"]/productos[iva/text()="21"]
+  ```
+
+  - Todas las facturas en las que se facturó algún ratón.
+
+  ```
+  /facturacion/factura[producto/@denominacion="ratón"]
+  ```
+
+  - Todas las facturas en las que el número total de artículos comprados fuese de más de 10.Investigue si hay alguna función que sirva para sumar.
+
+  ```
+  /facturacion/factura[sum(productos/cantidad)>10]
+  ```
+
+  - El número de facturas de emitidas en noviembre de 2012.
+
+  ```
+  /facturacion/factura[@fecha<"2012-12-01"][@fecha>"2012-10-31"]
+  ```
+
+  - Las facturas emitidas a residentes en Cazorla.
+
+  ```
+  /facturacion/factura[cliente/cp/text()="23470"]
+  ```
+
+  - El número de facturas que sólo contienen un producto.
+
+  ```
+  /facturacion/factura[count(producto)=1]
+  ```
+
+  - Las facturas sin productos gravados al 21%.
+
+  ```
+  /facturacion/facturas[count(producto[iva/text()="21"])=0]
+  ```
 
   3. Dada la solución propuesta para almacenar la información sobre los libros y préstamos en una biblioteca, determinar la expresión XPath que devuelve:
 
@@ -153,26 +334,124 @@
   </biblioteca>
   ```
 
-  - El número de socios de la biblioteca
+  - El número de socios de la biblioteca.
+
+  ```
+  count(/biblioteca/socios/socio)
+  ```
+
   - La dirección del socio que se llama "Perico de los Palotes".
-  - Los libros cuyo año de edición sea 1985
+
+  ```
+  /biblioteca/socios/socio[nombre/text()="Perico de los Palotes"]/direccion
+  ```
+
+  - Los libros cuyo año de edición sea 1985.
+
+  ```
+  /biblioteca/catalogo/libro[año/text()="1985"]
+  ```
+
   - Los libros de la editorial Alfaguara.
+
+  ```
+  /biblioteca/catalogo/libro[editorial/text()="Alfaguara"]
+  ```
+
   - El número total de ejemplares que hay en la biblioteca.
+
+  ```
+  count(/biblioteca/catalogo/libro/ejemplar)
+  ```
+
   - Todos los libros cuyo autor sea "Miguel De Cervantes".
+
+  ```
+  /biblioteca/catalogo/libro[autor/text()="Miguel de Cervantes"]
+  ```
   - El número de ejemplares del libro con identificador L1.
+
+  ```
+  count(/biblioteca/catalogo/libro[@id="L1"]/ejemplar)
+  ```
+
   - El número total de ejemplares prestados.
+
+  ```
+  count(/biblioteca/catalogo/libro/ejemplar[@socio])
+  ```
+
   - El número total de ejemplares no prestados.
+
+  ```
+  count(/biblioteca/catalogo/libro/ejemplar[not(@socio)])
+  ```
+
   - El número de ejemplares prestados al socio "s1".
+
+  ```
+  count(/biblioteca/catalogo/libro/ejemplar[@socio="s1"])
+  ```
   - Los libros que se han prestado al socio "s1".
+
+  ```
+  /biblioteca/catalogo/libro[ejemplar/@socio="s1"]
+  ```
+
   - Los libros que no están prestados al socio "s1".
+
+  ```
+  /biblioteca/catalogo/libro[count(ejemplar[@socio="s1"])=0]
+  ```
+
+
   - Los libros que se han prestado al socio "s1", pero no al socio "s2".
+
+  ```
+  /biblioteca/catalogo/libro[ejemplar/@socio="s1"][count(ejemplar[@socio="s2"])=0]
+  ```
+
   - El número de ejemplares de libros de la editorial Castalia
+
+  ```
+  count(/biblioteca/catalogo/libro[editorial/text()="Castalia"]/ejemplar)
+  ```
+
   - Los identificadores de los socios que tiene algún libro en préstamo.(distinct-values es una función de XPath 2.0, por lo que xmlstarlet no la admite.)
+
+  ```
+  distinct-values(/biblioteca/catalogo/libro/ejemplar/@socio)
+  ```
+
   - Los ejemplares aún disponibles (no prestados) de "Don Quijote de La Mancha".
+
+  ```
+  /biblioteca/catalogo/libro[nombre/text()="Don Quijote de la Mancha"]/ejemplar[not(@socio)]
+  ```
+
   - Los libros de los que quedan menos de dos ejemplares en la biblioteca.
+
+  ```
+  /biblioteca/catalogo/libro[count(ejemplar[not(@socio)])<2]
+  ```
+
   - Los libros de los que no se ha prestado ningún ejemplar.
+
+  ```
+  /biblioteca/catalogo/libro[count(ejemplar/@socio)=0]
+  ```
+
   - Los libros que tiene todos los ejemplares prestados
+
+  ```
+  /biblioteca/catalogo/libro[count(ejemplar[not(@socio)])=0]
+  ```
+
   - Los libros que tiene más ejemplares en préstamo que aún en la biblioteca.
+
+  ```
+  /biblioteca/catalogo/libro[count(ejemplar) div 2 < count(ejemplar/@socio)]
+  ```
 
   4. Dada la solución propuesta para almacenar la información sobre los coches que vende un concesionario, determinar la expresión XPath que devuelve:
 
@@ -208,168 +487,124 @@ SYSTEM '08coches.dtd'>
 ```
 
   - Los nombres de las marcas que vende el concesionario.
+
+  ```
+  /flota/marca/@nombre
+  ```
+
   - El nombre de los modelos de la marca Renault que vende el concesionario.
+
+  ```
+  /flota/marca[@nombre="Renault"]/modelo/@nombre
+  ```
+
   - Los modelos de cinco plazas.
+
+  ```
+  /flota/marca/modelo[plazas/text()="5"]
+  ```
+
   - Los modelos que tienen una cilindrada mayor a 300.
+
+  ```
+  /flota/marca/modelo[cilindrada/text()>"300"]
+  ```
+
   - El modelo Megane.
+
+  ```
+  /flota/marca/modelo[@nombre="Megane"]
+  ```
+
   - El último modelo de todas las marcas.
+
+  ```
+  /flota/marca/modelo[last()]
+  ```
+
   - El número de marcas que vende el concesionario.
+
+  ```
+  count(/flota/marca)
+  ```
+
   - El número de modelos que vende el concesionario.
-  - El cliente de identificador p1.
+
+  ```
+  count(/flota/marca/modelo)
+  ```
+
+  - El cliente de identificador. p1.
+
+  ```
+  /flota/cliente[@id="p1"]
+  ```
+
   - El número de clientes.
-  - Los coches que ha reservado el cliente p1
-  - Los coches nuevos (no tienen kilometraje)
+
+  ```
+  count(/flota/cliente)
+  ```
+
+  - Los coches que ha reservado el cliente p1.
+
+  ```
+  /flota/coche[@reservado="p1"]
+  ```
+
+  - Los coches nuevos (no tienen kilometraje).
+
+  ```
+  /flota/coche[not(@km)]
+  ```
+
   - Los coches reservados.
+
+  ```
+  /flota/coche[@reservado]
+  ```
+
   - El número de coches reservados.
+
+  ```
+  count(/flota/coche[@reservado])
+  ```
+
   - El número de coches Clio.
-  - Los Clio reservados
+
+  ```
+  count(/flota/coche[@modelo="Clio"])
+  ```
+
+  - Los Clio reservados.
+
+  ```
+  /flota/coche[@modelo="Clio"][@reservado]
+  ```
+
   - Los coches de segunda mano reservados.
-  - Los coches reservados que sean Clio o Megane
+
+  ```
+  /flota/coche[@km][@reservado]
+  ```
+
+  - Los coches reservados que sean Clio o Megane.
+
+  ```
+  /flota/coche[@modelo="Clio" or @modelo="Megane"][@reservado]
+  ```
+
   - Los coches nuevos no reservados aún.
+
+  ```
+  /flota/coche[not(@km)][not(@reservado)]
+  ```
+
   - Los coches reservados seminuevos (de menos de 500 km).
 
-<!--
-Dada la solución propuesta para almacenar la información sobre los parques nacionales, determinar la expresión XPath que devuelve:
-
-
-
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-
-<!DOCTYPE parques SYSTEM "09parques.dtd">
-
-<parques>
-
-<especies>
-
-<vegetal id="f1">
-
-<comun>Junco rarísimo</comun>
-
-<cientifico>Juncus rarisimus</cientifico>
-
-<extincion>bajo</extincion>
-
-</vegetal>
-
-<animal id="a1">
-
-<comun>Lince ibérico</comun>
-
-<cientifico>Lynx pardinus</cientifico>
-
-<extincion>alto</extincion>
-
-</animal>
-
-
-</especies>
-
-<parque nombre="Doñana">
-
-<provincia>Huelva</provincia>
-
-<ca>Andalucía</ca>
-
-<extension unidades="Ha">10000</extension>
-
-<presupuesto>1000000</presupuesto>
-
-<flora id="f1" />
-
-<fauna id="a1" ejemplares="40" />
-
-</parque>
-
-
-
-</parques>
-
-El número de especies vegetales.
-Las especies vegetales con un peligro alto de extinción.
-El número de especies animales en peligro bajo de extinción.
-El número de especies en peligro alto de extinción.
-El nombre común de las especies vegetales en peligro alto de extinción
-El peligro de extinción del animal de nombre común "Lince ibérico"
-El número de parques nacionales.
-El número de parques en Canarias.
-Los parques de la provincia de Huelva.
-Los parques con una extensión mayor de 30.000 hectáreas.
-El total de presupuestos.
-El total de ejemplares en los parques de identificador "a1".
-El número de especies de interés en Doñana.
-El número de ejemplares animales de interés en Doñana.
-El parque de Timanfaya.
-Los especies animales de interés de Garajonay.
-Las comunidades autónomas con parques nacionales.
-Las provincias con parques nacionales.
-Los parques nacionales con menos de veinte especies de interés
-El número de parque nacionales que sólo tiene como especies de interés animales.
-Dada la solución propuesta para almacenar la información sobre los habitantes de un municipio, determinar la expresión XPath que devuelve:
-
-
-
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-
-<!DOCTYPE poblacion SYSTEM "10ayuntamiento.dtd">
-
-<poblacion>
-
-<habitante id="h01" sexo="hombre">
-
-<nombre>Perico</nombre>
-
-<apellidos>de los Palotes</apellidos>
-
-<direccion>c/ Callo, 5</direccion>
-
-<tlfo>953123456</tlfo>
-
-<nacimiento>Úbeda</nacimiento>
-
-</habitante>
-
-<habitante id="h02" sexo="mujer">
-
-<nombre>María</nombre>
-
-<apellidos>Lagartona</apellidos>
-
-<direccion>c/ Callo, 5</direccion>
-
-<tlfo>953123456</tlfo>
-
-<nacimiento>Marmolejo</nacimiento>
-
-</habitante>
-
-<habitante id="h03" sexo="hombre" padre="h01" madre="h02">
-
-<nombre>Felipe</nombre>
-
-<apellidos>el Hermoso</apellidos>
-
-<direccion>c/ Callo, 5</direccion>
-
-<tlfo>953123456</tlfo>
-
-<nacimiento>Cazorla</nacimiento>
-
-</habitante>
-
-
-</poblacion>
-
-El número de habitantes del municipio
-Los varones del municipio
-Las mujeres del municipio
-El número de habitantes de los que se tiene registrado el padre.
-El número de habitantes de los que se tienen registrados padre y madre
-Los habitantes que se llaman Perico
-El listado de identificadores de personas que son padre.
-El listado de identificadores de personas que son madre.
-Los habitantes de padre conocido que han nacido en Cazorla.
-Los datos de los habitantes cuyo padre tienen identificador "h01"
--->
+  ```
+  /flota/coche[@reservado][@km<500]
+  ```
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 
