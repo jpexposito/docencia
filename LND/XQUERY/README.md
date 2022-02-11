@@ -325,4 +325,7 @@
   return <libro>{$book/* except $book/year except $book/author}</libro>
   ```
 
+## Herramientas online  
+  - [videlibri](https://www.videlibri.de/cgi-bin/xidelcgi).
+
 </div>
