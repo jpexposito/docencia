@@ -172,7 +172,7 @@
 - Obtén el nombre de aquellos alumnos que son repetidores.
 - Obtén el nombre de todos los alumnos de 1º de ASIR que tengan atributo cial (da igual el valor del cial).
 - Obtén todos los nombres de los alumnos salvo del que tiene cial=A18X111.
-- Obtén los nombres de los alumnos del fichero, salvo aquellos que sean los  ltimos de su curso.
+- Obtén los nombres de los alumnos del fichero, salvo aquellos que sean de  último de curso.
 - Obtén el nombre del penúltimo alumno de 1º de DAI.
 - Obtén todos los nombres de aquellos alumnos cuya suma de notas sea mayor que 23.
 - Obtén todos los alumnos cuyo nombre comience por M y que sean repetidores.
@@ -294,10 +294,10 @@ Pequeños cambios en la salinidad pueden tener efectos a gran escala en la circu
 - Obtén todos los títulos de las noticias publicadas por el autor “chupidos”.
 - Obtén el título de la primera noticia del autor “DUNALUNA”.
 - Obtén el autor de las noticias que dentro del título tengan la palabra “Fukushima”.
-- Obtén todas las canciones cuyo título (__title__) comience por __C__.
-- Obtén todas las canciones del autor “DUNALUNA”.
-- Obtén el número las canciones del autor “chupidos”.
-- Obtén el número las canciones del autor “DUNALUNA”.
+- Obtén todas las noticias cuyo título (__title__) comience por __C__.
+- Obtén todas de noticias del autor “DUNALUNA”.
+- Obtén el número de noticias del autor “chupidos”.
+- Obtén el número de noticias del autor “DUNALUNA”.
 - Obtén todas las noticias que tengan descripción.
 - Obtén todas las noticias que __NO__ tengan descripción.
 - Obtén el número de notícias.
