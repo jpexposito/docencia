@@ -16,7 +16,22 @@
 
  Ejecutados los pasos anteriores, podremos comenzar a conocer la herramienta. Comenzaremos creando nuestro primer proyecto de forma manual. Para ello seguiremos el siguiente manual, y describiremos los comandos utilizados y los ficheros creados y su contenido.
 
-#### Creación de un proyecto
+### La era Pre-Maven, antes de Maven…
+
+ Cuando desarrollamos un proyecto sin Maven, nos empiezan a surgir muchas preguntas. Tales como:
+ - ¿Cómo me instalo el proyecto?
+ - ¿Por qué cada proyecto tiene una estructura distinta?
+ - ¿Cómo modificamos alguna versión de una librería?
+ - ¿Cómo metemos una nueva librería?
+ - ¿Cómo lo probamos?
+
+___Las respuestas a estas preguntas eran complejas y diferentes para cada proyecto___.
+
+### La era Post-Maven, con de Maven…
+
+  La finalizad principal con la que Jason van Zyl desarrolló Maven para la empresa Sonatype (año 2002), fue con la finalizad de aglutinar todas esas preguntas creando una manera de gestionar y construir proyecto que otorgará un conjunto de convenciones para que las preguntas anteriores y algunas más tuvieran una misma respuesta. Y también otorgar simplicidad a la creación y gestión de proyectos.
+
+### Creación de un proyecto
  Para la creación hemos de ejecutar el siguiente comando, desde una terminal (windows / linux / mac).
 
 ```console
@@ -53,7 +68,33 @@ my-app
 
  Existen otros que se crearán en función del tipo de proyecto que vayamos a construir, o los comandos que ejecutemos a través de maven (javadoc, …).
 
-#### Ciclo de Vida
+### Project Object Model (POM)
+
+  El corazón del proyecto, requiere un apartado independiente por la importancia y por la cantidad de conceptos que existen dentro de el y que tenemos que dominar: estructura mínima, presentar el concepto de dependencias, etc.
+
+#### Estructura mínima de un fichero Pom
+
+  El fichero pom con la estructura más básica posible, contendrá:
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1</version>
+  </project>
+  ```
+  En cuanto al ejemplo anterior, su nombre de artefacto completo es “__com.mycompany.app:my-app:1.0.0-SNAPSHOT__”.
+  - __Project__: root.
+  - __ModelVersion__: se debe establecer en 4.0.0.
+  - __GroupId__: el id del grupo del proyecto.
+  - __ArtifactId__: el id del artefacto (proyecto).
+  - __Version__: la versión del artefacto en el grupo especificado.
+
+  La descripción completa del fichero y sus implicaciones en el siguiente [enlace](POM.md).
+
+### Ciclo de Vida
 
  El ciclo de vida de maven se puede resumir a través de la siguiente imagen:
  <div align="center">
@@ -63,7 +104,15 @@ my-app
 
  Para la ejecución de los distintos comandos que supondrán la ejecución hasta la fase que deseemos realizar, hemos de situarnos en el directorio donde se encuentre el fichero pom.xml.
 
-#### Comandos más destacados:
+### Un Goal en Maven
+
+ Un _goal_ en maven es el comando que nos ayuda a realizar una acción. Los más comunes son:
+ - __clean__.- Limpia los ficheros temporales creados en la carpeta target.
+ - __package__.- Realiza la compilación de las clases.
+ - __install__.- Realiza la instalación de la librería dentro del repositorio local.
+ - __javadoc:javadoc__.- Genera la documentación web de la librería en formato __html__.  
+
+### Comandos más destacados:
 
  - mvn clean.- Realiza una limpieza de las clases generadas hasta el momento.
  - mvn compile.- Compila nuestro proyecto.
@@ -80,7 +129,7 @@ my-app
  Por último, el conjunto de comandos, para las distintas fases del ciclo de vida de maven, en el siguiente [link](https://jpexposito.com/lets-go-maven/).
 
 
-#### Instalación en Linux
+### Instalación en Linux
 
   Para realizar la instalación en Linux hemos de ejecutar desde una consola el siguiente comando:
 
@@ -136,16 +185,6 @@ my-app
         </plugins>
     </build>
   ```
-
-### Un Goal en Maven
-
-  Un _goal_ en maven es el comando que nos ayuda a realizar una acción. Los más comunes son:
-  - __clean__.- Limpia los ficheros temporales creados en la carpeta target.
-  - __package__.- Realiza la compilación de las clases.
-  - __install__.- Realiza la instalación de la librería dentro del repositorio local.
-  - __javadoc:javadoc__.- Genera la documentación web de la librería en formato __html__.  
-
-</br>
 
 Con esto podeís comenzar a disfrutar de un buen compañero de viaje en el desarrollo con Java.
 
