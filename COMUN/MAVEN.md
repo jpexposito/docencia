@@ -80,20 +80,21 @@ my-app
  Por último, el conjunto de comandos, para las distintas fases del ciclo de vida de maven, en el siguiente [link](https://jpexposito.com/lets-go-maven/).
 
 
- #### Instalación en Linux
+#### Instalación en Linux
 
-   Para realizar la instalación en Linux hemos de ejecutar desde una consola el siguiente comando:
+  Para realizar la instalación en Linux hemos de ejecutar desde una consola el siguiente comando:
 
   ```
    sudo apt install maven
   ```
 
-   Para verificar la instalación, ejecute mvn -version:
+  Para verificar la instalación, ejecute mvn -version:
+
   ```
    mvn -version
   ```
 
-   La salida debería verse así:
+  La salida debería verse así:
 
   ```
   Apache Maven 3.6.3
@@ -103,7 +104,50 @@ my-app
    OS name: "linux", version: "5.4.0-29-generic", arch: "amd64", family: "unix"
   ```
 
-  Con esto podeís comenzar a disfrutar de un buen compañero de viaje en el desarrollo con Java.
+### Plugins
+
+  _¿Como se encarga Maven de ejecutar todas estas fases de la construcción del software?_ . La realidad es que el no lo puede hacer solo . Sino que necesita de un grupo de __Plugins__. Cada uno de los Plugins se encarga de una tarea concreta.
+
+  Por ejemplo el _Plugin de Compiler_ se encarga de compilar el código , mientras que el plugin de _JavaDoc_ se encarga de generar la documentación _JavaDoc_ de nuestro código.
+
+```xml
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+  ```
+
+### Un Goal en Maven
+
+  Un _goal_ en maven es el comando que nos ayuda a realizar una acción. Los más comunes son:
+  - __clean__.- Limpia los ficheros temporales creados en la carpeta target.
+  - __package__.- Realiza la compilación de las clases.
+  - __install__.- Realiza la instalación de la librería dentro del repositorio local.
+  - __javadoc:javadoc__.- Genera la documentación web de la librería en formato __html__.  
+
+</br>
+
+Con esto podeís comenzar a disfrutar de un buen compañero de viaje en el desarrollo con Java.
 
   <div align="center">
    <img src="https://i1.wp.com/suayed.iztacala.unam.mx/wp-content/uploads/2014/07/despedida.jpg?resize=300%2C225&ssl=1" alt="disfrutar" >
