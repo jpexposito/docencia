@@ -259,19 +259,19 @@
 
   ```
 
-- Obtener el nombre y el teléfono de cada alumno ordenado por apellidos de forma descendiente.
+- Obtener el nombre de cada alumno ordenado por apellidos de forma descendiente.
 
   ```
 
   ```
 
-- Obtener los nombres de los alumnos matriculados en LMSGI y sus notas ordenado por notas.
+- Obtener los nombres de los alumnos matriculados y sus notas ordenado por notas.
 
   ```
 
   ```
 
-- Obtener los nombres y las calificaciones de los matriculados en FH que han aprobado.
+- Obtener los nombres y las calificaciones de los alumnos que han aprobado.
 
   ```
 
