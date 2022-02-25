@@ -94,6 +94,7 @@
   ```
 
   ```
+
 - Mostrar las clases ordenados por nombre.
 
   ```
@@ -147,15 +148,13 @@
   ```
 
   ```
-
 - Mostrar la suma de los precios de las clases de la sala 1.
 
   ```
 
   ```
 
-- Mostrar el dinero que ganaría la profesora "Laura Mendiola" si se completaran todas las plazas de su clase, sabiendo que sólo tiene una
-clase.
+- Mostrar el dinero que ganaría la profesora "Laura Mendiola" si se completaran todas las plazas de su clase, sabiendo que sólo tiene una clase.
 
   ```
 
@@ -185,6 +184,98 @@ clase.
 
   ```
 
+2. Dada la solución propuesta para almacenar la información sobre los habitantes de un municipio, determinar la expresión _XQuery_ que devuelve:
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<notas>
+    <alumno convocatoria="Septiembre">
+        <nombre>Carlos</nombre>
+        <apellidos>Amaya Arozamena</apellidos>
+        <matricula>m019843</matricula>
+        <cuestionarios>8.0</cuestionarios>
+        <tareas>8.0</tareas>
+        <examen>6.0</examen>
+        <final>8.0</final>
+    </alumno>
+    <alumno convocatoria="Junio">
+        <nombre>Jose</nombre>
+        <apellidos>Muñoz Soto</apellidos>
+        <matricula>m019872</matricula>
+        <cuestionarios>7.0</cuestionarios>
+        <tareas>9.0</tareas>
+        <examen>7.0</examen>
+        <final>8.5</final>
+    </alumno>
+    <alumno convocatoria="Junio">
+        <nombre>Ana</nombre>
+        <apellidos>Martinez de la Fuente</apellidos>
+        <matricula>m097215</matricula>
+        <cuestionarios>8.0</cuestionarios>
+        <tareas>9.0</tareas>
+        <examen>9.0</examen>
+        <final>8.5</final>
+    </alumno>
+    <alumno convocatoria="Septiembre">
+        <nombre>Roberto</nombre>
+        <apellidos>Carrera Fernández</apellidos>
+        <matricula>m059312</matricula>
+        <cuestionarios>6.0</cuestionarios>
+        <tareas>7.0</tareas>
+        <examen>6.0</examen>
+        <final>6.5</final>
+    </alumno>
+    <alumno convocatoria="Septiembre">
+        <nombre>Concepción</nombre>
+        <apellidos>Lalinde Priego</apellidos>
+        <matricula>m034093</matricula>
+        <cuestionarios>4.0</cuestionarios>
+        <tareas>3.0</tareas>
+        <examen>2.0</examen>
+        <final>3.0</final>
+    </alumno>
+    <alumno convocatoria="Junio">
+        <nombre>Esther</nombre>
+        <apellidos>Pereda</apellidos>
+        <matricula>m938762</matricula>
+        <cuestionarios>2.0</cuestionarios>
+        <tareas>3.0</tareas>
+        <examen>2.0</examen>
+        <final>2.5</final>
+    </alumno>
+</notas>
+
+```
+
+- Obtener el nombre de todos los alumnos matriculados en algún módulo.
+
+  ```
+
+  ```
+
+- Obtener las calificaciones del alumno de código "n43483437" en cada módulo.
+
+  ```
+
+  ```
+
+- Obtener el nombre y el teléfono de cada alumno ordenado por apellidos de forma descendiente.
+
+  ```
+
+  ```
+
+- Obtener los nombres de los alumnos matriculados en LMSGI y sus notas ordenado por notas.
+
+  ```
+
+  ```
+
+- Obtener los nombres y las calificaciones de los matriculados en FH que han aprobado.
+
+  ```
+
+  ```
 
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
