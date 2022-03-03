@@ -57,3 +57,4 @@
   La documentación técnica es esencial en cada etapa del trabajo, el proceso de desarrollo no tienes que esperar a ninguna ocasión específica.
 
   ___La documentación técnica es simplemente un hábito y una disciplina y, contrariamente a lo que mucha gente piensa, no requiere de gran esfuerzo. La documentación técnica va en paralelo con el proceso de desarrollo y no es necesario esperar a que termine todo el trabajo___.
+QUE
