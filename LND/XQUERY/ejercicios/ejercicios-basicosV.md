@@ -80,108 +80,166 @@
 - Muestra el nombre de todos los clases.
 
   ```
+  for $clase in /clases/clase
+  return $clase/nombre/text()
 
+  ó
+
+  for $nombre in //nombre
+  return $nombre
   ```
 
 - Muestra el nombre y precio de todos las clases.
 
   ```
-
+  for $clase in /clases/clase
+  return <clases>
+  	<nombre>{$clase/nombre/text()}</nombre>
+  	<precio>{$clase/precio/text()}</precio>
+  </clases>
   ```
 
 - Muestra el nombre y precio de todos las clases donde su precio es mayor que 40.
 
   ```
-
+  for $clase in /clases/clase
+  where $clase/precio > 40
+  return <clases>
+  <nombre>{$clase/nombre/text()}</nombre>
+  <precio>{$clase/precio/text()}</precio>
+  </clases>
   ```
 
 - Mostrar las clases ordenados por nombre.
 
   ```
-
+  for $clase in /clases/clase
+  order by $clase/nombre
+  return $clase/nombre
   ```
 
 - Mostrar los nombres de las clases que contienen una a.
 
   ```
-
+  for $clase in /clases/clase
+  where contains($clase/nombre, "a")
+  return $clase/nombre
   ```
 
 - Mostrar el nombre de las clases donde el apellido del profesor sea Lozano.
 
   ```
-
+  for $clase in /clases/clase
+  where contains($clase/profesor, "Lozano")
+  return $clase/nombre
   ```               
 
 - Mostrar todos las clases, excepto el 3 y 5.
 
   ```
-
+  for $clase in /clases/clase
+  where $clase/@id != 3 and $clase/@id != 5
+  return $clase/nombre
   ```
 
 - Mostrar profesores que den clases por una cuota mensual.
 
   ```
-
+  for $clase in /clases/clase
+  where $clase/precio[@cuota = "mensual"]
+  return $clase/profesor
   ```
 
 - Mostrar el nombre de las clases de la sala 1, que se pague con euros y el precio sea menor a 35.
 
   ```
-
+  for $clase in /clases/clase
+  where $clase/sala = 1 and $clase/precio/@moneda = "euro" and $clase/precio < 35
+  return $clase/nombre
   ```
 
 - Mostrar los nombres de las clases cuyo precio sea mayor de 30.
 
   ```
-
+  for $clase in /clases/clase
+  where $clase/precio > 30
+  return $clase/nombre
   ```
 
 - Mostrar los nombres de las clases cuyo precio sea mayor de 30 y la moneda "euro".
 
   ```
-
+  for $clase in /clases/clase
+  where $clase[precio/@moneda = "euro"]/precio>30
+  return $clase/nombre/text()
   ```
 
 - Mostrar la media de los precios de todos las clases.
 
   ```
-
+  let $clase := /clases/clase
+  return <media>{avg($clase/precio)}</media>
   ```
 - Mostrar la suma de los precios de las clases de la sala 1.
 
   ```
-
+  for $clase in /clases/clase
+  where $clase/sala = 1
+  return sum($clase/precio)
   ```
 
 - Mostrar el dinero que ganaría la profesora "Laura Mendiola" si se completaran todas las plazas de su clase, sabiendo que sólo tiene una clase.
 
   ```
-
+  let $clase := /clases/clase[profesor = "Laura Mendiola"]
+  return $clase/plazas * $clase/precio
   ```
 
 - Mostrar el nombre de la clase, su precio y el precio con un descuento del 15% para familias numerosas. Ordenar por el nombre de la clase.
 
   ```
-
+  for $clase in /clases/clase
+  order by $clase/nombre
+  return
+  <clase>
+  <nombreClase>{$clase/nombre}</nombreClase>
+  <precio>{$clase/precio}</precio>
+  <familiaNumerosa>{$clase/precio * 0.85}</familiaNumerosa>
+  </clase>
   ```
 
 - Mostrar el dinero que ganaría la profesora "Laura" (no conocemos su apellido) si se completaran todas las plazas de su clase.
 
   ```
+  for $clase in /clases/clase
+  where starts-with($clase/profesor, "Laura")
+  return $clase/plazas * $clase/precio
+
+  ó
+
+  for $clase in /clases/clase[starts-with(profesor, "Laura")]
+  return <beneficio>{$clase/plazas * $clase/precio}</beneficio>
 
   ```
 
 - Mostrar los nombres y la fecha de comienzo de las clases que comiencen el mes de enero (utiliza para buscarlo la cadena de texto "/1/").
 
   ```
-
+  for $clase in /clases/clase
+  where contains($clase/comienzo, "/1/")
+  return
+  <clase>
+  <nombre>{$clase/nombre}</nombre>
+  <fechaInicio>{$clase/comienzo}</fechaInicio>
+  </clase>
   ```
 
 - Mostrar el dinero que ganaría el profesor "Jesus Lozano" si se completaran todas las plazas de su clase, pero mostrando el beneficio de cada clase por separado.   
 
   ```
-
+  for $clase in //clase
+  where compare($clase/profesor, 'Jesus Lozano')
+  return <beneficio>{$clase/plazas * $clase/precio}</beneficio>
   ```
 
 2. Dada la solución propuesta para almacenar la información sobre los habitantes de un municipio, determinar la expresión _XQuery_ que devuelve:
@@ -250,31 +308,40 @@
 - Obtener el nombre de todos los alumnos matriculados en algún módulo.
 
   ```
-
+  for $alumno in //alumno
+  return $alumno/nombre
   ```
 
 - Obtener las calificaciones del alumno de código "n43483437" en cada módulo.
 
   ```
-
+  for $alumno in //alumno
+  where compare($alumno/matricula,"n43483437")
+  return $alumno/final
   ```
 
 - Obtener el nombre de cada alumno ordenado por apellidos de forma descendiente.
 
   ```
-
+  for $alumno in //alumno
+  order by $alumno/apellidos descending
+  return $alumno/nombre
   ```
 
 - Obtener los nombres de los alumnos matriculados y sus notas ordenado por notas.
 
   ```
-
+  for $alumno in //alumno
+  order by $alumno/final
+  return <resultado>$alumno/nombre, $alumno/final</resultado>
   ```
 
 - Obtener los nombres y las calificaciones de los alumnos que han aprobado.
 
   ```
-
+  for $alumno in //alumno
+  order by $alumno/final >= 5
+  return <resultado>$alumno/nombre, $alumno/final</resultado>
   ```
 
 
