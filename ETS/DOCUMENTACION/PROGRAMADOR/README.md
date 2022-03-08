@@ -1,6 +1,6 @@
 <div align="justify">
 
-# MANUAL DE USUARIO
+# MANUAL DEL PROGRAMADOR
 
 </br>
 
