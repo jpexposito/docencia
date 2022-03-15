@@ -93,15 +93,126 @@
   - Mostrar una lista con los autores españoles.
 
   ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
+    <xsl:template match="/">
+      <html>
+        <xsl:apply-templates select="catalogo/artistas/artista" />
+      </html>
+    </xsl:template>
+
+    <xsl:template match="catalogo/artistas/artista">
+      <xsl:if test="nacionalidad = 'España'">
+        <li>
+          <xsl:value-of select="nombre" />
+        </li>
+        </xsl:if>
+    </xsl:template>
+  ```
+
+  Indicamos que sólo se aplique __catalogo/artistas/artista__ de modo que el resto se ignora. Después utilizamos la sentencia __if__ para filtrar los resultados.
+
+  Otra forma de realizarlo es a través de un bucle for:
+
+  ```xml
+
+  <?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+	<xsl:template match="/">
+		<html>
+			<head/>
+			<body>
+				<ol>
+					<xsl:for-each select="catalogo/artistas/artista">
+						<xsl:if test="nacionalidad = 'España'">
+							<li>
+								<xsl:value-of select="nombre"/>
+							</li>
+						</xsl:if>
+					</xsl:for-each>
+				</ol>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>
   ```
 
   - Mostrar una tabla con el nombre del disco en verde si el año es posterior al 2000, y en rojo si el año es anterior al 2000.
 
   ```xml
-
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  	<xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  	<xsl:template match="/">
+  		<html>
+  			<head/>
+  			<body>
+  				<xsl:apply-templates select="catalogo/cds"/>
+  			</body>
+  		</html>
+  	</xsl:template>
+  	<xsl:template match="/catalogo/cds">
+  		<table>
+  			<xsl:apply-templates select="cd"/>
+  		</table>
+  	</xsl:template>
+  	<xsl:template match="/catalogo/cds/cd">
+  		<tr>
+  			<xsl:choose>
+  				<xsl:when test="año &gt; 2000">
+  					<td>
+  						<font color="green"/>
+  						<xsl:apply-templates select="titulo"/>
+  					</td>
+  				</xsl:when>
+  				<xsl:otherwise>
+  					<td>
+  						<font color="red"/>
+  						<xsl:apply-templates select="titulo"/>
+  					</td>
+  				</xsl:otherwise>
+  			</xsl:choose>
+  		</tr>
+  	</xsl:template>
+  </xsl:stylesheet>
   ```
+  O a través de un bucle for:
 
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  	<xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  	<xsl:template match="/">
+  		<html>
+  			<head/>
+  			<body>
+  				<table>
+  					<xsl:for-each select="catalogo/cds/cd">
+  						<tr>
+  							<xsl:choose>
+  								<xsl:when test="año &gt; 2000">
+  									<td>
+  										<font color="green"/>
+  										<xsl:apply-templates select="titulo"/>
+  									</td>
+  								</xsl:when>
+  								<xsl:otherwise>
+  									<td>
+  										<font color="red"/>
+  										<xsl:apply-templates select="titulo"/>
+  									</td>
+  								</xsl:otherwise>
+  							</xsl:choose>
+  						</tr>
+  					</xsl:for-each>
+  				</table>
+  			</body>
+  		</html>
+  	</xsl:template>
+  </xsl:stylesheet>
+  ```
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 
