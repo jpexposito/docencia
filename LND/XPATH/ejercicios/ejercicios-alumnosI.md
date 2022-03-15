@@ -156,29 +156,146 @@
 ```
 
 - Obtén el listado de alumnos del instituto.
+
+  ```xml
+    /instituto/curso/alumno
+
+    ó si quiero sólo el nombre
+
+    /instituto/curso/alumno/nombre
+  ```
+
 - Obtén el primer alumno que esta en el segundo curso.
+
+  ```xml
+  /instituto/curso[@codigo=2]/alumno[1]
+  ```
+
 - Obtén el nombre y apellidos de todos los alumnos de 1º de ASIR.
+
+  ```xml
+  /instituto/curso[@nombre="1º ASIR"]/alumno/nombre | /instituto/curso[@nombre="1º ASIR"]/alumno/apellidos
+  ```
+
 - Obtén el nombre de todos los alumnos que comiencen por __M__.
+
+  ```xml
+  /instituto/curso/alumno[starts-with(nombre, "M")]/nombre
+  ```
+
 - Obtén todos los alumnos (Nombre) de 1º de Asir que hayan suspendido,(__<5__), Lenguajes de marcas.
-- Obtén todos los alumnos (Nombre) de 2º de Asir que hayan aprobado, (__<=5__), Seguridad Informática.
-- Obtén todos los alumnos (Cial) de 1º DAI que hayan aprobado, (__<=5__), Programación.
+
+  ```xml
+  /instituto/curso[@codigo=1]/alumno[notas/nota[1]<5]/nombre/text()
+  ```
+
+- Obtén todos los alumnos (Nombre) de 2º de Asir que hayan aprobado, (__>=5__), Seguridad Informática.
+
+  ```xml
+  /instituto/curso[@codigo=2]/alumno[notas/nota[1]>=5]/nombre/text()
+  ```
+
+- Obtén todos los alumnos (Cial) de 1º DAI que hayan aprobado, (__>=5__), Programación.
+
+  ```xml
+  /instituto/curso[@codigo=3]/alumno[notas/nota[1]>=5]/@cial
+  ```
+
 - Obtén las notas de la alumna __Irina Lugo Lugo__.
+
+  ```xml
+  /instituto/curso/alumno[nombre="Irina" and apellidos="Lugo Lugo"]/notas/nota/text()
+  ```
+
 - Obtén todos los ciales de los alumnos.
+
+  ```xml
+  /instituto/curso/alumno/@cial
+  ```
+
 - Obtén todas las notas del alumno con cial __A95M600__.
+
+  ```xml
+  /instituto/curso/alumno[@cial="A95M600"]/notas/nota/text()
+  ```
+
 - Obtén todos los apellidos de todos los alumnos.
-- Obtén todos todos los ciales de los alumnos de 2  de ASIR.
+
+  ```xml
+  /instituto/curso/alumno/apellidos/text()
+  ```
+
+- Obtén todos todos los ciales de los alumnos de 2 de ASIR.
+
+  ```xml
+  /instituto/curso[@nombre="2º ASIR"]/alumno/@cial
+  ```
+
 - Obtén todos toda la información de texto del alumno con cial A95M600.
-- Obtén el nombre del curso donde esté  el alumno con cial A95M600.
+
+  ```xml
+  /instituto/curso/alumno[@cial="A95M600"]//text()
+  ```
+
+- Obtén el nombre del curso donde esté el alumno con cial A95M600.
+
+  ```xml
+  /instituto/curso[alumno/@cial="A95M600"]/@nombre
+  ```
+
 - Obtén el nombre de aquellos alumnos que son repetidores.
+
+  ```xml
+  /instituto/curso/alumno[repetidor="True"]/nombre/text()
+  ```
+
 - Obtén el nombre de todos los alumnos de 1º de ASIR que tengan atributo cial (da igual el valor del cial).
+
+  ```xml
+  /instituto/curso[@nombre="1º ASIR"]/alumno[@cial]/nombre/text() 
+  ```
+
 - Obtén todos los nombres de los alumnos salvo del que tiene cial=A18X111.
-- Obtén los nombres de los alumnos del fichero, salvo aquellos que sean de  último de curso.
+
+  ```xml
+  /instituto/curso/alumno[@cial!="A18X111"]/nombre/text()
+  ```
+
+- Obtén los nombres de los alumnos del fichero, salvo aquellos que sean de último de curso.
+
+  ```xml
+  /instituto/curso[not(starts-with(@nombre, "2"))]/alumno/nombre/text()
+  ```
+
 - Obtén el nombre del penúltimo alumno de 1º de DAI.
+
+  ```xml
+  /instituto/curso[@nombre="1º DAI"]/alumno[last()-1]/nombre/text()
+  ```
+
 - Obtén todos los nombres de aquellos alumnos cuya suma de notas sea mayor que 23.
+
+  ```xml
+  /instituto/curso/alumno[sum(notas/nota)>23]/nombre/text()
+  ```
+
 - Obtén todos los alumnos cuyo nombre comience por M y que sean repetidores.
+
+  ```xml
+  /instituto/curso/alumno[starts-with(nombre, "M") and repetidor="True"]/nombre/text()
+  ```
+
 - Obtén toda la información de los alumnos que tengan Pérez como alguno de sus apellidos.
+
+  ```xml
+  /instituto/curso/alumno[contains(apellidos, "Pérez")]
+  ```
+
 - Obtén todos los alumnos que tienen menos de 4 materias.
 
+  ```xml
+  /instituto/curso/alumno[sum(asignaturas)<4]/nombre/text()
+  ```
 
 2. Dada la solución propuesta para almacenar la información sobre __noticias__, determinar la expresión XPath que devuelve:
 
@@ -292,15 +409,65 @@ Pequeños cambios en la salinidad pueden tener efectos a gran escala en la circu
 ```
 
 - Obtén todos los títulos de las noticias publicadas por el autor “chupidos”.
+
+  ```xml
+  /Category/Feed/item[author="chupidos"]/title/text()
+  ```
+
 - Obtén el título de la primera noticia del autor “DUNALUNA”.
+
+  ```xml
+  /Category/Feed/item[author="DUNALUNA"][1]/title/text()
+  ```
+
 - Obtén el autor de las noticias que dentro del título tengan la palabra “Fukushima”.
-- Obtén todas las noticias cuyo título (__title__) comience por __C__.
+
+  ```xml
+  /Category/Feed/item[contains(title, "Fukushima")]/author/title()
+  ```
+
+- Obtén todas las noticias cuyo título (title) comience por C.
+
+  ```xml
+  /Category/Feed/item[starts-with(title, "C")]
+  ```
+
 - Obtén todas de noticias del autor “DUNALUNA”.
+
+  ```xml
+  /Category/Feed/item[author="DUNALUNA"]
+  ```
+
 - Obtén el número de noticias del autor “chupidos”.
+
+  ```xml
+  /Category/Feed/sum(item[author="chupidos"]
+  ```
+
 - Obtén el número de noticias del autor “DUNALUNA”.
+
+  ```xml
+  /Category/Feed/sum(item[author="DUNALUNA"]
+  ```
+
 - Obtén todas las noticias que tengan descripción.
-- Obtén todas las noticias que __NO__ tengan descripción.
+
+  ```xml
+  /Category/Feed/item[description]
+  ```
+
+- Obtén todas las noticias que NO tengan descripción.
+
+  ```xml
+  /Category/Feed/item[count(description)<1]
+  ```
+
 - Obtén el número de notícias.
+
+  ```xml
+  /Category/Feed/sum(item)
+  ```
+
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 

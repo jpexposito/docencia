@@ -38,25 +38,124 @@
 ```
 
 - El número de especies vegetales.
+
+  ```xml
+
+  ```
+
 - Las especies vegetales con un peligro alto de extinción.
+
+  ```xml
+
+  ```
+
 - El número de especies animales en peligro bajo de extinción.
+
+  ```xml
+
+  ```
+
 - El número de especies en peligro alto de extinción.
+
+  ```xml
+
+  ```
+
 - El nombre común de las especies vegetales en peligro alto de extinción
+
+  ```xml
+
+  ```
+
 - El peligro de extinción del animal de nombre común "Lince ibérico"
+
+  ```xml
+
+  ```
+
 - El número de parques nacionales.
+
+  ```xml
+
+  ```
+
 - El número de parques en Canarias.
+
+  ```xml
+
+  ```
+
 - Los parques de la provincia de Huelva.
+
+  ```xml
+
+  ```
+
 - Los parques con una extensión mayor de 30.000 hectáreas.
+
+  ```xml
+
+  ```
+
 - El total de presupuestos.
+
+  ```xml
+
+  ```
+
 - El total de ejemplares en los parques de identificador "a1".
+
+  ```xml
+
+  ```
+
 - El número de especies de interés en Doñana.
+
+  ```xml
+
+  ```
+
 - El número de ejemplares animales de interés en Doñana.
+
+  ```xml
+
+  ```
+
 - El parque de Timanfaya.
+
+  ```xml
+
+  ```
+
 - Los especies animales de interés de Garajonay.
+
+  ```xml
+
+  ```
+
 - Las comunidades autónomas con parques nacionales.
+
+  ```xml
+
+  ```
+
 - Las provincias con parques nacionales.
+
+  ```xml
+
+  ```
+
 - Los parques nacionales con menos de veinte especies de interés
+
+  ```xml
+
+  ```
+
 - El número de parque nacionales que sólo tiene como especies de interés animales.
+
+  ```xml
+
+  ```
 
 2. Dada la solución propuesta para almacenar la información sobre los habitantes de un municipio, determinar la expresión XPath que devuelve:
 
@@ -90,15 +189,64 @@
 ```
 
 - El número de habitantes del municipio.
+
+  ```xml
+
+  ```
+
 - Los varones del municipio.
+
+  ```xml
+
+  ```
+
 - Las mujeres del municipio.
+
+  ```xml
+
+  ```
+
 - El número de habitantes de los que se tiene registrado el padre.
+
+  ```xml
+
+  ```
+
 - El número de habitantes de los que se tienen registrados padre y madre.
+
+  ```xml
+
+  ```
+
 - Los habitantes que se llaman Perico.
+
+  ```xml
+
+  ```
+
 - El listado de identificadores de personas que son padre.
+
+  ```xml
+
+  ```
+
 - El listado de identificadores de personas que son madre.
+
+  ```xml
+
+  ```
+
 - Los habitantes de padre conocido que han nacido en Cazorla.
+
+  ```xml
+
+  ```
+
 - Los datos de los habitantes cuyo padre tienen identificador "h01".
+
+  ```xml
+
+  ```
 
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
