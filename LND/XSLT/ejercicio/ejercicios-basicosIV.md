@@ -82,9 +82,118 @@
 
 Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
 - Muestra el nombre, cargo y país de cada uno de los reyes.
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  <xsl:template match="/">
+    <xsl:apply-templates select="reyes/persona"/>
+  </xsl:template>
+  <xsl:template match="/reyes/persona/nombre">
+    <xsl:value-of select="."/>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
 - Muestra el nombre, el país de nacimiento y el año de cada uno de los reyes.
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  <xsl:template match="/">
+    <html>
+      <head/>
+      <body>
+        <xsl:for-each select="//persona">
+          <ul>
+            <li>
+              <xsl:value-of select="nombre"/>
+            </li>
+            <li>
+              <xsl:value-of select="vida/@nacimiento"/>
+            </li>
+            <li>
+              <xsl:value-of select="vida/@pais"/>
+            </li>
+          </ul>
+        </xsl:for-each>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
 - Muestra el nombre y país de todas las personas que hayan sido reinas.
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  <xsl:template match="/">
+    <html>
+      <head/>
+      <body>
+        <xsl:for-each select="//persona">
+          <xsl:if test="monarca/cargo = 'Reina'">
+          <ul>
+            <li>
+              <xsl:value-of select="nombre"/>
+            </li>
+            <li>
+              <xsl:value-of select="monarca/cargo"/>
+            </li>
+            <li>
+              <xsl:value-of select="monarca/pais"/>
+            </li>
+          </ul>
+          </xsl:if>
+        </xsl:for-each>
+      </body>
+    </html>
+  </xsl:template>
+```
+
 - Muestra el nombre y fecha de nacimiento y muerte de todas las personas cuya fecha de muerte sean anterior a 1900.
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  <xsl:template match="/">
+    <html>
+      <head/>
+      <body>
+        <xsl:for-each select="//persona">
+          <xsl:if test="vida/@muerte &lt; 1900">
+          <ul>
+            <li>
+              <xsl:value-of select="nombre"/>
+            </li>
+            <li>
+              <xsl:value-of select="vida/@nacimiento"/>
+            </li>
+            <li>
+              <xsl:value-of select="vida/@muerte"/>
+            </li>
+          </ul>
+          </xsl:if>
+        </xsl:for-each>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
 - Mostrar el cargo y nombre de los monarcas (únicamente de los monarcas) en forma de párrafos:
 
 ```xml
@@ -96,6 +205,36 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
 <p>Victoria Eugenia de Battenger fue Reina de España</p>
 <p>Emperatriz Alexandra fue Emperatriz de Rusia</p>
 ```
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  <xsl:template match="/">
+    <html>
+      <head/>
+      <body>
+        <xsl:for-each select="//persona">
+          <xsl:choose>
+            <xsl:when test="monarca">
+              <p>
+                <xsl:value-of select="nombre"/>
+                <xsl:text>fue </xsl:text>
+                <xsl:value-of select="monarca/cargo"/>
+                <xsl:text>de </xsl:text>
+                <xsl:value-of select="monarca/pais"/>
+              </p>
+            </xsl:when>
+          </xsl:choose>
+        </xsl:for-each>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
 - Mostrar la fecha y lugar de nacimiento de todas las personas en forma de lista. El resultado contendrá todas las etiquetas necesarias para verse correctamente en el navegador:
 
 ```html
@@ -114,6 +253,34 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
   </ul>
 </html>
 
+```
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output encoding="UTF-8" indent="yes" method="html" version="5.0"/>
+  <xsl:template match="/">
+    <html>
+      <head/>
+      <body>
+        <h1>La descendencia de la Reina Victoria</h1>
+        <ul>
+          <xsl:for-each select="//persona">
+            <li>
+              <xsl:value-of select="nombre"/>
+              <xsl:text>nació en </xsl:text>
+              <xsl:value-of select="vida/@nacimiento"/>
+              <xsl:text>en </xsl:text>
+              <xsl:value-of select="vida/@pais"/>
+            </li>
+          </xsl:for-each>
+        </ul>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
 ```
 
 2. Dado el siguiente documento XML, escriba las hojas de estilo XSLT que devuelvan la respuesta deseada.
@@ -148,6 +315,31 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
   <galeria nombre="National Gallery" ciudad="Londres" pais="Reino Unido"/>
 </galerias>
 ```
+
+ - Solución:
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+  <xsl:template match="/">
+    <galerias>
+      <xsl:apply-templates />
+    </galerias>
+  </xsl:template>
+
+  <xsl:template match="galeria">
+    <galeria>
+      <xsl:attribute name="nombre"><xsl:value-of select="nombre" /></xsl:attribute>
+      <xsl:attribute name="ciudad"><xsl:value-of select="ciudad" /></xsl:attribute>
+      <xsl:attribute name="pais"><xsl:value-of select="pais" /></xsl:attribute>
+    </galeria>
+  </xsl:template>
+
+  </xsl:stylesheet>
+  ```
+
+
 - Convertir las etiquetas en atributos, obteniendo el siguiente resultado:
 
 ```xml
@@ -167,10 +359,37 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
   </galeria>
 </galerias>
 ```
+
+Solución:
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+  <xsl:template match="/">
+    <galerias>
+      <xsl:apply-templates />
+    </galerias>
+  </xsl:template>
+
+  <xsl:template match="galeria">
+    <galeria>
+      <nombre><xsl:value-of select="nombre" /></nombre>
+      <ubicacion>
+        <xsl:attribute name="ciudad"><xsl:value-of select="ciudad" /></xsl:attribute>
+        <xsl:attribute name="pais"><xsl:value-of select="pais" /></xsl:attribute>
+      </ubicacion>
+    </galeria>
+  </xsl:template>
+
+  </xsl:stylesheet>
+  ```
+
+
 - Convertir las etiquetas en atributos, obteniendo el siguiente resultado:
 
 ```xml
-<<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ciudades>
   <ciudad>
     <nombre>Madrid</nombre>
@@ -190,6 +409,30 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
 </ciudades>
 ```
 
+Solución:
+
+ ```xml
+ <?xml version="1.0" encoding="UTF-8"?>
+ <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+ <xsl:strip-space elements="*" />
+
+ <xsl:template match="/">
+   <ciudades>
+     <xsl:apply-templates />
+   </ciudades>
+ </xsl:template>
+
+ <xsl:template match="galeria">
+   <ciudad>
+     <nombre><xsl:value-of select="ciudad" /></nombre>
+     <pais><xsl:value-of select="pais" /></pais>
+     <galeria><xsl:value-of select="nombre" /></galeria>
+   </ciudad>
+ </xsl:template>
+
+ </xsl:stylesheet>
+ ```
+
 - Convertir las etiquetas en atributos, obteniendo el siguiente resultado:
 
 ```xml
@@ -206,6 +449,31 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
   </ciudad>
 </ciudades>
 ```
+
+Solución:
+
+ ```xml
+ <?xml version="1.0" encoding="UTF-8"?>
+ <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+ <xsl:strip-space elements="*" />
+
+ <xsl:template match="/">
+   <ciudades>
+     <xsl:apply-templates />
+   </ciudades>
+ </xsl:template>
+
+ <xsl:template match="galeria">
+   <ciudad>
+     <xsl:attribute name="nombre"><xsl:value-of select="ciudad" /></xsl:attribute>
+     <xsl:attribute name="pais"><xsl:value-of select="pais" /></xsl:attribute>
+     <galeria><xsl:value-of select="nombre" /></galeria>
+   </ciudad>
+ </xsl:template>
+
+ </xsl:stylesheet>
+ ```
+
 - Convertir las etiquetas en atributos, obteniendo el siguiente resultado:
 
 ```xml
@@ -221,6 +489,32 @@ Dado el anterior documento XML, realiza las siguientes transformaciones XSLT:
     <galeria galeria="National Gallery" ciudad="Londres"/>
   </pais>
 </paises>
+```
+
+Solución:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:strip-space elements="*" />
+
+<xsl:template match="/">
+  <paises>
+    <xsl:apply-templates />
+  </paises>
+</xsl:template>
+
+<xsl:template match="galeria">
+  <pais>
+    <xsl:attribute name="nombre"><xsl:value-of select="pais" /></xsl:attribute>
+    <galeria>
+        <xsl:attribute name="galeria"><xsl:value-of select="nombre" /></xsl:attribute>
+        <xsl:attribute name="ciudad"><xsl:value-of select="ciudad" /></xsl:attribute>
+    </galeria>
+  </pais>
+</xsl:template>
+
+</xsl:stylesheet>
 ```
 
 ## Genera un informe con las soluciones y los resultados obtenidos de cada uno de los ejercicios propuestos.
