@@ -164,6 +164,23 @@
   /instituto/curso/alumno/nombre
 ```
 
+- Obtén el primer alumno que esta en el segundo curso.
+
+```
+    /instituto/curso[@codigo=2]/alumno[1]
+```
+
+- Obtén el nombre y apellidos de todos los alumnos de 1º de ASIR.
+
+```xml
+    /instituto/curso[@nombre="1º ASIR"]/alumno/nombre | /instituto/curso[@nombre="1º ASIR"]/alumno/apellidos
+```
+
+- Obtén el nombre de todos los alumnos que comiencen por __M__.
+
+```xml
+    /instituto/curso/alumno[starts-with(nombre, "M")]/nombre
+```
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 
