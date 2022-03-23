@@ -182,6 +182,12 @@
     /instituto/curso/alumno[starts-with(nombre, "M")]/nombre
 ```
 
+- Obtén todos los alumnos (Nombre) de 1º de Asir que hayan suspendido,(__<5__), Lenguajes de marcas.
+
+```xml
+  /instituto/curso[@codigo=1]/alumno[notas/nota[1]<5]/nombre/text()
+```
+
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 
 </div>
