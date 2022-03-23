@@ -206,6 +206,30 @@
     /instituto/curso/alumno[nombre="Irina" and apellidos="Lugo Lugo"]/notas/nota/text()
 ```
 
+- Obtén todos los ciales de los alumnos.
+
+```xml
+    /instituto/curso/alumno/@cial
+```
+
+- Obtén todas las notas del alumno con cial __A95M600__.
+
+```xml
+    /instituto/curso/alumno[@cial="A95M600"]/notas/nota/text()
+```
+
+- Obtén todos los apellidos de todos los alumnos.
+
+```xml
+    /instituto/curso/alumno/apellidos/text()
+```
+
+- Obtén todos todos los ciales de los alumnos de 2 de ASIR.
+
+```xml
+    /instituto/curso[@nombre="2º ASIR"]/alumno/@cial
+```
+
 
 ## Genera un informe con las soluciones de cada uno de los ejercicios propuestos.
 
