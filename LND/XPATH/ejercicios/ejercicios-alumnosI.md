@@ -230,5 +230,30 @@
 /instituto/curso[@nombre="2º ASIR"]/alumno/@cial
 ```
 
+- Obtén todos toda la información de texto del alumno con cial A95M600.
+
+```
+/instituto/curso/alumno[@cial="A95M600"]//text()
+```
+
+- Obtén el nombre del curso donde esté el alumno con cial A95M600.
+
+```
+/instituto/curso[alumno/@cial="A95M600"]/@nombre
+```
+
+- Obtén el nombre de aquellos alumnos que son repetidores.
+
+```
+/instituto/curso/alumno[repetidor="True"]/nombre/text()
+```
+
+- Obtén el nombre de todos los alumnos de 1º de ASIR que tengan atributo cial (da igual el valor del cial).
+
+```
+/instituto/curso[@nombre="1º ASIR"]/alumno[@cial]/nombre/text()
+```
+
+
 
 </div>
