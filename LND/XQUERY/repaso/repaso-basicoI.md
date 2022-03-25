@@ -7,82 +7,66 @@
 
 </br>
 
-Dado el siguiente xml, realizar las expresiones xpath para obtener los resultados que se indican:
+Dado el siguiente xml, realizar las expresiones xquery para obtener los resultados que se indican:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<ies>
-  <modulos>
-    <modulo id="0228">
-      <nombre>Aplicaciones web</nombre>
-      <curso>2</curso>
-      <horasSemanales>4</horasSemanales>
-      <ciclo>SMR</ciclo>
-    </modulo>
-    <modulo id="0372">
-      <nombre>Gestión de bases de datos</nombre>
-      <curso>1</curso>
-      <horasSemanales>5</horasSemanales>
-      <ciclo>ASIR</ciclo>
-    </modulo>
-    <modulo id="0373">
-      <nombre>Lenguajes de marcas y sistemas de gestión de información</nombre>
-      <curso>1</curso>
-      <horasSemanales>3</horasSemanales>
-      <ciclo>ASIR</ciclo>
-      <ciclo>DAW</ciclo>
-    </modulo>
-    <modulo id="0376">
-      <nombre>Implantación de aplicaciones web</nombre>
-      <curso>2</curso>
-      <horasSemanales>5</horasSemanales>
-      <ciclo>ASIR</ciclo>
-    </modulo>
-  </modulos>
-</ies>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bib>
+    <libro anyo="1994">
+        <titulo>TCP/IP Illustrated</titulo>
+        <autor>
+            <apellido>Stevens</apellido>
+            <nombre>W.</nombre>
+        </autor>
+        <editorial>Addison-Wesley</editorial>
+        <precio>65.95</precio>
+    </libro>
+    <libro anyo="1992">
+        <titulo>Advanced Programming for Unix environment</titulo>
+        <autor>
+            <apellido>Stevens</apellido>
+            <nombre>W.</nombre>
+        </autor>
+        <editorial>Addison-Wesley</editorial>
+        <precio>65.95</precio>
+    </libro>
+    <libro anyo="2000">
+        <titulo>Data on the Web</titulo>
+        <autor>
+            <apellido>Abiteboul</apellido>
+            <nombre>Serge</nombre>
+        </autor>
+        <autor>
+            <apellido>Buneman</apellido>
+            <nombre>Peter</nombre>
+        </autor>
+        <autor>
+            <apellido>Suciu</apellido>
+            <nombre>Dan</nombre>
+        </autor>
+        <editorial>Morgan Kaufmann editorials</editorial>
+        <precio>39.95</precio>
+    </libro>
+    <libro anyo="1999">
+        <titulo>Economics of Technology for Digital TV</titulo>
+        <editor>
+            <apellido>Gerbarg</apellido>
+            <nombre>Darcy</nombre>
+            <afiliacion>CITI</afiliacion>
+        </editor>
+        <editorial>Kluwer Academic editorials</editorial>
+        <precio>129.95</precio>
+    </libro>
+</bib>
 ```
-- Nombre de los módulos que se imparten en el Instituto:
-  ```
-  Aplicaciones web Gestión de bases de datos Lenguajes de marcas y sistemas de gestión de información Implantación de aplicaciones web
-  ```
-
-- Nombre de los módulos del ciclo ASIR:
-  ```
-  Gestión de bases de datos Lenguajes de marcas y sistemas de gestión de información Implantación de aplicaciones web
-  ```
-- Nombre de los módulos que se imparten en el segundo curso de cualquier ciclo:
-  ```
-  Aplicaciones web Implantación de aplicaciones web
-  ```  
-- Nombre de los módulos de menos de 5 horas semanales:
-  ```
-  Aplicaciones web Lenguajes de marcas y sistemas de gestión de información
-  ```
-- Nombre de los módulos que se imparten en el primer curso de ASIR:
-  ```
-  Gestión de bases de datos Lenguajes de marcas y sistemas de gestión de información
-  ```
-- Horas semanales de los módulos de más de 3 horas semanales:
-  ```
-  4 5 5
-  ```
-
-- Identificador de los módulos __(id)__ de menos de 3 horas semanales:
-  ```
-  0373
-  ```
-- Número de horas que se imparten en el primer curso de cualquiera de sus módulos.    
-  ```
-  8
-  ```
-
-- Número de módulos que se imparten en cualquiera de los cursos de ASIR.    
-  ```
-  3
-  ```
-
-- Identificador del módulo de Aplicaciones web.
-  ```
-  0228
-```
+- Listar el título de todos los libros.
+- Listar año y título de todos los libros, ordenados por el año.
+- Listar los libros cuyo precio sea 65.95.
+- Listar los libros publicados antes del año 2000.
+- Listar año y título de los libros publicados por Addison-Wesley después del año 1992.
+- Listar año y título de los libros que tienen más de un autor.
+- Listar año y título de los libros que tienen no tienen autor.
+- Mostrar los apellidos de los autores que aparecen en el documento, sin repeticiones, ordenadosalfabéticamente.
+- Por cada libro, listar agrupado en un elemento <result> su titulo y autores.
+- Por cada libro, obtener su título y el número de autores, agrupados en un elemento <libro>.
 </div>
