@@ -254,6 +254,48 @@
 /instituto/curso[@nombre="1º ASIR"]/alumno[@cial]/nombre/text()
 ```
 
+- Obtén todos los nombres de los alumnos salvo del que tiene cial=A18X111.
+
+```
+/instituto/curso/alumno[@cial!="A18X111"]/nombre/text()
+```
+
+- Obtén los nombres de los alumnos del fichero, salvo aquellos que sean de último de curso.
+
+```
+/instituto/curso[not(starts-with(@nombre, "2"))]/alumno/nombre/text()
+```
+
+- Obtén el nombre del penúltimo alumno de 1º de DAI.
+
+```
+/instituto/curso[@nombre="1º DAI"]/alumno[last()-1]/nombre/text()
+```
+
+- Obtén todos los nombres de aquellos alumnos cuya suma de notas sea mayor que 23.
+
+```
+/instituto/curso/alumno[sum(notas/nota)>23]/nombre/text()
+```
+
+- Obtén todos los alumnos cuyo nombre comience por M y que sean repetidores.
+
+```
+/instituto/curso/alumno[starts-with(nombre, "M") and repetidor="True"]/nombre/text()
+```
+
+- Obtén toda la información de los alumnos que tengan Pérez como alguno de sus apellidos.
+
+```
+/instituto/curso/alumno[contains(apellidos, "Pérez")]
+```
+
+- Obtén todos los alumnos que tienen menos de 4 materias.
+
+```
+/instituto/curso/alumno[sum(asignaturas)<4]/nombre/text()
+```
+
 
 
 </div>
