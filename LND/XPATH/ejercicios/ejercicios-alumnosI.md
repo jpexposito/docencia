@@ -182,5 +182,18 @@
 /instituto/curso/alumno[starts-with(nombre, "M")]/nombre
 ```
 
+- Obtén todos los alumnos (Nombre) de 1º de Asir que hayan suspendido,(__<5__), Lenguajes de marcas.
+
+```
+/instituto/curso[@codigo=1]/alumno[notas/nota[1]<5]/nombre/text()
+```
+
+- Obtén todos los alumnos (Nombre) de 2º de Asir que hayan aprobado, (__>=5__), Seguridad Informática.
+
+```
+/instituto/curso[@codigo=2]/alumno[notas/nota[1]>=5]/nombre/text()
+```
+
+
 
 </div>
