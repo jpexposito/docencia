@@ -194,6 +194,24 @@
 /instituto/curso[@codigo=2]/alumno[notas/nota[1]>=5]/nombre/text()
 ```
 
+- Obtén todos los alumnos (Cial) de 1º DAI que hayan aprobado, (__>=5__), Programación.
+
+```
+/instituto/curso[@codigo=3]/alumno[notas/nota[1]>=5]/@cial
+```
+
+- Obtén las notas de la alumna __Irina Lugo Lugo__.
+
+```
+/instituto/curso/alumno[nombre="Irina" and apellidos="Lugo Lugo"]/notas/nota/text()
+```
+
+- Obtén todos los ciales de los alumnos.
+
+```
+/instituto/curso/alumno/@cial
+```
+
 
 
 </div>
