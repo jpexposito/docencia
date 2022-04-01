@@ -127,7 +127,7 @@ Por lo tanto, es importante para nuestra web o blog la técnica del Ibound Marke
   - [El País](https://servicios.elpais.com/rss/).
   - [El Mundo](http://rss.elmundo.es/rss/).
   - Lectores de RSS:
-   - [Inoreader](https://www.inoreader.com/).
-   - [Newsblur](https://newsblur.com/).   
+    - [Inoreader](https://www.inoreader.com/).
+    - [Newsblur](https://newsblur.com/).   
 
 </div>
