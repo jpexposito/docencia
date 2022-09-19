@@ -1,6 +1,15 @@
 # MANUAL BÁSICO DE MARKDOWN
 
 ## Estéticas
+ - Justificación del texto:
+  - Al inicio de la página:
+  ```
+   <div align="justify"> 
+   ```
+   - Al final de la página:
+   ```
+   </div>
+   ```
  - Para hacer títulos anteponer dos almohadillas \#
  - Los subtítulos con \## y \###
  - <--- este punto tan molón se hace con \- al princio de la línea
