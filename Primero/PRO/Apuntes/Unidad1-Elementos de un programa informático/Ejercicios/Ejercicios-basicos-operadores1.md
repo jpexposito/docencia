@@ -2,7 +2,6 @@
 
 # Ejercicios de Operadores en Java
 
-
 - Si a, b y c son variables enteras con valores __a=8, b=3, c=-5__, determina el valor de las siguientes expresiones aritméticas:
     -  a + b + c
     -  2 * b + 3 * (a – c)
