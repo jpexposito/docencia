@@ -10,5 +10,8 @@ Desarrolle un algoritmo que permita leer dos valores distintos, determinar cual 
 
 ### Diagrama de Flujo
 
+<img src="images/diagrama-flujo.png"
+ />
+
 </div>
 
