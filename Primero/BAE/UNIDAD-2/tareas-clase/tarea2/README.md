@@ -15,7 +15,6 @@ Se desea realizar una BD que permita apoyar la gestión de un sistema de ventas.
 - Por razones de contabilidad, se debe registrar la información de cada venta con un id, fecha, cliente, descuento y monto final.
 - Además se debe guardar el precio al momento de la venta, la cantidad vendida y el monto total por el producto.
 
-<!--
 
 <details>
       <summary>PULSA PARA VER LA SOLUCIÓN</summary>
@@ -31,6 +30,6 @@ Se desea realizar una BD que permita apoyar la gestión de un sistema de ventas.
   </br>
   
 </details>
--->
+
 
 </div>
