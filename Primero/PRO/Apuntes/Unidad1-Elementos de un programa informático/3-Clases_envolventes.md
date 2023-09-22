@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Clases envolventes
 
 Para cada uno de los tipos de datos primitivos existen una clase de envoltura asociada:
@@ -99,3 +101,5 @@ Métodos estáticos | char car=’u’;
 System.out.println(Character.toUpperCase(car)); |
 | Character valueOf(char c) | Método estático
 Devuelve un Character a partir de un char | Character m=Character.valueOf(’a’); |
+
+</div>

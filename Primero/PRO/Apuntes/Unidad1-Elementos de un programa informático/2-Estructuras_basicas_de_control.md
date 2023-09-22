@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Estructuras básicas de control
 
 ## Estructuras básicas de control
@@ -24,13 +26,12 @@
 
 ### Sentencias If, If…else
 
-Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan de manera secuencial, primero una, después la siguiente y así sucesivamente. Sin embargo, en la mayoría de los casos, seguir un orden secuencial resulta imposible, pues ocurre que algunas sentencias se ejecutan acorde a una condición donde tenemos dos o más instrucciones a ejecutar, pero solo una de estas tendrá lugar según los criterios dados por la condición que se evalúan en este caso por las sentencias If.
+__Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan de manera secuencial__, _primero una, después la siguiente y así sucesivamente_. Sin embargo, en la mayoría de los casos, seguir un orden secuencial resulta imposible, pues ocurre que algunas sentencias se ejecutan acorde a una condición donde tenemos dos o más instrucciones a ejecutar, pero solo una de estas tendrá lugar según los criterios dados por la condición que se evalúan en este caso por las sentencias ___If___.
 
 - Ejemplos:
     1. Ejemplo simple
         
-        
-        ![Untitled](Imagenes/imagen3.png)
+        ![Untitled](images/imagen3.png)
         
         ```java
         //Ejemplo seudocodigo
@@ -38,8 +39,7 @@ Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan d
         
         public class Ejemplo1
         
-        	public static void main(String[] args){
-        	
+        	public static void main(String[] args){	
         		if (condicion){
         			sentencia;
         		}
@@ -49,10 +49,12 @@ Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan d
         }
         ```
         
-    2. Suponiendo por ejemplo que estamos conduciendo un vehículo y llegamos a la altura de un semáforo. Si la luz del semáforo es roja nos detendremos, si es verde seguiríamos nuestro camino a la misma velocidad. Aquí se presentan dos alternativas: continuar con la marcha o frenar, dadas por la condición del estado de la luz del semáforo.
-        
+    2. _Suponiendo por ejemplo que estamos conduciendo un vehículo y llegamos a la altura de un semáforo. Si la luz del semáforo es roja nos detendremos_, si es verde seguiríamos nuestro camino a la misma velocidad. Aquí se presentan __dos alternativas__: ___continuar___ con la marcha o ___frenar___, dadas por la condición del estado de la luz del semáforo.
+        __Pseudocódigo__:
         Si `luzSemaforo=rojo`, entonces `velocidadVehiculo=0`
         
+		__En código:__
+
         ```java
         //Ejemplo seudocodigo
         import java.lang.*;
@@ -75,13 +77,13 @@ Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan d
         }
         ```
         
-    3. Estamos ante dos alternativas. En este tipo de selección la condición toma un valor lógico de verdadero o falso. Se tienen que especificar las acciones que deben ocurrir si la condición es verdadera. Si la luz es verde, la condición no se cumple y la velocidad del vehículo se mantendría en 40. Opcionalmente se puede indicar que debe ocurrir si la condición es falsa.
+    3. _Estamos ante dos alternativas_. __En este tipo de selección la condición toma un valor lógico de verdadero o falso__. Se tienen que especificar las acciones que deben ocurrir si la condición es verdadera. Si la luz es verde, la condición no se cumple y la velocidad del vehículo se mantendría en 40. Opcionalmente se puede indicar que debe ocurrir si la condición es falsa.
         
         Si `luzSemaforo=rojo`, entonces `velocidadVehiculo=0`
         
         Si no `velocidadVehiculo=40`
         
-        ![Untitled](Imagenes/imagen4.png)
+        ![Untitled](images/imagen4.png)
         
         ```java
         //Ejemplo seudocodigo
@@ -108,9 +110,9 @@ Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan d
         }
         ```
         
-    4. Si se requiere la evaluación de diferentes condiciones una detrás de otra, se utilizara la expresión else if. El programa evaluara la primera condición la cual se cumplirá si es verdadera, si no, seguirá y evaluara la segunda, si no, la tercera, así hasta n condiciones.
+    4. __Si se requiere la evaluación de diferentes condiciones una detrás de otra, se utilizara la expresión__ ___else if___. El programa evaluara la primera condición la cual se cumplirá si es verdadera, si no, seguirá y evaluara la segunda, si no, la tercera, así hasta n condiciones.
         
-        ![Untitled](Imagenes/imagen5.png)
+        ![Untitled](images/imagen5.png)
         
         Siguiendo el ejemplo del vehículo, pero añadiendo la luz ámbar como condición para detener el vehículo. En lenguaje java se escribiría el siguiente código:
         
@@ -142,9 +144,9 @@ Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan d
         }
         ```
         
-    5. Las estructuras de selección con operadores lógicos y de relación nos permiten simplificar la estructura del código en muchas ocasiones. Sin ellos nos veríamos en la necesidad de anidar las sentencias complicando la comprensión del código y haciéndolo más extenso.
+    5. ___Las estructuras de selección con operadores lógicos y de relación___ _nos permiten simplificar la estructura del código en muchas ocasiones_. Sin ellos nos veríamos en la necesidad de anidar las sentencias complicando la comprensión del código y haciéndolo más extenso.
         
-        Ejemplo del caso anterior, si el semáforo esta en rojo o en ámbar, el vehículo debe parar.
+        __Ejemplo del caso anterior, si el semáforo esta en rojo o en ámbar, el vehículo debe parar.__
         
         ```java
         //Ejemplo seudocodigo
@@ -174,9 +176,9 @@ Normalmente, los algoritmos vienen definidos por instrucciones que se ejecutan d
 
 ### Sentencia Switch…case
 
-En el caso de dos o más bloques alternativos se debe usar la sentencia de control switch. La sentencia Switch evalúa una expresión del tipo primitivo de datos (byte, short, char y int) o de la clase String y va comparando cada uno de los casos a ver cuál de ellos cumple la condición. En el caso de que uno de ellos sea verdadero, se ejecutan las sentencias del bloque hasta que se rompe su ejecución mediante la orden “break” o llegue al final de la sentencia switch. Si ninguna de los casos se cumpliera, se ejecutaría la opción por defecto en caso de existir, puesto que es opcional, o ninguna de ellas.
+__En el caso de dos o más bloques alternativos se debe usar la sentencia de control__ ___switch___. La sentencia Switch ___evalúa una expresión del tipo primitivo de datos (byte, short, char y int)__ o de la clase __String__ y va comparando cada uno de los casos a ver cuál de ellos cumple la condición. En el caso de que uno de ellos sea verdadero, se ejecutan las sentencias del bloque hasta que se rompe su ejecución mediante la orden “break” o llegue al final de la sentencia switch. Si ninguna de los casos se cumpliera, se ejecutaría la opción por defecto en caso de existir, puesto que es opcional, o ninguna de ellas.
 
-![Untitled](Imagenes/imagen6.png)
+![Untitled](images/imagen6.png)
 
 - Ejemplos:
     
@@ -263,9 +265,9 @@ En el caso de dos o más bloques alternativos se debe usar la sentencia de contr
 
 ## Estructuras de repeticion
 
-Las estructuras de repetición o bucle nos permiten ejecutar un número de veces determinado una serie de instrucciones. La mayor utilidad es evitar la repetición de lineas de código iguales. Es frecuente que determinados cálculos requieran la ejecución repetitiva de un conjunto de sentencias, como por ejemplo, buscar un nombre en un fichero, leyendo secuencialmente linea a linea. Las estructuras repetitivas se ejecutan un número finito de veces, al principio o final de cada iteración se evalúa una condición la cual determina si ha de continuar o no la ejecución pasando a la siguiente o terminando el bucle.
+_Las estructuras de repetición_ o ___bucle___ _nos permiten ejecutar un número de veces determinado una serie de instrucciones_. ___La mayor utilidad es evitar la repetición de lineas de código iguales___. Es frecuente que determinados cálculos requieran la ejecución repetitiva de un conjunto de sentencias, como por ejemplo, buscar un nombre en un fichero, leyendo secuencialmente linea a linea. Las estructuras repetitivas se ejecutan un número finito de veces, al principio o final de cada iteración se evalúa una condición la cual determina si ha de continuar o no la ejecución pasando a la siguiente o terminando el bucle.
 
-Existen tres tipos principalmente: while, do-while y for.
+Existen tres tipos principalmente: __while, do-while y for__.
 
 | Estructura | Usar si |
 | --- | --- |
@@ -280,7 +282,7 @@ Usar si la estructura de almacenamiento se va a recorrer completa realizando ope
 
 Un ejemplo común de uso de este tipo de estructuras es la lectura de un fichero en donde la condición de continuidad es que no se ha llegado al final del fichero. De esta manera, si el fichero está vacío, ya no se cumple la condición desde el principio ahorrando tiempo de ejecución.
 
-![Untitled](Imagenes/imagen7.png)
+![Untitled](images/imagen7.png)
 
 Importante destacar la necesidad de que si la condición se cumple, dentro del bucle debe existir alguna sentencia para que la condición en algún momento de la ejecución sea falsa, si no, entraríamos en un bucle infinito.
 
@@ -288,7 +290,7 @@ Importante destacar la necesidad de que si la condición se cumple, dentro del b
 
 A diferencia del while, el do while evalua la condicion al final del bucle, ejecutando el codigo que lo forma al menos una vez.
 
-![Untitled](Imagenes/imagen8.png)
+![Untitled](images/imagen8.png)
 
 ```java
 //Ejemplo seudocodigo
@@ -343,7 +345,7 @@ Partes importantes dentro del bucle for:
 - Condición: Se determina el final del bucle evaluando una condición, como si un if se tratase.
 - Actualización: línea dentro del bucle donde se incrementara o decrementa el valor del contador, puede ser de 1 en 1, 2 en 2 o de más valor en más valor (5 en 5, etc...).
 
-![Untitled](Imagenes/imagen9.png)
+![Untitled](images/imagen9.png)
 
 | for( | inicializacion; | condicion; | pasos) |
 | --- | --- | --- | --- |
@@ -462,3 +464,5 @@ public class Ejemplo1 {
 
 }
 ```
+
+</div>

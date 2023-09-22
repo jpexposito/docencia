@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Elementos de un programa informático
 
 ## Elementos de un programa informático
@@ -155,3 +157,5 @@ Javadoc, es una herramienta del SDK que permite documentar, de una manera rápid
 | + | Concatenación de cadenas | a=“cad1”+“cad2” → cad1cad2 |
 | . | Acceso a variables y métodos | a=obj.var1 |
 | ( ) | Agrupación de expresiones | a=(a+b)*c |
+
+</div>
