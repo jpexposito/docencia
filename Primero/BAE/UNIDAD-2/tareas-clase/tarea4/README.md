@@ -27,7 +27,7 @@ Se solicita:
   <img src="img/camioneros.drawio.png">
 
   </br>
--->
+
 </details>
 
 <details>
@@ -58,5 +58,5 @@ __Explicación__:
   - Camión – Camionero __(1,N)__
   Por lo tanto la cardinalidad de la relación “conduce” es __N:M__ (las dos máximas).
 </details>
-
+-->
 </div>
