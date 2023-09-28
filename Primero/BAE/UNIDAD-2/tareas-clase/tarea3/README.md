@@ -22,7 +22,6 @@ __Nota__: Una dirección se entenderá como Nº, Calle, Ciudad y Provincia . Una
 
 _Se pide hacer el diagrama ER para la base de datos que represente esta información._
 
-<!--
 <details>
       <summary>PULSA PARA VER LA SOLUCIÓN</summary>
 
@@ -44,6 +43,5 @@ _Se pide hacer el diagrama ER para la base de datos que represente esta informac
   </br>
   
 </details>
--->
 
 </div>
