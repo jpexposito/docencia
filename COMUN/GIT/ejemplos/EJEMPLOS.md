@@ -1,19 +1,21 @@
-# EJEMPLOS EN Git
+# Trabajando con Git
 
 ❗️Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre historial de cambios o bien hacer un clon del repositorio remoto https://github.com/jpexposito/libro mediante la siguiente secuencia de comandos:
+
 ```console
 git clone https://github.com/jpexposito/libro.git
 cd libro
-```
+ls -la
+``````
+>__Nota__: Recuerda mostrar el contenido del directorio libro
 
 ## Ejercicio 1
 
 - Mostrar el historial de cambios del repositorio.
 - Crear la carpeta capítulos y crear dentro de ella el fichero capitulo1.txt con el siguiente texto.
-
-```console
-Git es un sistema de control de versiones ideado por Linus Torvalds.
-```
+  ```console
+  Git es un sistema de control de versiones ideado por Linus Torvalds.
+  ```
 - Añadir los cambios a la zona de intercambio temporal.
 - Hacer un commit de los cambios con el mensaje _Añadido capítulo 1._
 - Volver a mostrar el historial de cambios del repositorio.
@@ -22,15 +24,21 @@ Git es un sistema de control de versiones ideado por Linus Torvalds.
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
  ```console
- > git log
- > mkdir capitulos
- > cat > capitulos/capitulo1.txt
+ git log
+ mkdir capitulos
+ cat > capitulos/capitulo1.txt
  Git es un sistema de control de versiones ideado por Linus Torvalds.
- Ctrl+D
- > git add .
- > git commit -m "Añadido capítulo 1."
- > git log
  ```
+>__Nota__: __Ctrl+D__ nos permite salir del cat.
+
+```console
+ git add .
+ git commit -m "Añadido capítulo 1."
+ git log
+ ```
+
+ >__Nota__: __git add__ permite añadir elementos al especio de intercambio.
+ __git log__ permite ver el historico de cambios.
 
 </details>
 
@@ -50,16 +58,22 @@ El flujo de trabajo básico con Git consiste en: 1- Hacer cambios en el reposito
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
 ```console
- > cat > capitulos/capitulo2.txt
+ cat > capitulos/capitulo2.txt
  El flujo de trabajo básico con Git consiste en:
  1- Hacer cambios en el repositorio.
  2- Añadir los cambios a la zona de intercambio temporal.
  3- Hacer un commit de los cambios.
- Ctrl+D
- > git add .
- > git commit -m "Añadido capítulo 2."
- > git diff HEAD~2..HEAD
+ ```
+ 
+ >___Nota__:__Ctrl+D__, sale del cat.
+
+ ```code
+ git add .
+ git commit -m "Añadido capítulo 2."
+ git diff HEAD~2..HEAD
 ```
+
+>__Nota__: __HEAD__ Apunta al último cambio del repositorio.
 
 </details>
 
@@ -81,11 +95,15 @@ Git permite la creación de ramas lo que permite tener distintas versiones del m
 ```console
  > cat > capitulos/capitulo3.txt
  Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
- Ctrl+D
- > git add .
- > git commit -m "Añadido capítulo 3."
- > git log
- > git diff <codigo hash de la primera version>..HEAD
+ ```
+
+__Ctrl+D__
+
+```console
+git add .
+git commit -m "Añadido capítulo 3."
+git log
+git diff <codigo hash de la primera version>..HEAD
 ```
 
 </details>
@@ -104,13 +122,13 @@ Indice de los cápitulos, con conceptos avanzados de git
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
 ```console
- > cat > indice.txt
- > git add .
- > git commit -m "Se crea el indice."
- > echo "Indice de los cápitulos, con conceptos avanzados de git" >> indice.txt
- > git add .
- > git commit -m "Añadido el índice ."
- > git annotate indice.txt
+ cat > indice.txt
+ git add .
+ git commit -m "Se crea el indice."
+ echo "Indice de los cápitulos, con conceptos avanzados de git" >> indice.txt
+ git add .
+ git commit -m "Añadido el índice ."
+ git annotate indice.txt
  ```
 
 </details>
@@ -119,12 +137,14 @@ Indice de los cápitulos, con conceptos avanzados de git
 
 Crear una nueva rama bibliografía y mostrar las ramas del repositorio.
 
+>__Nota__: Recuerda que __git branch__ crea una rama.
+
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
 ```console
   git branch bibliografia
-  > git branch -av
+  git branch -av
 ```
 
 </details>
@@ -146,13 +166,18 @@ Crear una nueva rama bibliografía y mostrar las ramas del repositorio.
  <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
 ```console
-> cat > capitulos/capitulo4.txt
+cat > capitulos/capitulo4.txt
 En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
-Ctrl+D
-> git add .
-> git commit -m "Añadido capítulo 4."
-> git log --graph --all --oneline
 ```
+
+Ctrl+D
+
+```console
+git add .
+git commit -m "Añadido capítulo 4."
+git log --graph --all --oneline
+```
+>__Nota__: Obvesva la salida del comando __git log --graph --all --oneline__.
 
 </details>
 
@@ -171,13 +196,17 @@ Chacon, S. and Straub, B. Pro Git. Apress.
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
 ```console
- > git checkout bibliografia
- > cat > bibliografia.txt
+ git checkout bibliografia
+ cat > bibliografia.txt
  - Chacon, S. and Straub, B. Pro Git. Apress.
- Ctrl+D
- > git add .
- > git commit -m "Añadida primera referencia bibliográfica."
- > git log --graph --all --oneline
+ ```
+ 
+__Ctrl+D__
+
+``````
+git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
 ```
 
  </details>
@@ -189,15 +218,18 @@ Chacon, S. and Straub, B. Pro Git. Apress.
  - Eliminar la rama bibliografía.
  - Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.
 
+>__Nota__: __git checkout__ Descarga/cambia de rama.
+
+
 <details>
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
  ```console
- > git checkout main
-> git merge bibliografia
-> git log --graph --all --oneline
-> git branch -d bibliografia
-> git log --graph --all --oneline
+  git checkout main
+  git merge bibliografia
+  git log --graph --all --oneline
+  git branch -d bibliografia
+  git log --graph --all --oneline
  ```
 
  </details>
@@ -231,24 +263,32 @@ Hodson, R. Ry’s Git Tutorial. Smashwords (2014)
   <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
  ```console
- > git branch bibliografia
- > git checkout bibliografia
- > cat > bibliografia.txt
+ git branch bibliografia
+ git checkout bibliografia
+ cat > bibliografia.txt
  - Scott Chacon and Ben Straub. Pro Git. Apress.
  - Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)
- Ctrl+D
- > git commit -a -m "Añadida nueva referencia bibliográfica."
- > git checkout main
- > cat > bibliografia.txt
+ ```
+ 
+ >__Nota__:__Ctrl+D__ salimos del cat.
+ 
+ ```
+ git commit -a -m "Añadida nueva referencia bibliográfica."
+ git checkout main
+ cat > bibliografia.txt
  - Chacon, S. and Straub, B. Pro Git. Apress.
  - Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.
- Ctrl+D
- > git commit -a -m "Añadida nueva referencia bibliográfica."
- > git merge bibliografia
- > git nano bibliografia
+ ```
+ 
+ >__Nota__:__Ctrl+D__ salimos del cat.
+ 
+ ```
+ git commit -a -m "Añadida nueva referencia bibliográfica."
+ git merge bibliografia
+ git nano bibliografia
  # Hacer los cambios indicados en el fichero
- > git commit -a -m "Solucionado conflicto bibliografía."
- > git log --graph --all --oneline
+ git commit -a -m "Solucionado conflicto bibliografía."
+ git log --graph --all --oneline
  ```
 
  </details>
