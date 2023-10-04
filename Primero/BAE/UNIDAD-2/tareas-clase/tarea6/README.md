@@ -38,19 +38,19 @@ Propiedades:
 </details>
 
 <details>
-      <summary>Entidaddes-Relaciones</summary>
+      <summary>Solución 1</summary>
 
   </br>
-  <img src="img/automoviles-relaciones.drawio.png">
+  <img src="er-solucion-1.png">
   </br>
   
 </details>
 
 <details>
-      <summary>Diagrama</summary>
+      <summary>Solución 2</summary>
 
   </br>
-  <img src="img/automoviles-diagrama.drawio.png">
+  <img src="er-solucion-2.png">
   </br>
   
 </details>
