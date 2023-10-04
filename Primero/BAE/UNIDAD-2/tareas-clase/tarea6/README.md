@@ -23,19 +23,6 @@ __Recuerda que__:
 - (x,y): Cardinalidad; estas hacen referencia ala cantidad de relación entre una entidad y otra.
 - Atributo subrayado: Es el campo clave o índice; este ordena toda la información.
 
-<details>
-      <summary>Paso 1</summary>
-
-| Sustantivos | Verbos |
-| -- | -- |
-|  Automóviles, Cliente, Revisión  |  Necesitar, Conocer, LLevar, Comprar, Desear, Realizar  |
-
-Propiedades:
-- Automóvil: Matrícula, marca, modelo, color y precio.
-- Cliente: RFC, nombre, dirección, ciudad y número de teléfono.
-- Revisión: Código, cambio de filtro, cambio de aciete y cambio de frenos.
-
-</details>
 
 <details>
       <summary>Solución 1</summary>
@@ -54,6 +41,5 @@ Propiedades:
   </br>
   
 </details>
-
 
 </div>
