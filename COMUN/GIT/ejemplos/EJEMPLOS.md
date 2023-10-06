@@ -103,7 +103,7 @@ __Ctrl+D__
 git add .
 git commit -m "Añadido capítulo 3."
 git log
-git diff <codigo hash de la primera version>..HEAD
+ git diff <codigo hash de la primera version>..HEAD
 ```
 
 </details>
@@ -209,7 +209,7 @@ git commit -m "Añadida primera referencia bibliográfica."
 git log --graph --all --oneline
 ```
 
- </details>
+</details>
 
 ## Ejercicio 8
 
