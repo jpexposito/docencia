@@ -203,7 +203,7 @@ Chacon, S. and Straub, B. Pro Git. Apress.
  
 __Ctrl+D__
 
-``````
+```console
 git add .
 git commit -m "Añadida primera referencia bibliográfica."
 git log --graph --all --oneline
