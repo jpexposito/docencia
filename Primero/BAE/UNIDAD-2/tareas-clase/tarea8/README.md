@@ -19,7 +19,7 @@ Se pide:
 5. Colocar los atributos a cada entidad e interrelación.
 6. Indica la cardinalidad de las relaciones.
 
-
+<!--
 <details>
       <summary>PASO 1 :PULSA PARA VER LA SOLUCIÓN</summary>
   </br>
@@ -36,5 +36,5 @@ Se pide:
    </br>
   
 </details>
-
+-->
 </div>
