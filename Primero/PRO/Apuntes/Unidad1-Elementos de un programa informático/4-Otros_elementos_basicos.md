@@ -15,16 +15,56 @@ public class OrdenarNumeros {
         int num5 = 40;
 
         // Ordenamos los números
-        if (num1 > num2) { int temp = num1; num1 = num2; num2 = temp; }
-        if (num2 > num3) { int temp = num2; num2 = num3; num3 = temp; }
-        if (num3 > num4) { int temp = num3; num3 = num4; num4 = temp; }
-        if (num4 > num5) { int temp = num4; num4 = num5; num5 = temp; }
-        if (num1 > num2) { int temp = num1; num1 = num2; num2 = temp; }
-        if (num2 > num3) { int temp = num2; num2 = num3; num3 = temp; }
-        if (num3 > num4) { int temp = num3; num3 = num4; num4 = temp; }
-        if (num1 > num2) { int temp = num1; num1 = num2; num2 = temp; }
-        if (num2 > num3) { int temp = num2; num2 = num3; num3 = temp; }
-        if (num1 > num2) { int temp = num1; num1 = num2; num2 = temp; }
+        if (num1 > num2) { 
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        if (num2 > num3) { 
+            int temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+        if (num3 > num4) {
+            int temp = num3;
+            num3 = num4;
+            num4 = temp; 
+        }
+        if (num4 > num5) {
+            int temp = num4;
+            num4 = num5;
+            num5 = temp;
+        }
+        if (num1 > num2) {
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+            }
+        if (num2 > num3) {
+            int temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+        if (num3 > num4) {
+            int temp = num3;
+            num3 = num4;
+            num4 = temp;
+        }
+        if (num1 > num2) {
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        if (num2 > num3) {
+            int temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+        if (num1 > num2) {
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
 
         // Mostramos los números ordenados
         System.out.println("Números ordenados: " + num1 + ", " + num2 + ", " + num3 + ", " + num4 + ", " + num5);
