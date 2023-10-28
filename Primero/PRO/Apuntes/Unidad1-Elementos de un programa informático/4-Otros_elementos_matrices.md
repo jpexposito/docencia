@@ -399,4 +399,150 @@ En este ejemplo, la función __bubbleSort__ implementa el algoritmo de ordenaci�
 
 Por favor, ten en cuenta que __Bubble Sort__ __NO__ es la opción más eficiente para grandes conjuntos de datos, ya que tiene una complejidad de tiempo de __O(n^2)__. Para conjuntos de datos más grandes, se recomiendan algoritmos más eficientes como __QuickSort o MergeSort__.
 
+# Arrays Bidimensionales
+
+Una matriz bidimensional en __es simplemente un array de arrays__, lo que significa que contiene otros arrays como sus elementos. __Cada uno de estos "arrays internos" representa una fila de la matriz__.
+
+## Matrices Bidireccionales
+
+En Java, una matriz bidimensional se declara y se inicializa de la siguiente manera:
+
+```java
+tipoDato[][] nombreMatriz = new tipoDato[numFilas][numColumnas];
+```
+
+Donde __tipoDato__ es el tipo de datos que contendrá la matriz, __nombreMatriz__ es el nombre de la matriz, __numFilas__ es el número de filas y __numColumnas__ es el número de columnas. Su definicial es similar a los __Array´s Unidimensionales__. 
+
+### Ejemplo
+
+Supongamos que queremos crear una matriz bidimensional de enteros de 2x3 e inicializarla con algunos valores. Aquí está el código Java para hacerlo:
+
+```java
+int[][] matriz = {{1, 2, 3}, {4, 5, 6}};
+```
+
+Esta matriz se vería como sigue:
+
+```code
+|---|---|---|
+| 1 | 2 | 3 |
+|---|---|---|
+| 4 | 5 | 6 |
+|---|---|---|
+```
+
+La matriz matriz es de tipo __int__, tiene __2__ filas y __3__ columnas, y está inicializada con los valores del __1 al 6__ _distribuidos en las filas y columnas_.
+
+### Acceso a Elementos de una Matriz Bidimensional
+
+Para acceder a los elementos de una matriz bidimensional, utilizamos dos índices: uno para la fila y otro para la columna. Por ejemplo, para acceder al elemento en la segunda fila y tercera columna de la matriz anterior, usaríamos:
+
+```java
+// Esto asignaría el valor 6 a la variable "elemento"
+int elemento = matriz[1][2]; 
+```
+
+### Modificación de Elementos de una Matriz Bidimensional
+
+Para modificar un elemento de una matriz bidimensional, también utilizamos dos índices. Por ejemplo, para cambiar el valor en la primera fila y segunda columna a 10, usaríamos:
+
+```java
+matriz[0][1] = 10;
+```
+
+### Recorriendo una Matriz Bidimensional
+
+Para recorrer una matriz bidimensional, utilizamos dos bucles for. El primer bucle itera sobre las filas y el segundo bucle itera sobre las columnas. Por ejemplo, para imprimir todos los elementos de la matriz, podríamos usar:
+
+```java
+// Tenemos el iterados i para las filas
+for (int i = 0; i < matriz.length; i++) {
+    //Tenemos el iterador j para las columnas
+    for (int j = 0; j < matriz[i].length; j++) {
+        System.out.print(matriz[i][j] + " ");
+    }
+    //Salta de fila
+    System.out.println();
+}
+```
+
+Este código imprimiría:
+
+```code
+1 2 3 
+4 5 6 
+```
+
+## Matrices tridireccionales
+
+Una matriz tridimensional en es un array de arrays de arrays, lo que significa que contiene otros __arrays bidimensionales__ como sus elementos. __Cada uno de estos "arrays internos" representa una matriz bidimensional__, que a su vez representa una capa de la matriz tridimensional.
+
+Representación
+
+En Java, una matriz tridimensional se declara y se inicializa de la siguiente manera:
+
+```code
+tipoDato[][][] nombreMatriz = new tipoDato[numCapas][numFilas][numColumnas];
+```
+
+Donde __tipoDato__ es el tipo de datos que contendrá la matriz, __nombreMatriz__ es el nombre de la matriz, __numCapas__ es el número de capas, __numFilas__ es el número de filas y __numColumnas__ es el número de columnas.
+
+#### Ejemplo de Matriz Tridimensional
+
+Supongamos que queremos crear una matriz tridimensional de enteros de __2x3x2__ e _inicializarla con algunos valores_.
+
+```java
+int[][][] matriz = {{{1, 2}, {3, 4}, {5, 6}}, {{7, 8}, {9, 10}, {11, 12}}};
+```
+
+Esta matriz se vería como sigue:
+
+```yaml
+Capa 1:
+| 1  2 |
+| 3  4 |
+| 5  6 |
+
+Capa 2:
+| 7  8 |
+| 9 10 |
+| 11 12 |
+
+```
+
+La matriz matriz es de tipo int, tiene _2 capas, 3 filas y 2 columnas__, y está inicializada con los valores del __1 al 12__ distribuidos en las __capas, filas y columnas__.
+
+#### Acceso a Elementos de una Matriz Tridimensional:
+
+```java
+int elemento = matriz[1][2][0]; // Esto asignaría el valor 11 a la variable "elemento"
+``` 
+
+#### Modificación de Elementos de una Matriz
+
+```java
+matriz[0][1][1] = 20;
+```
+
+#### Recorriendo una Matriz Tridimensional
+
+```java
+
+// Tenemos el iterados i para las capas
+for (int i = 0; i < matriz.length; i++) {
+    System.out.println("Capa " + (i+1) + ":");
+    // Tenemos el iterados j para las filas
+    for (int j = 0; j < matriz[i].length; j++) {
+        // Tenemos el iterados k para las columnas
+        for (int k = 0; k < matriz[i][j].length; k++) {
+            System.out.print(matriz[i][j][k] + " ");
+        }
+        //Salta de fila
+        System.out.println();
+    }
+    //Salta de capa
+    System.out.println();
+}
+```
+
 </div>
