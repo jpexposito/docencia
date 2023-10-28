@@ -393,7 +393,6 @@ public class EjemploBubbleSort {
         }
     }
 }
-
 ```
 
 En este ejemplo, la función __bubbleSort__ implementa el algoritmo de ordenación _Bubble Sort_. Funciona _comparando elementos adyacentes y los intercambia si están en el orden incorrecto. Este proceso se repite hasta que el array esté completamente ordenado_.
