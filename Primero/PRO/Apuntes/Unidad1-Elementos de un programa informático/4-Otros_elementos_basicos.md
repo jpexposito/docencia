@@ -291,7 +291,45 @@ for (int i = 0; i < original.length; i++) {
 copia el contenido de un array en el otro.
 
 
-5. Ordenar un Array:
+5. Copiar un Array en orden inverso:
+
+```java
+// Array original
+int[] arrayOriginal = {1, 2, 3, 4, 5};
+
+// Array destino
+int[] arrayInverso = new int[arrayOriginal.length];
+
+// Copiar en orden inverso
+for (int i = 0; i < arrayOriginal.length; i++) {
+    arrayInverso[i] = arrayOriginal[arrayOriginal.length - 1 - i];
+}
+```
+
+| Array Original | Array Inverso |
+|----------------|---------------|
+| `[1, 2, 3, 4, 5]` | `[0, 0, 0, 0, 0]` |
+
+
+_Iterando sobre el array original en orden inverso_:
+
+- Para __i = 0__:
+arrayInverso[0] = arrayOriginal[4] => [__5__, 0, 0, 0, 0]
+
+- Para __i = 1__:
+arrayInverso[1] = arrayOriginal[3] => [__5, 4__, 0, 0, 0]
+
+- Para __i = 2__:
+arrayInverso[2] = arrayOriginal[2] => [__5, 4, 3__, 0, 0]
+
+- Para __i = 3__:
+arrayInverso[3] = arrayOriginal[1] => [__5, 4, 3, 2__, 0]
+
+- Para __i = 4__:
+arrayInverso[4] = arrayOriginal[0] => [__5, 4, 3, 2, 1__]
+
+
+6. Ordenar un Array:
 
 
 ```java
