@@ -73,21 +73,28 @@ public class OrdenarNumeros {
 
 ```
 
-
 # Arrays Unidimensionales
 
-Un array es una estructura para guardar un conjunto de objetos de la misma clase. Se accede a cada elemento individual del array mediante un número entero denominado índice (index en inglés). 0 es el índice del primer elemento y n-1 es el índice del último elemento, siendo n, la dimensión del array.
+Un array es una estructura para guardar un conjunto de objetos de la misma clase. Se accede a cada elemento individual del array mediante un número entero denominado __índice (index en inglés)__. __0__ es el índice del primer elemento y __n-1__ es el índice del último elemento, siendo __n__, la dimensión del array.
 
 Para declarar un array se usa la siguiente sintaxis:
 
 ```
 tipo_de_dato[] nombre_del_array;
 ```
+Para declarar y inicializar un array en Java, puedes hacerlo de la siguiente manera:
+
+| Tipo de Dato | Nombre del Array | Tamaño del Array | Elementos |
+|--------------|-------------------|-------------------|-----------|
+| int          | numeros           | 4                 | [2, -4, 15, -25] |
+
 
 Por, ejemplo, para declarar un array de enteros escribimos lo siguiente:
+
 ```java
 int[] numeros;
 ```
+
 Para crear un array de 4 números enteros escribimos lo siguiente:
 
 ```java
@@ -110,6 +117,15 @@ numeros[2] = 15;
 numeros[3] = -25;
 ```
 
+
+ Índice | Valor |
+|-------|-------|
+| 0     | 2 |
+| 1     | -4 |
+| 2     | 15 |
+| 3     | -25 |
+
+
 Los arrays se pueden declarar, crear e inicializar en una misma línea, de la siguiente manera:
 
 ```java
@@ -121,7 +137,7 @@ Para imprimir a los elementos de array nombres se escribe
 
 ```java
 for(int i=0; i < nombres.length; i++){
-System.out.println(nombres[i]);
+    System.out.println(nombres[i]);
 }
 ```
 
@@ -135,15 +151,31 @@ Veamos algunos ejemplos:
 public class EjemploArrays {
 
     public static void main(String[] args) {
-        // Inicializar un arreglo de enteros
+        // Inicializar un array de enteros
         int[] numeros = {10, 20, 30, 40, 50};
 
-        // Acceder a elementos del arreglo
+        // Acceder a elementos del array
         System.out.println("El primer elemento es: " + numeros[0]);
         System.out.println("El segundo elemento es: " + numeros[1]);
     }
 }
 
+```
+
+> __Importante__: Definicimos un array de tamaño __5__ (__lenght__).
+La posición __numeros[0]__ contiene el valor __10__.
+La posición __numeros[1]__ contiene el valor __20__.
+
+El código:
+
+```java
+System.out.println("El primer elemento es: " + numeros[0]);
+System.out.println("El segundo elemento es: " + numeros[1]);
+```
+
+```code
+El primer elemento es: 10
+El segundo elemento es: 20
 ```
 
 2. Recorrer un Array con un Bucle:
@@ -152,16 +184,38 @@ public class EjemploArrays {
 public class EjemploArrays {
 
     public static void main(String[] args) {
-        // Inicializar un arreglo de cadenas
+        // Inicializar un array de cadenas
         String[] nombres = {"Juan", "María", "Carlos", "Elena"};
 
-        // Recorrer el arreglo e imprimir los elementos
+        // Recorrer el array e imprimir los elementos
         for (String nombre : nombres) {
             System.out.println("Nombre: " + nombre);
         }
     }
 }
 
+```
+
+> __Importante__: Definicimos un array de tamaño __4__ (__lenght__).
+La posición __nombres[0]__ contiene el valor __Juan__.
+La posición __nombres[1]__ contiene el valor __María__, y así sucesivamente.
+
+
+El bucle:
+
+```java
+for (String nombre : nombres) {
+    System.out.println("Nombre: " + nombre);
+}
+```
+
+Muestra la siguiente salida:
+
+```code
+Nombre: Juan
+Nombre: María
+Nombre: Carlos
+Nombre: Elena
 ```
 
 3. Encontrar el Valor Máximo en un Array:
@@ -185,22 +239,31 @@ public class EjemploArrays {
 
 ```
 
+> __Importante__: Definicimos un array de tamaño __4__ (__lenght__).
+Donde los valores son: __30,10__,... .
+
+El algoritmo realiza:
+- Fija un valor máximo al inicio, cuyo valor es primer elemento del array (__30__).
+- Comenzamos recorriendo el array en la posición __1__, y no en la __0__, dado que es el valor máquino y no tiene sentido __->__ (__30 = 30__).
+- Si el elmento que se hace refrencia a través del __índice__ es mayor que el __máximo__ en ese momento, se actualiza.
+- El __máximo__ se encuentra en cunado el __índice__ vale __2__ y se hace referencia al valor _50_ -> __(numeros[2] = 50)__.
+
 4. Copiar un Array a Otro:
 
 ```java
 public class EjemploArrays {
 
     public static void main(String[] args) {
-        int[] arregloOriginal = {1, 2, 3, 4, 5};
-        int[] copia = new int[arregloOriginal.length];
+        int[] original = {1, 2, 3, 4, 5};
+        int[] copia = new int[original.length];
 
-        // Copiar elementos del arreglo original a la copia
-        for (int i = 0; i < arregloOriginal.length; i++) {
-            copia[i] = arregloOriginal[i];
+        // Copiar elementos del array original a la copia
+        for (int i = 0; i < original.length; i++) {
+            copia[i] = original[i];
         }
 
         // Imprimir la copia
-        System.out.println("Copia del arreglo original:");
+        System.out.println("Copia del array original:");
         for (int elemento : copia) {
             System.out.print(elemento + " ");
         }
@@ -208,6 +271,25 @@ public class EjemploArrays {
 }
 
 ```
+
+> __Importante__: Definicimos un array de tamaño __4__ (__lenght__).
+
+En esta parte del código se define el tamaño del __array copia__, que tiene el valor del tamaño del __array original__.
+
+```java
+int[] copia = new int[original.length];
+```
+
+El bucle:
+
+```java
+for (int i = 0; i < original.length; i++) {
+    copia[i] = original[i];
+}
+```
+
+copia el contenido de un array en el otro.
+
 
 5. Ordenar un Array:
 
@@ -220,11 +302,11 @@ public class EjemploArrays {
     public static void main(String[] args) {
         int[] numeros = {30, 10, 50, 20, 40};
 
-        // Ordenar el arreglo
+        // Ordenar el array
         Arrays.sort(numeros);
 
-        // Imprimir el arreglo ordenado
-        System.out.println("Arreglo ordenado:");
+        // Imprimir el array ordenado
+        System.out.println("array ordenado:");
         for (int numero : numeros) {
             System.out.print(numero + " ");
         }
@@ -233,7 +315,15 @@ public class EjemploArrays {
 
 ```
 
-Sin Sort
+> __Importante__: Definicimos un array de tamaño __4__ (__lenght__).
+
+En este ejemplo se hace uso de la sentencia __Array.sort__ que recibe una __array__ como parámetro de entrada, y realiza la ordenación.
+
+```java
+Arrays.sort(numeros);
+```
+
+__Sin Array.sort___:
 
 ```java
 public class EjemploBubbleSort {
@@ -244,8 +334,8 @@ public class EjemploBubbleSort {
         // Llamamos a la función de ordenación
         bubbleSort(numeros);
 
-        // Imprimimos el arreglo ordenado
-        System.out.println("Arreglo ordenado:");
+        // Imprimimos el array ordenado
+        System.out.println("array ordenado:");
         for (int numero : numeros) {
             System.out.print(numero + " ");
         }
@@ -268,7 +358,7 @@ public class EjemploBubbleSort {
 
 ```
 
-En este ejemplo, la función __bubbleSort__ implementa el algoritmo de ordenación _Bubble Sort_. Funciona _comparando elementos adyacentes y los intercambia si están en el orden incorrecto. Este proceso se repite hasta que el arreglo esté completamente ordenado_.
+En este ejemplo, la función __bubbleSort__ implementa el algoritmo de ordenación _Bubble Sort_. Funciona _comparando elementos adyacentes y los intercambia si están en el orden incorrecto. Este proceso se repite hasta que el array esté completamente ordenado_.
 
 Por favor, ten en cuenta que __Bubble Sort__ __NO__ es la opción más eficiente para grandes conjuntos de datos, ya que tiene una complejidad de tiempo de __O(n^2)__. Para conjuntos de datos más grandes, se recomiendan algoritmos más eficientes como __QuickSort o MergeSort__.
 
