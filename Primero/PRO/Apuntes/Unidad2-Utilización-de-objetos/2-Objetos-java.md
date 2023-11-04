@@ -1,3 +1,6 @@
+<div align="justify">
+
+
 # Objetos en Java
 
 En Java, un objeto es una instancia de una clase. Una clase es una plantilla que define el comportamiento y las características de un tipo de objeto. Los objetos son fundamentales en la programación orientada a objetos (OOP) y representan entidades con propiedades y comportamientos asociados.
@@ -199,3 +202,5 @@ public class Persona {
 - __Mantenimiento y Flexibilidad__: Facilita la modificación interna de una clase sin afectar el código que la utiliza.
 
 _La encapsulación es una práctica fundamental en Java y en la programación orientada a objetos en general. Ayuda a crear código más robusto y mantenible al proteger y controlar el acceso a las propiedades de un objeto._
+
+</div>
