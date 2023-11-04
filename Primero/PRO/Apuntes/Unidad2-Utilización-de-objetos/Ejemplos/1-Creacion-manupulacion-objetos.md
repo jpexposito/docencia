@@ -1,4 +1,4 @@
-# Ejercicios de declaración y manipulación de clases
+# Ejercicios de declaraciónfÑ¡ y manipulación de clases
 
 ## Ejercicio 1: Creación de una Clase y Objetos
 
@@ -10,20 +10,20 @@ Crea una clase llamada Coche con las siguientes propiedades: marca, modelo, año
 public class Coche {
     String marca;
     String modelo;
-    int año;
+    int anio;
     double precio;
     
-    public Coche(String marca, String modelo, int año, double precio) {
+    public Coche(String marca, String modelo, int anio, double precio) {
         this.marca = marca;
         this.modelo = modelo;
-        this.año = año;
+        this.anio = anio;
         this.precio = precio;
     }
     
     public void mostrarDetalles() {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
-        System.out.println("Año: " + año);
+        System.out.println("anio: " + anio);
         System.out.println("Precio: $" + precio);
     }
 }
@@ -50,7 +50,7 @@ Modifica la clase Coche del ejercicio anterior para encapsular sus propiedades y
 public class Coche {
     private String marca;
     private String modelo;
-    private int año;
+    private int anio;
     private double precio;
     
     // Métodos getter
@@ -62,8 +62,8 @@ public class Coche {
         return modelo;
     }
     
-    public int getAño() {
-        return año;
+    public int getAnio() {
+        return anio;
     }
     
     public double getPrecio() {
@@ -79,8 +79,8 @@ public class Coche {
         this.modelo = modelo;
     }
     
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
     
     public void setPrecio(double precio) {
