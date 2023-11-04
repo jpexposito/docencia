@@ -1,8 +1,9 @@
-# Ejercicios de declaraciónfÑ¡ y manipulación de clases
+# Ejercicios de declaraciónf y manipulación de clases
+
 
 ## Ejercicio 1: Creación de una Clase y Objetos
 
-### Descripción:
+### Descripción:
 
 Crea una clase llamada Coche con las siguientes propiedades: marca, modelo, año, y precio. Luego, crea dos objetos de la clase Coche e imprime sus detalles.
 
