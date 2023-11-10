@@ -97,7 +97,7 @@ Las notas son:
 
 - Implementa la solución realizando dos métodos/programas. El primero utilizando __if/else__ y el segundo utilizando __switch__.
 
-## Ejercicio 4: Crear una Clase Estudiante
+## Ejercicio 4: Gestión Bancaria
 
 Implementa un programa que gestione las __cuentas de un banco__, teniendo en cuenta las siguientes consideraciones:
 - La cuenta de ahorro tendrá las siguientes propiedades:
