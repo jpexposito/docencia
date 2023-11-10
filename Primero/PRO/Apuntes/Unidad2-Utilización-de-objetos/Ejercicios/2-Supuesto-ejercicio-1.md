@@ -89,7 +89,7 @@ Supongamos que tenemos que implementar un programa que clasifica a los estudiant
 Las notas son:
 
 - Entre 0-4.99. Suspenso.
-- Entre 5-6. Aprobado.
+- Entre 5-5.99. Aprobado.
 - Entre 6-6.99. Bien.
 - Entre 7-8.99. Notable.
 - Entre 9-9.99. Sobresaliente.
