@@ -24,4 +24,5 @@ Las acciones que se realizarán en el sistema son las que siguen:
 
 Como podemos observar, el sistema tiene distintos actores, casos de uso y relaciones entre ellos. Se pide realizar el diagrama de casos de uso, identificando: los actores, casos de uso y realizando la especificación.
 
+__Realiza la especificación de casos de uso indicada en el [enlace](../ESTRUCTURACION-ESPECIFICACION-CASO-USO.md)__.
 </div>
