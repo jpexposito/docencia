@@ -10,12 +10,141 @@ Realiza los siguientes ejercicios. Se debe de trabajar con __array´s, búcles (
 
 - Se quiere realizar un programa que lea por teclado las 5 notas obtenidas por un alumno (comprendidas entre 0 y 10), y almacenadas en un array. A continuación debe mostrar todas las notas, la nota media, la nota más alta que ha sacado y la menor.
 
+<details>
+      <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+
+  En primer lugar hemos de crear la clase __Ejericicio1__.
+  
+  </br>
+  
+  ```java
+  import java.util.Scanner;
+
+public class Ejericicio1 {
+    //Haremos uso del main
+    public static void main(String[] args) {
+        // Crear un array para almacenar las notas
+        double[] notas = new double[5];
+
+        // Utilizar un Scanner para leer las notas desde el teclado
+        Scanner scanner = new Scanner(System.in);
+
+        // Leer las notas
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Introduce la nota " + (i + 1) + ": ");
+            notas[i] = scanner.nextDouble();
+
+            // Verificar que la nota esté en el rango de 0 a 10
+            while (notas[i] < 0 || notas[i] > 10) {
+                System.out.println("Error: La nota debe estar entre 0 y 10.");
+                System.out.print("Introduce la nota " + (i + 1) + " nuevamente: ");
+                notas[i] = scanner.nextDouble();
+            }
+        }
+
+        // Cerrar el Scanner
+        scanner.close();
+
+        // Mostrar todas las notas
+        System.out.println("\nTodas las notas:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Nota " + (i + 1) + ": " + notas[i]);
+        }
+
+        // Calcular la nota media
+        double suma = 0;
+        for (double nota : notas) {
+            suma += nota;
+        }
+        double media = suma / notas.length;
+
+        // Encontrar la nota más alta y la nota más baja
+        double notaMasAlta = notas[0];
+        double notaMasBaja = notas[0];
+
+        // Realizamos la ordenacion
+        for (int i = 1; i < notas.length; i++) {
+            if (notas[i] > notaMasAlta) {
+                notaMasAlta = notas[i];
+            }
+            else if (notas[i] < notaMasBaja) {
+                notaMasBaja = notas[i];
+            }
+            //El else siguiente no es necesario ya que seria igual
+        }
+
+        // Mostrar resultados
+        System.out.println("\nNota media: " + media);
+        System.out.println("Nota más alta: " + notaMasAlta);
+        System.out.println("Nota más baja: " + notaMasBaja);
+    }
+}
+  ```
+</details>
+  </br>
 
 ## Ejericicio 2
 
 ### Descripción
 
-Programa que declare un arrat de diez elementos enteros y pida números para rellenarlo hasta que se llene el vector o se introduzca un número negativo. Entonces se debe imprimir el array (sólo los elementos introducidos).
+Programa que declare un array de diez elementos enteros y pida números para rellenarlo hasta que se llene el vector o se introduzca un número negativo. Entonces se debe imprimir el array (sólo los elementos introducidos).
+
+<details>
+      <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+ 
+  En primer lugar hemos de crear la clase __Ejericicio2__.
+ </br>
+
+  ```java
+  import java.util.Scanner;
+
+public class Ejericicio2 {
+    public static void main(String[] args) {
+        // Crear un array de diez elementos enteros
+        int[] numeros = new int[10];
+
+        // Utilizar un Scanner para leer números desde el teclado
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir números al usuario hasta que se llene el array o se introduzca un número negativo
+        int indice = 0;
+        int numero;
+        do {
+            System.out.print("Introduce un número (introduce un número negativo para finalizar): ");
+            numero = scanner.nextInt();
+
+            // Verificar si el número es negativo
+            if (numero >= 0) {
+                // Almacenar el número en el array
+                numeros[indice] = numero;
+                indice++;
+            } else {
+                // Salir del bucle si se introduce un número negativo
+                break;
+            }
+
+            // Verificar si el array está lleno
+            if (indice == numeros.length) {
+                System.out.println("El array está lleno. Se detiene la entrada de números.");
+                break;
+            }
+        } while (true);
+
+        // Cerrar el Scanner
+        scanner.close();
+
+        // Imprimir los elementos introducidos en el array
+        System.out.println("\nElementos del array:");
+        for (int i = 0; i < indice; i++) {
+            System.out.println("Elemento " + (i + 1) + ": " + numeros[i]);
+        }
+    }
+}
+
+  ```
+
+
+</details>
 
 ## Ejericicio 3
 
