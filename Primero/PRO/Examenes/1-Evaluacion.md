@@ -27,7 +27,7 @@ Se pide:
 - Utiliza buenas prácticas de programación, incluyendo nombres de variables descriptivos y un formato limpio y legible.
 - Si el número de filas ingresado es 0 o negativo, muestra un mensaje de error indicando que el número de filas debe ser positivo.
 
-## Ejercicio2: Crea la clase que representa la información de un Estudiante (2 puntos)
+## Ejercicio2: Crea la clase que representa la información de un Estudiante 
 
 El objetivo de este ejercicio es crear una clase en Java llamada Ejercicio2 que represente a un estudiante con atributos como nombre, edad, peso y altura. Además, se debe implementar un método para calcular el Índice de Masa Corporal (IMC) del estudiante.
 
