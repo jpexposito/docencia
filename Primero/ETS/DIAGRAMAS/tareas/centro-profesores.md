@@ -33,19 +33,20 @@ identifique inicialmente como administrador de la aplicación, se deben permitir
      - Consultar aquellos alumnos que no se pueden matricular y el motivo de ello.
      - Consultar el historial académico de un alumno.
 
-<!--
-___Solución__:
+
+__Solución__:
 
 Vamos a realizar el análisis de cada uno de los parrafos del ejercicio.
 >__Información__: El profesor recibe las actas en blanco de las asignaturas de las que es responsable, en formato electrónico.
 
 En primer lugar vemos que existe un actor llamado __profesor__ sobre el que recae el gran peso de la operaciones que realiza la aplicación. En segundo lugar observamos que hay un agente que proveo las actas, que podríamos llamar __generador de Actas__. El primer _caso de uso_ será el envío de actas, por este actor.
- - __Generar Actas__: _Enviar Actas_. __C.U.1.__
->__Información__:El acta contiene los siguientes datos de la asignatura (titulación,campus, curso académico, denominación de la asignatura, convocatoria y grupo) y la lista de alumnos matriculados (niu, nif, nombre y apellidos).
-Esta información no es de vital importancia para detectar los casos de uso que existen, pero si contiene información de datos que debería almacenarse en una __BBDD__ _(titulación,campus, curso académico, denominación de la asignatura, convocatoria y grupo) y la lista de alumnos matriculados (niu, nif, nombre y apellidos)_. 
+- __Generar Actas__: _Enviar Actas_. __C.U.1.__
+
+  >__Información__:El acta contiene los siguientes datos de la asignatura (titulación,campus, curso académico, denominación de la asignatura, convocatoria y grupo) y la lista de alumnos matriculados (niu, nif, nombre y apellidos).
+  Esta información no es de vital importancia para detectar los casos de uso que existen, pero si contiene información de datos que debería almacenarse en una __BBDD__ _(titulación,campus, curso académico, denominación de la asignatura, convocatoria y grupo) y la lista de alumnos matriculados (niu, nif, nombre y apellidos)_. 
 
 El siguiente bloque de información que debemos de analizar es el siguiente:
-> __Información__:
+  > __Información__:
     - Completar un acta con las notas de los alumnos.
     - Añadir o borrar un alumno de un acta.
     - Integrar las actas de varios grupos de una misma asignatura en una sola acta.
@@ -109,5 +110,7 @@ De este párrafo podemos obtener los siguientes casos de uso:
   - Modificación. __(C.U.29).__
   - Consulta. __(C.U.30).__
 
--->
+
+Una vez analizados todos los casos de uso y los actores existentes, sólo faltará realizar la __especificación de casos de uso indicada en el [enlace](../ESTRUCTURACION-ESPECIFICACION-CASO-USO.md)__. 
+  
 </div>
