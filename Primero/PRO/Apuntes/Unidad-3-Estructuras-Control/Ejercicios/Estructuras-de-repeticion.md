@@ -6,6 +6,7 @@
 
 - Escribe un programa que encuentre el primer número divisible por 7 y 5 entre 1 y 100 (inclusive), utilizando __break__.
 - Escribe un programa que encuentre el primer número primo mayor que 100 , utilizando __break__.
+>__Nota__: Los números primos son aquellos que solo, muy importante, solo son divisibles (al dividirse entre otro da un número entero) entre ellos mismos y el 1. Ejemplo el 7.  
 - Escribe un programa que busque el número 7 en un array, utilizando __break__.
 - Escribe un programa que encuentre el primer número negativo en un array, utilizando __break__.
 - Escribe un programa que encuentre el primer número divisible por 5 y mayor que 30, utilizando __break__.
