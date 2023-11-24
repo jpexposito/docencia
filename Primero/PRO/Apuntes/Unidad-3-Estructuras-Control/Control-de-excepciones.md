@@ -80,4 +80,69 @@ public void metodo() throws ExcepcionVerificada {
 }
 ```
 
+## Tipos de Exceptions
+
+### Excepciones Verificadas (Checked Exceptions)
+
+- IOException: Esta excepción se lanza cuando ocurre un error durante la lectura o escritura de archivos, o cuando hay problemas con las operaciones de entrada/salida.
+
+    ```java
+    try {
+        // Operaciones de entrada/salida que pueden lanzar IOException
+    } catch (IOException e) {
+        // Manejo de la excepción
+    }
+    ```
+
+- SQLException: Se lanza cuando se producen errores relacionados con operaciones de bases de datos.
+
+    ```java
+    try {
+        // Operaciones de bases de datos que pueden lanzar SQLException
+    } catch (SQLException e) {
+        // Manejo de la excepción
+    }
+    ```
+
+### Excepciones No Verificadas (Unchecked Exceptions)
+- ArithmeticException: Se lanza cuando se produce una operación aritmética ilegal, como la división por cero.
+
+    ```java
+    try {
+        // Operación aritmética que puede lanzar ArithmeticException
+    } catch (ArithmeticException e) {
+        // Manejo de la excepción
+    }
+    ```
+
+- NullPointerException: Se lanza cuando se intenta acceder a un objeto que es null.
+
+    ```java
+    try {
+        // Operación que puede lanzar NullPointerException
+    } catch (NullPointerException e) {
+        // Manejo de la excepción
+    }
+    ```
+
+- ArrayIndexOutOfBoundsException: Ocurre cuando se intenta acceder a un índice fuera del rango válido de un array.
+
+    ```java
+    try {
+        // Operación con arrays que puede lanzar ArrayIndexOutOfBoundsException
+    } catch (ArrayIndexOutOfBoundsException e) {
+        // Manejo de la excepción
+    }
+    ```
+
+- IllegalArgumentException: Se lanza cuando un método recibe un argumento ilegal.
+
+    ```java
+    try {
+        // Llamada a un método con un argumento ilegal que puede lanzar IllegalArgumentException
+    } catch (IllegalArgumentException e) {
+        // Manejo de la excepción
+    }
+    ```
+
 </div>
