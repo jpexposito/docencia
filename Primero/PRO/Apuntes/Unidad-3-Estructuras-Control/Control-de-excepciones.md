@@ -147,45 +147,45 @@ public void metodo() throws ExcepcionVerificada {
 
 ## Definición de Exceptiones
 
-    En Java, puedes definir tus propias excepciones personalizadas creando clases que extiendan la clase Exception o alguna de sus subclases. Aquí hay un ejemplo básico de cómo podrías definir tu propia excepción personalizada:
+En Java, puedes definir tus propias excepciones personalizadas creando clases que extiendan la clase Exception o alguna de sus subclases. Aquí hay un ejemplo básico de cómo podrías definir tu propia excepción personalizada:
 
-    ```java
-    // Definición de una excepción personalizada
-    class MiExcepcionPersonalizada extends Exception {
-        public MiExcepcionPersonalizada(String mensaje) {
-            super(mensaje);
+```java
+// Definición de una excepción personalizada
+class MiExcepcionPersonalizada extends Exception {
+    public MiExcepcionPersonalizada(String mensaje) {
+        super(mensaje);
+    }
+}
+
+// Clase que utiliza la excepción personalizada
+class ClaseQueUsaExcepcion {
+    public void metodoConExcepcion() throws MiExcepcionPersonalizada {
+        // Algunas condiciones que podrían lanzar la excepción
+        boolean algunaCondicion = false;
+
+        if (algunaCondicion) {
+            // Lanzar la excepción personalizada
+            throw new MiExcepcionPersonalizada("¡Esto es una excepción personalizada!");
+        }
+
+        // Resto del código
+    }
+}
+
+// Ejemplo de uso
+public class Main {
+    public static void main(String[] args) {
+        ClaseQueUsaExcepcion objeto = new ClaseQueUsaExcepcion();
+
+        try {
+            objeto.metodoConExcepcion();
+        } catch (MiExcepcionPersonalizada e) {
+            // Manejar la excepción personalizada
+            System.out.println("¡Se ha producido una excepción personalizada! Mensaje: " + e.getMessage());
         }
     }
-
-    // Clase que utiliza la excepción personalizada
-    class ClaseQueUsaExcepcion {
-        public void metodoConExcepcion() throws MiExcepcionPersonalizada {
-            // Algunas condiciones que podrían lanzar la excepción
-            boolean algunaCondicion = false;
-
-            if (algunaCondicion) {
-                // Lanzar la excepción personalizada
-                throw new MiExcepcionPersonalizada("¡Esto es una excepción personalizada!");
-            }
-
-            // Resto del código
-        }
-    }
-
-    // Ejemplo de uso
-    public class Main {
-        public static void main(String[] args) {
-            ClaseQueUsaExcepcion objeto = new ClaseQueUsaExcepcion();
-
-            try {
-                objeto.metodoConExcepcion();
-            } catch (MiExcepcionPersonalizada e) {
-                // Manejar la excepción personalizada
-                System.out.println("¡Se ha producido una excepción personalizada! Mensaje: " + e.getMessage());
-            }
-        }
-    }
-    ```
+}
+```
 
 ### Descripción del uso de Exceptions
 
