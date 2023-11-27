@@ -27,6 +27,10 @@
 - División entre Números Reales
   - Escribe un programa que solicite al usuario dos números y realice la división. Maneja la excepción InputMismatchException si el usuario ingresa algo que no es un número.
 
+- Excepción para números negativos
+  - Crea una excepción personalizada llamada NumeroNegativoException que se lance cuando un método recibe un número negativo como argumento. Luego, implementa una clase que contenga un método que acepte un número y lance esta excepción si es negativo.
 
+- Excepción para nombres nulos o vacíos
+  - Crea una excepción personalizada llamada NombreInvalidoException que se lance cuando un método reciba un nombre nulo o vacío como argumento. Implementa una clase que contenga un método que acepte un nombre y lance esta excepción si es inválido.
 
 </div>
