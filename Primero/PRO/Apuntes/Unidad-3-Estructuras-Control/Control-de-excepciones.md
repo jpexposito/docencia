@@ -145,4 +145,58 @@ public void metodo() throws ExcepcionVerificada {
     }
     ```
 
+## Definición de Exceptiones
+
+    En Java, puedes definir tus propias excepciones personalizadas creando clases que extiendan la clase Exception o alguna de sus subclases. Aquí hay un ejemplo básico de cómo podrías definir tu propia excepción personalizada:
+
+    ```java
+    // Definición de una excepción personalizada
+    class MiExcepcionPersonalizada extends Exception {
+        public MiExcepcionPersonalizada(String mensaje) {
+            super(mensaje);
+        }
+    }
+
+    // Clase que utiliza la excepción personalizada
+    class ClaseQueUsaExcepcion {
+        public void metodoConExcepcion() throws MiExcepcionPersonalizada {
+            // Algunas condiciones que podrían lanzar la excepción
+            boolean algunaCondicion = false;
+
+            if (algunaCondicion) {
+                // Lanzar la excepción personalizada
+                throw new MiExcepcionPersonalizada("¡Esto es una excepción personalizada!");
+            }
+
+            // Resto del código
+        }
+    }
+
+    // Ejemplo de uso
+    public class Main {
+        public static void main(String[] args) {
+            ClaseQueUsaExcepcion objeto = new ClaseQueUsaExcepcion();
+
+            try {
+                objeto.metodoConExcepcion();
+            } catch (MiExcepcionPersonalizada e) {
+                // Manejar la excepción personalizada
+                System.out.println("¡Se ha producido una excepción personalizada! Mensaje: " + e.getMessage());
+            }
+        }
+    }
+    ```
+
+### Descripción del uso de Exceptions
+
+En este ejemplo:
+
+- La clase __MiExcepcionPersonalizada__ extiende la clase __Exception__ y tiene un __constructor__ que toma un mensaje como parámetro. Este mensaje se puede utilizar para proporcionar información adicional sobre la excepción.
+
+- La clase __ClaseQueUsaExcepcion__ tiene un _método_ llamado __metodoConExcepcion__ que puede lanzar la excepción personalizada en ciertas condiciones.
+
+- En el método main, se crea una instancia de __ClaseQueUsaExcepcion__ y se llama al método metodoConExcepcion dentro de un bloque __try-catch__. Si se lanza la excepción personalizada, se captura en el bloque catch y se maneja adecuadamente.
+
+
+
 </div>
