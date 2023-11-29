@@ -24,5 +24,10 @@ Se pide:
    - Los empleados administrativos trabajan en departamentos, y cada departamento puede tener varios empleados administrativos.
    - Se deben registrar las instalaciones deportivas de la universidad, y cada instalación puede ser utilizada para uno o más eventos deportivos.
    - Las empresas asociadas pueden patrocinar eventos y proporcionar becas a estudiantes.
+   - Los estudiantes están identificados por su dni, nombre y apellidos y pueden tener múltiples emails. Además de su dirección postal (calle, número, piso, código postal, municipio, y provincia).
+   - Los profesores están identificados por un id_profesor, y además tendrán los campos dni, nombre y apellidos y tendrán un único dni.
+   - Cada estudiante tendrá un tutor y cada tutor a su vez será un profesor, pudiendo este ser tutor o no.
+
+ >__Nota__: Indentifica entidades, relaciones, propiedades simples, propiedades compuestas, y propiedades múltiples.
 
 </div>
