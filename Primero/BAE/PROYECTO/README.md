@@ -28,6 +28,14 @@ Se pide:
    - Los profesores están identificados por un id_profesor, y además tendrán los campos dni, nombre y apellidos y tendrán un único dni.
    - Cada estudiante tendrá un tutor y cada tutor a su vez será un profesor, pudiendo este ser tutor o no.
 
- >__Nota__: Indentifica entidades, relaciones, propiedades simples, propiedades compuestas, y propiedades múltiples.
-
+- Realiza:
+- 
+  - __Modelo ER__, teniendo en cuenta que: 
+      - Indentifica entidades, relaciones, propiedades simples, propiedades compuestas, y propiedades múltiples.
+  - __Modelo Relacional__ del modelo ER creado en el paso anterior.
+  - Crea información y rellena las tablas resultantes.
+  - Normalización (1,2,3 y 4) del Modelo Relacional.
+  - Corrige la información que hayas creado en el paso 3.
+  - Crea la estructura de BBDD y realiza la inserción de datos creados en el paso 5.
+  
 </div>
