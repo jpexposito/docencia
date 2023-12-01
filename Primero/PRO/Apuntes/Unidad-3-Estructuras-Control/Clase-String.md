@@ -33,7 +33,7 @@ Devuelve una subcadena de la cadena actual.
 
 ```java
 String sub1 = str.substring(0, 4); // Devuelve "Hola"
-String sub2 = str.substring(5);    // Devuelve ", mundo!"
+String sub2 = str.substring(4);    // Devuelve ", mundo!"
 ```
 
 ## concat(String str) o + 
