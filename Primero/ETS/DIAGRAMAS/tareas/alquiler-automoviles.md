@@ -22,10 +22,5 @@
 
   Realiza el diagrama de clases identificando: __clases, propiedades, acciones, sus relaciones y la cardinalidad de estas__.
 
-## Solución
-
-<div align="center">
-  <img src="img/diagrama-clases-agencia-coches.png" width="700px">
-</div>
 
 </div>  
