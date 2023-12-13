@@ -27,6 +27,7 @@ Se pide:
    - Los estudiantes están identificados por su dni, nombre y apellidos y pueden tener múltiples emails. Además de su dirección postal (calle, número, piso, código postal, municipio, y provincia).
    - Los profesores están identificados por un id_profesor, y además tendrán los campos dni, nombre y apellidos y tendrán un único dni.
    - Cada estudiante tendrá un tutor y cada tutor a su vez será un profesor, pudiendo este ser tutor o no.
+   - Cada estudiante podrá tomar prestado un libro un libro sólo puede estar en prestamo por un estudiante.
 
 - Realiza:
 - 
