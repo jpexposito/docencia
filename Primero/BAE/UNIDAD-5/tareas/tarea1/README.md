@@ -35,8 +35,6 @@ Dado el siguiente conjunto de información:
 
 | id |   texto    | entero | decimal |    fecha    | booleano |
 |----|------------|--------|---------|-------------|----------|
-| id |   texto    | entero | decimal |    fecha    | booleano |
-|----|------------|--------|---------|-------------|----------|
 | 1  | Ejemplo1    | 25     | 10.5    | 2022-05-15  | 0        |
 | 2  | Ejemplo2    | 63     | 45.7    | 2022-06-22  | 1        |
 | 3  | Ejemplo3    | 12     | 30.0    | 2022-07-10  | 0        |
