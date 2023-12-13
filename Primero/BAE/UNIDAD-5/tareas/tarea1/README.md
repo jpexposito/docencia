@@ -107,14 +107,21 @@ ___Guarda algunas de las entradas para el informe___.
 
 1. Elimina las entradas donde el campo `booleano` es igual a `True`.
 
-2. Modifica el campo `texto` de las entradas donde el campo `entero` es menor a 30 y establece el texto como "Modificado".
+>__Nota__: Ayudate de los [apuntes](../../sqlite/05_delete.md).
 
-3. Elimina las entradas donde el campo `entero` es igual a 50.
+1. Modifica el campo `texto` de las entradas donde el campo `entero` es menor a 30 y establece el texto como "Modificado".
 
-4. Incrementa en 10 el valor del campo `entero` para las entradas donde el campo `booleano` es igual a `False`.
+>__Nota__: Ayudate de los [apuntes](../../sqlite/06_update.md).
 
-5. Elimina las entradas donde el campo `decimal` es menor a 50.
+2. Elimina las entradas donde el campo `entero` es igual a 50.
 
-6. Actualiza el campo `fecha` de todas las entradas a la fecha actual.
+3. Incrementa en 10 el valor del campo `entero` para las entradas donde el campo `booleano` es igual a `False`.
+
+>__Nota__: Ayudate de los [apuntes](../../sqlite/06_update.md).
+
+
+4. Elimina las entradas donde el campo `decimal` es menor a 50.
+
+5. Actualiza el campo `fecha` de todas las entradas a la fecha actual.
 
 </div>
