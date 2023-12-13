@@ -2,6 +2,7 @@
 
 <div align="center">
 <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*YRLPcqx9hsm4JT87.png" width="400px"/>
+</div>
 
 # Comandos Básicos de SQLite a través de ejemplos
 
