@@ -2,6 +2,10 @@
 
 # Primeros pasos en SQL
 
+<div align="center">
+<img src="https://i0.wp.com/hunna.org/wp-content/uploads/2014/06/huellas.jpg?resize=324%2C215" width="500px"/>
+</div>
+
 ## Objetivo
 
 _Practicar la creación y manipulación de una base de datos SQLite3 desde la línea de comandos_.
