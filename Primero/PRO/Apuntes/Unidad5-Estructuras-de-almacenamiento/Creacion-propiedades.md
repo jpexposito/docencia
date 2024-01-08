@@ -1,3 +1,0 @@
-<div align="justify">
-
-</div>
