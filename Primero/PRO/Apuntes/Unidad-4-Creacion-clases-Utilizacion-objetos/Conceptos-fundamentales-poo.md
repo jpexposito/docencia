@@ -4,7 +4,7 @@
 
 La __programación orientada a objetos__ _(POO)_ es un paradigma de programación que se basa en el concepto de "objetos", que son entidades que combinan datos y comportamiento. Hay ___cuatro conceptos fundamentales__ que constituyen la base de la POO.
 
-<img src="https://www.aluracursos.com/blog/assets/java/img8.png" >
+<img src="https://miro.medium.com/v2/resize:fit:888/format:webp/1*hXFebLehdhsUEP94jXIh7Q.png" >
 
 
 ## Encapsulación
