@@ -23,7 +23,7 @@ _Practicar la creación y manipulación de una base de datos SQLite3 desde la l�
     ```
 
 2. Dentro de SQLite3, crea las siguientes tablas:
- - __Propietarios__: Almacena información de los vehículos.
+ - __Propietarios__: Almacena información de los propietarios.
    - __id__ INTEGER ENTERO clave primaria y AUTOINCREMENT.
    - __nombre__ TEXT no nulo.
    - __apellido__ TEXT no nulo.
@@ -39,7 +39,7 @@ _Practicar la creación y manipulación de una base de datos SQLite3 desde la l�
    Asegúrate de cerrar SQLite3 al finalizar.
 >__Nota__: Ayudate de los [apuntes](../../sqlite/01_crear_borrar_tabla.md).
 
-### Paso 2: Insertar 50 entradas
+### Paso 2: Insertar 20 entradas
 
 Dado el siguiente conjunto de información:
 
