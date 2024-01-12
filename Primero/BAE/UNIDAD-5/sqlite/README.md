@@ -4,6 +4,10 @@
 <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*YRLPcqx9hsm4JT87.png" width="400px"/>
 </div>
 
+# Consultas Básicas a través de ejemplos
+
+- [Consultas Básicas a través de clausulas](consultas-basicas-clausulas.md).
+
 # Comandos Básicos de SQLite a través de ejemplos
 
 - [Importante - Comandos Meta](comandos_sqlite.md).
@@ -39,7 +43,8 @@
 - [Cláusula Inner Join](26_inner_join_.md).
 - [Cláusula Left Join](27_left_join_.md).
 - [Cláusula Right Join](28_right_join_.md).
-  
+
+
   
   
 
