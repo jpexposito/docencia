@@ -10,7 +10,7 @@ Realiza:
 ## Creación de una Clase Básica
 
 - Crea una clase Persona con atributos como nombre, edad y dni. Añade métodos para obtener y establecer los valores de los atributos.
-- Crea una clase Alumno que haga uso (__extends__) de la clase Alumno.
+- Crea una clase _Alumno_ que haga uso (__extends__) de la clase _Persona_.
 
 >__Nota__: Crea un programa que demuestre el comportamiento correcto del programa, o __test unitarios__ que sistituyen a este. 
 
