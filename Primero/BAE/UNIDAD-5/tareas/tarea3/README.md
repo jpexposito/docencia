@@ -104,4 +104,8 @@ Realiza las siguientes consultas, y muestra el resultado obtenido:
   - Empleados con salarios fuera del rango de 55000 a 70000, ordenados por departamento.
   - Empleados en el departamento 'Recursos Humanos' con nombres que no contienen la letra 'e'.
 
+### Generación Informe
+
+Genera un informe con cada una de las consultas y los resuldos obtenidos tras su ejecución. El informe se debe de realizar en __markdown, y enviar el enlace__.
+
 </div>
