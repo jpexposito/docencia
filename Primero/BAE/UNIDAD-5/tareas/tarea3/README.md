@@ -16,7 +16,7 @@ _Practicar la creación y manipulación de una base de datos SQLite3 desde la l�
 
 ### Paso 1: Creación de la BBDD
 
-Crea la BBDD copiando la siguiente información y haciendo un read del fichero sql, de nombre __empleados-db.sql__.
+Crea con el siguente contenido el fichero __empleados-dump.sql__.
 
 ```sql
 CREATE TABLE empleados (
@@ -48,6 +48,18 @@ INSERT INTO empleados (nombre, salario, departamento) VALUES ('Roberto', 49000, 
 INSERT INTO empleados (nombre, salario, departamento) VALUES ('Beatriz', 63000, 'TI');
 ```
   
+### Paso 2 Lectura del fichero sql.
+
+Entra en sqlite a través del siguiente comando:
+
+```sql
+sqlite3 tarea3.db 
+```
+
+Haciendo un __.read__ del fichero __sql__, de nombre __empleados-db.sql__, realiza la creación e inserción de información de la __BBDD__.
+
+### Paso 3: Realización de consultas
+
 Realiza las siguientes consultas, y muestra el resultado obtenido:
 
 - Funciones UPPER y LOWER:
@@ -80,7 +92,16 @@ Realiza las siguientes consultas, y muestra el resultado obtenido:
 - Funciones de Manipulación de Cadenas (SUBSTR):
   - Muestra los primeros tres caracteres de cada nombre de empleado.
 
-
-
+- __Order By__ and __Like__.
+  - Empleados en el departamento de 'Ventas' con salarios superiores a 52000.
+  - Empleados cuyos nombres contienen la letra 'a' y tienen salarios ordenados de manera ascendente.
+  - Empleados en el departamento 'Recursos Humanos' con salarios entre 45000 y 55000.
+  - Empleados con salarios en orden descendente, limitando a los primeros 5 resultados.
+  - Empleados cuyos nombres comienzan con 'M' o 'N' y tienen salarios superiores a 50000.
+  - Empleados en el departamento 'TI' o 'Ventas' ordenados alfabéticamente por nombre.
+  - Empleados con salarios únicos (eliminando duplicados) en orden ascendente.
+  - Empleados cuyos nombres terminan con 'o' o 'a' y están en el departamento 'Ventas'.
+  - Empleados con salarios fuera del rango de 55000 a 70000, ordenados por departamento.
+  - Empleados en el departamento 'Recursos Humanos' con nombres que no contienen la letra 'e'.
 
 </div>
