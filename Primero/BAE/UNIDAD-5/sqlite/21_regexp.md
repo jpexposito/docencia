@@ -6,9 +6,9 @@
 
 Los operadores __regexp__ y __not regexp__ busca patrones de modo similar a __like__ y __not like__.
 
-Una expresión regular es una técnica que nos permite identificar si un string coincide con un patrón determinado.
+Una __expresión regular__ es una técnica que nos permite __identificar__ si un __TEXTO__ coincide con un __PATRÓN__ determinado.
 
-Un ejemplo clásico es determinar si un email está correctamente almacenado(sabemos que comienza con uno o más caracteres alfanuméricos, luego el carácter @ seguido de uno o más caracteres alfanuméricos, luego el carácter '.' y finalmente otros caracteres alfabéticos)
+Un ejemplo clásico es determinar si un ___email__ está correctamente almacenado(sabemos que __comienza__ con uno o más __caracteres alfanuméricos__, luego el carácter __@__ seguido de __uno o más caracteres alfanuméricos__, luego el carácter __'.'__ y finalmente otros caracteres alfabéticos).
 
 Existe toda una serie de reglas para crear las expresiones regulares que iremos viendo.
 
