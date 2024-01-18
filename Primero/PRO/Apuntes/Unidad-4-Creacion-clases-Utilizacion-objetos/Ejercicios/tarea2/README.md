@@ -37,9 +37,10 @@ Realiza:
     - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
     - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
 - El siguiente ejercicio tiene como objetivo la comprensión de jerarquías en programación. Para ello debe de implementarse las siguientes estruturas:    
- - Una clase llamada Persona que contenga los siguientes atributos:
+ - Una clase abstracta llamada Persona que contenga los siguientes atributos:
   - nombre (String)
   - fechaNacimiento(String)
+  - Define el método __anios__, que retorno un __int__ que calcule la edad a partir de la fecha de nacimiento.
  - Define una interfaz llamada Trabajador que tenga un método abstracto llamado trabajar(), que retorne un String.
  - Crea una clase abstracta llamada Empleado que implemente la interfaz Trabajador, que extienda de Persona y contenga un atributo adicional:
   - salario (float).
