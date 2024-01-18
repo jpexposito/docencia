@@ -37,21 +37,21 @@ Realiza:
     - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
     - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
 - El siguiente ejercicio tiene como objetivo la comprensión de jerarquías en programación. Para ello debe de implementarse las siguientes estruturas:    
- - Una clase abstracta llamada Persona que contenga los siguientes atributos:
-  - nombre (String)
-  - fechaNacimiento(String)
-  - Define el método __anios__, que retorno un __int__ que calcule la edad a partir de la fecha de nacimiento.
- - Define una interfaz llamada Trabajador que tenga un método abstracto llamado trabajar(), que retorne un String.
- - Crea una clase abstracta llamada Empleado que implemente la interfaz Trabajador, que extienda de Persona y contenga un atributo adicional:
-  - salario (float).
-  - trabajo.
- - Agrega métodos abstractos para calcular el salario () y mostrar información específica del empleado (toString()).    
- - Crea una clase llamada Profesor que herede de Persona y de la clase abstracta Empleado. La clase Profesor debe tener un atributo adicional:
-  - especialidad(String) 
- - Implementa los métodos abstractos de la clase Empleado y agrega un método específico para los profesores, por ejemplo, impartirClase().
- - Crea una clase llamada Alumno que herede de Persona. La clase Alumno debe tener un atributo adicional:
-  - nivel(String)
- - Agrega métodos específicos para los alumnos, por ejemplo, estudiar().
+  - Una clase abstracta llamada Persona que contenga los siguientes atributos:
+    - nombre (String)
+    - fechaNacimiento(String)
+    - Define el método __anios__, que retorno un __int__ que calcule la edad a partir de la fecha de nacimiento.
+  - Define una interfaz llamada Trabajador que tenga un método abstracto llamado trabajar(), que retorne un String.
+  - Crea una clase abstracta llamada Empleado que implemente la interfaz Trabajador, que extienda de Persona y contenga un atributo adicional:
+    - salario (float).
+    - trabajo.
+    - Agrega métodos abstractos para calcular el salario () y mostrar información específica del empleado (toString()).    
+  - Crea una clase llamada Profesor que herede de Persona y de la clase abstracta Empleado. La clase Profesor debe tener un atributo adicional:
+   - especialidad(String) 
+   - Implementa los métodos abstractos de la clase Empleado y agrega un método específico para los profesores, por ejemplo, impartirClase().
+  - Crea una clase llamada Alumno que herede de Persona. La clase Alumno debe tener un atributo adicional:
+    - nivel(String)
+  - Agrega métodos específicos para los alumnos, por ejemplo, estudiar().
     
     __Nota__:
     - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
