@@ -47,7 +47,7 @@ Realiza:
     - trabajo.
     - Agrega métodos abstractos para calcular el salario () y mostrar información específica del empleado (toString()).    
   - Crea una clase llamada Profesor que herede de Persona y de la clase abstracta Empleado. La clase Profesor debe tener un atributo adicional:
-   - especialidad(String) 
+    - especialidad(String) 
    - Implementa los métodos abstractos de la clase Empleado y agrega un método específico para los profesores, por ejemplo, impartirClase().
   - Crea una clase llamada Alumno que herede de Persona. La clase Alumno debe tener un atributo adicional:
     - nivel(String)
