@@ -6,24 +6,35 @@ Teniendo como referencia: la documentación, los ejemplos realizados en clase, y
 
 Realiza:
 
-- Crea una interfaz llamada __Reproductor__ que contenga dos métodos abstractos: _reproducir() y detener()_. Luego, implementa la interfaz en una clase __ReproductorMP3__ que proporciona una implementación concreta para ambos métodos.
-
-__Nota__: Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
-
-- Define una interfaz __FormaGeometrica__ que contenga un método abstracto llamado _calcularArea_(). Implementa esta interfaz en dos clases: __Circulo y Rectangulo__. Proporciona implementaciones concretas para calcular el área en ambas clases.
-
-__Nota__: Crea un programa que demuestre el comportamiento correcto del programa AppArea, o __test unitarios__ que sistituyen a este.
-
-- Crea una interfaz __Conductor__ con dos métodos abstractos: _arrancar() y detener()_. Implementa la interfaz en una clase __Automovil__ que proporciona una implementación concreta para ambos métodos. Además, agrega un método adicional __conducir()__ que sea específico de la clase Automovil.
-
-__Nota__: Crea un programa que demuestre el comportamiento correcto del programa AppAutomovil, o __test unitarios__ que sistituyen a este.
-
-- Define una interfaz __ConexionRed__ que declare un método abstracto __conectar()__. Implementa esta interfaz en dos clases: __ConexionEthernet y ConexionWifi__. Proporciona implementaciones concretas para conectar en ambas clases.
-
-__Nota__: Crea un programa que demuestre el comportamiento correcto del programa AppConexion, o __test unitarios__ que sistituyen a este.
-
-- Crea una interfaz __InstrumentoMusical__ con dos métodos abstractos: __tocarNota(String nota) y afinar()__. Luego, implementa la interfaz en una clase __Guitarra__ que proporciona implementaciones concretas para ambos métodos. Además, agrega un método adicional __cambiarCuerdas()__ que sea específico de la clase Guitarra.
-
-__Nota__: Crea un programa que demuestre el comportamiento correcto del programa AppInstrumentoMusical, o __test unitarios__ que sistituyen a este.
+- Crea una interfaz llamada __IReproductor__ que contenga dos métodos: _reproducir() y detener()_. Luego, implementa la interfaz en una clase __ReproductorMP3__ que proporciona una implementación concreta para ambos métodos. _(Reproduciendo mp3 y Deteniendo mp3 respectivamente)_.
+    
+    __Nota__:
+    - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstract__ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
+    - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
+- Define una interfaz __IFormaGeometrica__ que contenga un método abstracto llamado _calcularArea_(). Implementa esta interfaz en dos clases: __Circulo y Rectangulo__. Proporciona implementaciones concretas para calcular el área en ambas clases.
+    
+    __Nota__:
+    - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstract__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
+    - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
+- Crea una interfaz __IConductor__ con dos métodos: _arrancar() y detener()_. Implementa la interfaz en una clase __Automovil__ que proporciona una implementación concreta para ambos métodos. Además, agrega un método adicional __conducir()__ que sea específico de la clase Automovil.
+    
+    __Nota__:
+    - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstract__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
+    - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
+- Define una interfaz __IConexionRed__ que declare un método __conectar()__. Implementa esta interfaz en dos clases: __ConexionEthernet y ConexionWifi__. Proporciona implementaciones concretas para conectar en ambas clases. _(Conectando vía Ethernet y Conectando vía Wifi) respectivamente_.
+    
+    __Nota__:
+    - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstract__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
+    - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
+- Crea una interfaz __IInstrumentoMusical__ con dos métodos: __tocarNota(String nota) y afinar()__. Luego, implementa la interfaz en una clase __Guitarra__ que proporciona implementaciones concretas para ambos métodos _(Tocar nota de guitarra y afinada la guitarra respectivamente)_. Además, agrega un método adicional __cambiarCuerdas()__ que sea específico de la clase Guitarra.
+    
+    __Nota__:
+    - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstract__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
+    - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
 
 </div>
