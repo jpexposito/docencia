@@ -34,7 +34,7 @@ CREATE TABLE ventas (
     FOREIGN KEY (id_producto) REFERENCES productos(id)
 );
 
-INSERT INTO productos (nombre, categoria, precio) VALUES 
+INSERT INTO productos (id, nombre, categoria, precio) VALUES 
     (1, 'Arroz', 'Alimentos', 2.5),
     (2, 'Leche', 'Lácteos', 1.8),
     (3, 'Pan', 'Panadería', 1.2),
