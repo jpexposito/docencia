@@ -54,7 +54,8 @@ Realiza:
     
     __Nota__:
     - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
-    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.
+    - ___CREA LAS CLASES CON LOS NOMBRES ADECUADOS EN FUNCIÓN DEL TIPO DE CLASE QUE SEA Y EL PAQUETE DONDE ESTE___.  
     - Crea un programa que demuestre el comportamiento correcto del programa AppReproductor, o __test unitarios__ que sistituyen a este.
 
 </div>
