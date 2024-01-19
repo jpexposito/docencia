@@ -1,6 +1,5 @@
 <div align="justify">
 
-
 # Estructuras de almacenamiento
 
  El árbol de dependencias de las __interfaces__ de __colecciones__ y __mapas__ se organiza de manera __jerárquica__. A continuación, te proporcionaré un esquema básico del árbol de dependencias:
