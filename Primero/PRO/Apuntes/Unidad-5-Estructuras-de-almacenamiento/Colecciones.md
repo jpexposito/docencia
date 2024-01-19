@@ -3,25 +3,23 @@
 
 # Colecciones
 
-ava proporciona una amplia variedad de estructuras de datos a través del framework de Colecciones __(Collections Framework)__. Estas colecciones facilitan el almacenamiento, manipulación y gestión de grupos de objetos. Las principales interfaces y clases relacionadas con colecciones en Java se encuentran en el paquete __java.util__.
+Java proporciona una amplia variedad de estructuras de datos a través del framework de Colecciones __(Collections Framework)__. Estas __colecciones__ facilitan el _almacenamiento, manipulación y gestión de grupos de objetos_. Las principales interfaces y clases relacionadas con colecciones en Java se encuentran en el paquete __java.util__.
 
 ## Interfaces Principales del Framework de Colecciones
 
 ### Collection
 
 - Representa una colección de objetos. __No garantiza ningún orden específico para sus elementos__.
-- Subinterfaces: List, Set, y Queue.
+- Subinterfaces: __List, Set, y Queue__.
 
 #### List
 
 Colección ordenada que __PERMITE__ elementos duplicados.
-
 >Nota: __Implementaciones notables: ArrayList, LinkedList, y Vector__.
 
 #### Set
 
 Colección que __NO PERMITE__ elementos duplicados. __NO GARANTIZA__ un orden específico.
-
 >Nota: __Implementaciones notables: HashSet, TreeSet, y LinkedHashSet__.
 
 #### Queue
@@ -42,191 +40,246 @@ Colección de __pares clave-valor. Cada clave debe ser única__.
 
 Basado en arrays dinámicos.  Permite acceso rápido a los elementos, pero puede ser más lento en operaciones de inserción y eliminación en el medio.
 
-- Ventajas: Tamaño dinámico, acceso rápido, permite elementos duplicados.
-- Uso: Cuando se necesite una lista ordenada y se realicen operaciones frecuentes de inserción y acceso.
+- Ventajas: _Tamaño dinámico, acceso rápido_, __PERMITE ELEMENTOS DUPLICADOS__.
+- Uso: Cuando se necesite una __lista ordenada__ y __se realicen operaciones frecuentes de inserción y acceso__.
+
+    ```java
+    // Ejemplo de construcción de una lista con ArrayList
+    List<String> lista = new ArrayList<>();
+    lista.add("Elemento 1");
+    lista.add("Elemento 2");
+    ```
+<div align="center">    
+<img src="https://miro.medium.com/v2/resize:fit:670/0*5w9-ibvGwT1EpeH9.png" width="250px">
+</div>
 
 ### LinkedList
 
-Basado en una lista doblemente enlazada.
-Ofrece inserciones y eliminaciones rápidas en cualquier posición.
+Basado en una __lista doblemente enlazada__.
+_Ofrece inserciones y eliminaciones rápidas en cualquier posición_.
 
-- Ventajas: Inserciones y eliminaciones rápidas en cualquier posición, implementa la interfaz Deque.
-- Uso: Cuando se necesite una lista y se realicen operaciones frecuentes de inserción y eliminación en cualquier posición.
+- Ventajas: _Inserciones y eliminaciones rápidas en cualquier posición_, implementa la __interfaz Deque__.
+- Uso: Cuando se _necesite_ una __lista__ y se __realicen operaciones frecuentes de inserción y eliminación en cualquier posición__.
+
+```java
+LinkedList<String> linkedList = new LinkedList<>();
+
+// Agregar elementos al final de la lista
+linkedList.add("Elemento 1");
+linkedList.add("Elemento 2");
+linkedList.add("Elemento 3");
+
+// Mostrar la LinkedList
+System.out.println("LinkedList actual: " + linkedList);
+
+// Agregar un elemento al principio de la lista
+linkedList.addFirst("Elemento 0");
+// Agregar un elemento al final de la lista
+linkedList.addLast("Elemento 4");
+```
+
+<div align="center"> 
+<img src="https://qph.cf2.quoracdn.net/main-qimg-41cdfa9a815220598f2c03f1bccaeff8"/>
+</div>
 
 ###  HashSet
 Implementación basada en una tabla hash.
-Ofrece operaciones rápidas para agregar, eliminar y comprobar la existencia de un elemento.
+Ofrece ___operaciones rápidas para agregar, eliminar y comprobar la existencia de un elemento__.
 
-- Ventajas: Garantiza elementos únicos, operaciones rápidas de inserción, eliminación y búsqueda.
-- Uso: Cuando se necesite una colección sin duplicados y el orden de los elementos no sea importante.
-
-### HashMap
-
-Implementación basada en una tabla hash.
-Ofrece acceso rápido a los valores a través de sus claves.
-
-- Ventajas: Almacena pares clave-valor, acceso rápido a los valores a través de las claves, permite claves y valores null.
-- Uso: Cuando se necesite asociar claves únicas con valores y realizar operaciones frecuentes de búsqueda, inserción y eliminación.
-
-## Resumen de ventajas y uso
-
-- __ArrayList__: Uso ideal cuando se requiere un acceso rápido a los elementos y se realizan operaciones frecuentes de lectura.
-- __LinkedList__: Beneficioso cuando se realizan operaciones frecuentes de inserción y eliminación en cualquier posición, o se necesita una cola o pila.
-- __HashSet__: Útil cuando se necesita asegurar que no haya elementos duplicados y el orden no es una preocupación.
-- __HashMap__: Esencial para almacenar pares clave-valor y cuando se requiere un acceso rápido a los valores a través de sus claves.
-
-## Características y ejemplos
-
-### ArrayList:
-
-- __Uso__: Cuando necesitas una lista redimensionable y no estás tan preocupado por el acceso rápido aleatorio.
-- __Ejemplo__: Almacenar y manejar una lista de nombres de estudiantes en un curso.
+- Ventajas: __Garantiza elementos únicos__, _operaciones_ __rápidas de inserción, eliminación y búsqueda__.
+- Uso: Cuando se necesite una __colección sin duplicados__ y el _orden de los elementos_ __NO__ sea importante.
 
 ```java
-import java.util.ArrayList;
+// Crear un HashSet de tipo String
+HashSet<String> hashSet = new HashSet<>();
 
-public class Main {
-    public static void main(String[] args) {
-        ArrayList<String> estudiantes = new ArrayList<>();
-        estudiantes.add("Juan");
-        estudiantes.add("María");
-        estudiantes.add("Pedro");
+// Agregar elementos al conjunto
+hashSet.add("Elemento 1");
+hashSet.add("Elemento 2");
+hashSet.add("Elemento 3");
 
-        for (String estudiante : estudiantes) {
-            System.out.println(estudiante);
-        }
-    }
-}
+// Mostrar el HashSet actual
+System.out.println("HashSet actual: " + hashSet);
+
+// Intentar agregar un elemento duplicado (no se permiten duplicados en un conjunto)
+boolean seAgregoDuplicado = hashSet.add("Elemento 2");
 ```
 
+<div align="center"> 
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/ArrayListVsHashSet.png"/>
+</div>
 
-### LinkedList:
+### LinkedHashSet
 
-- __Uso__: Para operaciones de inserción y eliminación frecuentes en la parte media de la lista.
-- __Ejemplo__: Implementar una cola o lista doblemente enlazada.
-
-```java
-
-```
-
-
-### HashSet:
-
-- __Uso__: Cuando necesitas garantizar la unicidad de elementos y no te importa el orden.
-- __Ejemplo__: Almacenar un conjunto de identificadores únicos para usuarios registrados.
+Mientras que __HashSet__ __NO__ garantiza un orden específico de los elementos, __LinkedHashSet__ mantiene el __orden__ de __inserción__, es decir, el orden en el que los elementos fueron agregados.
 
 ```java
-import java.util.HashSet;
+inkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
 
-public class Main {
-    public static void main(String[] args) {
-        HashSet<String> usuarios = new HashSet<>();
-        usuarios.add("usuario1");
-        usuarios.add("usuario2");
-        usuarios.add("usuario3");
+// Agregar elementos al conjunto
+linkedHashSet.add("Elemento 3");
+linkedHashSet.add("Elemento 1");
+linkedHashSet.add("Elemento 2");
+// Mostrar el LinkedHashSet actual (se mantendrá el orden de inserción)
+System.out.println("LinkedHashSet actual: " + linkedHashSet);
+// Intentar agregar un elemento duplicado (no se permiten duplicados en un conjunto)
+boolean seAgregoDuplicado = linkedHashSet.add("Elemento 2");
+System.out.println("¿Se agregó duplicado? " + seAgregoDuplicado);
 
-        for (String usuario : usuarios) {
-            System.out.println(usuario);
-        }
-    }
-}
-```
+// Mostrar el LinkedHashSet después de intentar agregar un duplicado
+System.out.println("LinkedHashSet después de intentar agregar un duplicado: " + linkedHashSet);
 
+// Verificar si el conjunto contiene un elemento específico
+boolean contieneElemento = linkedHashSet.contains("Elemento 3");
+System.out.println("¿Contiene 'Elemento 3'? " + contieneElemento);
 
-### LinkedHashSet:
-
-- __Uso__: Cuando deseas preservar el orden de inserción pero también garantizar la unicidad.
-- __Ejemplo__: Mantener un registro de eventos en el orden en que ocurrieron, pero sin duplicados.
-
-```java
+// Eliminar un elemento del conjunto
+linkedHashSet.remove("Elemento 1");
 
 ```
 
+## Map
 
-### TreeSet:
+Un mapa en Java es una interfaz que representa una colección de pares __clave-valor__, donde cada __clave es única__ y se __asigna a un único valor__. La principal característica de los mapas es que __NO permiten claves duplicadas__.
 
-- __Uso__: Cuando necesitas elementos ordenados naturalmente o según un comparador.
-- __Ejemplo__: Mantener una lista de palabras ordenadas alfabéticamente o por longitud.
+### Características Principales
+
+1. **Claves Únicas:** Cada clave en un mapa es única; no puede haber dos claves iguales en un mismo mapa.
+2. **Asociación de Clave-Valor:** Cada clave se asocia a un único valor. Sin embargo, diferentes claves pueden asociarse al mismo valor.
+3. **Implementaciones:** Java proporciona varias implementaciones de la interfaz `Map`, como `HashMap`, `TreeMap`, `LinkedHashMap`, entre otros, cada una con sus propias características y comportamientos.
+4. **No Garantiza Orden:** Aunque algunas implementaciones, como `LinkedHashMap`, mantienen el orden de inserción, el orden en general no está garantizado para todos los mapas.
+
+### Operaciones Comunes
+
+- **put(K key, V value):** Asocia el valor especificado con la clave especificada en el mapa.
+- **get(Object key):** Devuelve el valor asociado con la clave especificada, o `null` si el mapa no contiene la clave.
+- **remove(Object key):** Elimina la clave y su valor asociado del mapa.
+- **containsKey(Object key):** Verifica si el mapa contiene la clave especificada.
+- **containsValue(Object value):** Verifica si el mapa contiene el valor especificado.
+
+#### HashMap
+
+Implementación basada en una __tabla hash__.
+Ofrece acceso _rápido a los valores a través de sus claves_.
+
+- Ventajas: Almacena pares __clave-valor__, acceso rápido a los valores a través de las __claves__, _permite claves y valores_ __null__.
+- Uso: Cuando se necesite asociar __claves únicas con valores__ y realizar operaciones frecuentes de __búsqueda, inserción y eliminación__.
 
 ```java
+// Crear un HashMap donde la clave es de tipo String y el valor es de tipo Integer
+HashMap<String, Integer> hashMap = new HashMap<>();
+
+// Agregar pares clave-valor al mapa
+hashMap.put("Clave1", 10);
+hashMap.put("Clave2", 20);
+hashMap.put("Clave3", 30);
+
+// Mostrar el HashMap actual
+System.out.println("HashMap actual: " + hashMap);
+
+// Obtener el valor asociado a una clave específica
+int valorClave2 = hashMap.get("Clave2");
+System.out.println("Valor asociado a 'Clave2': " + valorClave2);
+
+// Verificar si el mapa contiene una clave específica
+boolean contieneClave = hashMap.containsKey("Clave1");
+System.out.println("¿Contiene 'Clave1'? " + contieneClave);
+```
+
+```java
+// Crear un HashMap donde la clave es el DNI (String) y el valor es la Persona
+HashMap<String, Persona> mapaPersonas = new HashMap<>();
+
+// Crear instancias de la clase Persona
+Persona persona1 = new Persona("Juan", "12345678A");
+Persona persona2 = new Persona("María", "87654321B");
+
+// Agregar pares clave-valor al mapa
+mapaPersonas.put(persona1.getDni(), persona1);
+mapaPersonas.put(persona2.getDni(), persona2);
+```
+
+#### TreeMap
+
+Implementación basada en árboles que mantiene las claves ordenadas naturalmente o según un comparador proporcionado.
+
+```java
+TreeMap<String, Integer> treeMap = new TreeMap<>();
+
+// Agregar pares clave-valor al mapa
+treeMap.put("Tres", 3);
+treeMap.put("Uno", 1);
+treeMap.put("Dos", 2);
+
+// Mostrar el TreeMap actual (orden natural de las claves)
+System.out.println("TreeMap actual: " + treeMap);
+
+// Obtener y mostrar el valor asociado a una clave específica
+int valorClaveDos = treeMap.get("Dos");
+System.out.println("Valor asociado a 'Dos': " + valorClaveDos);
+
+// Verificar si el mapa contiene una clave específica
+boolean contieneClave = treeMap.containsKey("Tres");
+System.out.println("¿Contiene 'Tres'? " + contieneClave);
+
+// Modificar el valor asociado a una clave existente
+treeMap.put("Uno", 10);
+
+// Mostrar el TreeMap después de modificar un valor
+System.out.println("TreeMap después de modificar 'Uno': " + treeMap);
+
+// Eliminar una entrada del mapa utilizando la clave
+treeMap.remove("Tres");
 
 ```
 
+#### LinkedHashMap
 
-### HashMap:
-
-- __Uso__: Cuando necesitas un mapeo eficiente de claves a valores y no te importa el orden.
-- __Ejemplo__: Almacenar y recuperar información sobre productos basada en su código de barras.
+Combina la rápida recuperación de `HashMap` con la capacidad de mantener el orden de inserción.
 
 ```java
-import java.util.HashMap;
+// Crear un LinkedHashMap donde la clave es de tipo String y el valor es de tipo Integer
+LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
 
-public class Main {
-    public static void main(String[] args) {
-        HashMap<Integer, String> productos = new HashMap<>();
-        productos.put(1, "Laptop");
-        productos.put(2, "Teléfono");
-        productos.put(3, "Tablet");
+// Agregar pares clave-valor al mapa
+linkedHashMap.put("Tres", 3);
+linkedHashMap.put("Uno", 1);
+linkedHashMap.put("Dos", 2);
 
-        System.out.println(productos.get(2));  // Debería imprimir "Teléfono"
-    }
-}
+// Mostrar el LinkedHashMap actual (orden de inserción)
+System.out.println("LinkedHashMap actual: " + linkedHashMap);
+
+// Obtener y mostrar el valor asociado a una clave específica
+int valorClaveDos = linkedHashMap.get("Dos");
+System.out.println("Valor asociado a 'Dos': " + valorClaveDos);
+
+// Verificar si el mapa contiene una clave específica
+boolean contieneClave = linkedHashMap.containsKey("Tres");
+System.out.println("¿Contiene 'Tres'? " + contieneClave);
+
+// Modificar el valor asociado a una clave existente
+linkedHashMap.put("Uno", 10);
+
+// Mostrar el LinkedHashMap después de modificar un valor
+System.out.println("LinkedHashMap después de modificar 'Uno': " + linkedHashMap);
+
+// Eliminar una entrada del mapa utilizando la clave
+linkedHashMap.remove("Tres");
+
+// Mostrar el LinkedHashMap después de eliminar una entrada
+System.out.println("LinkedHashMap después de eliminar 'Tres': " + linkedHashMap);
+
+// Obtener el tamaño del LinkedHashMap
+int tamaño = linkedHashMap.size();
+System.out.println("Tamaño del LinkedHashMap: " + tamaño);
+
+// Limpiar (eliminar todas las entradas) del LinkedHashMap
+linkedHashMap.clear();
 ```
-
-
-### LinkedHashMap:
-
-- __Uso__: Cuando deseas un mapeo con orden de inserción y la eficiencia de un HashMap.
-- __Ejemplo__: Mantener un registro de pedidos en el orden en que se realizaron.
-
-```java
-
-```
-
-
-### TreeMap:
-
-- __Uso__: Cuando necesitas un mapeo ordenado basado en las claves.
-- __Ejemplo__: Implementar un directorio telefónico que esté ordenado alfabéticamente por nombres.
-
-```java
-
-```
-
-
-### PriorityQueue:
-
-- __Uso__: Para almacenar elementos en un orden específico (por ejemplo, el menor elemento primero).
-- __Ejemplo__: Implementar un algoritmo de búsqueda en grafos como el algoritmo de Dijkstra.
-
-```java
-
-```
-
-
-### ArrayDeque:
-
-- __Uso__: Cuando necesitas una pila o una cola eficiente basada en un arreglo.
-- __Ejemplo__: Mantener un historial de navegación en un navegador web.
-
-```java
-import java.util.ArrayDeque;
-
-public class Main {
-    public static void main(String[] args) {
-        ArrayDeque<String> historialNavegacion = new ArrayDeque<>();
-        historialNavegacion.push("https://www.google.com");
-        historialNavegacion.push("https://www.openai.com");
-
-        System.out.println(historialNavegacion.pop());  // Debería imprimir "https://www.openai.com"
-    }
-}
-```
-
 
 ## Conclusión
 
-Las estructuras de datos en el framework de Colecciones de Java proporcionan soluciones flexibles y eficientes para una amplia gama de necesidades de programación.
+Las estructuras de datos en el __framework de Colecciones__ de Java proporcionan __soluciones flexibles y eficientes__ para una amplia gama de necesidades de programación.
 
 >Nota: ___Cada estructura y clase en Java está diseñada para adaptarse a diferentes necesidades y escenarios de aplicación. La elección adecuada depende de los requisitos específicos del problema y de las operaciones que se realizarán con los datos.___
 
