@@ -1,0 +1,4 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+DELETE FROM sqlite_sequence;
+COMMIT;
