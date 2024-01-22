@@ -5,6 +5,9 @@
 
 Teniendo como referencia: la documentación, los ejemplos realizados en clase, y los que se encuentran en el siguiente [enlace](../../Ejemplos/).
 
+_Primera Parte_
+---
+
 Realiza:
 
 - Crea un programa que declare e inicialice un ArrayList de enteros. Luego, agrega números pares del 1 al 10 a la lista.
@@ -37,5 +40,8 @@ Realiza:
 - Recuerda siempre declarar los métodos __toString__ y __equals__.
 - Sigue los apuntes para que veas distintos ejemplos de los métodos que se piden implementar.
 
+_Segunda Parte_
+--- 
 
+__En construcción!!__
 </div>
