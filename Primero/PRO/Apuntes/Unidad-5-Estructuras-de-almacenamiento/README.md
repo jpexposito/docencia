@@ -35,7 +35,7 @@ _HashMap_, _Hashtable_, _LinkedHashMap_, _TreeMap_, y _IdentityHashMap_ son __IM
 Es importante destacar que _Hashtable_ es una implementación más antigua y está sincronizada, lo que significa que es segura para operaciones en __entornos concurrentes__ pero puede tener un rendimiento inferior en comparación con las implementaciones no sincronizadas más modernas, como HashMap.
 
 ## 1. [Creación de arrays](Creacion-de-arrays.md)
-## 2. [Colecciones](Colecciones.md)
+## 2. [Colecciones](Collection/README.md)
 ## 3. [Maps](Maps.md)
 
 </div>
