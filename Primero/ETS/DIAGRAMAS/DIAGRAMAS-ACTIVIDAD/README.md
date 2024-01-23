@@ -141,36 +141,30 @@ Los "swimlanes" __NO__ están definidos como una __característica estándar__ e
 
 ```mermaid
 graph TD;
+    A[Inicio];
+    B[Actividad 1];
+    C[Actividad 2];
+    D[Actividad 3];
+    E[Actividad 4];
+    F[Actividad 5];
+    G[Fin];
+
     subgraph Actor1
-        A[Inicio];
-        B[Actividad 1];
-        C[Actividad 2];
-        D[Fin];
+        A -->|Comienza| B;
+        B -->|Continúa| C;
+        C -->|Finaliza| G;
     end
 
     subgraph Actor2
-        E[Inicio];
-        F[Actividad 3];
-        G[Actividad 4];
-        H[Fin];
+        A -->|Comienza| D;
+        D -->|Continúa| E;
+        E -->|Finaliza| G;
     end
 
     subgraph Actor3
-        I[Inicio];
-        J[Actividad 5];
-        K[Fin];
+        A -->|Comienza| F;
+        F -->|Finaliza| G;
     end
-
-    A -->|Comienza| B;
-    B -->|Continúa| C;
-    C -->|Finaliza| D;
-
-    E -->|Comienza| F;
-    F -->|Continúa| G;
-    G -->|Finaliza| H;
-
-    I -->|Comienza| J;
-    J -->|Finaliza| K;
 ```
 
 </div>
