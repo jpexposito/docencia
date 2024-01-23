@@ -8,9 +8,7 @@
   <img src="https://static.wixstatic.com/media/a59c1e_2bdad58798374b8593d54d4a02a5928f~mv2.jpg/v1/fill/w_1200,h_600,al_c,q_90/a59c1e_2bdad58798374b8593d54d4a02a5928f~mv2.webp" width="450px" />
 </div>
 
-</br>
-
-## Definiciones y especificación de requerimientos
+## Definiciones y especificación de requerimientos
 
 Los requerimientos/requisitos de un sistema describen los servicios que ha de ofrecer el sistema y las restricciones asociadas a su funcionamiento, es decir, las propiedades o restricciones que deben satisfacerse, determinadas de forma precisa.
 
