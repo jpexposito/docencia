@@ -139,25 +139,38 @@ Los "swimlanes" __NO__ están definidos como una __característica estándar__ e
 
 >__Nota__: __NO__ es una _práctica estándar en UML_, pero puede ser útil en ciertos contextos para mejorar la organización y la comprensión visual del sistema.
 
-```gantt
-    title Diagrama de Actividad con Swimlanes
+```mermaid
+graph TD;
+    subgraph Actor1
+        A[Inicio];
+        B[Actividad 1];
+        C[Actividad 2];
+        D[Fin];
+    end
 
-    section Actor 1
-    Inicio                 :2024-01-01, 1d
-    Actividad 1            :after Inicio  , 2d
-    Actividad 2            :after Actividad 1, 3d
-    Fin                    :after Actividad 2, 1d
+    subgraph Actor2
+        E[Inicio];
+        F[Actividad 3];
+        G[Actividad 4];
+        H[Fin];
+    end
 
-    section Actor 2
-    Inicio                 :2024-01-01, 1d
-    Actividad 3            :after Inicio  , 2d
-    Actividad 4            :after Actividad 3, 2d
-    Fin                    :after Actividad 4, 1d
+    subgraph Actor3
+        I[Inicio];
+        J[Actividad 5];
+        K[Fin];
+    end
 
-    section Actor 3
-    Inicio                 :2024-01-01, 1d
-    Actividad 5            :after Inicio  , 4d
-    Fin                    :after Actividad 5, 1d
+    A -->|Comienza| B;
+    B -->|Continúa| C;
+    C -->|Finaliza| D;
 
+    E -->|Comienza| F;
+    F -->|Continúa| G;
+    G -->|Finaliza| H;
+
+    I -->|Comienza| J;
+    J -->|Finaliza| K;
 ```
+
 </div>
