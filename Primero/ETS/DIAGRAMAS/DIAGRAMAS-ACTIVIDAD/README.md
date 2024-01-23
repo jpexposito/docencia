@@ -131,4 +131,33 @@ Si el libro está disponible, el proceso continúa a la confirmación de présta
 
 #### ¿Sabes interpretar el diagrama anterior y realizar su implementación?
 
+## Swimlanes
+
+Una __"swimlane"__ es una __línea o área visual__ que __divide el diagrama__ en __secciones__ para representar __diferentes actores, sistemas o componentes__. Cada sección (carril) contiene casos de uso relacionados. Ayuda a organizar y entender mejor la __relación entre los actores y los casos de uso en un sistema más complejo__.
+
+Los "swimlanes" __NO__ están definidos como una __característica estándar__ en la especificación de UML para los diagramas de casos de uso, algunas _herramientas de modelado o metodologías específicas pueden adoptar su uso para mejorar la claridad visual del diagrama_.
+
+>__Nota__: __NO__ es una _práctica estándar en UML_, pero puede ser útil en ciertos contextos para mejorar la organización y la comprensión visual del sistema.
+
+```plantuml
+@startuml
+|Actor 1|
+start
+:Actividad 1;
+|Actor 2|
+:Actividad 2;
+|Actor 3|
+:Actividad 3;
+|Actor 1|
+:Actividad 4;
+:Actividad 5;
+|Actor 2|
+:Actividad 6;
+|Actor 3|
+:Actividad 7;
+|Actor 1|
+:Fin;
+stop
+@enduml
+```
 </div>
