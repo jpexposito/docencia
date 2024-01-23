@@ -123,9 +123,12 @@ Si el libro está disponible, el proceso continúa a la confirmación de présta
 
 >__Nota__:Este es el proceso básico de préstamo bibliotecario, desde la solicitud del libro hasta la confirmación del préstamo o la indicación de que el libro no está disponible.
 
+### Diagrama de Actividad Calculadora
 
 <div align="center">
   <img src="https://programacionorientadaweb.files.wordpress.com/2016/09/u88so1.jpg" width="400px">
 </div>
+
+#### ¿Sabes interpretar el diagrama anterior y realizar su implementación?
 
 </div>
