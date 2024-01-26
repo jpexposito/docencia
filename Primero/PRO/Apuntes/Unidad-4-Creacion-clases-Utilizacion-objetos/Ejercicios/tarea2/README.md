@@ -36,10 +36,10 @@ Realiza:
     - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
     - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.  
     - Crea un programa que demuestre el comportamiento correcto del programa App__NombreIndentificativo__, o __test unitarios__ que sistituyen a este.
-- El siguiente ejercicio tiene como objetivo la comprensión de jerarquías en programación. Para ello debe de implementarse las siguientes estruturas:    
+- El siguiente ejercicio tiene como objetivo la comprensión de jerarquías en programación. Para ello debe de implementarse las siguientes estruturas:
   - Una clase abstracta llamada Persona que contenga los siguientes atributos:
-    - nombre (String)
-    - fechaNacimiento(String)
+    - nombre (String).
+    - fechaNacimiento(String).
     - Define el método __anios__, que retorno un __int__ que calcule la edad a partir de la fecha de nacimiento.
   - Define una interfaz llamada Trabajador que tenga un método abstracto llamado trabajar(), que retorne un String.
   - Crea una clase abstracta llamada Empleado que implemente la interfaz Trabajador, que extienda de Persona y contenga un atributo adicional:
@@ -57,6 +57,6 @@ Realiza:
     - Crea la __interfaz__ en el paquete __ies.puerto.interfaz__ y la implementación en el paquete __ies.puerto.impl__.
     - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.
     - ___CREA LAS CLASES CON LOS NOMBRES ADECUADOS EN FUNCIÓN DEL TIPO DE CLASE QUE SEA Y EL PAQUETE DONDE ESTE___.  
-    - Crea un programa que demuestre el comportamiento correcto del programa App__NombreIndentificativo__, o __test unitarios__ que sistituyen a este.
+    - Crea un programa que demuestre el comportamiento correcto del programa __AppNombreIndentificativo__, o __test unitarios__ que sistituyen a este.
 
 </div>

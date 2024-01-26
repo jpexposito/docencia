@@ -42,6 +42,46 @@ Realiza:
 
 _Segunda Parte_
 --- 
+- El siguiente ejercicio tiene como objetivo la comprensión de jerarquías en programación, así como el uso de __List de colecciones__. Para ello debe de implementarse las siguientes estruturas:
+  - Una clase abstracta llamada Persona que contenga los siguientes atributos:
+    - nombre (String).
+    - dni.
+    - fechaNacimiento(String).
+    - Define el método __anios__, que retorno un __int__ que calcule la edad a partir de la fecha de nacimiento.
+  - Una clase Nota que cotenga los siguientes atributos:
+    - nombre (String).
+    - valor (float).
+  - Define una clase asbtracta llamada Trabajador que exitiende de Persona y que contenga:
+    - nombre (String).
+    - salario (float).
+  - Crea una clase abstracta llamada Empleado que extienda de Trabajador.
+  - Crea una clase llamada Profesor que extienda Empleado. La clase Profesor debe tener un atributo adicional:
+    - especialidad(String). 
+  - Crea una clase llamada Alumno que herede de Persona. La clase Alumno debe tener un atributo adicional:
+    - notas List<Nota>.
+  - Crea una clase llamada Aula que esta compuesta por las siguientes propiedades:
+    - nombre String.
+    - profesor Profesor.
+    - alumnos List<Alumno>.
+  - Crea la clase Colegio que estará compuesta por los siguientes atributos:
+    - nombre String.
+    - dirección String.
+    - ubicación String.
+    - aulas List<Aula>.
+  
+  - Agrega métodos específicos de la forma más eficas para:
+    - Obtener la nota máxima de todos los alumnos en el colegio.
+    - Obtener la nota media de una clase específica.
+    - Obtener la nota media de todo el colegio.
+    - Obtener la información del salario medio de los profesores.
+    - Obtener el salario máximo y mínimo de los profesores.
+    - Obtener la información de un Profesor, un alumno o una clase específica a través de su dni.
+    - Obtener la edad media de los profesores, y alumnos.
+    - No se permiten elementos duplicados en ninguna de las listas creadas.
+    
+    __Nota__:
+    - Realiza el ejercicio creando una clase __abstracta__, en el paquete __ies.puerto.abstractas__ _(Los métodos abstractos_ ___NO___ _comienzan por_ ___I___ _)_ y realizando la implemetación de los __métodos abstractos__ en una clase declarada en el paquete __ies.puerto.implementation__.
+    - ___CREA LAS CLASES CON LOS NOMBRES ADECUADOS EN FUNCIÓN DEL TIPO DE CLASE QUE SEA Y EL PAQUETE DONDE ESTE___.  
+    - Crea un programa que demuestre el comportamiento correcto del programa __AppNombreIndentificativo__, o __test unitarios__ que sistituyen a este.
 
-__En construcción!!__
 </div>
