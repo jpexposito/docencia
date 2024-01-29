@@ -1,6 +1,6 @@
 <div align="justify">
 
-# Ejemplos de trabajo con Collection
+# Ejemplos de trabajo con Collection (ArrayList)
 
 ## Almacenar y Manipular Elementos de Tipo String
 
