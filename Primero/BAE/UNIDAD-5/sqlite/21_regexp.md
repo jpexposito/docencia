@@ -196,4 +196,140 @@ Este último registro insertado cumple que el precio tiene entre 3 y 6 dígitos 
 | __\s__ | Equivale a un espacio en blanco. | 
 | __\S__ | Equivale a un no espacio en blando. | 
 
+## Veamos un conjunto de ejermpos:
+
+1. Selecciona todos los libros cuyo título comienza con la letra "A".
+
+```sql
+--Opción 1
+SELECT * FROM libro WHERE titulo REGEXP '^A';
+
+-- Opción like (MENOS EFICIENTE)
+SELECT * FROM libro WHERE titulo LIKE 'A%';
+```
+
+2. Encuentra los libros escritos por autores cuyos nombres terminan con la letra "s".
+
+```sql
+--Opción 1
+SELECT * FROM libro WHERE autor REGEXP 's$';
+
+-- Opción 2 (MENOS EFICIENTE)
+SELECT * FROM libro WHERE autor LIKE '%s';
+```
+
+3. Obtén los libros cuyo título contiene la palabra "java" en cualquier posición.
+
+```sql
+--Opcioón 1
+SELECT * FROM libro WHERE titulo REGEXP 'java';
+--Opción 2
+SELECT * FROM libro WHERE titulo LIKE '%java%';
+```
+
+4. Encuentra los libros con títulos que comienzan con __"La"__ seguido de __cualquier palabra__.
+
+```sql
+--Opción
+SELECT * FROM libro WHERE titulo REGEXP '^La [a-zA-Z]+';
+--Opción 2
+SELECT * FROM libro WHERE titulo LIKE 'La %';
+```
+
+5. Selecciona los libros cuyo autor tiene exactamente cinco caracteres en su nombre.
+
+```sql
+SELECT * FROM libro WHERE autor REGEXP '^.{5}$';
+```
+
+6. Obtén los libros con editoriales que contienen la palabra __"Press"__.
+
+```sql
+SELECT * FROM libro WHERE editorial REGEXP 'Press';
+```
+
+7. Encuentra los libros con precios que tienen dos dígitos decimales exactos.
+
+```sql
+SELECT * FROM libro WHERE precio REGEXP '\\.[0-9]{2}$';
+```
+
+8. Obtén los libros con títulos que contienen números.
+
+```sql
+SELECT * FROM libro WHERE titulo REGEXP '\\d';
+```
+
+9. Encuentra los libros con autores que tienen al menos una vocal repetida.
+
+```sql
+SELECT * FROM libro WHERE autor REGEXP '[aeiouAEIOU].*[aeiouAEIOU]';
+```
+
+10. Selecciona los libros cuyo título inicia con una vocal.
+
+```sql
+SELECT * FROM libro WHERE titulo REGEXP '^[aeiouAEIOU]';
+```
+
+11. Obtén los libros con autores cuyos nombres tienen una longitud de al menos 10 caracteres.
+
+```sql
+SELECT * FROM libro WHERE LENGTH(autor) >= 10;
+```
+
+12. Encuentra los libros con editoriales que comienzan con la letra "P" seguida de al menos dos caracteres.
+
+```sql
+SELECT * FROM libro WHERE editorial REGEXP '^P.{2,}';
+```
+
+13. Selecciona los libros con precios que terminan con ".99".
+
+```sql
+SELECT * FROM libro WHERE precio REGEXP '\\.99$';
+```
+
+14. Obtén los libros cuyos títulos no contienen la palabra "historia".
+    
+```sql
+SELECT * FROM libro WHERE titulo NOT REGEXP '\\bhistoria\\b';
+```
+
+15. Encuentra los libros con títulos que contienen solo letras mayúsculas.
+
+```sql
+SELECT * FROM libro WHERE titulo REGEXP '^[A-Z]+$';
+```
+
+16. Selecciona los libros con autores que contienen al menos una mayúscula y una minúscula.
+
+```sql
+SELECT * FROM libro WHERE autor REGEXP '[a-z]' AND autor REGEXP '[A-Z]';
+```
+
+17. Obtén los libros con editoriales que no contienen la palabra "publications".
+
+```sql
+SELECT * FROM libro WHERE editorial NOT REGEXP 'publications';
+```
+
+18. Selecciona los libros cuyo título comienza con una letra y termina con un número.
+
+```sql
+SELECT * FROM libro WHERE titulo REGEXP '^[a-zA-Z].*[0-9]$';
+```
+19. Selecciona los libros cuyos títulos tienen al menos tres palabras.
+
+```sql
+-- Opción 1
+SELECT * FROM libro WHERE titulo LIKE '% % %';
+
+-- Opción 2
+
+
+SELECT * FROM libro WHERE titulo REGEXP '\\b\\w+\\b\\s\\b\\w+\\b\\s\\b\\w+\\b';
+```
+
+
 </div>
