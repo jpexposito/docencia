@@ -1,11 +1,11 @@
 -- Elimino la tabla autor si exite
-DROP if EXISTS autor;
+DROP TABLE if EXISTS autor;
 CREATE TABLE IF NOT EXISTS autor (
     id INTEGER PRIMARY KEY,
     nombre TEXT
 );
 -- Elimino la tabla libro si existe
-DROP if EXISTS libro;
+DROP table if EXISTS libro;
 CREATE TABLE IF NOT EXISTS libro (
     codigo INTEGER PRIMARY KEY,
     titulo TEXT,
