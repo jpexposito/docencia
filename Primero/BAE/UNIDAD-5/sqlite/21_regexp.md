@@ -102,21 +102,21 @@ Para buscar los autores que tienen por lo menos una de las letras de la __a__ ha
 
 Para ver los títulos que comienzan con __A__ tipeamos:
 
-```
+```sql
  select titulo from libro
   where titulo regexp '^A';  
 ```
 
 Para ver los títulos que terminan en __HP__ usamos:
 
-```
+```sql
 select titulo from libro
   where titulo regexp 'HP$';  
 ```
 
 Para buscar títulos que contengan una __a__ luego un caracter cualquiera y luego una __e__ utilizamos la siguiente sentencia:
 
-```
+```sql
  select titulo from libro
   where titulo regexp 'a.e';
 ```
@@ -125,28 +125,28 @@ El punto (.) identifica cualquier caracter.
 
 Podemos mostrar los títulos que contienen una __a__ seguida de 2 caracteres y luego una __e__:
 
-```
+```sql
 select titulo from libro
   where titulo regexp 'a..e';  
 ```
 
 Para buscar autores que tengan 6 caracteres exactamente usamos:
 
-```
+```sql
  select autor from libro
   where autor regexp '^......$';
 ```
 
 Para buscar autores que tengan al menos 6 caracteres usamos:
 
-```
+```sql
  select autor from libro
   where autor regexp '......';
 ```
 
 Cuando tenemos que buscar en el string alguno de los caracteres que tienen un significado especial en las expresiones regulares '^ $. * +? =! : | \ / () [] {} ' debemos escaparlos dentro de los corchetes.
 
-```
+```sql
  insert into libro (titulo,autor,editorial,precio)
   values('Como ganar $ en esta vida','Rodriguez Pablo','Paidos',25.00);  
  select titulo from libro
@@ -159,7 +159,7 @@ Son útiles para controlar la cantidad de repeticiones del patrón definido.
 
 Se especifican luego del corchete donde definimos los caracteres permitidos. Verificar si el precio del libro tiene entre 3 y 6 dígitos:
 
-```
+```sql
  insert into libro (titulo,autor,editorial,precio)
   values('Python','Charles Dierbach','Wiley',100.24);    
  select titulo, precio from libro
