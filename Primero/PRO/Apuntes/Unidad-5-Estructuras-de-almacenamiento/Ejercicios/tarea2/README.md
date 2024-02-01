@@ -5,9 +5,6 @@
 
 Teniendo como referencia: la documentación, los ejemplos realizados en clase, y los que se encuentran en el siguiente [enlace](../../Ejemplos/).
 
-_Primera Parte_
----
-
 Realiza:
 - Crea una __interfaz__ llamada __IVehiculo__ que contenga los siguientes métodos:
   - int velocidadMaxima();
