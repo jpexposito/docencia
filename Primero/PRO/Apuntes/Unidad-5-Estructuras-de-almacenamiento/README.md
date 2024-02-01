@@ -36,7 +36,7 @@ Es importante destacar que _Hashtable_ es una implementación más antigua y est
 
 ## 1. [Creación de arrays](Creacion-de-arrays.md)
 ## 2. [Colecciones](Collection/README.md)
-## 3. [Maps](Maps.md)
+## 3. [Maps](Map/README.md)
 
 
 </div>
