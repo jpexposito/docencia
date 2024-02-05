@@ -16,7 +16,7 @@ Realiza:
   - int cantidadDisponible();
 - Crea una clase __abstracta__ llamada __Producto__, que implementa __IProducto__ con las siguientes propiedades:
   - nombre (String).
-  - precio (String).
+  - precio (float).
   - fechaEntrada(String).
   - udi(String).
 
