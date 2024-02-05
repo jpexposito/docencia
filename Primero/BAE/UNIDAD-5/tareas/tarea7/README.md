@@ -4,7 +4,7 @@
 
 ## Descripción
 
-En la siguiente tarea se premia el uso de [funciones matemáticas](../../sqlite/funciones-basicas-sql.md), así como la utilización de __subconsultas__ en BBDD.
+En la siguiente tarea se premia el uso de [funciones matemáticas](../../sqlite/funciones-basicas-sql.md), así como la utilización de [subconsultas](../../sqlite/29_sub_consultas.md) en BBDD.
 
 Realiza la lectura de la base de datos a través del fichero [base datos de clientes](files/base-datos-clientes.sql).
 
