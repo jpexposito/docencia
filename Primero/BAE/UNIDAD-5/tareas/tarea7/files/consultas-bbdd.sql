@@ -22,7 +22,7 @@
   -- Cosas que debo de tener en cuenta:
     -- ¿Qué me están pidiendo?. ¿Por qué campo tengo que ordenadar. Es uno o más campos?
 
--- Encontrar el modelo de coche más caro que ha sido reparado al menos una vez.
+-- Encontrar el modelo de coche más caro.
   -- Cosas que debo de tener en cuenta:
     -- ¿Qué me están pidiendo?. MAX
 
