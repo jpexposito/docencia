@@ -73,7 +73,7 @@ con la instanciación correspondiente:
 Libro miLibro = new Libro("Java Programming", "John Doe", 2022);
 ```
 
->__Nota__:_Teniendo esto claro, sólo debemos indicar un elemento más y es el_ ___conjunto de libros___, que podrían formar una_ ___biblioteca__, _en formato_ ___xml, csv___, o ___json___.
+>__Nota__:_Teniendo esto claro, sólo debemos indicar un elemento más y es el_ ___conjunto de libros___, que podrían formar una __biblioteca__, _en formato_ ___xml, csv___, o ___json___.
 
 ### XML
 
@@ -93,6 +93,8 @@ Libro miLibro = new Libro("Java Programming", "John Doe", 2022);
 </biblioteca>
 ```
 
+>__Nota__: Cada __libro__ se representa entre las etiquetas ```xml <libro>...</libro>``` y la __biblioteca__ entre ```xml <biblioteca>...</biblioteca>```.
+
 ### CSV
 
 ```csv
@@ -100,6 +102,8 @@ id,titulo,autor,publicacion
 1,Java Programming,John Doe,2022
 2,Python for Beginners,Jane Smith,2023
 ```
+>__Nota__: Cada __libro__ se representa por cada una de las filas del fichero. La __biblioteca__, es el conjunto del fichero.
+
 
 ### JSON
 
@@ -119,6 +123,8 @@ id,titulo,autor,publicacion
   }
 ]
 ```
+>__Nota__: Cada __libro__ se representa entre __{}__, mientras que el conjunto de los libros en __[{},{}]__.
+
 
 ### Java
 
@@ -226,10 +232,126 @@ Debemos de tener en cuenta que tratamos con ficheros, y por lo tanto en caso de 
 
 ## Métodos que se deben de implementar
 
+### Existencia del fichero
+
+Este método es transversal para cualquiera de los métodos siguientes. Debe de devolver __true/false__, indicando si existe o no, y realizando la siguiente acción.
+
+```java
+public static boolean existeFichero(String path) {
+    if (path == null || path.isEmpty()) {
+        return false;
+        }
+    File fichero = new File(path);
+    return fichero.exists() && fichero.isFile();
+    }
+```
+
+>__Nota__: ¿Por qué debemos de implementarlo?. En las operaciones de __lectura/escritura__ siempre debemos de verificar si existe el fichero sobre el que se va a realizar la __operación__.
+
 ### Lectura de fichero
 
-### Modificación de fichero
+```java
+// Ejemplo básico de lectura de ficheros linea a linea
+public static void lectura(String path) {
+        // Crear un objeto File
+        File fichero = new File(path);
+        // Verificar si el fichero existe antes de intentar leerlo
+        if (fichero.exists() && fichero.isFile()) {
+            try (BufferedReader br = new BufferedReader(new FileReader(fichero))) {
+                String linea;
+                // Leer cada línea del fichero
+                while ((linea = br.readLine()) != null) {
+                    System.out.println(linea);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            System.out.println("El fichero no existe o no es un fichero válido.");
+        }
+    }
+```
+
+```java
+    // Invocando al método anterior
+    public static void lectura(String path) {
+        if(!existeFichero(path)) {
+            return;
+        }
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String linea;
+            // Leer cada línea del fichero
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+            }
+        } catch (IOException e) {
+            // Manejar la excepción en caso de error de lectura
+            e.printStackTrace();
+        }
+    }
+```
+
+Se verifica la existenca el fichero, en caso de no existir, no hace ninguna acción, y se evita un posible __NullPointer__.
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader(fichero))) {
+    String linea;
+
+    // Leer cada línea del fichero
+    while ((linea = br.readLine()) != null) {
+        System.out.println(linea);
+    }
+```
+
+Utilizamos un bloque __try-with-resources__ para asegurarnos de que el __BufferedReader__ se cierre adecuadamente al finalizar. Luego, leemos __cada línea__ del fichero y la imprimimos en la consola.
+
+```java
+} catch (IOException e) {
+    // Manejar la excepción en caso de error de lectura
+    e.printStackTrace();
+}
+```
+
+__Capturamos y manejamos cualquier excepción__ que pueda ocurrir durante la __lectura del fichero__. En este caso, __imprimimos__ el rastreo de la pila en la consola.
 
 ### Almacenamiento en fichero
+
+```java
+// Método para almacenar texto en un fichero
+    public static void almacenarEnFichero(String rutaFichero, String texto) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(rutaFichero, true))) {
+            // El parámetro 'true' en FileWriter permite la escritura en modo de añadir al final del fichero
+
+            bw.write(texto);
+            bw.newLine(); // Agregar una nueva línea después del texto
+
+            System.out.println("Texto almacenado en el fichero.");
+
+        } catch (IOException e) {
+            // Manejar la excepción en caso de error de escritura
+            e.printStackTrace();
+        }
+    }
+```
+
+>__Nota__: _¿Qué deberiamos tener en cuenta antes de escribir en un fichero?_
+
+## Trabajando con ficheros en proyectos maven
+
+Si deseas __leer y escribir__ archivos en el directorio __src/main/resources__ de un proyecto Maven, ten en cuenta que _los archivos en este directorio se consideran recursos y generalmente son de solo lectura durante la ejecución_. Sin embargo, puedes copiarlos a un directorio temporal o al sistema de archivos local para realizar operaciones de escritura.
+
+```java
+public static void leerFichero(String nombreRecurso) {
+        try (InputStream inputStream = OperacionesFicheroResources.class.getResourceAsStream("/" + nombreRecurso);
+             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+```
 
 </div>
