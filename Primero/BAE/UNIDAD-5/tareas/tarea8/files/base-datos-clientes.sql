@@ -31,7 +31,15 @@ CREATE TABLE IF NOT EXISTS ventas (
     FOREIGN KEY (id_coche) REFERENCES coches(id_coche)
 );
 
-
+CREATE TABLE IF NOT EXISTS reparacion (
+    id_reparación INTEGER PRIMARY KEY,
+    id_cliente INTEGER,
+    id_coche INTEGER,
+    fecha_reparación DATE,
+    descripción TEXT,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
+    FOREIGN KEY (id_coche) REFERENCES coches(id_coche)
+);
 
 INSERT INTO clientes (nombre, edad, direccion) VALUES
     ('Juan Pérez', 30, 'Calle A #123'),
@@ -69,7 +77,7 @@ INSERT INTO ventas (id_cliente, id_coche, fecha_venta) VALUES
     (8, 8, '2023-08-25'),
     (10, 10, '2023-10-05');
 -- Inserts para la tabla "reparación"
-INSERT INTO reparación (id_cliente, id_coche, fecha_reparación, descripción) VALUES
+INSERT INTO reparacion (id_cliente, id_coche, fecha_reparación, descripción) VALUES
     (1, 1, '2023-05-15', 'Reparación de motor'),
     (2, 3, '2023-06-20', 'Cambio de neumáticos'),
     (3, 5, '2023-07-25', 'Reparación de frenos'),
