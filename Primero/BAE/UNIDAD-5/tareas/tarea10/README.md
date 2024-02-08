@@ -17,9 +17,9 @@ Utilizando la base de datos `chinook` 🚁🚁 que se __adjunta__,  practica com
 
 >__Nota__: ___Realiza cada consulta que sea posible utilizando INNER JOIN && WHERE___.
 
-* Proporciona una consulta que muestre solo los clientes de Brasil.
+* Proporciona una consulta que muestre solo los clientes de Brazil.
 
-* Proporciona una consulta que muestre las facturas de clientes que son de Brasil.
+* Proporciona una consulta que muestre las facturas de clientes que son de Brazil.
   La tabla resultante debe mostrar el nombre completo del cliente, ID de factura, fecha de la factura
   y país de facturación.
 
@@ -27,7 +27,7 @@ Utilizando la base de datos `chinook` 🚁🚁 que se __adjunta__,  practica com
 
 * Proporciona una consulta que muestre una lista única de países de facturación de la tabla de Facturas.
 
-* Proporciona una consulta que muestre las facturas de clientes que son de Brasil.
+* Proporciona una consulta que muestre las facturas de clientes que son de Brazil.
 
 * Proporciona una consulta que muestre las facturas asociadas con cada agente de ventas. La tabla resultante debe incluir el nombre completo del Agente de Ventas.
 
@@ -37,8 +37,8 @@ Utilizando la base de datos `chinook` 🚁🚁 que se __adjunta__,  practica com
 
 * Mirando la tabla de InvoiceLine, proporciona una consulta que CUENTE el número de ítems de línea para el ID de factura 37.
 
-* Mirando la tabla de InvoiceLine, proporciona una consulta que CUENTE el número de ítems de línea para cada Factura. PISTA: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
-
+* Mirando la tabla de InvoiceLine, proporciona una consulta que CUENTE el número de ítems de línea para cada Factura.
+* 
 * Proporciona una consulta que incluya el nombre de la pista con cada ítem de línea de factura.
 
 * Proporciona una consulta que incluya el nombre de la pista comprada Y el nombre del artista con cada ítem de línea de factura.
