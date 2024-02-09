@@ -22,12 +22,12 @@ Realiza:
 
   >__Nota__: Crea los contructores, getters/setters necesarios, asi como los métodos __toString()__, y __equals()__. Además el __udi__ es el identificador único de un producto.
 
-- Crea la clase __Alimento__ que __extiente__ de __Producto__ y que permite como precio máximo, su precio * __0,23__.
+- Crea la clase __Alimento__ que __extiente__ de __Producto__ y que permite como precio máximo, su precio * __1,23__.
   - Además posee un método:
     - int diasDisponible(). Qué calcula cuantos días sobre la fecha de entrada del alimento, estará este sin caducar (fechaActual - fechaEntrada).
     - boolean caducado(). Función que determina si un alimento esta caducado. (__mayor a 30 dias de diferencia__).
-- Crea la clase __Electronica__ que __extiente__ de __Producto__ y que permite como precio máximo, su precio * __0,6__.
-- Crea la clase __Soubenir__ que __extiente__ de __Producto__ y que permite como precio máximo, su precio * __0,4__.
+- Crea la clase __Electronica__ que __extiente__ de __Producto__ y que permite como precio máximo, su precio * __1,6__.
+- Crea la clase __Soubenir__ que __extiente__ de __Producto__ y que permite como precio máximo, su precio * __1,4__.
 - Crea una clase llamada __Supermercado__ que contenga:
   - List<Alimento> alimentos de tipo __HashSet__.
   - List<Electronica> electronica de tipo __ArrayList__.
