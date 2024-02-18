@@ -336,6 +336,44 @@ __Capturamos y manejamos cualquier excepción__ que pueda ocurrir durante la __l
 
 >__Nota__: _¿Qué deberiamos tener en cuenta antes de escribir en un fichero?_
 
+### Eliminar el contenido de en fichero
+
+Para eliminar el contenido de un fichero, podemos escribir una cadena __vacía__, y cerrar el fichero.
+
+```java
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        // Ruta del archivo
+        String filePath = "ruta/al/archivo.txt";
+
+        try {
+            // Crear un objeto File
+            File file = new File(filePath);
+
+            // Crear un FileOutputStream para escribir en el archivo
+            FileOutputStream outputStream = new FileOutputStream(file);
+
+            // Escribir un contenido vacío
+            byte[] emptyContent = {};
+            outputStream.write(emptyContent);
+
+            // Cerrar el FileOutputStream
+            outputStream.close();
+
+            System.out.println("Contenido del archivo eliminado con éxito.");
+
+        } catch (IOException e) {
+            System.out.println("Ocurrió un error al eliminar el contenido del archivo: " + e.getMessage());
+        }
+    }
+}
+
+```
+
 ## Trabajando con ficheros en proyectos maven
 
 Si deseas __leer y escribir__ archivos en el directorio __src/main/resources__ de un proyecto Maven, ten en cuenta que _los archivos en este directorio se consideran recursos y generalmente son de solo lectura durante la ejecución_. Sin embargo, puedes copiarlos a un directorio temporal o al sistema de archivos local para realizar operaciones de escritura.
@@ -353,5 +391,6 @@ public static void leerFichero(String nombreRecurso) {
         }
     }
 ```
+
 
 </div>
