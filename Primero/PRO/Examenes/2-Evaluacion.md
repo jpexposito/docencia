@@ -11,7 +11,7 @@ Vamos a desarrollar un sistema de gestión de inventario para una cadena de tien
 - Crea tres clases abstractas llamadas __Producto, ProductoFresco  y ProductoRecomendable__:
   - __Producto__ debe implementar la interfaz __IVendible__ y contener las propiedades comunes a todos los productos: _nombre (String), precio(String), fecha de entrada (String) y un identificador único (String)_.
   - __ProductoFresco__ debe extender __Producto__ e implementar la interfaz __ISaludable__. Esta clase debe incluir una propiedad adicional para la __fecha de caducidad(String)__.
-  - __ProductoRecomendable__ debe extender __Producto__ e implementar la interfaz __IRecomendable__. Esta clase debe incluir métodos para __recomendar el producto__ _(popularidad > 7) y __calcular su popularidad__ _(retorna el valor de la propiedad)_.
+  - __ProductoRecomendable__ debe extender __Producto__ e implementar la interfaz __IRecomendable__. Esta clase debe incluir métodos para __recomendar el producto__ _(popularidad > 7)_ y __calcular su popularidad__ _(retorna el valor de la propiedad)_.
 - Implementa las siguientes clases con sus respectivas características:
 -  __Alimento__: debe ser una subclase de __ProductoFresco__ y debe tener un método para __(int) calcular la cantidad de días antes de la caducidad__ y para __(boolean) verificar si está caducado__. Calcular el precio __máximo (1,35*precio)__.
 - __Aparato__: debe ser una subclase de __Producto__ y debe tener un método para (float) calcular el precio __máximo (1,42*precio)__.
@@ -19,13 +19,14 @@ Vamos a desarrollar un sistema de gestión de inventario para una cadena de tien
 - __CuidadoPersonal__: debe ser una subclase de ProductoRecomendable y debe incluir métodos para recomendar el producto y calcular su popularidad,calcular el precio __máximo (1,8*precio)__.
 - Crea una clase Tienda que tenga las siguientes características:
 - Debe contener listas __(List/Set/HasMap)__ para almacenar _cada tipo de producto_.
-- Debe tener métodos para __agregar, eliminar y obtener productos de cada lista_.
+- Debe tener métodos para _agregar, eliminar y obtener productos de cada lista_.
 - Debe incluir métodos para _calcular el precio total de cada tipo de producto_ y el _precio total de todos los productos en la tienda_. _(Los alimentos caducados no se pueden vender)_.
 - Debe de tener un método que _calcule cual es la ganancia de cada una de las listas de los productos y de toda la tienda_. (Los alimentos caducados no se pueden vender).
 - Implementa un método que muestre la _cantidad de productos disponibles de cada uno de los tipos que existe_.
 - Asegúrate de manejar adecuadamente la duplicación de productos y de verificar su existencia antes de realizar operaciones de añadir, eliminar u obtener.
 - Implementa un menú interactivo que permita al usuario realizar operaciones como añadir, mostrar, eliminar y modificar productos en la tienda.
-- Un producto de cuidado personal, se considera cuando tiene una popularidad de mayor o igual a 7. - Implementa un método que muestre aquellos productos que muestren aquellos que lo cumplen.
+- Un producto de cuidado personal, se considera cuando tiene una popularidad de mayor o igual a 7.
+- Implementa un método que muestre aquellos productos que muestren aquellos que lo cumplen.
 - Asegúrate de hacer uso de las interfaces y clases abstractas definidas previamente en tus implementaciones.
 
 </div>
