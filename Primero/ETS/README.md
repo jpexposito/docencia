@@ -10,4 +10,4 @@
 [Unidad 3: Elaboración de diagramas de comportamiento](DIAGRAMAS_COMPORTAMIENTO/README.md)   
 [Unidad 4: Elaboración de diagramas de clases](DIAGRAMAS_CLASES.md)   
 [Unidad 5: Documentación y optimización](DOCUMENTACION.md)     
-[Unidad 6: Diseño y realización de pruebas](PRUEBAS.md)  
+[Unidad 6: Diseño y realización de pruebas](PRUEBAS/README.md)  
