@@ -2,13 +2,13 @@
 
 # Repasando consultas III
 
-Dada la siguiente [bbdd universidad](files/universidad.d) descrita a través del siguiente __diagrama de e-r__:
+Dada la siguiente [bbdd universidad](files/universidad.db) descrita a través del siguiente __diagrama de e-r__:
 
 <img src="img/universidad.png">
 
 Realiza el siguiente listado de consultas:
 
-## <span style="color:red">Consultas multitabla (Join)<span>
+## <span style="color:red">Consultas de una única tabla<span>
 
 1. Devuelve un listado con el primer apellido, segundo apellido y el nombre de todos los alumnos. El listado deberá estar ordenado alfabéticamente de menor a mayor por el primer apellido, segundo apellido y nombre.
 
