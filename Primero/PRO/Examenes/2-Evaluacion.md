@@ -28,5 +28,6 @@ Vamos a desarrollar un sistema de gestión de inventario para una cadena de tien
 - Un producto de cuidado personal, se considera cuando tiene una popularidad de mayor o igual a 7.
 - Implementa un método que muestre aquellos productos que muestren aquellos que lo cumplen.
 - Asegúrate de hacer uso de las interfaces y clases abstractas definidas previamente en tus implementaciones.
-
+- Implementa un menú que permita realizar cada una de las ___operaciones/requerimientos__ _descritos_.
+- 
 </div>
