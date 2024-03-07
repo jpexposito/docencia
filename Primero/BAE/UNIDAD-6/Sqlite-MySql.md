@@ -19,5 +19,8 @@
 | Borrar tabla       | `DROP TABLE nombre_tabla;`        | `DROP TABLE nombre_tabla;`         |
 | Cerrar la base de datos | `.exit`                        | `EXIT;`                             |
 
+## Correspondencia Datos SQLite3 y MySQL
+
+En el siguiente enlace se encuentra la [correspondencia de datos](../UNIDAD-5/01-Tipos-de-datos.md).
 
 </div>
