@@ -36,7 +36,6 @@
     - [Lectura de XML](#lectura-de-xml)
     - [Lectura de XML](#lectura-de-xml-1)
       - [Clase Paciente](#clase-paciente)
-    - [Conversión entre Paciente y PacienteDto](#conversión-entre-paciente-y-pacientedto)
     - [Escritura de XML](#escritura-de-xml)
 
 ## Contenidos
@@ -707,7 +706,8 @@ Los ficheros XML (Extensible Markup Language) son ficheros de texto plano que co
 ### Lectura de XML
 
 ### Lectura de XML
-Para leer ficheros XML en Java con Maven, podemos utilizar la librería Simple XML. Esta librería nos permite convertir objetos a XML y viceversa, y es óptima para trabajar tanto con Java como con Kotlin. Aunque también podemos considerar Kotlin Serialization, esta última solo es compatible con Kotlin.
+
+Para leer ficheros XML en Java con Maven, podemos utilizar la librería Simple XML. Esta librería nos permite convertir objetos a XML y viceversa, y es óptima para trabajar tanto con Java como con Kotlin. Aunque también podemos considerar Kotlin Serialization, esta última solo es compatible con java.
 
 Lo primero que necesitamos hacer es agregar la dependencia de Simple XML en nuestro archivo pom.xml:
 
@@ -757,63 +757,14 @@ public class Paciente {
 
     // Getters y Setters
 }
-
-### Clase PacienteDto
-
-```java
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
-
-@Root(name = "paciente")
-public class PacienteDto {
-    @Attribute(name = "uuid")
-    private String uuid;
-
-    @Element(name = "nombre")
-    private String nombre;
-
-    @Element(name = "edad")
-    private String edad;
-
-    @Element(name = "created_at")
-    private String createdAt;
-
-    public PacienteDto() {
-        // Constructor por defecto necesario para Simple XML
-    }
-
-    // Getters y Setters
-}
 ```
 
-
-### Conversión entre Paciente y PacienteDto
-
+Aquí un [ejemplo](https://github.com/shevek/simple-xml/blob/master/examples/example1/Example1.java) completo.
 
 ```java
-import java.time.LocalDateTime;
-import java.util.UUID;
-
-public class Mapper {
-    public static PacienteDto toDto(Paciente paciente) {
-        PacienteDto dto = new PacienteDto();
-        dto.setUuid(paciente.getUuid());
-        dto.setNombre(paciente.getNombre());
-        dto.setEdad(paciente.getEdad());
-        dto.setCreatedAt(paciente.getCreatedAt());
-        return dto;
-    }
-
-    public static Paciente toModel(PacienteDto dto) {
-        Paciente paciente = new Paciente();
-        paciente.setUuid(UUID.fromString(dto.getUuid()));
-        paciente.setNombre(dto.getNombre());
-        paciente.setEdad(dto.getEdad());
-        paciente.setCreatedAt(LocalDateTime.parse(dto.getCreatedAt()));
-        return paciente;
-    }
-}
+      Persister persister = new Persister();
+      File file = new File("example1/example1.xml");
+      Example example = persister.read(Example.class, file);
 ```
 
 ### Escritura de XML
@@ -831,6 +782,9 @@ Para escribir un XML, podemos usar la misma librería Simple XML. Aquí hay un e
     System.out.println("XML escrito correctamente");
 
 ```
+
+Aquí un [ejemplo](https://github.com/shevek/simple-xml/blob/master/examples/example2/Example2.java
+) completo.
 
 
 </div>
