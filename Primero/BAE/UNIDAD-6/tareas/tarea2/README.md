@@ -5,20 +5,12 @@
 Dada la siguiente __BBDD__ en __Sqlite3__:
 
 ```sql
--- Crear la base de datos
-CREATE DATABASE IF NOT EXISTS practica_joins;
-
--- Usar la base de datos
-USE practica_joins;
-
--- Crear la tabla de clientes
 CREATE TABLE IF NOT EXISTS clientes (
-    id_cliente INTEGER PRIMARY KEY,
+    id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT,
     direccion TEXT
 );
 
--- Insertar 20 registros de ejemplo en la tabla de clientes
 INSERT INTO clientes (nombre, direccion) VALUES
     ('Cliente 1', 'Dirección 1'),
     ('Cliente 2', 'Dirección 2'),
@@ -41,14 +33,12 @@ INSERT INTO clientes (nombre, direccion) VALUES
     ('Cliente 19', 'Dirección 19'),
     ('Cliente 20', 'Dirección 20');
 
--- Crear la tabla de productos
 CREATE TABLE IF NOT EXISTS productos (
-    id_producto INTEGER PRIMARY KEY,
+    id_producto INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT,
     precio FLOAT
 );
 
--- Insertar 20 registros de ejemplo en la tabla de productos
 INSERT INTO productos (nombre, precio) VALUES
     ('Producto 1', 10.99),
     ('Producto 2', 20.50),
@@ -71,9 +61,8 @@ INSERT INTO productos (nombre, precio) VALUES
     ('Producto 19', 190.99),
     ('Producto 20', 200.50);
 
--- Crear la tabla de órdenes
 CREATE TABLE IF NOT EXISTS ordenes (
-    id_orden INTEGER PRIMARY KEY,
+    id_orden INTEGER PRIMARY KEY AUTOINCREMENT,
     id_cliente INTEGER,
     id_producto INTEGER,
     cantidad INTEGER,
@@ -81,7 +70,6 @@ CREATE TABLE IF NOT EXISTS ordenes (
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
 
--- Insertar 20 registros de ejemplo en la tabla de órdenes
 INSERT INTO ordenes (id_cliente, id_producto, cantidad) VALUES
     (1, 1, 2),
     (2, 2, 1),
