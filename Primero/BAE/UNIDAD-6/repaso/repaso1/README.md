@@ -2,7 +2,7 @@
 
 # Repaso Consultas
 
-jercicios básicos de SQL con sus soluciones. Para usar con la base de datos [Sakila](https://dev.mysql.com/doc/sakila/en/). Las soluciones propuestas son para MySQL pero en gran parte son compatibles con SQL Server u otros motores. También incluyen algunas explicaciones.
+jercicios básicos de SQL con sus soluciones. Para usar con la base de datos [Sakila](file/sakila-es-data.sql). Las soluciones propuestas son para MySQL pero en gran parte son compatibles con SQL Server u otros motores. También incluyen algunas explicaciones.
 
 La mayoría de los ejercicios fueron sacados de internet, traducidos o modificados.
 
