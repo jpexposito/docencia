@@ -220,6 +220,20 @@ Para crear un índice como parte de un campo, sólo se tiene que especificar el 
 ALTER TABLE usuarios ADD INDEX idx_nombre(nombre(10), apellidos(20));;
 ```
 
+## Operaciones sobre índices
+
+| Operación                   | Sintaxis                                                              | Descripción                                                   |
+|-----------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------|
+| Ver índices de una tabla   | `SHOW INDEX FROM nombre_tabla;`<br> `DESCRIBE nombre_tabla;`          | Muestra los índices de una tabla específica.                 |
+| Crear un índice            | `CREATE INDEX nombre_indice ON nombre_tabla (columna);`               | Crea un nuevo índice en la tabla especificada.               |
+| Crear un índice único      | `CREATE UNIQUE INDEX nombre_indice ON nombre_tabla (columna);`        | Crea un nuevo índice único en la tabla especificada.         |
+| Eliminar un índice         | `DROP INDEX nombre_indice ON nombre_tabla;`                           | Elimina un índice existente de la tabla especificada.        |
+| Eliminar un índice único   | `ALTER TABLE nombre_tabla DROP INDEX nombre_indice;`                  | Elimina un índice único existente de la tabla especificada.  |
+| Ver tamaño de un índice    | `SHOW INDEX FROM nombre_tabla;`                                       | Muestra el tamaño del índice de una tabla.                   |
+| Analizar tabla             | `ANALYZE TABLE nombre_tabla;`                                        | Recopila estadísticas sobre la distribución de valores.      |
+| Optimizar tabla            | `OPTIMIZE TABLE nombre_tabla;`                                        | Reorganiza el almacenamiento de una tabla para mejorar el rendimiento. |
+
+
 ## Referencias.
 
 - [Crear Índices](https://dev.mysql.com/doc/refman/8.0/en/create-index.html).
