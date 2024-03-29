@@ -234,6 +234,132 @@ ALTER TABLE usuarios ADD INDEX idx_nombre(nombre(10), apellidos(20));;
 | Optimizar tabla            | `OPTIMIZE TABLE nombre_tabla;`                                        | Reorganiza el almacenamiento de una tabla para mejorar el rendimiento. |
 
 
+## Prácticando índices
+
+Supongamos que tenemos una base de datos para gestionar una tienda en línea que vende productos electrónicos. La base de datos tiene dos tablas principales: productos y pedidos.
+
+#### Tabla `productos`:
+
+| Columna   | Tipo          | Descripción                        |
+|-----------|---------------|------------------------------------|
+| id        | INT           | Identificador único del producto  |
+| nombre    | VARCHAR(100)  | Nombre del producto                |
+| precio    | DECIMAL(10,2) | Precio del producto                |
+| categoria | VARCHAR(50)   | Categoría del producto             |
+
+#### Tabla `pedidos`:
+
+| Columna     | Tipo         | Descripción                        |
+|-------------|--------------|------------------------------------|
+| id          | INT          | Identificador único del pedido     |
+| producto_id | INT          | ID del producto                    |
+| cantidad    | INT          | Cantidad de productos en el pedido |
+| fecha       | DATE         | Fecha del pedido                   |
+| total       | DECIMAL(10,2)| Total del pedido                   |
+
+A continuación completa la __sentencia sql__ con los líneas que faltan:
+
+```sql
+CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    precio DECIMAL(10,2),
+    categoria VARCHAR(50)
+);
+
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    producto_id INT,
+    cantidad INT,
+    fecha DATE,
+    total DECIMAL(10,2)
+);
+```
+
+>__Nota__:_¿Qué es lo que falta?_.
+
+Realiza la inserción de los elementos de ejermlo:
+
+```sql
+INSERT INTO productos (nombre, precio, categoria) VALUES
+('Laptop', 999.99, 'Electrónica'),
+('Teléfono', 299.99, 'Electrónica'),
+('Tablet', 199.99, 'Electrónica');
+
+INSERT INTO pedidos (producto_id, cantidad, fecha, total) VALUES
+(1, 2, '2024-03-20', 1999.98),
+(2, 1, '2024-03-20', 299.99),
+(3, 3, '2024-03-21', 599.97);
+```
+
+A continuación realiza:
+
+- Crea Índices:
+  - Crea un índice en la columna nombre de la tabla productos para mejorar la velocidad de búsqueda por nombre de producto.
+  
+    ```sql
+    CREATE INDEX idx_nombre ON productos (nombre);
+    ```
+
+  - Crea un índice único en la columna id de la tabla productos para garantizar la unicidad de los identificadores de producto.
+  
+    ```sql
+    CREATE UNIQUE INDEX idx_id ON productos (id);
+    ```
+
+  - Crea un índice en la columna fecha de la tabla pedidos para optimizar la búsqueda por fecha de pedido.
+  
+      ```sql
+    CREATE INDEX idx_fecha ON pedidos (fecha);
+    ```
+
+- Ver Índices:
+  - Utiliza la sentencia SHOW INDEX FROM productos; para ver los índices de la tabla productos.
+  
+    ```sql
+    SHOW INDEX FROM productos;
+    ```
+
+  - Utiliza la sentencia SHOW INDEX FROM pedidos; para ver los índices de la tabla pedidos.
+  
+    ```sql
+    SHOW INDEX FROM pedidos;
+    ```
+
+- Eliminar Índices:
+  - Elimina el índice en la columna nombre de la tabla productos.
+  
+    ```sql
+    DROP INDEX idx_nombre ON productos;
+    ```
+
+  - Elimina el índice en la columna fecha de la tabla pedidos.
+  
+    ```sql
+    DROP INDEX idx_fecha ON pedidos;
+    ```
+
+- Optimizar Tabla:
+  - Utiliza la sentencia OPTIMIZE TABLE productos; para reorganizar el almacenamiento de la tabla productos y mejorar el rendimiento de las consultas.
+
+    ```sql
+    OPTIMIZE TABLE productos;
+    ```
+
+  >__Nota__: Obtendremos una salida similar a la siguiente:
+
+  ```sql
+    mysql> OPTIMIZE TABLE productos;
+  +--------------------------+----------+----------+-------------------------------------------------------------------+
+  | Table                    | Op       | Msg_type | Msg_text                                                          |
+  +--------------------------+----------+----------+-------------------------------------------------------------------+
+  | tienda_en_linea.productos | optimize | note     | Table does not support optimize, doing recreate + analyze instead |
+  | tienda_en_linea.productos | optimize | status   | OK                                                                |
+  +--------------------------+----------+----------+-------------------------------------------------------------------+
+  2 rows in set (0.09 sec)
+  ```
+
+
 ## Referencias.
 
 - [Crear Índices](https://dev.mysql.com/doc/refman/8.0/en/create-index.html).
