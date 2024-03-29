@@ -27,8 +27,6 @@ inscripción).
         >__Nota__:_Muestra el comando y la salida. Justifica el tipo de indice en un comentario_. 
     - Vea los índices de la tabla.
         >__Nota__:_Muestra el comando y la salida __"show index"___.
-- Genera un procedimiento que realice la inserción de 5 registros, al menos 2 veces, de forma aleatoria.
-    >__Nota__:_Muestra el comando y la salida_.
 - Intente ingresar un alumno con clave primaria repetida.
     >__Nota__:_Muestra el comando y la salida_.
 - Intente ingresar un alumno con documento repetido.
