@@ -22,19 +22,32 @@ Las operaciones son las siguientes:
     | Cantidad         | int     | Obligatorio                |
 
 - Aplica la sentencia adecuada para visualizar los índices que hay en la tabla.
+  
+>__Nota__: _Muestra el resultado y razona la respueta_.
 
 - Ejecuta la siguiente sentencia sql para generar datos de prueba:
 
     ```sql
-    INSERT INTO MOVIMIENTO (Articulo, Fecha, Cantidad)
+    CREATE TABLE NumerosUnicos (
+    Numero INT AUTO_INCREMENT PRIMARY KEY
+    );
+
+    INSERT INTO NumerosUnicos (Numero)
+    SELECT NULL FROM INFORMATION_SCHEMA.COLUMNS LIMIT 5000;
+
+    INSERT INTO MOVIMIENTO (Identificador, Articulo, Fecha, Cantidad)
     SELECT 
-        CONCAT('Producto', FLOOR(RAND() * 100) + 1), -- 
-        DATE_ADD('2012-01-01', INTERVAL FLOOR(RAND() * 120) DAY), 
-        FLOOR(RAND() * 100) + 1 
+        n.Numero,
+        CONCAT('Producto', n.Numero),
+        DATE_ADD('2012-01-01', INTERVAL FLOOR(RAND() * 120) DAY),
+        FLOOR(RAND() * 1000000) + 1
     FROM 
-        INFORMATION_SCHEMA.TABLES
-    LIMIT 20;
+        NumerosUnicos n;
+
+        DROP TABLE NumerosUnicos;
     ```
+
+>__Nota__: _Muestra el resultado y razona la respueta. Ejecuta un count sobre la tabla_.
 
 - Crea con la sentencia CREATE TABLE…SELECT… un duplicado de la tabla MOVIMIENTO a
 la que llamaremos MOVIMIENTO_BIS.
@@ -43,20 +56,31 @@ la que llamaremos MOVIMIENTO_BIS.
 create table MOVIMIENTO_BIS select * from MOVIMIENTO;
 ```
 
+>__Nota__: _Muestra el resultado y razona la respueta_.
+
 - Con la cláusula __DESCRIBE__ observa cuál es la situación de la tabla clonada, ¿Qué le pasa al
 índice y a la propiedad __AUTO_INCREMENT__?
+
 >__Nota__: _Compara el resultado con la tabla MOVIMIENTO_.
 
 - Utilizando EXPLAIN observa el plan de ejecución de la consulta que devuelve toda la información de los movimientos con identificador=3. Tanto en la tabla MOVIMIENTOS como en la tabla MOVIMIENTOS_bis. Escribe tus conclusiones al respecto.
 
 - Supongamos que las consultas de rango que se van a hacer en nuestra tabla son frecuentes y además no por el identificador, sino por la fecha. Este es motivo suficiente para que sea la fecha un índice de tabla y así mejorar el tiempo de respuesta de nuestras consultas.
-En la tabla MOVIMIENTO_bis creamos un índice para la fecha (IX_FECHA_BIS) y otro índice para el identificador (IX_IDENTIFICADOR).
+En la tabla MOVIMIENTO_BIS creamos un índice para la fecha (IX_FECHA_BIS) y otro índice para el identificador (IX_IDENTIFICADOR).
 
 - 8.- Analiza el plan de ejecución de las siguientes consultas y observa la diferencia:
 Consulta1
-select * from MOVIMIENTO_bis where identificador=3;
-consulta 2
-select identificador from MOVIMIENTO_bis where identificador=3;
+
+```sql
+select * from MOVIMIENTO_BIS where identificador=3;
+```
+
+Consulta 2
+
+```sql
+select identificador from MOVIMIENTO_BIS where identificador=3;
+```
+
 Fíjata en que en la consulta 1 pedimos todos los campos. ¿A través de que indice se busca? ¿Por qué crees que lo hace así?
 En la consulta 2 solo pedimos el identificador. ¿A través de que índice busca? ¿Por qué crees que lo hace así? Analiza la ejecución.
 
