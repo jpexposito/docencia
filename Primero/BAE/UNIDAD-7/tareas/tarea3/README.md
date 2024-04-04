@@ -72,7 +72,7 @@ En la tabla MOVIMIENTO_BIS creamos un índice para la fecha (IX_FECHA_BIS) y otr
 Consulta1
 
 ```sql
-select * from MOVIMIENTO_BIS where identificador=3;
+select * from MOVIMIENTO where identificador=3;
 ```
 
 consulta 2
@@ -95,7 +95,7 @@ SELECT fecha FROM MOVIMIENTO WHERE fecha BETWEEN ‘01/01/2012’ and ‘01/03/2
 Consulta 2
 
 ```sql
-SELECT * FROM MOVIMIENTO WHERE fecha BETWEEN ‘01/01/2012’ and ‘01/03/2012’;
+SELECT * FROM MOVIMIENTO_BIS WHERE fecha BETWEEN ‘01/01/2012’ and ‘01/03/2012’;
 ```
 
 Fijate que en la consulta 2 pedimos todos los campos. ¿A través de que índice busca? ¿Por qué crees que lo hace así?
