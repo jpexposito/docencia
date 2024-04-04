@@ -16,7 +16,7 @@ Las operaciones son las siguientes:
 
     | Nombre del campo | Tipo de dato | Propiedades                |
     |------------------|--------------|----------------------------|
-    | Identificador    | int       | AUTO_INCREMENT, Clave primaria (PK_MOVIMIENTO) |
+    | Identificador    | int       | AUTO_INCREMENT, __Clave primaria__  |
     | Articulo         | varchar(50)  | Obligatorio                |
     | Fecha            | date         | Obligatorio                |
     | Cantidad         | int     | Obligatorio                |
@@ -75,7 +75,7 @@ Consulta1
 select * from MOVIMIENTO_BIS where identificador=3;
 ```
 
-Consulta 2
+consulta 2
 
 ```sql
 select identificador from MOVIMIENTO_BIS where identificador=3;
