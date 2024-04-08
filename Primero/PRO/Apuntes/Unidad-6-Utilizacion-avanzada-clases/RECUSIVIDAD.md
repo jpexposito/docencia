@@ -44,7 +44,7 @@ Esto es un problema porque, como decimos, la función nunca deja de llamarse a s
 ## Ejemplo Factorial
 
 <div align="center">
-    <img src="img/factorial-recursividad.png">
+    <img src="img/factorial-recursividad.png" width="200px">
 </div>
 
 
@@ -56,7 +56,7 @@ public class Factorial {
         System.out.println("El factorial de " + numero + " es: " + factorial);
     }
 
-    public long calcular(int numero) {
+    public static long calcular(int numero) {
         if (n == 0) {
             return 1;
         }
