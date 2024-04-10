@@ -359,6 +359,307 @@ A continuación realiza:
   2 rows in set (0.09 sec)
   ```
 
+### Un Ejemplo (Jardinería)
+
+Suponga que estamos trabajando con la base de datos [jardineria](file/jardineria.sql) y queremos optimizar la siguiente consulta.
+
+```sql
+SELECT nombre_contacto, telefono
+FROM cliente
+WHERE pais = 'France';
+```
+
+Lo primero que tenemos que hacer es hacer uso de __EXPLAIN__ para obtener información sobre cómo se está realizando la consulta.
+
+```sql
+EXPLAIN SELECT nombre_contacto, telefono
+FROM cliente
+WHERE pais = 'France';
+
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table   | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | cliente | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   36 |    10.00 | Using where |
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+-------------+
+```
+
+Tenemos que fijarnos en los valores que nos aparecen en las columnas type y rows. En este caso tenemos ___type =  ALL___, que quiere decir que es necesario realizar un escaneo completo de todas las filas de la tabla. Y ___rows = 36___, _quiere decir que en este caso ha tenido que examinar 36 filas_. Que es el número total de filas que tiene la tabla.
+
+Para obtener información sobre la tabla y sobre los índices que existen en ella podemos usar ___DESCRIBE o SHOW INDEX___.
+
+```sql
+DESCRIBE cliente;
+
++----------------------------+---------------+------+-----+---------+-------+
+| Field                      | Type          | Null | Key | Default | Extra |
++----------------------------+---------------+------+-----+---------+-------+
+| codigo_cliente             | int(11)       | NO   | PRI | NULL    |       |
+| nombre_cliente             | varchar(50)   | NO   |     | NULL    |       |
+| nombre_contacto            | varchar(30)   | YES  |     | NULL    |       |
+| apellido_contacto          | varchar(30)   | YES  |     | NULL    |       |
+| telefono                   | varchar(15)   | NO   |     | NULL    |       |
+| fax                        | varchar(15)   | NO   |     | NULL    |       |
+| linea_direccion1           | varchar(50)   | NO   |     | NULL    |       |
+| linea_direccion2           | varchar(50)   | YES  |     | NULL    |       |
+| ciudad                     | varchar(50)   | NO   |     | NULL    |       |
+| region                     | varchar(50)   | YES  |     | NULL    |       |
+| pais                       | varchar(50)   | YES  |     | NULL    |       |
+| codigo_postal              | varchar(10)   | YES  |     | NULL    |       |
+| codigo_empleado_rep_ventas | int(11)       | YES  | MUL | NULL    |       |
+| limite_credito             | decimal(15,2) | YES  |     | NULL    |       |
++----------------------------+---------------+------+-----+---------+-------+
+```
+
+```sql
+SHOW INDEX FROM cliente;
+
++---------+------------+----------------------------+--------------+----------------------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table   | Non_unique | Key_name                   | Seq_in_index | Column_name                | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++---------+------------+----------------------------+--------------+----------------------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| cliente |          0 | PRIMARY                    |            1 | codigo_cliente             | A         |          36 |     NULL | NULL   |      | BTREE      |         |               |
+| cliente |          1 | codigo_empleado_rep_ventas |            1 | codigo_empleado_rep_ventas | A         |          11 |     NULL | NULL   | YES  | BTREE      |         |               |
++---------+------------+----------------------------+--------------+----------------------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+```
+
+Según los resultados obtenidos con __DESCRIBE y SHOW INDEX__ podemos observar que ___NO___ existe ningún índice sobre la columna pais.
+
+Para crear un índice sobre la _columna pais_ hacemos uso de __CREATE INDEX__:
+
+```sql
+CREATE INDEX idx_pais ON cliente(pais);
+```
+
+```sql
+SHOW INDEX FROM cliente;
+
++---------+------------+----------------------------+--------------+----------------------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table   | Non_unique | Key_name                   | Seq_in_index | Column_name                | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++---------+------------+----------------------------+--------------+----------------------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| cliente |          0 | PRIMARY                    |            1 | codigo_cliente             | A         |          36 |     NULL | NULL   |      | BTREE      |         |               |
+| cliente |          1 | codigo_empleado_rep_ventas |            1 | codigo_empleado_rep_ventas | A         |          11 |     NULL | NULL   | YES  | BTREE      |         |               |
+| cliente |          1 | idx_paix                   |            1 | pais                       | A         |           5 |     NULL | NULL   | YES  | BTREE      |         |               |
++---------+------------+----------------------------+--------------+----------------------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+```
+
+Una vez que hemos comprobado que el índice se ha creado de forma correcta podemos volver a ejecutar la consulta con EXPLAIN para comprobar si hemos conseguido optimizarla.
+
+```sql
+EXPLAIN SELECT nombre_contacto, telefono
+FROM cliente
+WHERE pais = 'France';
+
++----+-------------+---------+------------+------+---------------+----------+---------+-------+------+----------+-------+
+| id | select_type | table   | partitions | type | possible_keys | key      | key_len | ref   | rows | filtered | Extra |
++----+-------------+---------+------------+------+---------------+----------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | cliente | NULL       | ref  | idx_pais      | idx_pais | 203     | const |    2 |   100.00 | NULL  |
++----+-------------+---------+------------+------+---------------+----------+---------+-------+------+----------+-------+
+```
+
+De nuevo tenemos que fijarnos en los valores que nos aparecen en las columnas ___type y rows___. En este caso ambos valores han cambiado, ahora type es igual a _ref_, y por lo tanto ya no es necesario realizar un escaneo completo de todas las filas de la tabla. Y el valor de _rows es igual a 2_, que quiere decir que en este caso ha tenido que examinar solamente __2 filas__.
+
+#### Ejemplo 2 (FULLTEXT INDEX)
+
+Suponga que estamos trabajando con la base de datos jardineria y queremos buscar todos los productos que contienen la palabra acero en el nombre o en la descripción del producto. Una posible solución podrías ser esta:
+
+```sql
+SELECT *
+FROM producto
+WHERE nombre LIKE '%acero%' OR descripcion LIKE '%acero%';
+```
+
+Si la analizamos con __EXPLAIN__ veremos que no es muy eficiente porque esta consulta realiza un escaneo completo de toda la tabla.
+
+```sql
+EXPLAIN SELECT *
+FROM producto
+WHERE nombre LIKE '%acero%' OR descripcion LIKE '%acero%';
+```
+
+En estos casos es muy útil hacer uso de los índices de tipo ___FULLTEXT INDEX___.
+
+En primer lugar vamos a modificar la tabla producto para crear el índice __FULLTEXT__ con las ___dos columnas___ sobre las que queremos _realizar la búsqueda_.
+
+```sql
+CREATE FULLTEXT INDEX idx_nombre_descripcion ON producto(nombre, descripcion);
+```
+
+Una vez creado el índice ejecutamos la consulta haciendo uso de _MATCH_ y _AGAINST_.
+
+```sql
+SELECT *
+FROM producto
+WHERE MATCH(nombre, descripcion) AGAINST ('acero');
+```
+
+Si analizamos la consulta con __EXPLAIN__ veremos que ya no es necesario escanear toda la tabla para encontrar el resultado que buscamos.
+
+```sql
+EXPLAIN SELECT *
+FROM producto
+WHERE MATCH(nombre, descripcion) AGAINST ('acero');
+```
+
+### Ejemplo 3 (FULLTEXT INDEX)
+
+En este ejemplo vamos a trabajar con una base de datos llamada viajes que contiene la tabla lugares que almacena en una columna la descripción con texto enriquecido con etiquetas HTML.
+
+El script SQL de creación de la base de datos es el siguiente.
+
+```sql
+DROP DATABASE IF EXISTS viajes;
+CREATE DATABASE viajes CHARACTER SET utf8mb4;
+USE viajes;
+
+CREATE TABLE lugares (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  descripcion TEXT NOT NULL
+);
+
+INSERT INTO lugares VALUES (1, 'París', 'Viaje a <strong>París</strong>, fascinado por la <strong>Torre Eiffel</strong> iluminada de noche y el museo del <strong>Louvre</strong> con la <strong>Mona Lisa</strong>.');
+
+INSERT INTO lugares VALUES (2, 'Santorini', 'Pintoresco pueblo de <strong>Santorini</strong> con casas blancas y tejados azules, playas de arena volcánica. Cuenta con museos fascinantes como el del Louvre que muestran la rica historia de la isla y su cultura.');
+
+INSERT INTO lugares VALUES (3, 'Gran Cañon', 'Impresionante <strong>Gran Cañón</strong> con paredes rocosas y espectaculares puestas de sol.');
+
+INSERT INTO lugares VALUES (4, 'Machu Pichu', 'Ruinas antiguas de <strong>Machu Picchu</strong>, caminar por calles empedradas y admirar templos y terrazas.');
+
+INSERT INTO lugares VALUES (5, 'Tokio', 'Contraste de tradición y modernidad en <strong>Tokio</strong>, con templos históricos y brillantes letreros de neón.');
+```
+
+___El problema que queremos resolver es que queremos realizar una búsqueda de una frase exacta sobre la columna descripcion, pero tenemos el inconveniente de que esta columna contiene etiquetas HTML, lo que dificulta la búsqueda de una frase exacta___.
+Por ejemplo, suponga que queremos buscar todas las filas que contengan la frase museo del __Louvre__. Si utilizamos la siguiente consulta no obtendremos ningún resultado, porque en la tabla lugares la fila que contiene esa frase tiene la palabra Louvre está encerrada entre etiquetas: museo del _<strong>Louvre</strong>_.
+
+```sql
+SELECT *
+FROM lugares
+WHERE descripcion LIKE '%museo del Louvre%';
+```
+
+#### Paso 1
+
+La primera solución que vamos a realizar consiste en utilizar la función __REGEXP_REPLACE__ para eliminar las etiquetas HTML que aparecen en el texto de la descripción.
+
+La expresión regular que nos permite eliminar las etiquetas HTML es: "<[^>]+>". Vamos a analizar cada uno de los elementos que forman la expresión:
+
+"<": Busca el caracter < dentro del texto.
+[^>]+: Entre los corchetes indicamos que vamos a seleccionar todos los caracteres que no sean el carácter >. El símbolo + indica que se deben buscar uno o más caracteres que cumplan la regla definida dentro de los corchetes.
+">": Busca el caracter > dentro del texto.
+La consulta SQL quedaría así:
+
+```sql
+SELECT REGEXP_REPLACE(descripcion, "<[^>]+>", "")
+FROM lugares
+WHERE REGEXP_REPLACE(descripcion, "<[^>]+>", "") LIKE '%museo del Louvre%';
+```
+
+Esta consulta no es eficiente porque tiene que recorrer todas las filas de la tabla para hacer la búsqueda.
+
+Podemos utilizar el operador EXPLAIN para obtener información sobre cómo se está realizando la consulta.
+
+```sql
+EXPLAIN SELECT REGEXP_REPLACE(descripcion, "<[^>]+>", "")
+FROM lugares
+WHERE REGEXP_REPLACE(descripcion, "<[^>]+>", "") LIKE '%museo del Louvre%';
+
++----+-------------+---------+------------+------+---------------+----------+---------+-------+------+----------+--------------+
+| id | select_type | table   | partitions | type | possible_keys | key      | key_len | ref   | rows | filtered | Extra        |
++----+-------------+---------+------------+------+---------------+----------+---------+-------+------+----------+--------------+
+|  1 | SIMPLE      | lugares | NULL       | ALL  | NULL          | NULL     | NULL    | NULL  |    5 |   100.00 | Using where  |
++----+-------------+---------+------------+------+---------------+----------+---------+-------+------+----------+--------------+
+```
+
+En la columna type podemos observar que es necesario realizar un escaneo completo de toda la tabla y en la columna __rows__ vemos que se han recorrido las __5__ filas que tiene la tabla.
+
+#### Paso 2
+
+Para evitar tener que recorrer toda la tabla durante la búsqueda vamos a crear índice de tipo __FULLTEXT__ sobre la columna descripcion que es la que contiene el texto enriquecido con etiquetas.
+
+```sql
+CREATE FULLTEXT INDEX idx_nombre ON lugares(descripcion);
+```
+
+Hacemos una búsqueda sobre el índice que acabamos de crear, pero tenemos el inconveniente de que no podemos utilizar la función __REGEXP_REPLACE__ dentro de las cláusulas MATCH y AGAINST.
+
+Por lo tanto, no vamos a poder utilizar una búsqueda de frase completa porque con las cláusulas MATCH y AGAINST no podemos eliminar las etiquetas HTML que aparecen en el texto de la descripción.
+
+La consulta SQL quedaría así:
+
+```sql
+SELECT *, MATCH(descripcion) AGAINST ('museo del Louvre')
+FROM lugares
+WHERE MATCH(descripcion) AGAINST ('museo del Louvre');
+```
+
+Esta consulta es más eficiente que la anterior porque está haciendo uso de índices, pero el resultado no es correcto del todo porque devuelve filas con contenido relacionado con las palabras de búsqueda.
+
+```
++---+-----------+-----------------------------------+---------------------+
+| 1 | París     | Viaje a <strong>París</strong>... | 0.805271565914154   |
+| 2 | Santorini | Pintoresco pueblo de <strong>...  | 0.31671249866485596 |
++---+-----------+-----------------------------------+---------------------+
+```
+
+Podemos utilizar el operador EXPLAIN para obtener información sobre cómo se está realizando la consulta.
+
+```sql
+EXPLAIN SELECT *, MATCH(descripcion) AGAINST ('museo del Louvre')
+FROM lugares
+WHERE MATCH(descripcion) AGAINST ('museo del Louvre');
+
++----+-------------+---------+------------+----------+---------------+------------+---------+-------+------+----------+--------------+
+| id | select_type | table   | partitions | type     | possible_keys | key        | key_len | ref   | rows | filtered | Extra        |
++----+-------------+---------+------------+----------+---------------+------------+---------+-------+------+----------+--------------+
+| 1  | SIMPLE      | lugares | NULL       | fulltext | idx_nombre    | idx_nombre | 0       | const | 1    | 100.00   | Using where  |
++----+-------------+---------+------------+----------+---------------+------------+---------+-------+------+----------+--------------+
+```
+
+En la columna type podemos observar que no es necesario realizar un escaneo completo de toda la tabla porque está utilizando un índice de tipo FULLTEXT, y en la columna rows vemos que sólo se ha escaneado 1 fila de la tabla.
+
+#### Paso 3
+
+Podemos mejorar la consulta anterior para hacer uso del índice de tipo FULLTEXT y filtrar únicamente las filas que coinciden con la búsqueda exacta haciendo uso de la función REGEXP_REPLACE. En este caso vamos a utilizar dos condiciones en la cláusula WHERE:
+
+La primera para hacer uso del índice con las cláusulas MATCH y AGAINST, y filtrar únicamente las filas que pueden tener el resultado que estamos buscando.
+
+Y la segunda será una expresión regular con la función REGEXP_REPLACE para eliminar las etiquetas HTML y hacer una comparación exacta con la cadena que estamos buscando.
+
+La consulta optimizada quedaría así:
+
+```sql
+SELECT *
+FROM lugares
+WHERE 
+  MATCH(descripcion) AGAINST ('museo del Louvre') AND
+  REGEXP_REPLACE(descripcion, "<[^>]+>", "") LIKE '%museo del Louvre%';
+```
+
+Esta consulta devuelve el resultado que estamos buscando.
+
+```
++---+-----------+-----------------------------------+
+| 1 | París     | Viaje a <strong>París</strong>... |
++---+-----------+-----------------------------------+
+```
+
+Podemos utilizar el operador EXPLAIN para obtener información sobre cómo se está realizando la consulta.
+
+```sql
+EXPLAIN SELECT *
+FROM lugares
+WHERE 
+  MATCH(descripcion) AGAINST ('museo del Louvre') AND
+  REGEXP_REPLACE(descripcion, "<[^>]+>", "") LIKE '%museo del Louvre%';
+
++----+-------------+---------+------------+----------+---------------+------------+---------+-------+------+----------+--------------+
+| id | select_type | table   | partitions | type     | possible_keys | key        | key_len | ref   | rows | filtered | Extra        |
++----+-------------+---------+------------+----------+---------------+------------+---------+-------+------+----------+--------------+
+| 1  | SIMPLE      | lugares | NULL       | fulltext | idx_nombre    | idx_nombre | 0       | const | 1    | 100.00   | Using where  |
++----+-------------+---------+------------+----------+---------------+------------+---------+-------+------+----------+--------------+
+```
+
+En la columna __type__ podemos observar que no es necesario realizar un escaneo completo de toda la tabla porque está utilizando un índice de tipo __FULLTEXT__, y en la columna __rows__ vemos que sólo se ha escaneado __1__ fila de la tabla.
+
 
 ## Referencias.
 
