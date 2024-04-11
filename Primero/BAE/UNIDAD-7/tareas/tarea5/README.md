@@ -14,7 +14,7 @@ Se pide:
 
 ### Carga de datos
 
-- Realiza la carga de la BBDD de Jardineria y describe los pasos que has realizado.
+- Realiza la carga de la BBDD de [Jardineria](file/jardineria.sql) y describe los pasos que has realizado.
 
 ### Índices
 
@@ -35,7 +35,7 @@ Se pide:
 
   >Razona la respuesta, y analiza las diferencias.
 
-  - Suponga que estamos trabajando con la base de datos jardineria y queremos saber optimizar las siguientes consultas. ¿Cuál de las dos sería más eficiente?. Se recomienda hacer uso de EXPLAIN para obtener información sobre cómo se están realizando las consultas.
+- Suponga que estamos trabajando con la base de datos jardineria y queremos saber optimizar las siguientes consultas. ¿Cuál de las dos sería más eficiente?. Se recomienda hacer uso de EXPLAIN para obtener información sobre cómo se están realizando las consultas.
 
   ```sql
   SELECT AVG(total)
@@ -51,7 +51,7 @@ Se pide:
 
   >[Lectura recomendada sobre la función YEAR y el uso de índices](https://www.mysqltutorial.org/mysql-date-functions/mysql-year-function/)
 
-  - Optimiza la siguiente consulta creando índices cuando sea necesario. Se recomienda hacer uso de EXPLAIN para obtener información sobre cómo se están realizando las consultas.
+- Optimiza la siguiente consulta creando índices cuando sea necesario. Se recomienda hacer uso de EXPLAIN para obtener información sobre cómo se están realizando las consultas.
 
   ```sql
   SELECT *
@@ -60,7 +60,7 @@ Se pide:
   WHERE cliente.nombre_cliente LIKE 'A%';
   ```
 
-  - ¿Por qué no es posible optimizar el tiempo de ejecución de las siguientes consultas, incluso haciendo uso de índices?
+- ¿Por qué no es posible optimizar el tiempo de ejecución de las siguientes consultas, incluso haciendo uso de índices?
 
   ```sql
   SELECT *
@@ -74,15 +74,15 @@ Se pide:
   WHERE cliente.nombre_cliente LIKE '%A';
   ```
 
-  - Crea un índice de tipo FULLTEXT sobre las columnas nombre y descripcion de la tabla producto.
-  - Una vez creado el índice del ejercicio anterior realiza las siguientes consultas haciendo uso de la función MATCH, para buscar todos los productos que:
-    - Contienen la palabra planta en el nombre o en la descripción. - Realice una consulta para cada uno de los modos de búsqueda full-text que existen en MySQL (IN NATURAL LANGUAGE MODE, IN BOOLEAN MODE y WITH QUERY EXPANSION) y compare los resultados que ha obtenido en cada caso.
-    - Contienen la palabra planta seguida de cualquier carácter o conjunto de caracteres, en el nombre o en la descripción.
-    - Empiezan con la palabra planta en el nombre o en la descripción.
-    - Contienen la palabra tronco o la palabra árbol en el nombre o en la descripción.
-    - Contienen la palabra tronco y la palabra árbol en el nombre o en la descripción.
-    - Contienen la palabra tronco pero no contienen la palabra árbol en el nombre o en la descripción.
-    - Contiene la frase proviene de las costas en el nombre o en la descripción.
+- Crea un índice de tipo FULLTEXT sobre las columnas nombre y descripcion de la tabla producto.
+- Una vez creado el índice del ejercicio anterior realiza las siguientes consultas haciendo uso de la función MATCH, para buscar todos los productos que:
+  - Contienen la palabra planta en el nombre o en la descripción. - Realice una consulta para cada uno de los modos de búsqueda full-text que existen en MySQL (IN NATURAL LANGUAGE MODE, IN BOOLEAN MODE y WITH QUERY EXPANSION) y compare los resultados que ha obtenido en cada caso.
+  - Contienen la palabra planta seguida de cualquier carácter o conjunto de caracteres, en el nombre o en la descripción.
+  - Empiezan con la palabra planta en el nombre o en la descripción.
+  - Contienen la palabra tronco o la palabra árbol en el nombre o en la descripción.
+  - Contienen la palabra tronco y la palabra árbol en el nombre o en la descripción.
+  - Contienen la palabra tronco pero no contienen la palabra árbol en el nombre o en la descripción.
+  - Contiene la frase proviene de las costas en el nombre o en la descripción.
   - Crea un índice de tipo INDEX compuesto por las columnas apellido_contacto y nombre_contacto de la tabla cliente.
   - Una vez creado el índice del ejercicio anterior realice las siguientes consultas haciendo uso de EXPLAIN:
     - Busca el cliente Javier Villar. ¿Cuántas filas se han examinado hasta encontrar el resultado?
