@@ -22,5 +22,116 @@ Dentro de las implementaciones más utilizadas están __Hibernate__, EclipseLink
     <img src="img/orm.png">
 </div>
 
+## Entremos en detalle
+
+<div align="center">
+    <img src="img/jpa-api-arquitectura.png" width="400px">
+</div>
+
+| Unidades               | Descripción                                                                                                    |
+|------------------------|----------------------------------------------------------------------------------------------------------------|
+| __EntityManagerFactory__  | Esta es una clase de fábrica de EntityManager. Crea y gestiona múltiples instancias EntityManager.            |
+| __EntityManager__         | Es una interfaz, que gestiona la persistencia de objetos. Funciona como instancia de consulta.                 |
+| Entidad                | Las entidades son los objetos de persistencia, tiendas como registros en la base de datos.                     |
+| __EntityTransaction__      | Tiene una relación de uno a uno con EntityManager. Para cada método EntityManager, se mantienen las        |
+|                        | operaciones de EntityTransaction clase.                                                                       |
+| __Persistencia__           | Esta clase contiene métodos estáticos para obtener EntityManagerFactory.                                       |
+| __Consulta__               | Esta interfaz es implementada por cada proveedor JPA relacional para obtener objetos que cumplan los criterios.|
+
+>___Nota___: _Aunque parezca complicado lo iremos viendo más simple con un pequeño ejemplo_.
+
+```java
+import javax.persistence.*;
+import java.util.List;
+
+// Definición de la entidad Persona
+@Entity
+@Table(name = "personas")
+public class Persona {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "edad")
+    private int edad;
+
+    // Constructores, getters y setters
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Configurar la conexión a la base de datos SQLite usando un archivo de base de datos
+        String url = "jdbc:sqlite:datos.db";
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("MiUnidadPersistencia", getJpaProperties(url));
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        // Iniciar una transacción
+        entityManager.getTransaction().begin();
+
+        // Crear una nueva persona
+        Persona persona = new Persona();
+        persona.setNombre("Juan");
+        persona.setEdad(30);
+
+        // Persistir la persona en la base de datos
+        entityManager.persist(persona);
+
+        // Confirmar la transacción
+        entityManager.getTransaction().commit();
+
+        // Consultar todas las personas en la base de datos
+        Query query = entityManager.createQuery("SELECT p FROM Persona p");
+        List<Persona> personas = query.getResultList();
+
+        // Mostrar los resultados de la consulta
+        for (Persona p : personas) {
+            System.out.println("Persona: " + p.getId() + ", " + p.getNombre() + ", " + p.getEdad());
+        }
+
+        // Cerrar el EntityManager
+        entityManager.close();
+        entityManagerFactory.close();
+    }
+
+    // Método para configurar las propiedades JPA con la URL de conexión SQLite
+    private static Map<String, String> getJpaProperties(String url) {
+        Map<String, String> properties = new HashMap<>();
+        properties.put("javax.persistence.jdbc.driver", "org.sqlite.JDBC");
+        properties.put("javax.persistence.jdbc.url", url);
+        properties.put("javax.persistence.schema-generation.database.action", "create");
+        return properties;
+    }
+}
+```
+
+>___Importante___: _utilizamos las anotaciones en las entidades que provee el paquete_ ___javax.persistence.*;___
+
+
+También podemos definir las propiedades del la conexión de base de datos a través de un fichero de configuración ___.xml__ que se denomina ___persitence.xml__ y que se almacena en el directorio: __src/main/resources__.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="MiUnidadPersistencia">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>paquete.de.tu.clase.Persona</class>
+        <properties>
+            <!-- Propiedades para la configuración de la base de datos -->
+            <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:datos.db"/>
+            <property name="javax.persistence.schema-generation.database.action" value="validate"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
+
+```
 
 </div>
