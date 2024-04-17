@@ -49,5 +49,8 @@ entityManager.close();
 entityManagerFactory.close();
 ```
 
+## Ejemplo
+
+En el siguiente [enlace](https://github.com/jpexposito/sqlite-jpa) se encuenta un proyecto de ejemplo.
 
 </div>

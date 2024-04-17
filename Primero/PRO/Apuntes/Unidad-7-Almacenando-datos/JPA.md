@@ -110,7 +110,7 @@ public class Main {
 >___Importante___: _utilizamos las anotaciones en las entidades que provee el paquete_ ___javax.persistence.*;___
 
 
-También podemos definir las propiedades del la conexión de base de datos a través de un fichero de configuración ___.xml__ que se denomina ___persitence.xml__ y que se almacena en el directorio: __src/main/resources__.
+También podemos definir las propiedades del la conexión de base de datos a través de un fichero de configuración ___.xml___ que se denomina ___persitence.xml___ y que se almacena en el directorio: __src/main/resources/META-INF__.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -129,9 +129,31 @@ También podemos definir las propiedades del la conexión de base de datos a tra
             <property name="javax.persistence.schema-generation.database.action" value="validate"/>
         </properties>
     </persistence-unit>
-
 </persistence>
-
 ```
 
+Elementos a tener en cuenta, y __muy importantes__:
+
+- __org.sqlite.JDBC__: Driver de la BBDD.
+- __sqlite:datos.db__: Nombre de la BBDD, referenciado en _javax.persistence.jdbc.url_.
+- __<class>paquete.de.tu.clase.Persona</class>__. Conjunto de clases anotadas que contienen información de las tablas de la BBDD.
+- __javax.persistence.schema-generation.database.action__. Acción que se va a realizar sobre la BBDD:
+  - __validate__: Esta opción hace que Hibernate valide el esquema de la base de datos. No realiza cambios en el esquema de la base de datos. Es útil en entornos de producción donde no quieres que Hibernate realice cambios automáticos en la estructura de la base de datos.
+  
+    ```xml
+    <property name="hibernate.hbm2ddl.auto" value="validate"/>
+    ```
+  
+  - __update__: Esta opción hace que Hibernate actualice automáticamente el esquema de la base de datos según los cambios en las entidades de tu aplicación. Por ejemplo, si agregas una nueva entidad o cambias la definición de una entidad existente, Hibernate modificará automáticamente el esquema de la base de datos para reflejar esos cambios.
+    
+    ```xml
+    <property name="hibernate.hbm2ddl.auto" value="update"/>
+    ```
+  
+  - __create__: Esta opción hace que Hibernate elimine y cree el esquema de la base de datos cada vez que se inicia la aplicación. Ten en cuenta que esto borrará todos los datos de la base de datos y creará un esquema nuevo desde cero. Es útil en entornos de desarrollo donde deseas tener un esquema de base de datos fresco cada vez que reinicias la aplicación.
+
+    ```xml
+    <property name="hibernate.hbm2ddl.auto" value="create"/>
+    ```
+  
 </div>
