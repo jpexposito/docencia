@@ -2,7 +2,7 @@
 
 <div align="center">
 <img src="https://danielme.com/wp-content/uploads/2023/08/image-16.png" width="300">
-
+</div>
 
 En este ejercicio, vamos a trabajar en la creación de una base de datos simple utilizando MySQL. Esta base de datos estará diseñada para __administrar información de usuarios y productos__. Una vez que hayamos creado la base de datos y las tablas necesarias, vamos a implementar procedimientos almacenados y funciones para realizar operaciones comunes sobre estos datos.
 
