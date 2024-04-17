@@ -55,6 +55,105 @@ Pasos:
 
 >__Nota__: _Realiza la invocación y la verificación de que ha funcionado correctamente_.
 
+## Solución
+
+- Procedimiento para insertar un nuevo usuario.
+
+  <details>
+      <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+  </br>
+  
+  ```sql
+  DELIMITER //
+
+  CREATE PROCEDURE InsertUser(
+      IN p_UserName VARCHAR(50),
+      IN p_Email VARCHAR(100)
+  )
+  BEGIN
+      INSERT INTO Users (UserName, Email) VALUES (p_UserName, p_Email);
+  END//
+
+  DELIMITER ;
+
+  ```
+
+  </br>
+
+- Procedimiento para actualizar el nombre de un usuario.
+
+  <details>
+      <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+  </br>
+  
+  ```sql
+  DELIMITER //
+
+  CREATE FUNCTION CalculateTotalPrice(
+      IN p_ProductIDs VARCHAR(255)
+  )
+  RETURNS DECIMAL(10, 2)
+  BEGIN
+      DECLARE total_price DECIMAL(10, 2);
+      
+      SELECT SUM(Price) INTO total_price
+      FROM Products
+      WHERE FIND_IN_SET(ProductID, p_ProductIDs);
+      
+      RETURN total_price;
+  END//
+
+  DELIMITER ;  
+  ```
+
+  </br>
+
+- Función para calcular el precio total de un conjunto de productos.
+  
+  <details>
+      <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+  </br>
+  
+  ```sql
+  DELIMITER //
+
+  CREATE PROCEDURE UpdateUserName(
+      IN p_UserID INT,
+      IN p_NewUserName VARCHAR(50)
+  )
+  BEGIN
+      UPDATE Users
+      SET UserName = p_NewUserName
+      WHERE UserID = p_UserID;
+  END//
+  DELIMITER ;
+  ```
+
+  </br>
+
+- Función para contar el número de usuarios. 
+
+  <details>
+      <summary>PULSA PARA VER LA SOLUCIÓN</summary>
+  </br>
+  
+  ```sql
+  DELIMITER //
+
+  CREATE FUNCTION CountUsers() RETURNS INT
+  BEGIN
+      DECLARE user_count INT;
+      SELECT COUNT(*) INTO user_count FROM Users;
+      RETURN user_count;
+  END//
+
+  DELIMITER ;
+  ```
+
+  </br>
+
+
+
 </div>
 
 </div>
