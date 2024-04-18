@@ -172,7 +172,7 @@ Las anotaciones JPA son parte de la especificación de Java Persistence API y se
 - __@OneToOne__: Indica una relación uno a uno entre dos entidades.
 - __@ManyToMany__: Indica una relación muchos a muchos entre dos entidades.
 
-## Ejemplo
+## Ejemplo ManyToOne - OneToMany
 
 Un __Alumno__ _pertenece_ a __una(1)__ __Clase__ y una __Clase__ puede tener un __conjunto de alumnos(N)__.
 
@@ -241,5 +241,136 @@ public class Clase {
 >___Nota___: _La clase_ ___Clase___ _representa una clase escolar con un nombre y una_ ___colección de alumnos___ _que pertenecen a ella_.
 
 >___Importante___:_En este diseño, cada alumno puede pertenecer a una sola clase (@ManyToOne en la clase Alumno), mientras que una clase puede tener varios alumnos (@OneToMany en la clase Clase). La relación entre las clases Alumno y Clase es bidireccional, lo que significa que cada una tiene una referencia a la otra_.
+
+## Ejemplo ManyToMany - ManyToMany
+
+Supongamos que deseamos hacer la relación: _un alumnos puede pertener a muchas clases y un clase puede tener muchos alumnos_.
+
+Las clases quedarán como siguen:
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.ManyToMany;
+import java.util.Set;
+
+@Entity
+@Table(name = "alumno")
+public class Alumno implements Serializable {
+
+    private static final long serialVersionUID = -7250234396452258822L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_alumno")
+    private Integer id;
+    private String nombre;
+    private Integer edad;
+
+    @ManyToMany(mappedBy = "alumnos")
+    private Set<Clase> clases;
+
+    // Constructor, getters y setters
+}
+```
+
+>___Nota___: _En este caso, la clase_ ___Alumno___ _tiene una relación_ ___@ManyToMany___ _con la clase_ ___Clase___, _lo que significa que un alumno puede pertenecer a muchas clases_.
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.ManyToMany;
+import java.util.Set;
+
+@Entity
+@Table(name = "clase")
+public class Clase {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_clase")
+    private Integer id;
+    private String nombre;
+
+    @ManyToMany
+    private Set<Alumno> alumnos;
+
+    // Constructor, getters y setters
+}
+```
+
+>___Nota___: _Por otro lado, la clase Clase también tiene una relación @ManyToMany con Alumno, lo que significa que una clase puede tener muchos alumnos_.
+
+_Esta configuración de relaciones muchos a muchos implica que se creará automáticamente una tabla de unión en la base de datos para manejar la relación entre Alumno y Clase. Esta tabla de unión almacenará pares de claves primarias de Alumno y Clase, lo que permite la asociación entre ellas_.
+
+## Ejemplo OneToOne - OneToOne
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.OneToOne;
+
+@Entity
+@Table(name = "alumno")
+public class Alumno implements Serializable {
+
+    private static final long serialVersionUID = -7250234396452258822L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_alumno")
+    private Integer id;
+    private String nombre;
+    private Integer edad;
+
+    @OneToOne(mappedBy = "alumno")
+    private Clase clase;
+
+    // Constructor, getters y setters
+}
+```
+
+>__Nota__: _En este ejemplo, la clase Alumno tiene una relación @OneToOne con la clase Clase, lo que significa que un alumno pertenece a una sola clase_.
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.OneToOne;
+
+@Entity
+@Table(name = "clase")
+public class Clase {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_clase")
+    private Integer id;
+    private String nombre;
+
+    @OneToOne
+    private Alumno alumno;
+
+    // Constructor, getters y setters
+}
+```
+
+>__Nota__: _Por otro lado, la clase Clase también tiene una relación @OneToOne con la clase Alumno, lo que significa que una clase está asociada con un solo alumno_.
+_Esta configuración de relaciones uno a uno puede ser útil en casos donde cada alumno está asociado a una única clase, y viceversa. Por ejemplo, en un sistema escolar donde cada estudiante está asignado a una sola clase y cada clase tiene un único estudiante representante_.
 
 </div>
