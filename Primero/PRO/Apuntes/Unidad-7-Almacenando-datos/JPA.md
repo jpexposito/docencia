@@ -155,5 +155,91 @@ Elementos a tener en cuenta, y __muy importantes__:
     ```xml
     <property name="hibernate.hbm2ddl.auto" value="create"/>
     ```
-  
+
+## Anotaciones JPA
+
+Las anotaciones JPA (Java Persistence API) son metadatos que se utilizan para mapear clases Java a entidades de bases de datos relacionales. Estas anotaciones proporcionan información sobre cómo se deben almacenar y recuperar los objetos Java en una base de datos relacional.
+
+Las anotaciones JPA son parte de la especificación de Java Persistence API y se utilizan comúnmente con frameworks de persistencia de datos como Hibernate, EclipseLink, y otros. Algunas de las anotaciones más comunes en JPA incluyen:
+
+- __@Entity__: _Marca una clase Java como una entidad que se puede persistir en la base de datos_.
+- __@Table__: Se utiliza para _especificar el nombre de la tabla en la base de datos a la que está mapeada la entidad_.
+- __@Id__: Indica que un atributo de la clase es la ___clave primaria de la entidad___.
+- __@GeneratedValue__: Se utiliza junto con @Id para especificar cómo se genera el valor de la clave primaria (por ejemplo, _GenerationType.IDENTITY, GenerationType.AUTO, etc_.).
+- __@Column__: Se utiliza para especificar el mapeo entre un atributo de la clase y una columna de la tabla en la base de datos.
+- __@ManyToOne__: Indica una relación muchos a uno entre dos entidades.
+- __@OneToMany__: Indica una relación uno a muchos entre dos entidades.
+- __@OneToOne__: Indica una relación uno a uno entre dos entidades.
+- __@ManyToMany__: Indica una relación muchos a muchos entre dos entidades.
+
+## Ejemplo
+
+Un __Alumno__ _pertenece_ a __una(1)__ __Clase__ y una __Clase__ puede tener un __conjunto de alumnos(N)__.
+
+### Definición de la Entity Alumno
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.ManyToOne;
+
+@Entity
+@Table(name = "alumno")
+public class Alumno implements Serializable {
+
+    private static final long serialVersionUID = -7250234396452258822L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_alumno")
+    private Integer id;
+    private String nombre;
+    private Integer edad;
+
+    @ManyToOne
+    private Clase clase;
+
+    // Constructor, getters y setters
+}
+```
+
+>___Nota___:_En esta versión, el_ ___Alumno___ _representa un alumno individual con un nombre, una edad y una referencia a la_ ___clase___ _a la que pertenece._
+
+### Definición de la Entity Clase
+
+```java
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
+import java.util.Set;
+
+@Entity
+@Table(name = "clase")
+public class Clase {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_clase")
+    private Integer id;
+    private String nombre;
+
+    @OneToMany(mappedBy = "clase")
+    private Set<Alumno> alumnos;
+
+    // Constructor, getters y setters
+}
+```
+
+>___Nota___: _La clase_ ___Clase___ _representa una clase escolar con un nombre y una_ ___colección de alumnos___ _que pertenecen a ella_.
+
+>___Importante___:_En este diseño, cada alumno puede pertenecer a una sola clase (@ManyToOne en la clase Alumno), mientras que una clase puede tener varios alumnos (@OneToMany en la clase Clase). La relación entre las clases Alumno y Clase es bidireccional, lo que significa que cada una tiene una referencia a la otra_.
+
 </div>
