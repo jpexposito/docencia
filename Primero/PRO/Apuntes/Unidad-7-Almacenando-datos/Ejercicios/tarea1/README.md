@@ -17,7 +17,7 @@ Tu tarea es implementar las siguientes funcionalidades:
 - __Eliminar un personaje__: _El usuario debería poder eliminar un personaje de la base de datos_.
 
 >___Nota___: _No es necesario implementar una interfaz de usuario, puedes trabajar_ ___TEST__. En caso de que te resulte complicado implementa una interfaz de línea de comandos simple para interactuar con el sistema_.
->___IMPORTA___:_Recuerda que la simplicidad y la claridad del código son importantes, así como el manejo correcto de errores y excepciones._
+>___IMPORTANTE___:_Recuerda que la simplicidad y la claridad del código son importantes, así como el manejo correcto de errores y excepciones._
 
 >__Nota__:
   
@@ -29,8 +29,6 @@ Tu tarea es implementar las siguientes funcionalidades:
       - _poder1_
       - _poder2_
       - _..._
-
-
 
 - __SQL las pruebas (personajes)__:
 
