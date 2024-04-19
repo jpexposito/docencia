@@ -5,7 +5,7 @@
 
 <div align="center">
 
-<img src="img/arquitectura-web.svg">
+<img src="img/arquitectura-web.svg" width="400px">
 
 </div>
 
