@@ -2,7 +2,6 @@
 
 # Servicios Web y Java
 
-
 <div align="center">
 
 <img src="img/arquitectura-web.svg" width="400px">
@@ -19,6 +18,15 @@ _El desarrollo de servicios web en Java implica la creación de clases Java que 
 
 >__Nota__: _En resumen, Java proporciona un entorno robusto y flexible para desarrollar servicios web que facilitan la interoperabilidad entre aplicaciones distribuidas, permitiendo a las organizaciones construir sistemas escalables y de alto rendimiento que satisfagan las demandas del mundo moderno de la tecnología_.
 
+## Elementos en el desarrollo de servicios
 
+Elementos principales:
+
+- __Framework de desarrollo web__: Puedes optar por usar un framework de desarrollo web en Java como ___Spring Framework___, que facilita la creación de servicios web ___RESTful y SOAP___. Spring ofrece módulos específicos para el desarrollo de servicios web, como ___Spring Web MVC y Spring Web Services___.
+- __API para servicios web__: Dependiendo del tipo de servicios web que desees desarrollar ___(SOAP o RESTful)___, necesitarás las API correspondientes. _Para servicios web SOAP, puedes utilizar JAX-WS (Java API for XML Web Services), que está incluido en la plataforma Java EE. Para servicios web RESTful, puedes utilizar JAX-RS (Java API for RESTful Web Services), que también está disponible en la plataforma Java EE_.
+- __Contenedor de aplicaciones__: Necesitarás un  servidor de aplicaciones para desplegar y ejecutar tu servicio web Java. Algunas opciones populares incluyen ___Apache Tomcat, Jetty, WildFly___ .
+- ___Gestión de dependencias__: Utiliza una herramienta de gestión de dependencias como ___Apache Maven___ o ___Gradle___ para administrar las dependencias de tu proyecto y facilitar ___la construcción, prueba y distribución de tu aplicación de servicios web___.
+- __Conocimientos de XML y JSON__: Es útil tener conocimientos básicos sobre _XML y JSON_, ya que son formatos comunes para el intercambio de datos en servicios web. XML se utiliza comúnmente en servicios web SOAP, mientras que JSON es popular en servicios web RESTful.
+- __Conocimientos de protocolos y estándares web__: Familiarízate con los protocolos y estándares web comunes como __HTTP, SOAP, REST, WSDL (Web Services Description Language) y Swagger/OpenAPI para comprender cómo funcionan los servicios web y cómo interactuar con ellos_.
 
 </div>

@@ -87,6 +87,6 @@ Tu tarea es implementar las siguientes funcionalidades:
       (2, 6); -- Spider-Man tiene Sentido arácnido
   ```
 
->__Nota__: _Corrige todo aquello que sea neceario, e implementa un crud a través de ___JBDC y JPA-HIBERNATE___, verificado con Test_.
+>__Nota__: _Corrige todo aquello que sea neceario, e implementa un crud a través de ___JDBC y JPA-HIBERNATE___, verificado con Test_.
 
 </div>
