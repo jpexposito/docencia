@@ -86,6 +86,7 @@ Tu tarea es implementar las siguientes funcionalidades:
       (2, 5), -- Spider-Man tiene Trepamuros
       (2, 6); -- Spider-Man tiene Sentido arácnido
   ```
->__Nota__: ___Corrige todo aquello que sea neceario, e implementa un crud, verificado con Test___.
+
+>__Nota__: _Corrige todo aquello que sea neceario, e implementa un crud a través de ___JBDC y JPA-HIBERNATE___, verificado con Test_.
 
 </div>
