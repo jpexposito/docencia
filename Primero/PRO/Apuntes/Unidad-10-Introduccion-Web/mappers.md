@@ -101,4 +101,71 @@ public class Main {
 }
 ```
 
+## Mapeando clases con MapStruct
+
+__MapStruct__ es una biblioteca que ___simplifica el proceso de mapeo entre clases Java mediante la generación automática de código___.
+
+Los pasos son:
+
+- Necesitamos agregar las dependencias de MapStruct a tu proyecto "__pom.xml__":
+
+```xml
+<dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct</artifactId>
+    <version>1.4.2.Final</version>
+</dependency>
+<dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct-processor</artifactId>
+    <version>1.4.2.Final</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+Teniendo en cuenta las clases ___Persona___ y ___PersonaDTO___, creadas anteriormente, debemos de crear los mappers de forma diferente:
+
+```java
+package com.example.mapper;
+
+import com.example.model.Persona;
+import com.example.dto.PersonaDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+@Mapper
+public interface PersonaMapper {
+    @Mapping(source = "direccion", target = "direccionCompleta")
+    PersonaDTO personaToPersonaDTO(Persona persona);
+}
+```
+
+```java
+package com.example.main;
+
+import com.example.model.Persona;
+import com.example.dto.PersonaDTO;
+import com.example.mapper.PersonaMapper;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear una persona
+        Persona persona = new Persona();
+        persona.setNombre("Juan");
+        persona.setEdad(30);
+        persona.setDireccion("Calle 123, Ciudad A");
+
+        // Convertir la persona a PersonaDTO utilizando MapStruct
+        PersonaMapper mapper = Mappers.getMapper(PersonaMapper.class);
+        PersonaDTO personaDTO = mapper.personaToPersonaDTO(persona);
+
+        // Imprimir los valores del objeto PersonaDTO resultante
+        System.out.println("Nombre: " + personaDTO.getNombre());
+        System.out.println("Edad: " + personaDTO.getEdad());
+        System.out.println("Dirección completa: " + personaDTO.getDireccionCompleta());
+    }
+}
+```
+
+>___Con MapStruct, el proceso de mapeo se simplifica enormemente, ya que no es necesario escribir la implementación del mapper. MapStruct se encarga de generar el código necesario en tiempo de compilación basado en las anotaciones que proporcionas en la interfaz del mapper.___
 </div>
