@@ -3,7 +3,7 @@
 ## Mapeando clases
 
 <div align="center">
-    <img src="img/mappers.png" width="400px">
+    <img src="img/mapper.png" width="400px">
 </div>
 
 Un __"mapper"__ (_mapeador_) en el contexto del desarrollo de software se refiere a _una clase o conjunto de clases encargadas de realizar la conversión de datos entre diferentes estructuras o formatos_. Su ___función principal___ es _mapear los datos de una representación a otra de manera eficiente y transparente_.
