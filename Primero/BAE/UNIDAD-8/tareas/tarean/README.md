@@ -1,6 +1,6 @@
 <div align="justify">
 
-# Trabajo con la BBDD Jardineria
+# Trabajo con la BBDD Emplead
 
 Vamos a realizar el trabajo con una BBDD existente en la documentación  oficial de MySql. Su nombre es __jardineria__.
 
