@@ -2,17 +2,68 @@
 
 # Cursores en MySQL
 
-___En base de datos un Cursor es un mecanismo el cual nos permite procesar fila por fila el resultado de una consulta__.
+___En base de datos un Cursor es un mecanismo el cual nos permite procesar fila por fila el resultado de una consulta___.
 
 >SQL es un lenguaje orientado a conjuntos. Si nosotros deseamos alterar ciertos elementos en nuestra colección tendremos que hacerlo mediante condicione. Única y exclusivamente los elementos que cumpla con dichas condiciones podrán ser alterados. ___Con los cursores podremos trabajar con cada uno de los elementos (filas) de nuestra consulta sin tener que obtener nuevos conjuntos. Esto nos permitirá ser mucho más flexibles al momento de manipular la información___.
 
 Para nosotros poder hacer uso de un cursor será necesario seguir los siguientes pasos:
- - Crear un cursor a partir de una sentencia SQL.
- - Apertura del cursor.
- - Acceso a datos.
- - Cierre del cursor.
 
->Es importante mencionar que en __MySQL__ los cursores solo podrán ser utilizados __dentro de stored procedures__.
+- Crear un cursor a partir de una sentencia SQL.
+- Apertura del cursor.
+- Acceso a datos.
+- Cierre del cursor.
+
+## Declaración del Cursor
+
+Donde definimos el nombre del cursor y la consulta SQL SELECT que va a devolver el conjunto de resultados.
+
+```sql
+DECLARE nome_cursor CURSOR FOR 
+   sentencia_SELECT;
+```
+
+> - _Indicar que para salir del bucle vamos a 'capturar' una excepción de 'no hay más datos'_. La definición de dicha captura tienen que ir después de __DECLARE__.
+> - La declaración del cursor tiene que ir después de la declaración de las variables y condiciones.
+> - En la sentencia __SELECT__ seleccionaremos las columnas que queremos guardar 'por cada fila' al recorrer el cursor.
+> - Dentro de un __procedimiento, trigger o función__ podemos tener varios cursores, __pero todos ellos deben de tener un nombre diferente__.
+
+### Apertira del Cursor
+
+Para poder procesar la información que viene en el SELECT.
+
+```sql
+OPEN nombre_cursor;
+```
+
+### Lectura del Cursor
+
+Esto se realiza con la orden __FETCH__ que permite guardar la información de una fila en variables locales y pasa a la siguiente fila del conjunto de resultados. La lectura va en un bucle que se ejecuta hasta que se terminan de leer todas las filas.
+
+```sql
+FETCH nombre_cursor INTO variable1[,variable2,...];
+```
+
+> - En la parte INTO deben ir tantas variables como columnas tengamos en la sentencia SELECT.
+> - Cada variable guardará el dato de la columna que venga en el SELECT, de tal forma que la primera variable guardará el dato de la primera columna, la segunda variable, el dato de la segunda columna y así sucesivamente
+> - Cada variable debe estar definida con el mismo tipo de dato que la columna a la que está asociada.
+
+
+### Cierre del Cursos
+
+Para liberar de la memoria el cursor creado.
+
+```sql
+CLOSE nombre_cursor;
+```
+
+> ___(IMP)Un cursor es un recurso de programación que nos ofrecen casi todos los gestores de bases de datos relacional y consiste en la posibilidad de recorrer fila a fila un conjunto de resultados provenientes de una sentencia SELECT.___
+> ___La ventaja que tiene el uso de cursores es que vamos a poder guardar en variables locales cada fila de resultados y manejar esa información como queramos (para realizar otras consultas, operaciones de INSERT, UPDATE o DELETE).___
+
+Un cursor tiene las siguientes características:
+
+- __Son de sólo lectura__: Sólo sirven para leer datos. Es decir, sólo podremos declarar un cursor para leer los datos que provienen de una consulta SELECT y nunca podremos modificar los datos de la tabla a través del cursor.
+- __De acceso secuencial__: La información que va a procesar el cursor (_el resultado de un_ ___SELECT___) es secuencial. Vamos a recorrer fila a fila desde la primera a la última de forma secuencial, una detrás de otra y no podremos saltar a una fila cualquiera de forma directa, tendremos que pasar por todas las anteriores.
+- Puede crearse dentro de un ___procedimiento, función o trigger___.
 
 ## Ejemplo.
 
@@ -107,7 +158,7 @@ Una vez hemos realizado todas las tareas correspondientes y se han iterado todos
 
 ```sql
 close cursor1
-````
+```
 
 Para ejecutar nuestro stored prcedure ejecutaremos la siguiente sentencia.
 
