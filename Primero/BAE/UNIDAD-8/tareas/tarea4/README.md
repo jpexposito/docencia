@@ -11,18 +11,15 @@ La tabla "empleados" está diseñada con las siguientes columnas:
 - __salario__: Esta columna registra el salario de cada empleado. Se define como un número decimal (DECIMAL) con una precisión de 10 dígitos en total y 2 dígitos después del punto decimal.
 
 ```sql
--- Crear la base de datos
 CREATE DATABASE IF NOT EXISTS empresa;
 USE empresa;
 
--- Crear la tabla empleados
 CREATE TABLE empleados (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100),
     salario DECIMAL(10, 2)
 );
 
--- Insertar algunos datos de ejemplo
 INSERT INTO empleados (nombre, salario) VALUES
 ('Juan', 3000.00),
 ('María', 3500.00),
@@ -117,8 +114,97 @@ Vamos a crear distintos procedimientos que harán uso de cursores. Vamos a ver u
 Teniendo este ejemplo como referencia, realiza:
 
 1. Escribe un procedimiento almacenado que aumente los salarios de todos los empleados en un 5%, pero excluya a aquellos cuyo salario sea superior a 3200. El procedimiento debe tener parámetros de entrada.
+  
+    <details>
+      <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
+
+      ```sql
+      DELIMITER //
+      CREATE PROCEDURE aumentar_salarios(IN porcentaje_aumento DECIMAL(5,2))
+      BEGIN
+          DECLARE done INT DEFAULT FALSE;
+          DECLARE emp_id INT;
+          DECLARE emp_salario DECIMAL(10, 2);
+          DECLARE cur CURSOR FOR SELECT id, salario FROM empleados WHERE salario <= 3200;
+          DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+          OPEN cur;
+          read_loop: LOOP
+              FETCH cur INTO emp_id, emp_salario;
+              IF done THEN
+                  LEAVE read_loop;
+              END IF;
+              UPDATE empleados SET salario = salario * (1 + porcentaje_aumento / 100) WHERE id = emp_id;
+          END LOOP;
+          CLOSE cur;
+      END //
+      DELIMITER ;
+      ```
+
+    </details>
 2. Escribe un procedimiento almacenado que calcule el salario anual de cada empleado (asumiendo que trabajan todo el año) y lo imprima.
+
+    <details>
+        <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
+
+      ```sql
+      DELIMITER //
+      CREATE PROCEDURE calcular_salario_anual()
+      BEGIN
+          DECLARE emp_id INT;
+          DECLARE emp_nombre VARCHAR(100);
+          DECLARE emp_salario DECIMAL(10, 2);
+          DECLARE emp_salario_anual DECIMAL(10, 2);
+          DECLARE cur CURSOR FOR SELECT id, nombre, salario FROM empleados;
+
+          OPEN cur;
+          read_loop: LOOP
+              FETCH cur INTO emp_id, emp_nombre, emp_salario;
+              IF emp_id IS NULL THEN
+                  LEAVE read_loop;
+              END IF;
+              SET emp_salario_anual = emp_salario * 12;
+              SELECT CONCAT('El salario anual de ', emp_nombre, ' es: ', emp_salario_anual) AS resultado;
+          END LOOP;
+          CLOSE cur;
+      END //
+      DELIMITER ;
+      ```
+
+    </details>
+
 3. Escribe un procedimiento almacenado que cuente y muestre el número de empleados en cada rango de salario (por ejemplo, menos de 3000, entre 3000 y 5000, más de 5000). El procedimiento debe tener parámetros de entrada.
+
+    <details>
+      <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
+
+      ```sql
+      DELIMITER //
+      CREATE PROCEDURE contar_empleados_por_rango(IN salario_minimo DECIMAL(10,2), IN salario_maximo DECIMAL(10,2))
+      BEGIN
+          DECLARE emp_count INT DEFAULT 0;
+          DECLARE done INT DEFAULT FALSE;
+          DECLARE cur CURSOR FOR SELECT salario FROM empleados;
+          DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+          OPEN cur;
+          read_loop: LOOP
+              FETCH cur INTO emp_salario;
+              IF done THEN
+                  LEAVE read_loop;
+              END IF;
+              IF emp_salario >= salario_minimo AND emp_salario <= salario_maximo THEN
+                  SET emp_count = emp_count + 1;
+              END IF;
+          END LOOP;
+          CLOSE cur;
+
+          SELECT CONCAT('Número de empleados con salario entre ', salario_minimo, ' y ', salario_maximo, ': ', emp_count) AS resultado;
+      END //
+      DELIMITER ;
+      ```
+
+    </details>
 
 ## Referencias
 
