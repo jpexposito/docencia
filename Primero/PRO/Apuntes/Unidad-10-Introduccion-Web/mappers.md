@@ -168,4 +168,11 @@ public class Main {
 ```
 
 >___Con MapStruct, el proceso de mapeo se simplifica enormemente, ya que no es necesario escribir la implementación del mapper. MapStruct se encarga de generar el código necesario en tiempo de compilación basado en las anotaciones que proporcionas en la interfaz del mapper.___
+
+## Referencias
+
+- [Utilizar Mappers combinados](https://www.baeldung.com/java-mapstruct-nested-mapping)
+- [Customizar Mappers](https://www.baeldung.com/mapstruct-custom-mapper).
+
+
 </div>

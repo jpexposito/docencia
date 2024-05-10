@@ -84,7 +84,7 @@ Realiza:
       ```sql
       
       ```
-
+      
     </details>
 
 > __Nota__:___Inserta elementos en la tabla para problar los procedimientos propuestos___.
