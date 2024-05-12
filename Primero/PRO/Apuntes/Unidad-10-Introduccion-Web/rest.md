@@ -59,9 +59,75 @@ Las **API REST** han aportado mucho en la forma de comunicación entre sistemas.
 
 Existe una cantidad enorme de API disponibles en Internet para agregar valor a cualquier desarrollo de software, ya sea para tercerizar algún módulo necesario para el sistema en cuestión (como timbrado de facturas, pagos online, etc.) o simplemente para mejorar la experiencia del usuario, como la geolocalización, el acceso con cuentas de redes sociales y demás.
 
+## Apis Rest en Java
+
+<div align="center">
+    <img src="img/api-rest.png" width="400px">
+</div>
+
+En Java, hay varias arquitecturas y frameworks populares para la construcción de servicios RESTful.
+Los más utilizados en __Java__ son los siguientes:
+
+| Arquitectura/Framework | Descripción | Similitudes | Diferencias | Anotaciones |
+|-------------------------|-------------|-------------|-------------|-------------|
+| Spring Framework        | Framework ampliamente utilizado que ofrece el módulo Spring MVC para construir servicios RESTful. También se utiliza Spring Boot para simplificar la configuración y el desarrollo. | - Utiliza anotaciones para definir endpoints RESTful. - Proporciona una amplia gama de características y herramientas para el desarrollo empresarial. | - Mayor énfasis en la inyección de dependencias y la configuración basada en anotaciones. | `@RestController`, `@RequestMapping`, `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` |
+| JAX-RS                  | Especificación estándar de Java para el desarrollo de servicios web RESTful. Permite a los desarrolladores crear servicios RESTful utilizando anotaciones Java. | - Basado en anotaciones para definir endpoints. - Facilita la creación de servicios RESTful en Java. | - Es una especificación estándar, no un framework completo. | `@Path`, `@GET`, `@POST`, `@PUT`, `@DELETE`, `@Produces`, `@Consumes` |
+| Jersey                  | Implementación de la especificación JAX-RS. Ofrece una forma sencilla y potente de crear servicios web RESTful en Java. | - Basado en la especificación JAX-RS. - Proporciona características adicionales para simplificar el desarrollo. | - Es una implementación específica de JAX-RS, lo que puede limitar la flexibilidad en algunos casos. | Mismas que JAX-RS |
+| RESTEasy                | Otra implementación de la especificación JAX-RS. Parte del proyecto JBoss. Ofrece características adicionales para el desarrollo de servicios RESTful. | - Basado en la especificación JAX-RS. - Proporciona características adicionales para simplificar el desarrollo. | - Integración más estrecha con el ecosistema JBoss. | Mismas que JAX-RS |
+| Apache CXF              | Framework que puede utilizarse para construir servicios web RESTful y SOAP en Java. Ofrece soporte tanto para JAX-RS como para JAX-WS (servicios web SOAP) y es altamente configurable. | - Ofrece soporte para JAX-RS y JAX-WS. - Altamente configurable. | - Mayor complejidad debido a la flexibilidad y configurabilidad. | Mismas que JAX-RS |
+
+## Dependencias necesarias
+
+Vamos a centrarnos en la creación de servicios bajo __Spring__ y bajo __CXF__.
+
+| Framework/Arquitectura | Dependencias |
+|------------------------|--------------|
+| Spring Framework       | ```xml
+                          <dependency>
+                              <groupId>org.springframework</groupId>
+                              <artifactId>spring-core</artifactId>
+                              <version>{versión de Spring}</version>
+                          </dependency>
+                          
+                          <dependency>
+                              <groupId>org.springframework</groupId>
+                              <artifactId>spring-webmvc</artifactId>
+                              <version>{versión de Spring}</version>
+                          </dependency>
+                          
+                          <!-- Opcional: Spring Boot -->
+                          <dependency>
+                              <groupId>org.springframework.boot</groupId>
+                              <artifactId>spring-boot-starter-web</artifactId>
+                              <version>{versión de Spring Boot}</version>
+                          </dependency>
+                    ``` |
+| Apache CXF             | ```
+                          <dependency>
+                              <groupId>org.apache.cxf</groupId>
+                              <artifactId>cxf-core</artifactId>
+                              <version>{versión de CXF}</version>
+                          </dependency>
+                          
+                          <dependency>
+                              <groupId>org.apache.cxf</groupId>
+                              <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+                              <version>{versión de CXF}</version>
+                          </dependency>
+                          
+                          <!-- Opcional: Integración con Spring -->
+                          <dependency>
+                              <groupId>org.apache.cxf</groupId>
+                              <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+                              <version>{versión de CXF}</version>
+                          </dependency>
+                          ``` |
+
+
 ## Referencias
 
 - [Ejemplo simple](https://github.com/rashm1n/CXF-JAXRS/).
 - [Nociones básicas de Rest-Api](https://blog.hubspot.es/website/que-es-api-rest)
+- [JAX-RS-Example](https://medium.com/geekculture/creating-jax-rs-restful-apis-with-apache-cxf-and-tomcat-c3e13f3b65c4)
 
 </div>
