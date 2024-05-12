@@ -80,49 +80,69 @@ Los más utilizados en __Java__ son los siguientes:
 
 Vamos a centrarnos en la creación de servicios bajo __Spring__ y bajo __CXF__.
 
-| Framework/Arquitectura | Dependencias |
-|------------------------|--------------|
-| Spring Framework       | ```xml
-                          <dependency>
-                              <groupId>org.springframework</groupId>
-                              <artifactId>spring-core</artifactId>
-                              <version>{versión de Spring}</version>
-                          </dependency>
-                          
-                          <dependency>
-                              <groupId>org.springframework</groupId>
-                              <artifactId>spring-webmvc</artifactId>
-                              <version>{versión de Spring}</version>
-                          </dependency>
-                          
-                          <!-- Opcional: Spring Boot -->
-                          <dependency>
-                              <groupId>org.springframework.boot</groupId>
-                              <artifactId>spring-boot-starter-web</artifactId>
-                              <version>{versión de Spring Boot}</version>
-                          </dependency>
-                    ``` |
-| Apache CXF             | ```
-                          <dependency>
-                              <groupId>org.apache.cxf</groupId>
-                              <artifactId>cxf-core</artifactId>
-                              <version>{versión de CXF}</version>
-                          </dependency>
-                          
-                          <dependency>
-                              <groupId>org.apache.cxf</groupId>
-                              <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-                              <version>{versión de CXF}</version>
-                          </dependency>
-                          
-                          <!-- Opcional: Integración con Spring -->
-                          <dependency>
-                              <groupId>org.apache.cxf</groupId>
-                              <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
-                              <version>{versión de CXF}</version>
-                          </dependency>
-                          ``` |
+### Spring Framework
 
+Para un proyecto básico de Spring, las dependencias comunes que necesitarías incluir son:
+
+```xml
+<dependencies>
+    <!-- Spring Core -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>{versión de Spring}</version>
+    </dependency>
+    
+    <!-- Spring MVC (para servicios REST) -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>{versión de Spring}</version>
+    </dependency>
+    
+    <!-- Spring Boot (opcional, para simplificar la configuración) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>{versión de Spring Boot}</version>
+    </dependency>
+</dependencies>
+```
+
+Debes reemplazar {versión de Spring} y {versión de Spring Boot} con las versiones específicas que desees utilizar en tu proyecto. Si estás utilizando Spring Boot, el último dependency es opcional, ya que spring-boot-starter-web ya incluye Spring MVC y otras dependencias necesarias.
+
+### Apache CXF
+
+Para un proyecto que utilice Apache CXF para servicios REST, necesitarás las siguientes dependencias:
+
+```xml
+<dependencies>
+    <!-- Apache CXF Core -->
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-core</artifactId>
+        <version>{versión de CXF}</version>
+    </dependency>
+    
+    <!-- Apache CXF JAX-RS (para servicios REST) -->
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+        <version>{versión de CXF}</version>
+    </dependency>
+    
+    <!-- Opcional: para la integración con Spring -->
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+        <version>{versión de CXF}</version>
+    </dependency>
+</dependencies>
+```
+
+Al igual que con las dependencias de Spring, debes reemplazar {versión de CXF} con la versión específica de Apache CXF que deseas utilizar.
+
+Estas dependencias proporcionan las bibliotecas fundamentales necesarias para desarrollar servicios REST con Spring y Apache CXF en Java. Puedes agregar otras dependencias adicionales según tus requisitos específicos de proyecto.
 
 ## Referencias
 
