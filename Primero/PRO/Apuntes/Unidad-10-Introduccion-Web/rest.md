@@ -151,6 +151,19 @@ Al igual que con las dependencias de Spring, debes reemplazar {versión de CXF} 
 
 Estas dependencias proporcionan las bibliotecas fundamentales necesarias para desarrollar servicios REST con Spring y Apache CXF en Java. Puedes agregar otras dependencias adicionales según tus requisitos específicos de proyecto.
 
+
+## Clientes para consumir servicios rest
+
+Algunos de los complementos populares para __Google Chrome y Mozilla Firefox__ que te ayudarán a consumir servicios REST son:
+
+- __Google Chrome__
+  - __Postman__: No es un plugin de navegador en sí, sino una aplicación independiente, pero también está disponible como una extensión de Chrome. Postman te permite crear, probar y documentar APIs de forma sencilla. Puedes enviar solicitudes RESTful y ver las respuestas de manera clara.
+  - __REST Client - HTTP Client__: Este es otro complemento para Chrome que te permite enviar solicitudes HTTP y HTTPS, incluidas las solicitudes RESTful. Proporciona una interfaz sencilla para escribir y enviar solicitudes, y ver las respuestas.
+- __Mozilla Firefox__
+  - __RESTClient__: Es una extensión de Firefox que te permite probar tus servicios web o API RESTful. Puedes enviar varios tipos de solicitudes HTTP, como GET, POST, PUT, DELETE, etc., y ver las respuestas de manera clara.
+
+  - __HttpRequester__: Este es otro complemento de Firefox que te permite realizar solicitudes HTTP, incluidas las solicitudes RESTful. Es bastante sencillo de usar y proporciona una interfaz intuitiva para enviar y recibir solicitudes y respuestas HTTP.
+
 ## Referencias
 
 - [Ejemplo simple](https://github.com/rashm1n/CXF-JAXRS/).
