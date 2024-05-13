@@ -6,7 +6,7 @@
     <img src="img/rest.png" width="400px">
 </div>
 
-PI es el acrónimo de **interfaz de programación de aplicaciones** (*application programming interface* en inglés). Es un conjunto de reglas bien definidas que se utilizan para especificar formalmente la comunicación entre dos componentes de software. 
+API es el acrónimo de **interfaz de programación de aplicaciones** (*application programming interface* en inglés). Es un conjunto de reglas bien definidas que se utilizan para especificar formalmente la comunicación entre dos componentes de software. 
 
 ## API REST
 En la actualidad existen distintas clases de API, y hoy hablaremos un poco más acerca de las **API REST**. 
@@ -58,6 +58,13 @@ A continuación, verás una tabla de ejemplo para ilustrar estos conceptos:
 Las **API REST** han aportado mucho en la forma de comunicación entre sistemas. Al día de hoy, un gran porcentaje de las empresas que usan la tecnología para aportar valor a sus productos tienen **API REST** como forma estándar de comunicación.
 
 Existe una cantidad enorme de API disponibles en Internet para agregar valor a cualquier desarrollo de software, ya sea para tercerizar algún módulo necesario para el sistema en cuestión (como timbrado de facturas, pagos online, etc.) o simplemente para mejorar la experiencia del usuario, como la geolocalización, el acceso con cuentas de redes sociales y demás.
+
+## Apis Java EE
+
+<div align="center">
+    <img src="img/java-ee-apis.png" width="400px">
+</div>
+
 
 ## Apis Rest en Java
 
