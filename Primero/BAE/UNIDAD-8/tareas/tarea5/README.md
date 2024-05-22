@@ -42,7 +42,7 @@ mysql> select * from empleados;
 Realiza:
 
 1. Escribe un procedimiento almacenado que copie los nombres de todos los empleados cuyo salario sea superior a 3000 en una nueva tabla llamada 'empleados_destino'. Es necesario crear la tabla __empleados_destiono__.
-    
+
     <details>
       <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
@@ -59,13 +59,18 @@ Realiza:
       
       ```
 
+    </details>
+
 3. Escribe un procedimiento almacenado que seleccione empleados cuyos IDs estén en un rango específico, por ejemplo, entre 2 y 3.
+
     <details>
       <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
       ```sql
       
       ```
+
+    </details>
 
 4. Escribe un procedimiento almacenado que elimine todos los empleados cuyo salario esté entre 2000 y 2500.
 
@@ -76,8 +81,10 @@ Realiza:
       
       ```
 
+    </details>
+
 5. Escribe un procedimiento almacenado que aumente el salario de un empleado específico cuyo nombre se pasa como parámetro en un 20%.
-   
+
     <details>
       <summary>PULSA PARA VER LA SOLUCIÓN:</summary>
 
