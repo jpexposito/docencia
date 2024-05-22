@@ -90,7 +90,7 @@ Crea el siguiente procedimiento:
   - Crea un procedimiento que permita realizar la inserción de un número de alumnos, con una nota mímina y máxima. Estos valores pueden oscilar entre -10, y 12.
 
 ```sql
--- implementa un insert que realice la siguiente acción con datos aleatorios
+-- implementa un procedimiento que realice la siguiente acción con datos aleatorios
 INSERT INTO alumnos (nombre, apellido1, apellido2, nota) VALUES ('Juan', 'Pérez', 'Gómez', -5);
 ```
 
