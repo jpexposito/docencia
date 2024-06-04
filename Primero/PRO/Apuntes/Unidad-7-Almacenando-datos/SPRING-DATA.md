@@ -176,11 +176,30 @@ spring.mail.username=user@example.com
 spring.mail.password=password
 ```
 
+
+## Documentación de Apís
+
+Se debe de incluir la siguiente dependencia a __spring__ para la documentación automática de la __API rest__.
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.1.0</version>
+</dependency>
+```
+
+Después debemos del reinicio del servidor, debemos acceder a la url:
+
+```code
+https://server:port/context-path/swagger-ui.html
+```
+
 ## Referencias
 
 - [Comenzando a construir proyectos spring](https://spring.io/guides/gs/accessing-data-jpa)
 - [Spring IO Build](https://start.spring.io/)
 - [Ejemplo Spring Data](https://mkyong.com/spring-boot/spring-boot-spring-data-jpa/)
-
+- [Documentación de Api´s](https://howtodoinjava.com/spring-boot/springdoc-openapi-rest-documentation/)
 
 </div>
