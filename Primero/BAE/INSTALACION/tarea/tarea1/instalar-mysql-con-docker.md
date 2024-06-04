@@ -209,4 +209,8 @@ Para comprobar el estado de los servicios podemos ejecutar:
 docker-compose ps
 ```
 
+## Referencias
+
+[Instalar y acceder a mysql en docker](https://www.datacamp.com/es/tutorial/set-up-and-configure-mysql-in-docker)
+
 </div>
