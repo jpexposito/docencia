@@ -253,4 +253,6 @@ jwt.expiration=86400000
 
 - [Securizando Spring](https://www.devglan.com/spring-security/spring-boot-security-jwt-example) 
 
+- [Securizando Spring con BBDD](https://medium.com/spring-boot/spring-boot-3-spring-security-6-jwt-authentication-authorization-98702d6313a5)
+
 </div>
