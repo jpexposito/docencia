@@ -249,6 +249,62 @@ jwt.secret=mysecretkey
 jwt.expiration=86400000
 ```
 
+## Validación en el lado del cliente
+
+Veamos un ejemplo en el lado del cliente a través de js:
+
+```javascript
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    fetch('http://localhost:8080/auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username: username, password: password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.token) {
+            localStorage.setItem('jwtToken', data.token);
+            document.getElementById('message').textContent = 'Login successful!';
+            document.getElementById('message').style.color = 'green';
+            // Redirect to another page or perform other actions
+        } else {
+            document.getElementById('message').textContent = 'Login failed!';
+            document.getElementById('message').style.color = 'red';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('message').textContent = 'An error occurred!';
+        document.getElementById('message').style.color = 'red';
+    });
+});
+```
+
+### Api rest
+
+La api rest debe revolver respuestas del tipo:
+
+```json
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+ó
+
+```json
+{
+    "error": "Invalid credentials"
+}
+```
+
 ## Referencias
 
 - [Securizando Spring](https://www.devglan.com/spring-security/spring-boot-security-jwt-example) 
